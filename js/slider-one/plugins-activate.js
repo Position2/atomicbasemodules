@@ -3,7 +3,7 @@ Atomic Basic Modules Plugin Activate
 ===================================== */
 (function($jq) {
   $jq(document).ready(function() {
-    $jq('.basic-slider').owlCarousel({
+    $jq('.slider-one').owlCarousel({
        loop: true,
         autoplay: 10000,
         smartSpeed: 1000,
