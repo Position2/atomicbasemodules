@@ -588,10 +588,8 @@ template {
 }
 
 #Slider .basic-slider .owl-dots {
-  position: absolute;
-  bottom: 5%;
-  text-align: center;
-  left: 17%;
+  width: 1280px;
+  margin: 0 auto;
 }
 
 #Slider .basic-slider .owl-dots .owl-dot {
@@ -605,6 +603,8 @@ template {
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   outline: 0;
+  position: relative;
+  bottom: 50px;
 }
 
 #Slider .basic-slider .owl-dots .owl-dot.active {
