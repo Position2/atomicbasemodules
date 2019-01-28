@@ -1,0 +1,19 @@
+{
+  "name": "AtomicBasicModules",
+  "version": "1.0.0",
+  "description": "Atomic Basic Modules",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "position2",
+  "license": "ISC",
+  "repository": "",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {}
+}
