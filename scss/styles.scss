@@ -1,7 +1,6 @@
 /* ================================== 
    Atomic Basic Modules Template Custom Styles
 ===================================== */
-@import 'normalize.scss';
-
-@import 'slider01';
+@import 'slider-one/normalize',
+        'slider-one/slider';
 
