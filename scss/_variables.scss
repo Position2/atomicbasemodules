@@ -1,16 +1,25 @@
+// Font families
 $base-font-family: 'Lato', sans-serif;
+
+// Base font size and lineheight
 $base-font-size: 18px;
 $base-line-height: 1.4;
+
+// font weights
 $fontweight-thin: 300;
 $fontweight-regular: 400;
 $fontweight-bold: 700;
-$fontsize-h1: 50px;
-$fontsize-h2: 40px;
-$fontsize-h3: 38px;
-$fontsize-h4: 36px;
-$fontsize-h5: 18px;
-$fontsize-h6: 16px;
-$fontsize-p: 18px;
+
+// font size
+$h1-fontsize: 50px;
+$h2-fontsize: 40px;
+$h3-fontsize: 38px;
+$h4-fontsize: 36px;
+$h5-fontsize: 18px;
+$h6-fontsize: 16px;
+$p-fontsize: 18px;
+
+// Color palette 
 $primary-color: #3765a0;
 $primary-utility-one: #da423e;
 $secondry-color: #333333;

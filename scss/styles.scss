@@ -1,8 +1,12 @@
 /* ================================== 
    Atomic Basic Modules Template Custom Styles
 ===================================== */
-// Common modules
-@import 'normalize';
+// Core variables and mixins
+@import 'bootstrap/bootstrap-grid', 
+        'bootstrap/bootstrap-reboot',
+        'bootstrap/bootstrap';
+
+// base files
 @import 'variables';
         
 @import 'slider-one/slider';

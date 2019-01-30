@@ -9,56 +9,61 @@
 <meta name="author" content="">
 <title>slider-one</title>
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="../js/slider-one/all-plugins.js"></script>
-<script type="text/javascript" src="../js/slider-one/plugins-activate.js"></script>
+<script type="text/javascript" src="../js/all-plugins.js"></script>
 </head>
 <body>
-  <div id="Slider">
-    <div class="owl-carousel slider-one">
-      <div class="item">
-        <picture>
-          <img src="../images/slider-one/slider-image.jpg" alt="Slider Image">
-        </picture>
+  <div class="sliderwrapper">
+    <ul class="slider">
+      <li>
+        <picture><img src="../images/slider-one/slider-image-one.jpg" alt="Slider iamge"></picture>
         <div class="each-slider">
-          <div class="content">
-            <div class="slider-text">
-              <div class="slider-heading">Lorem ipsum dolor sit amet</div>
-               <div class="slider-subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div> 
-               <a href="javascript:void(0)">Learn More</a>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="slider-text">
+                  <h1>Lorem ipsum dolor sit amet.</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br/>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="javascript:void(0)">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-       <div class="item">
-        <picture>
-          <img src="../images/slider-one/slider-image.jpg" alt="Slider Image">
-        </picture>
+      </li>
+       <li>
+        <picture><img src="../images/slider-one/slider-image-one.jpg" alt="Slider iamge"></picture>
         <div class="each-slider">
-          <div class="content">
-            <div class="slider-text">
-              <div class="slider-heading">Lorem ipsum dolor sit amet</div>
-               <div class="slider-subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div> 
-               <a href="javascript:void(0)">Learn More</a>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="slider-text">
+                  <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br/>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="javascript:void(0)">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-       <div class="item">
-        <picture>
-          <img src="../images/slider-one/slider-image.jpg" alt="Slider Image">
-        </picture>
-        <div class="each-slider">
-          <div class="content">
-            <div class="slider-text">
-              <div class="slider-heading">Lorem ipsum dolor sit amet</div>
-               <div class="slider-subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div> 
-               <a href="javascript:void(0)">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
+  <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+        $(".slider").bxSlider({
+          mode: $(window).width() < 768 ? 'fade' : 'horizontal',
+          useCSS: true,
+          auto: true,
+          easing: 'easeInCirc',
+          speed: 1000,
+          pager: true,
+          controls: false,
+          mouseDrag: true,
+          pause: 12000
+        });
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>
