@@ -1,11 +1,8 @@
 /* ================================== 
    Atomic Basic Modules Template Custom Styles
 ===================================== */
-@import 'slider-one/normalize',
-        'slider-one/slider';
-
-@import 'slider-two/normalize',
-        'slider-two/slider';
-
-@import 'slider-three/normalize',
-        'slider-three/slider';
+// Common modules
+@import 'normalize';
+@import 'varibales';
+        
+@import 'slider-one/slider';
