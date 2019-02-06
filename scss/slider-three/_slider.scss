@@ -6,9 +6,9 @@
 		margin: 0;
 		border: 0;
 		box-shadow: none;
-		height: 100vh;
-		width: 100vw;
-		overflow: hidden;
+		.bx-viewport {
+			height: 100vh !important;
+		}
 		@media (min-width: 0) and (max-width: 1199.98px) {
 			height: auto; 
 		}
@@ -44,10 +44,13 @@
 	.fp-slider {
 		margin: 0;
 		padding: 0;
+		height: 100vh;
 		li {
+			background: url("../images/slider-three/slider-image-one.jpg") no-repeat center center / cover;
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
+			height: 100vh;
 			picture {
 				display: block;
 				img {
