@@ -9,6 +9,9 @@
 		height: 100vh;
 		width: 100vw;
 		overflow: hidden;
+		@media (min-width: 0) and (max-width: 1199.98px) {
+			height: auto; 
+		}
 		.bx-controls {
 			position: absolute;
 			width: 100%;
@@ -60,6 +63,9 @@
 		    width: 100%;
 		    .text-content {
 		    	width: 50%;
+		    	@media (min-width: 0) and (max-width: 1199.98px) {
+						width: auto; 
+					}
 		    	h1 {
 		  			color: $white;
 		  			font-size: $h1-fontsize -10px;
