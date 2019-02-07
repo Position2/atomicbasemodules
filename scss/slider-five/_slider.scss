@@ -39,12 +39,12 @@
   	position: absolute;
     text-align: center;
     left: 0;
-    top: calc(50% - 40px);
+    top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 100%;
     @media (min-width: 0) and (max-width: 1199.98px) { 
-		  top: calc(60% - 40px);
+		  top: 60%;
     }
   	h1 {
 			color: $white;
