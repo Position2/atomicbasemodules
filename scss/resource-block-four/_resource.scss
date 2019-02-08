@@ -1,0 +1,171 @@
+.resource-wrap {
+	.featured-resource {
+		float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: calc(100%/3);
+    text-decoration: none;
+    @media (min-width: 0) and (max-width: 767.98px) {
+		  border-bottom: 3px solid $white;
+	    height: 200px;
+	    width: 100%;
+    }
+    img {
+    	width: 100%;
+    	height: auto;
+    }
+    span.featured {
+    	color: $white;
+			font-size: $h5-fontsize;
+			font-family: $base-font-family;
+			font-weight: $fontweight-regular;
+	    background-color: rgba(0,0,0,0.8);
+	    display: inline-block;
+	    left: 0;
+	    margin: 0;
+	    padding: 5px 15px;
+	    position: absolute;
+	    top: 0;
+	    opacity: 1;
+	    transition: opacity 0.2s ease 0s;
+	    @media (min-width: 0) and (max-width: 1199.98px) {
+	    	font-size: $h6-fontsize - 4;
+	    }
+    }
+    .res-holder {
+    	position: absolute;
+	    text-align: center;
+	    top: 40%;
+	    transform: translateY(-45%);
+	    transition: top 0.4s ease 0s;
+	    width: 100%;
+	     @media (min-width: 0) and (max-width: 768.98px) {
+				  top: 35%;
+	     }
+       @media (min-width: 768px) and (max-width: 1199.98px) {
+					top: 28%;
+       }
+	    img {
+	    	width: 50px;
+	    	margin-bottom: 20px;
+	    	@media (min-width: 0) and (max-width: 1199.98px) {
+					width: 30px;
+					margin-bottom: 5px;
+	    	}
+	    }
+	    p {
+	    	color: $white;
+				font-size: $h5-fontsize + 2;
+				font-family: $base-font-family;
+				font-weight: $fontweight-regular;
+		    margin: 0;
+		    opacity: 1;
+		    padding: 0;
+		    transition: opacity 0.2s;
+		    text-transform: uppercase;
+		    @media (min-width: 0) and (max-width: 1199.98px) {
+		    	font-size: $h6-fontsize;
+		    }
+	    }
+    }
+    .slide-up-content {
+    	background-color: rgba(0,0,0,0.4);
+	    bottom: -120px;
+	    padding: 20px;
+	    position: absolute;
+	    width: 100%;
+	    transition: bottom 0.2s cubic-bezier(0.42,0,0.58,1) 0s;
+	    @media (min-width: 0) and (max-width: 1199.98px) {
+  	    border-right: none;
+		    bottom: 0;
+		    padding: 10px 15px;
+	    }
+	    p{ 
+  	    color: $white;
+				font-size: $p-fontsize;
+				font-family: $base-font-family;
+				font-weight: $fontweight-regular;
+		    margin: 0 0 50px;
+		    min-height: 40px;
+		    text-align: left;
+		    @media (min-width: 0) and (max-width: 1199.98px) {
+		    	min-height: 10px;
+		    	margin: 0;
+		    	font-size: $h6-fontsize;
+		    }
+	    }
+	    .slide-cont-inner-wrap {
+	    	@media (min-width: 0) and (max-width: 1199.98px) {
+	    		display: none;
+	    	}
+	    	.slide-cont-inner {
+	    		float: left;
+    			width: 50%;
+    			.fa-chevron-circle-right {
+    				color: $white;
+						font-size: $p-fontsize + 6;
+				    margin-bottom: 20px;
+    			}
+    			p {
+    				color: $white;
+						font-size: $p-fontsize + 2;
+						font-family: $base-font-family;
+						font-weight: $fontweight-regular;
+				    margin: 0;
+				    min-height: 10px;
+				    text-transform: uppercase;
+    			}
+	    	}
+	    	.slide-cont-inner-two {
+	    		float: right;
+			    margin-top: 40px;
+			    width: auto;
+			    padding-left: 20px;
+			    i.fa-share-alt {  
+			    	color: $white;
+						font-size: $p-fontsize;
+			    }
+          .social-wrap {
+      	    bottom: 30px;
+				    display: none;
+				    position: absolute;
+				    right: 45px;
+				    i {
+              color: $white;
+						  font-size: $p-fontsize + 2;
+				      margin-left: 10px;
+				    }
+          }
+          &:hover {
+          	.social-wrap {
+          		display: inline-block;
+          	}
+          }
+	    	}
+	    }
+    }
+    &:hover {
+    	> img {
+    		filter: blur(3px);
+		    transform: scale(1.2);
+		    transition: filter 0.2s ease 0s,transform 0.4s ease 0s;
+    	}
+    	span.featured {
+    		opacity: 0;
+    		transition: opacity 0.2s ease 0s;
+    		@media (min-width: 0) and (max-width: 1199.98px) {
+    			opacity: 1;
+    		}
+    	}
+    	.res-holder {
+        top: 29%;
+  			transition: top 0.4s;
+    	}
+    	.slide-up-content {
+				bottom: 0;
+  			transition: bottom 0.2s cubic-bezier(0.42,0,0.58,1) 0s;
+			}
+    }
+	}
+}
