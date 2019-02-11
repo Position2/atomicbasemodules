@@ -82,10 +82,14 @@
   }
 }
 .mobile-device {
-	picture {
-		display: block;
-	}
-	video.video {
-		display: none;
+	.video-slider {
+		.video-block {
+      video.video {
+				display: none;
+			}
+		}
+		picture {
+			display: block;
+		}
 	}
 }
