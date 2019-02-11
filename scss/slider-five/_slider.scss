@@ -23,6 +23,10 @@
   picture {
   	display: none;
   	width: 100%;
+  	img {
+  		width: 100%;
+  		height: auto;
+  	}
   }
   .banner-text {
   	position: absolute;
@@ -81,7 +85,7 @@
 	picture {
 		display: block;
 	}
-	video {
+	video.video {
 		display: none;
 	}
 }
