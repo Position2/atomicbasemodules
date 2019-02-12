@@ -1,0 +1,105 @@
+.posts-wrap {
+	padding-top: 30px;
+	margin-right: -5px;
+	@media (min-width: 0) and (max-width: 767.98px) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.each-post {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: calc(100%/4 - 5px);
+    display: block;
+    position: relative;
+    @media (min-width: 0) and (max-width: 767.98px) {
+			float: none;
+			margin: 0;
+  		width: 100%;
+    }
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+			width: calc(100%/2 - 5px);
+    }
+    .post-content-wrapper {
+    	img {
+				width: 100%;
+				height: auto;
+    	}
+    	.post-overlay {
+		    position: absolute;
+		    background-color: rgba(0,0,0,0.65);
+		    bottom: 0;
+		    width: 100%;
+		    min-height: 70px;
+		    padding: 10px;
+		    p {
+		    	color: $white;
+		    	font-family: $base-font-family;
+    	    font-size: $h5-fontsize;
+			    font-weight: $fontweight-regular;
+			    margin: 0;
+			    line-height: 1.5;
+		    }
+    	}
+    }
+    .read-more {
+    	background-color: $primary-color;
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    opacity: 0;
+	    text-align: center;
+	    visibility: hidden;
+	    transition: all 0.35s ease 0s,opacity 0.5s ease 0s;
+	    .read-more-content-wrap {
+  	    position: absolute;
+		    top: 50%;
+		    -webkit-transform: translateY(-50%);
+		    transform: translateY(-50%);
+		    width: 100%;
+		    padding: 0 10px;
+		    h4 {
+		    	color: $white;
+		    	font-family: $base-font-family;
+    	    font-size: $h5-fontsize;
+			    font-weight: $fontweight-regular;
+			    margin: 0 0 15px;
+			    line-height: 1.2;
+		    }
+		    p {
+		    	color: $white;
+		    	font-family: $base-font-family;
+    	    font-size: $h6-fontsize;
+			    font-weight: $fontweight-regular;
+			    margin: 0 0 20px;
+			    line-height: 1.5;
+		    }
+		    .transparent-cta {
+		    	font-size: $h6-fontsize;
+			    font-weight: $fontweight-regular;
+			    background-color: transparent;
+			    border-radius: 4px;
+			    border: 1px solid $white;
+			    color: $white;
+			    transition: all 0.35s ease 0s;
+			    padding: 7px 20px;
+			    line-height: 1;
+			    display: inline-block;
+			    &:hover {
+	    	    background-color: $white;
+				    color: $primary-color;
+				    transition: all 0.35s ease 0s;
+			    }
+		    }
+	    }
+    }
+    &:hover {
+			.read-more {
+				visibility: visible;
+		    opacity: 1;
+		    transition: all 0.35s ease 0s,opacity 0.5s ease 0s;
+			}
+    }
+	}
+}
