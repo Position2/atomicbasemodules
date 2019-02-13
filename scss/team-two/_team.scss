@@ -1,0 +1,133 @@
+.carouselteam-wrap {
+  padding-top: 30px;
+  .bx-wrapper {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    .bx-pager.bx-default-pager {
+      a {
+        background-color: $grey;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        border: 1px solid $primary-color;
+      }
+      a.active, a:focus, a:hover {
+        background-color: $primary-color;
+      }
+    }
+    .bx-controls-auto, .bx-pager {
+      bottom: -40px;
+    } 
+    .bx-controls-direction {
+      a {
+        margin-top: -5px;
+        &.bx-prev {
+          background: url("../images/team-two/arrows-sprite.png") no-repeat 0 0 / 60px auto;
+          left: -29px;
+        }
+        &.bx-next {
+          background: url("../images/team-two/arrows-sprite.png") no-repeat -33px 0 / 60px auto;
+          right: -40px;
+        }
+      }
+    }
+   }
+  .team-carousel {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: calc(100%/4 - 20px);
+      margin-right: 10px;
+      margin-left: 10px;
+      float: left;
+      position: relative;
+      @media (min-width: 0) and (max-width: 479.98px) {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        margin-left: 0;
+      }
+      @media (min-width: 480px) and (max-width: 767.98px) {
+        width: calc(100%/2 - 20px);
+        margin-bottom: 20px;
+      }
+      @media (min-width: 768px) and (max-width: 1199.98px) {
+        width: calc(100%/3 - 20px);
+        margin-bottom: 20px;
+      }
+      .team-profile {
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+     .team-sub-wrap {
+        bottom: -40px;
+        color: $white;
+        padding: 0 10px;
+        position: absolute;
+        -webkit-transition: bottom 0.2s ease 0s;
+        -moz-transition: bottom 0.2s ease 0s;
+        -o-transition: bottom 0.2s ease 0s;
+        transition: bottom 0.2s ease 0s;
+        @media (min-width: 0px) and (max-width: 1199.98px) {
+          bottom: 14px;
+        }
+        .team-sub-content {
+          h3 {
+            color: $white;
+            font-size: $h5-fontsize + 2;
+            font-family: $base-font-family;
+            font-weight: $fontweight-regular;
+            margin: 0;
+            span {
+              display: block;
+              font-size: $h6-fontsize;
+            }
+          } 
+          p {
+            color: $white;
+            font-size: $h6-fontsize - 2;
+            font-family: $base-font-family;
+            font-weight: $fontweight-regular;
+            margin: 0;
+            min-height: 45px;
+            padding: 10px 25px 0 0;
+            @media (min-width: 0px) and (max-width: 1199.98px) {
+              display: none;
+            }
+          }
+        }
+      }
+      &:hover {
+        .team-sub-wrap {
+          bottom: 10px;
+          -webkit-transition: bottom 0.2s ease 0s;
+          -moz-transition: bottom 0.2s ease 0s;
+          -o-transition: bottom 0.2s ease 0s;
+          transition: bottom 0.2s ease 0s;
+        }
+      }
+    }
+    .team-tag {
+      bottom: 10px;
+      color: #ffffff;
+      position: absolute;
+      right: 10px;
+      &.twitter-icon {
+        bottom: 35px;
+      }
+      i {
+        font-size: $h6-fontsize;
+      }
+    }
+  }
+}
+
+
+
