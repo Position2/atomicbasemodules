@@ -92,7 +92,7 @@
 				font-size: $p-fontsize;
 				font-family: $base-font-family;
 				font-weight: $fontweight-regular;
-		    margin: 0 0 50px;
+		    margin: 0 0 40px;
 		    min-height: 40px;
 		    text-align: left;
 		    @media (min-width: 0) and (max-width: 1199.98px) {
@@ -152,6 +152,7 @@
 	    }
     }
     &:hover {
+    	outline: 0;
     	> img {
     		filter: blur(3px);
 		    transform: scale(1.2);
@@ -172,6 +173,9 @@
 				bottom: 0;
   			transition: bottom 0.2s cubic-bezier(0.42,0,0.58,1) 0s;
 			}
+    }
+    &:focus, &:active {
+    	outline: 0;
     }
 	}
 }

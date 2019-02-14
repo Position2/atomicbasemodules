@@ -68,12 +68,12 @@
 	      }
       }
       &.sm-div {
-				width: 25%;
+				width: calc(50%/2);
 				@media (min-width: 0) and (max-width: 767.98px) {
 					width: 100%;
 				}
 				@media (min-width: 768px) and (max-width: 991.98px) {
-					width: 50%;
+					width: calc(100%/2);
 				}
       }
       &.lg-div {
