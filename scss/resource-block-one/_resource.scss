@@ -6,12 +6,6 @@
 	    overflow: hidden;
 			display: block;
 			margin-bottom: 30px;
-			@media (min-width: 0) and (max-width: 767.98px) {
-				height: auto;
-			}
-			@media (min-width: 768px) and (max-width: 991.98px) {
-				height: auto;
-			}
 			&::before {
 		    content: "";
 		    height: 100%;
