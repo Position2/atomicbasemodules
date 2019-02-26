@@ -20,36 +20,39 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<title>Atomic Module | Webinar / News / PR / Events Three</title>
+<title>Atomic Module | Slider Four</title>
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/event-three/styles.css">
+<link rel="stylesheet" type="text/css" href="../../css/slider-four/styles.css">
+<script type="text/javascript" src="../../js/all-plugins.js"></script>
 </head>
 <body>
-  <div class="container">
-   <div class="news-wrap">
-     <div class="each-news">
-       <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, a, explicabo.</h4>
-       <ul>
-         <li>LOS ALTOS, Calif - </li>
-         <li>December 20, 2018</li>
+   <div class="logoslide-wrapper">
+    <div class="container">
+       <ul class="logo-slider">
+         <li><img src="../../images/slider-four/client-logo-one.jpg" alt="Client Logo"></li>
+         <li><img src="../../images/slider-four/client-logo-two.jpg" alt="Client Logo"></li>
+         <li><img src="../../images/slider-four/client-logo-three.jpg" alt="Client Logo"></li>
+         <li><img src="../../images/slider-four/client-logo-one.jpg" alt="Client Logo"></li>
+         <li><img src="../../images/slider-four/client-logo-two.jpg" alt="Client Logo"></li>
+         <li><img src="../../images/slider-four/client-logo-three.jpg" alt="Client Logo"></li>
        </ul>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia excepturi animi nihil quia veritatis sed dignissimos exercitationem. Reiciendis, labore, laboriosam. Ea delectus nobis dolorum cum, ipsa, nemo rerum consequatur maiores.</p>
-       <div class="read-more-holder">
-         <a href="javascript:void(0)">Read More</a>
-       </div>
-     </div>
-     <div class="each-news">
-       <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, a, explicabo. Reiciendis, labore, laboriosam.</h4>
-       <ul>
-         <li>LOS ALTOS, Calif - </li>
-         <li>December 20, 2018</li>
-       </ul>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia excepturi animi nihil quia veritatis sed dignissimos exercitationem. Reiciendis, labore, laboriosam. Ea delectus nobis dolorum cum, ipsa, nemo rerum consequatur maiores.</p>
-       <div class="read-more-holder">
-         <a href="javascript:void(0)">Read More</a>
-       </div>
      </div>
    </div>
-  </div>
+   <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+        $(".logo-slider").bxSlider({
+          minSlides: 1,
+          maxSlides: 7,
+          slideWidth: $(window).width() < 768 ? 100 : 250,
+          slideMargin: 0,
+          ticker: true,
+          slideMargin: 20,
+          speed: 50000, 
+          tickerHover: true
+        }); 
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>

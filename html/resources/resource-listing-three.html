@@ -20,39 +20,45 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<title>Atomic Module | Slider Four</title>
+<title>Atomic Module | Resource Listing Three</title>
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/slider-four/styles.css">
-<script type="text/javascript" src="../js/all-plugins.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/resource-listing-three/styles.css">
 </head>
 <body>
-   <div class="logoslide-wrapper">
-    <div class="container">
-       <ul class="logo-slider">
-         <li><img src="../images/slider-four/client-logo-one.jpg" alt="Client Logo"></li>
-         <li><img src="../images/slider-four/client-logo-two.jpg" alt="Client Logo"></li>
-         <li><img src="../images/slider-four/client-logo-three.jpg" alt="Client Logo"></li>
-         <li><img src="../images/slider-four/client-logo-one.jpg" alt="Client Logo"></li>
-         <li><img src="../images/slider-four/client-logo-two.jpg" alt="Client Logo"></li>
-         <li><img src="../images/slider-four/client-logo-three.jpg" alt="Client Logo"></li>
-       </ul>
-     </div>
-   </div>
-   <script type="text/javascript">
-    (function($) {
-      $(document).ready(function() {
-        $(".logo-slider").bxSlider({
-          minSlides: 1,
-          maxSlides: 7,
-          slideWidth: $(window).width() < 768 ? 100 : 250,
-          slideMargin: 0,
-          ticker: true,
-          slideMargin: 20,
-          speed: 50000, 
-          tickerHover: true
-        }); 
-      });
-    })(jQuery);
-  </script>
+  <div class="container">
+    <div class="video-wrap clearfix">
+      <div class="each-video">
+        <div class="video-thumbnail">
+          <img src="../../images/resource-listing-three/resource-one.jpg" alt="Image">
+        </div>
+        <div class="video-content">
+          <div class="video-introcontent">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+          </div>
+          <div class="play-button">
+            <a href="javascript:void(0)">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="each-video">
+        <div class="video-thumbnail">
+          <img src="../../images/resource-listing-three/resource-two.jpg" alt="">
+        </div>
+        <div class="video-content">
+          <div class="video-introcontent">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+          </div>
+          <div class="play-button">
+            <a href="javascript:void(0)">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
