@@ -1,6 +1,5 @@
 # Ignore paths that contain user-generated content.
 node_modules/*
-gulpfile.js
 
 #jtodd#
 .idea
