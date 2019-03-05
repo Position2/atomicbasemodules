@@ -88,15 +88,19 @@
 			}
 		}
 	}
+	.slider-dots {
+		position: absolute;
+		width: 100%;
+		z-index: 9;
+		top: auto;
+    bottom: 30px;
+	}
 	.carousel-indicators {
 		margin: 0 auto;
-		padding-left: 15px;
-		position: absolute;
 		-webkit-box-pack: left;
     -ms-flex-pack: left;
     justify-content: left;
-    top: auto;
-    bottom: 30px;
+    position: relative;
 		li {
 			background-color: $white;
 	    border-radius: 8px;
