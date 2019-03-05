@@ -27,11 +27,15 @@
 </head>
 <body>
   <div class="pagerSlider carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target=".pagerSlider" data-slide-to="0" class="active"><p>Slide One</p></li>
-    <li data-target=".pagerSlider" data-slide-to="1" class=""><p>Slide Two</p></li>
-    <li data-target=".pagerSlider" data-slide-to="2" class=""><p>Slide Three</p></li>
-  </ul>
+    <div class="pagination-slider">
+      <div class="container">
+        <ul class="carousel-indicators">
+          <li data-target=".pagerSlider" data-slide-to="0" class="active"><p>Slide One</p></li>
+          <li data-target=".pagerSlider" data-slide-to="1" class=""><p>Slide Two</p></li>
+          <li data-target=".pagerSlider" data-slide-to="2" class=""><p>Slide Three</p></li>
+        </ul>
+    </div>
+  </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <picture>
@@ -84,7 +88,7 @@
     (function($) {
       $(document).ready(function() {
         $('.carousel').carousel({
-         interval: 3000,
+         interval: 1000000,
          pause: 'hover',
          touch: true
         }); 

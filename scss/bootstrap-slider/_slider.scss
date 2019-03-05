@@ -14,6 +14,7 @@
 			    left: auto;
 			    text-align: left;
 			    right: auto;
+			    padding: 0;
 			    @media (min-width: 0) and (max-width: 767.98px) {
 						top: 20%;
 			    }
@@ -88,7 +89,6 @@
 		}
 	}
 	.carousel-indicators {
-		width: 1140px;
 		margin: 0 auto;
 		padding-left: 15px;
 		position: absolute;
@@ -97,19 +97,6 @@
     justify-content: left;
     top: auto;
     bottom: 30px;
-		@media (max-width: 575.98px) {
-			width: 100%;
-	    padding-left: 0;
-		}
-		@media (min-width: 576px) and (max-width: 767.98px) {
-			width: 540px;
-		}
-		@media (min-width: 768px) and (max-width: 991.98px) {
-			width: 720px;
-		}
-		@media (min-width: 992px ) and (max-width: 1199.98px) {
-			width: 960px;
-		}
 		li {
 			background-color: $white;
 	    border-radius: 8px;
