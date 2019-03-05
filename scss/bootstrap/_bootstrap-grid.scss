@@ -16,14 +16,14 @@ html {
   box-sizing: inherit;
 }
 
-@import "bootstrap/source/functions";
-@import "bootstrap/source/variables";
+@import "../bootstrap/source/functions";
+@import "../bootstrap/source/variables";
 
-@import "bootstrap/source/mixins/breakpoints";
-@import "bootstrap/source/mixins/grid-framework";
-@import "bootstrap/source/mixins/grid";
+@import "../bootstrap/source/mixins/breakpoints";
+@import "../bootstrap/source/mixins/grid-framework";
+@import "../bootstrap/source/mixins/grid";
 
-@import "bootstrap/source/grid";
-@import "bootstrap/source/utilities/display";
-@import "bootstrap/source/utilities/flex";
-@import "bootstrap/source/utilities/spacing";
+@import "../bootstrap/source/grid";
+@import "../bootstrap/source/utilities/display";
+@import "../bootstrap/source/utilities/flex";
+@import "../bootstrap/source/utilities/spacing";
