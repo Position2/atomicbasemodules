@@ -91,46 +91,45 @@
 	.slider-dots {
 		position: absolute;
 		width: 100%;
-		z-index: 9;
 		top: auto;
     bottom: 30px;
-	}
-	.carousel-indicators {
-		margin: 0 auto;
-		-webkit-box-pack: left;
-    -ms-flex-pack: left;
-    justify-content: left;
-    position: relative;
-		li {
-			background-color: $white;
-	    border-radius: 8px;
-	    bottom: 20px;
-	    display: inline-block;
-	    height: 16px;
-	    width: 16px;
-	    margin: 0 4px;
-	    -webkit-transition: all 0.5s ease 0s;
-	    transition: all 0.5s ease 0s;
-	    outline: 0;
-	    bottom: 50px;
-	    opacity: 1;
-	    background-clip: unset;
-	    border-top: none;
-	    border-bottom: none;
-      &:hover {
-      	background-color: $black;
-      	opacity: 0.6;
-      	 -webkit-transition: all 0.5s ease 0s;
-	      transition: all 0.5s ease 0s;
-      }
-	    &.active {
-	    	height: 16px;
-	      width: 35px;
-	      background-color: $black;
-	      opacity: 0.6;
-	       -webkit-transition: all 0.5s ease 0s;
-	      transition: all 0.5s ease 0s;
-	    }
+    .carousel-indicators {
+			margin: 0 auto;
+			-webkit-box-pack: left;
+	    -ms-flex-pack: left;
+	    justify-content: left;
+	    position: relative;
+			li {
+				background-color: $white;
+		    border-radius: 8px;
+		    bottom: 20px;
+		    display: inline-block;
+		    height: 16px;
+		    width: 16px;
+		    margin: 0 4px;
+		    -webkit-transition: all 0.5s ease 0s;
+		    transition: all 0.5s ease 0s;
+		    outline: 0;
+		    bottom: 50px;
+		    opacity: 1;
+		    background-clip: unset;
+		    border-top: none;
+		    border-bottom: none;
+	      &:hover {
+	      	background-color: $black;
+	      	opacity: 0.6;
+	      	 -webkit-transition: all 0.5s ease 0s;
+		      transition: all 0.5s ease 0s;
+	      }
+		    &.active {
+		    	height: 16px;
+		      width: 35px;
+		      background-color: $black;
+		      opacity: 0.6;
+		       -webkit-transition: all 0.5s ease 0s;
+		      transition: all 0.5s ease 0s;
+		    }
+			}
 		}
 	}
 }
