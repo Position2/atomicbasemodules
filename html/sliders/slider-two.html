@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,35 +21,44 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="../../ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<title>Atomic Module | Slider Two</title>
+<title>Atomic Module | Bootstrap Slider Two</title>
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../css/slider-two/styles.css">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap-slider-two/styles.css">
 <script type="text/javascript" src="../../js/all-plugins.js"></script>
 </head>
 <body>
-  <div class="pagerslider-wrapper">
-    <ul class="pager-slider">
-      <li>
-        <picture>
+  <div class="pagerSlider carousel" data-ride="carousel">
+    <div class="pagination-slider">
+      <div class="container">
+        <ul class="carousel-indicators">
+          <li data-target=".pagerSlider" data-slide-to="0" class="active"><p>Slide One</p></li>
+          <li data-target=".pagerSlider" data-slide-to="1" class=""><p>Slide Two</p></li>
+          <li data-target=".pagerSlider" data-slide-to="2" class=""><p>Slide Three</p></li>
+        </ul>
+    </div>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <picture>
+        <source srcset="../../images/slider-two/slider-image-mobile.jpg" media="(max-width: 991.98px)" alt="">
+        <img class="d-block w-100" src="../../images/slider-two/slider-image-one.jpg" alt="Slider image">
+      </picture>
+        <div class="each-slider carousel-caption">
+          <div class="container">
+            <div class="slider-content-wrap">
+                <h1>Slide One : Lorem ipsum dolor sit amet,<br/> consectetur adipisicing elit.</h1>
+                <p> Accusamus cumque, vitae, non quis facere suscipit quam, <br/>quidem id delectus in laborum architecto. Cupiditate ratione, <br/>ex deserunt ea fugiat eveniet esse.</p>
+            </div> 
+            <a href="javascript:void(0)" class="btn-one">Learn More</a>
+          </div>
+       </div>
+    </div>
+    <div class="carousel-item">
+      <picture>
           <source srcset="../../images/slider-two/slider-image-mobile.jpg" media="(max-width: 991.98px)" alt="">
-          <img src="../../images/slider-two/slider-image-one.jpg" alt="Slider image">
+          <img class="d-block w-100" src="../../images/slider-two/slider-image-one.jpg" alt="Slider image">
         </picture>
-          <div class="each-slider">
-            <div class="container">
-              <div class="slider-content-wrap">
-                  <h1>Slide One : Lorem ipsum dolor sit amet,<br/> consectetur adipisicing elit.</h1>
-                  <p> Accusamus cumque, vitae, non quis facere suscipit quam, <br/>quidem id delectus in laborum architecto. Cupiditate ratione, <br/>ex deserunt ea fugiat eveniet esse.</p>
-              </div> 
-              <a href="javascript:void(0)" class="btn-one">Learn More</a>
-            </div>
-         </div>
-      </li>
-      <li>
-        <picture>
-          <source srcset="../../images/slider-two/slider-image-mobile.jpg" media="(max-width: 991.98px)" alt="">
-          <img src="../../images/slider-two/slider-image-one.jpg" alt="Slider image">
-        </picture>
-          <div class="each-slider">
+          <div class="each-slider carousel-caption">
             <div class="container">
               <div class="slider-content-wrap">
                   <h1>Slide Two : Lorem ipsum dolor sit amet,<br/> consectetur adipisicing elit.</h1>
@@ -57,13 +67,13 @@
               <a href="javascript:void(0)" class="btn-two">Learn More</a>
             </div>
          </div>
-      </li>
-      <li>
+    </div>
+     <div class="carousel-item">
         <picture>
           <source srcset="../../images/slider-two/slider-image-mobile.jpg" media="(max-width: 991.98px)" alt="">
-          <img src="../../images/slider-two/slider-image-one.jpg" alt="Slider image">
+          <img class="d-block w-100" src="../../images/slider-two/slider-image-one.jpg" alt="Slider image">
         </picture>
-          <div class="each-slider">
+          <div class="each-slider carousel-caption">
             <div class="container">
               <div class="slider-content-wrap">
                   <h1>Slide Three : Lorem ipsum dolor sit amet</h1>
@@ -72,32 +82,17 @@
               <a href="javascript:void(0)" class="btn-three">Learn More</a>
             </div>
          </div>
-      </li>
-    </ul>
-    <div class="sliderthumbnail">
-      <div class="container">
-            <a data-slide-index="0"><p>Slide One</p></a>
-            <a data-slide-index="1"><p>Slide Two</p></a> 
-            <a data-slide-index="2"><p>Slide Three</p></a>
-      </div>
     </div>
   </div>
+</div>
   <script type="text/javascript">
     (function($) {
       $(document).ready(function() {
-         $('.pager-slider').bxSlider({
-          auto: true,
-          speed: 1000,
-          pause: 6000,
-          easing: 'easeInCirc',
-          pager: true,
-          controls: false,
-          infiniteLoop: true,
-          hideControlOnEnd: true,
-          minSlides: 1,
-          maxSlides: 1,
-          pagerCustom: '.sliderthumbnail'
-        });
+        $('.pagerSlider').carousel({
+         interval: 4000,
+         pause: 'hover',
+         touch: true
+        }); 
       });
     })(jQuery);
   </script>
