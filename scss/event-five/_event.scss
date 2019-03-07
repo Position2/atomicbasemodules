@@ -1,0 +1,81 @@
+.events-listing {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0 0 0;
+	.each-listing {
+    max-width: 25%;
+    flex: 1 0 calc(25% - 20px);
+    margin: 0 20px 0 0;
+    border: 1px solid $gray-two;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    @media (min-width: 0) and (max-width: 767.98px) {
+    	max-width: 100%;
+    	flex: 1 0 100%;;
+    	margin: 0 0 20px 0;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) { 
+      max-width: 50%;
+      flex: 1 0 calc(50% - 20px);
+      margin-bottom: 20px;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+			margin-right: 0;
+    }
+    .venue-descp {
+      padding: 20px;
+      h4 {
+        color: $secondry-color;
+        font-size: $p-fontsize + 2;
+        font-family: $base-font-family;
+        font-weight: $fontweight-bold;
+        line-height: 1;
+        margin-bottom: 14px;
+        min-height: 40px;
+      }
+      .event-details {
+        margin-bottom: 20px;
+        p {
+          color: $secondry-color;
+          font-size: $h6-fontsize;
+          font-family: $base-font-family;
+          font-weight: $fontweight-regular;
+          line-height: 1;
+          margin-bottom: 12px;
+        }
+      }
+      .event-share {
+        i.fa-share-alt {
+          color: $gray-two;
+          font-size: $p-fontsize;
+          cursor: pointer;
+          padding-right: 8px;
+        }
+        .social-wrap {
+          display: none;
+          a {
+            margin-right: 5px;
+          }
+          i.fa-facebook-official {
+            color: $fb-color;
+            font-size: $p-fontsize;
+          }
+          i.fa-twitter-square {
+            color: $twitter-color;
+            font-size: $p-fontsize;
+          }
+        }
+        &:hover {
+          .social-wrap {
+            display: inline-block;
+          }
+        }
+      }
+    }
+	}
+}
