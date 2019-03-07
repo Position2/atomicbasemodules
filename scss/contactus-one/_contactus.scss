@@ -1,0 +1,71 @@
+ .headquarter {
+ 	  display: flex;
+	  flex-wrap: wrap;
+	  padding: 30px 0 0 0;
+	  .each-location {
+	  	max-width: 25%;
+	    flex: 1 0 calc(25% - 20px);
+	    margin: 0 20px 0 0;
+	    @media (min-width: 0) and (max-width: 767.98px) {
+	    	max-width: 100%;
+	    	flex: 1 0 100%;;
+	    	margin: 0 0 20px 0;
+	    }
+	    @media (min-width: 768px) and (max-width: 991.98px) {
+	    	max-width: 50%;
+	    	flex: 1 0 calc(50% - 20px);
+	    	margin: 0 20px  20px 0;
+	    	&:nth-child(even) {
+	    		margin-right: 0;
+	    	}
+	    }
+	    img {
+	    	width: 100%;
+	    	height: auto;
+	    	margin-bottom: 20px;
+	    }
+	    .location {
+	    	margin-bottom: 20px;
+	    	h3 {
+	    		color: $primary-color;
+	        font-size: $h5-fontsize + 6;
+	        font-family: $base-font-family;
+	        font-weight: $fontweight-regular;
+	        display: inline-block;
+	        margin-bottom: 0;
+	        width: 91%;
+	    	}
+	    	a {
+	    		display: inline-block;
+	    		i {
+	    			color: $orange;
+	    			font-size: $mobile-h1-fontsize + 2;
+	    		}
+	    	}
+	    }
+	    p {
+	    	color: $secondry-color;
+        font-size: $h6-fontsize;
+        font-family: $base-font-family;
+        font-weight: $fontweight-regular;
+        margin-bottom: 20px;
+	    }
+	    .contactno {
+	    	p {
+	    		margin-bottom: 10px;
+	    		a {
+	    			color: $secondry-color;
+	    			text-decoration: none;
+	    			i {
+	    				color: $secondry-color;
+	    				padding-right: 10px;
+	    			}
+	    		}
+	    	}
+	    }
+	  }
+ }
+
+
+
+
