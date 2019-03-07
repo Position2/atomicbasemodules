@@ -29,6 +29,7 @@ var paths = [
   ["scss/event-four/styles.scss","css/event-four","scss/event-four/*.scss"],
   ["scss/event-five/styles.scss","css/event-five","scss/event-five/*.scss"],
   ["scss/event-six/styles.scss","css/event-six","scss/event-six/*.scss"],
+  ["scss/event-seven/styles.scss","css/event-seven","scss/event-seven/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
