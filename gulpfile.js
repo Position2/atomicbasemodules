@@ -33,6 +33,10 @@ var paths = [
   ["scss/contactus-one/styles.scss","css/contactus-one","scss/contactus-one/*.scss"],
   ["scss/contactus-two/styles.scss","css/contactus-two","scss/contactus-two/*.scss"],
   ["scss/contactus-three/styles.scss","css/contactus-three","scss/contactus-three/*.scss"],
+  ["scss/blog-one/styles.scss","css/blog-one","scss/blog-one/*.scss"],
+  ["scss/blog-two/styles.scss","css/blog-two","scss/blog-two/*.scss"],
+  ["scss/blog-three/styles.scss","css/blog-three","scss/blog-three/*.scss"],
+  ["scss/blog-four/styles.scss","css/blog-four","scss/blog-four/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {

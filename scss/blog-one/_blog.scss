@@ -1,0 +1,129 @@
+.recent-blog {
+	position: relative;
+	display: block;
+	.post-image {
+		position: relative;
+		height: 450px;
+    overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+			@media (min-width: 0) and (max-width: 991.98px) {
+				width: auto;
+			}
+		}
+		&::before {
+			width: 100%;
+	    height: 100%;
+	    content: "";
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    z-index: 1;
+			background-image: linear-gradient(to bottom, rgba(221, 221, 221, 0) 0%, rgb(0, 0, 0) 94%)
+		}
+	}
+	.content {
+		position: absolute;
+    width: 85%;
+    bottom: 0;
+    padding: 26px;
+    z-index: 1;
+    @media (min-width: 0) and (max-width: 991.98px) {
+	    width: 100%;
+	    bottom: 32px;
+	    padding: 16px;
+    }
+    h2 {
+			color: $white;
+			font-size: $h2-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-regular;
+      margin-bottom: 10px;
+      line-height: 1.2;
+      @media (min-width: 0) and (max-width: 767.98px) {
+      	font-size: $h5-fontsize + 4;
+      }
+      @media (min-width: 768px) and (max-width: 1199.98px) {
+      	font-size: $mobile-h1-fontsize;
+      }
+    }
+    span {
+    	color: $white;
+    	font-size: $h6-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-regular;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    p {
+    	color: $white;
+    	font-size: $p-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-regular;
+      margin-bottom: 24px;
+    }
+    .read-more {
+    	color: $white;
+    	font-size: $h6-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-regular;
+      text-transform: capitalize;
+      i {
+      	color: $white;
+      	font-size: $h6-fontsize + 2;
+      	padding-left: 10px;
+      	vertical-align: middle;
+      }
+    }
+	}
+	&:hover {
+		.block-overlay {
+			width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    bottom: 0;
+	    display: block;
+	    background-image: linear-gradient(to bottom, rgba(221, 221, 221, 0) 0%, rgb(0, 0, 0) 94%);
+		}
+	}
+}
+.blog-share {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  z-index: 99;
+  @media (min-width: 0) and (max-width: 767.98px) {
+  	bottom: 10px;
+    right: 20px;
+  }
+  i.fa-share-alt {
+    color: $white;
+    font-size: $mobile-h1-fontsize - 4;
+    cursor: pointer;
+    padding-right: 8px;
+  }
+  .social-wrap {
+  	width: 70px;
+  	position: absolute;
+    bottom: 0;
+    right: 22px;
+    display: none;
+    a {
+      margin-right: 5px;
+    }
+    i.fa-facebook-official {
+      color: $fb-color;
+      font-size: $mobile-h1-fontsize - 4;
+    }
+    i.fa-twitter-square {
+      color: $twitter-color;
+      font-size: $mobile-h1-fontsize - 4;
+    }
+  }
+  &:hover {
+    .social-wrap {
+      display: inline-block;
+    }
+  }
+}
