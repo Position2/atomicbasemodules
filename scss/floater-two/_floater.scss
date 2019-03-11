@@ -1,0 +1,61 @@
+.button-for-floating {
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    margin: -33px 0 0;
+    z-index: 9999;
+  .social-wrap {
+  	display: block;
+    height: 187px;
+    line-height: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: max-height .5s ease-in-out;
+    width: 50px;
+    padding: 0;
+    margin: 59px 0 0 7px;
+    li {
+    	display: block;
+    	&:nth-child(1) {
+    		a {
+    			background-color: $fb-color;
+  				padding: 8px 12px;
+    		}
+  		}
+  		&:nth-child(2) {
+    		a {
+    			background-color: $twitter-color;
+  				padding: 9px 10px;
+    		}
+  		}
+    	a {
+    		display: inline-block;
+		    margin-bottom: 10px;
+    		border-radius: 50%;
+    		i {
+    			font-size: $h6-fontsize - 2;
+    			color: $white;
+    		}
+    	}
+    }
+  }
+  button {
+  	background-color: transparent;
+    border: none;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+    width: 60px;
+    img {
+    	height: 50px;
+    	width: 50px;
+    }
+  }
+  &:hover {
+  	.social-wrap {
+  		max-height: 260px;
+  	}
+  }
+}
