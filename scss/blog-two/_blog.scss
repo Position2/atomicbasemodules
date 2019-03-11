@@ -58,6 +58,10 @@
 		    	font-size: $mobile-h1-fontsize - 2;
 		    	font-weight: $fontweight-regular;
 		    	margin-bottom: 20px;
+		    	@media (min-width: 0) and (max-width: 767.98px) {
+						font-size: $mobile-h1-fontsize - 6;
+						line-height: 1.4;
+		    	}
 		    }
 		    .date {
           color: $white;
@@ -76,18 +80,22 @@
           font-weight: $fontweight-regular;
           height: 98px;
           overflow: hidden;
+         @media (min-width: 992px) and (max-width: 1199.98px) {
+          	height: 120px;
+          }
 	    	}
 	    	.read-more {
 		    	color: $secondry-color;
-		    	font-size: $h6-fontsize;
+		    	font-size: $p-fontsize;
 		      font-family: $base-font-family;
 		      font-weight: $fontweight-regular;
 		      text-transform: capitalize;
 		      i {
 		      	color: $primary-color;
-		      	font-size: $h6-fontsize + 2;
+		      	font-size: $p-fontsize + 4;
 		      	padding-left: 10px;
 		      	vertical-align: middle;
+		      	font-weight: bold;
 		      }
 		    }
 	    }
@@ -117,12 +125,11 @@
 	}
 	.blog-share {
 	  position: absolute;
-	  right: 10px;
-    top: 211px;
+    right: 10px;
+    top: 215px;
 	  z-index: 99;
 	  @media (min-width: 0) and (max-width: 767.98px) {
-	  	bottom: 10px;
-	    right: 20px;
+	    right: 12px;
 	  }
 	  i.fa-share-alt {
 	    color: $white;
@@ -131,22 +138,34 @@
 	    padding-right: 8px;
 	  }
 	  .social-wrap {
-	  	width: 70px;
+	  	width: 98px;
 	  	position: absolute;
 	    bottom: 0;
 	    right: 22px;
 	    display: none;
 	    a {
 	      margin-right: 5px;
+	      border-radius: 5px;
 	      display: inline-block;
+	      &:nth-child(1) {
+	        background: $fb-color;
+	        padding: 4px 13px;
+	      }
+	      &:nth-child(2) {
+	        background: $twitter-color;
+	        padding: 3px 9px;
+	      }
+	      &:hover {
+	      	opacity: 0.8;
+	      }
 	    }
-	    i.fa-facebook-official {
-	      color: $fb-color;
-	      font-size: $mobile-h1-fontsize - 4;
+	    i.fa-facebook {
+	      color: $white;
+	      font-size: $h6-fontsize - 1;
 	    }
-	    i.fa-twitter-square {
-	      color: $twitter-color;
-	      font-size: $mobile-h1-fontsize - 4;
+	    i.fa-twitter {
+	      color: $white;
+	      font-size: $p-fontsize;
 	    }
 	  }
 	  &:hover {
