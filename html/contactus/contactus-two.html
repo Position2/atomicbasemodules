@@ -20,36 +20,82 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="../../ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<title>Atomic Module | Webinar / News / PR / Events Three</title>
+<title>Atomic Module | Contact Us Two</title>
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../../css/contactus-two/styles.css">
+<script type="text/javascript" src="../../js/all-plugins.js"></script>
 </head>
 <body>
-  <div class="container">
-   <div class="news-wrap">
-     <div class="each-news">
-       <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, a, explicabo.</h4>
-       <ul>
-         <li>LOS ALTOS, Calif - </li>
-         <li>December 20, 2018</li>
-       </ul>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia excepturi animi nihil quia veritatis sed dignissimos exercitationem. Reiciendis, labore, laboriosam. Ea delectus nobis dolorum cum, ipsa, nemo rerum consequatur maiores.</p>
-       <div class="read-more-holder">
-         <a href="javascript:void(0)">Read More</a>
-       </div>
-     </div>
-     <div class="each-news">
-       <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, a, explicabo. Reiciendis, labore, laboriosam.</h4>
-       <ul>
-         <li>LOS ALTOS, Calif - </li>
-         <li>December 20, 2018</li>
-       </ul>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia excepturi animi nihil quia veritatis sed dignissimos exercitationem. Reiciendis, labore, laboriosam. Ea delectus nobis dolorum cum, ipsa, nemo rerum consequatur maiores.</p>
-       <div class="read-more-holder">
-         <a href="javascript:void(0)">Read More</a>
-       </div>
-     </div>
-   </div>
+  <div class="locationMapWrapper">
+    <div id="map_canvas" style="height: 100vh; width: 100%"></div>
+    <div class="location-outer-wrapper">
+      <div class="container">
+        <div class="outer-tab-wrapper clearfix">
+          <ul class="tabs-wrapper clearfix">
+            <li class="each-tab"><a class="" id="UsMap" href=".UsLocation" data-marker="usa">US</a></li>
+            <li class="each-tab active"><a class="" id="InMap" href=".InLocation" data-marker="ind">India</a></li>
+          </ul>
+        </div>
+        <div class="tab-cont-wrapper">
+          <div class="tab-each-cont UsLocation">
+            <p>Position<sup>2</sup>sup> <br />
+            2880 Lakeside Drive, STE 131<br />
+            Santa Clara, CA 95054
+            </p>
+          </div>
+          <div class="tab-each-cont IndLocation">
+            <p>Position<sup>2</sup>sup> <br />
+              No.1 BSB Business Centre,<br />
+              Krishna Reddy Colony,<br />
+              Domlur Layout, Bangalore 560071
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      <!--//--><![CDATA[// ><!--
+      function initMap() {
+          var map,
+              markers = {},
+              tabs = {},
+              usaLatLng = { lat: 37.3838119, lng: -121.9825534 },
+              indLatLng = { lat: 12.9555285, lng: 77.6378281 },
+              map = new google.maps.Map(document.getElementById('map_canvas'), { zoom: 16, disableDefaultUI: true });
+          markers['usa'] = new google.maps.Marker({ position: usaLatLng, map: map });
+          markers['ind'] = new google.maps.Marker({ position: indLatLng, map: map });
+          tabs['usa'] = document.getElementById("UsMap");
+          tabs['ind'] = document.getElementById("InMap");
+          map.panTo(markers['usa'].getPosition());
+          google.maps.event.addDomListener(tabs['usa'], 'click', (function(m, mm) {
+              return function() {
+                  m.panTo(mm.getPosition());
+              }
+          })(map, markers[tabs['usa'].getAttribute("data-marker")]));
+          google.maps.event.addDomListener(tabs['ind'], 'click', (function(m, mm) {
+              return function() {
+                  m.panTo(mm.getPosition());
+              }
+          })(map, markers[tabs['ind'].getAttribute("data-marker")]));
+      }
+      //--><!]]>
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsb5UkztmmgNXAk6zmtu0eyUJyaNIXDFw&amp;callback=initMap"></script>
   </div>
+  <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+         $("ul.tabs-wrapper .each-tab a").click(function(e) {
+           e.preventDefault();
+           var dis = $(this),
+             disHref = dis.attr("href"),
+             disPar = dis.parent("li"),
+             disTarget = $(".tab-cont-wrapper .tab-each-cont"+disHref);
+           disPar.add(disTarget).addClass("active").siblings("li,.tab-each-cont").removeClass("active");
+        });
+        $("ul.tabs-wrapper .each-tab:visible:eq(0) a").trigger("click");
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>
