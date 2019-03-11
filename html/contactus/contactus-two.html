@@ -33,18 +33,18 @@
         <div class="outer-tab-wrapper clearfix">
           <ul class="tabs-wrapper clearfix">
             <li class="each-tab"><a class="" id="UsMap" href=".UsLocation" data-marker="usa">US</a></li>
-            <li class="each-tab active"><a class="" id="InMap" href=".InLocation" data-marker="ind">India</a></li>
+            <li class="each-tab"><a class="" id="InMap" href=".InLocation" data-marker="ind">India</a></li>
           </ul>
         </div>
         <div class="tab-cont-wrapper">
           <div class="tab-each-cont UsLocation">
-            <p>Position<sup>2</sup>sup> <br />
+            <p>Position<sup>2</sup><br />s
             2880 Lakeside Drive, STE 131<br />
             Santa Clara, CA 95054
             </p>
           </div>
           <div class="tab-each-cont IndLocation">
-            <p>Position<sup>2</sup>sup> <br />
+            <p>Position<sup>2</sup> <br />
               No.1 BSB Business Centre,<br />
               Krishna Reddy Colony,<br />
               Domlur Layout, Bangalore 560071
@@ -94,6 +94,10 @@
            disPar.add(disTarget).addClass("active").siblings("li,.tab-each-cont").removeClass("active");
         });
         $("ul.tabs-wrapper .each-tab:visible:eq(0) a").trigger("click");
+        $(".external-tablink").click(function(e) {
+         e.preventDefault();
+         $("ul.tabs-wrapper .each-tab a[href='"+$(this).attr("href")+"']").trigger("click");
+      });
       });
     })(jQuery);
   </script>
