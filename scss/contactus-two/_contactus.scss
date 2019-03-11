@@ -18,11 +18,13 @@
 			    transition: all 0.3s;
 			    list-style-type: none;
 			    a {
-			    	color: $secondry-color;
+			    	color: $white;
 		        font-size: $h5-fontsize;
 		        font-family: $base-font-family;
 		        font-weight: $fontweight-regular;
 		        padding: 15px;
+		        display: block;
+		        text-decoration: none;
 			    }
 			    &.active {
 	    	    background-color: rgba(0,0,0,0.7);
