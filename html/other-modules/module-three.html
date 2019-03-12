@@ -28,7 +28,7 @@
 <body>
   <div class="container">
    <div class="filtersection"></div>
-   <div id="filterwrapper">
+   <div class="filterwrapper">
 	   	<div class="alpha-filter">
 	   		<h4>A Series</h4>
 	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
@@ -82,8 +82,8 @@
 			        "class": (charAppered.length <= 0) ? "disabled" : ""
 			      }).appendTo(filterUl);
 			    }
-			    filterUl.appendTo($("#filtersection"));
-			    $("body").on("click", "#filtersection ul li", function() {
+			    filterUl.appendTo($(".filtersection"));
+			    $("body").on("click", ".filtersection ul li", function() {
 			      var dis = $(this),
 			        disFilter = dis.attr("data-filter") || "";
 			      if (!dis.hasClass("disabled")) {
