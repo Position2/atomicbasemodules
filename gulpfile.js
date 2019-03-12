@@ -39,6 +39,7 @@ var paths = [
   ["scss/blog-four/styles.scss","css/blog-four","scss/blog-four/*.scss"],
   ["scss/floater-one/styles.scss","css/floater-one","scss/floater-one/*.scss"],
   ["scss/floater-two/styles.scss","css/floater-two","scss/floater-two/*.scss"],
+  ["scss/module-one/styles.scss","css/module-one","scss/module-one/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
