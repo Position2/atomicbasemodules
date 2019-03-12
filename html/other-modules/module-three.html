@@ -20,13 +20,84 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="../../ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<title>Atomic Module | Module Five</title>
+<title>Atomic Module | Module Three</title>
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../../css/module-three/styles.css">
+<script type="text/javascript" src="../../js/all-plugins.js"></script>
 </head>
 <body>
   <div class="container">
-   
+   <div class="filtersection"></div>
+   <div id="filterwrapper">
+	   	<div class="alpha-filter">
+	   		<h4>A Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+	   	<div class="alpha-filter">
+	   		<h4>A Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+	   	<div class="alpha-filter">
+	   		<h4>B Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+	   	<div class="alpha-filter">
+	   		<h4>B Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+	   	<div class="alpha-filter">
+	   		<h4>B Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+	   	<div class="alpha-filter">
+	   		<h4>C Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+	   	<div class="alpha-filter">
+	   		<h4>N Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+	   	<div class="alpha-filter">
+	   		<h4>Z Series</h4>
+	   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+	   	</div>
+   </div>
   </div>
+  <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+        var filterUl = $("<ul/>");
+			    $("<li/>", {
+			      "html": "ALL <span class='count_pp'>" + $(".alpha-filter").size() + "</span>",
+			      "data-filter": "*"
+			    }).appendTo(filterUl);
+			    for (var i = 65; i <= 90; i++) {
+			      var alphachar = String.fromCharCode(i),
+			        charAppered = $(".alpha-filter").filter(function() {
+			          return $(this).text().trim().charAt(0).toLowerCase() == alphachar.toLowerCase()
+			        }).get();
+			      $("<li/>", {
+			        "html": alphachar + "<span class='count_pp'>" + charAppered.length + "</span>",
+			        "data-filter": alphachar.toLowerCase(),
+			        "class": (charAppered.length <= 0) ? "disabled" : ""
+			      }).appendTo(filterUl);
+			    }
+			    filterUl.appendTo($("#filtersection"));
+			    $("body").on("click", "#filtersection ul li", function() {
+			      var dis = $(this),
+			        disFilter = dis.attr("data-filter") || "";
+			      if (!dis.hasClass("disabled")) {
+			        dis.addClass("current").siblings("li").removeClass("current");
+			        if (disFilter != "" && disFilter != "*")
+			          $(".alpha-filter").hide().filter(function() {
+			            return $(this).text().trim().charAt(0).toLowerCase() == disFilter.toLowerCase()
+			          }).show();
+			        else
+			          $(".alpha-filter").show();
+			      }
+			    });
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>

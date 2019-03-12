@@ -23,10 +23,89 @@
 <title>Atomic Module | Module Two</title>
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../../css/module-two/styles.css">
+<script type="text/javascript" src="../../js/all-plugins.js"></script>
 </head>
 <body>
   <div class="container">
-   
+   <div class="faq-expandall">
+     <ul>
+      <li data-target="closeall" class="active">CLOSE ALL</li>
+      <li data-target="expandall">EXPAND ALL</li>
+    </ul>
+   </div>
+   <div class="faq-maincontent">
+     <ul class="faq-list">
+       <li>
+         <div class="faq-wrapper">
+           <div class="faq-title active">1. Lorem ipsum dolor sit amet?</div>
+           <div class="faq-content">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repudiandae cum, voluptatibus repellendus. Doloremque optio mollitia exercitationem vitae vel placeat nostrum, excepturi, corporis qui officia, iusto quasi harum voluptas facere.</p>
+           </div>
+         </div>
+       </li>
+       <li>
+         <div class="faq-wrapper">
+           <div class="faq-title">2. Lorem ipsum dolor sit amet?</div>
+           <div class="faq-content">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repudiandae cum, voluptatibus repellendus. Doloremque optio mollitia exercitationem vitae vel placeat nostrum, excepturi, corporis qui officia, iusto quasi harum voluptas facere.</p>
+           </div>
+         </div>
+       </li>
+       <li>
+         <div class="faq-wrapper">
+           <div class="faq-title">3. Lorem ipsum dolor sit amet?</div>
+           <div class="faq-content">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repudiandae cum, voluptatibus repellendus. Doloremque optio mollitia exercitationem vitae vel placeat nostrum, excepturi, corporis qui officia, iusto quasi harum voluptas facere.</p>
+           </div>
+         </div>
+       </li>
+       <li>
+         <div class="faq-wrapper">
+           <div class="faq-title">4. Lorem ipsum dolor sit amet?</div>
+           <div class="faq-content">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repudiandae cum, voluptatibus repellendus. Doloremque optio mollitia exercitationem vitae vel placeat nostrum, excepturi, corporis qui officia, iusto quasi harum voluptas facere.</p>
+           </div>
+         </div>
+       </li>
+       <li>
+         <div class="faq-wrapper">
+           <div class="faq-title">5. Lorem ipsum dolor sit amet?</div>
+           <div class="faq-content">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repudiandae cum, voluptatibus repellendus. Doloremque optio mollitia exercitationem vitae vel placeat nostrum, excepturi, corporis qui officia, iusto quasi harum voluptas facere.</p>
+           </div>
+         </div>
+       </li>
+     </ul>
+   </div>
   </div>
+   <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+         $(".faq-maincontent .faq-list .faq-wrapper .faq-title").click(function() {
+          var dis = $(this),
+            disNext = dis.next(".faq-content"),
+            disSibs = dis.parents("li").siblings();
+          dis.toggleClass("active");
+          disSibs.find(".faq-title").removeClass("active");
+          disNext.slideToggle();
+          disSibs.find(".faq-content").slideUp();
+        });
+        $(".faq-expandall").find("ul li").click(function() {
+          var dis = $(this),
+            disTar = dis.attr("data-target"),
+            allTitle = $(".faq-maincontent .faq-list .faq-wrapper .faq-title"),
+            allContent = $(".faq-maincontent .faq-list .faq-wrapper .faq-content");
+          dis.addClass("active").siblings().removeClass("active");
+          if (disTar == "expandall") {
+            allTitle.addClass("active");
+            allContent.slideDown();
+          } else {
+            allTitle.removeClass("active");
+            allContent.slideUp();
+          }
+        });
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>
