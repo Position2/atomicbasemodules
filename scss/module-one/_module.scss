@@ -5,6 +5,13 @@
     overflow: hidden;
     text-align: center;
     transition: all 0.2s ease-in;
+    @media (min-width: 0) and (max-width: 767.98px) {
+      width: 320px;
+      margin: 0 auto 30px;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      margin-bottom: 30px;
+    }
     &.one {
       background-image: linear-gradient($primary-color-light 0%,$primary-color-light 40%,$primary-color 100%);
       a {
@@ -128,6 +135,18 @@
       padding: 10px;
       top: 18px;
       left: -102px;
+      @media (min-width: 0) and (max-width: 767.98px) {
+        top: 39px;
+        left: -121px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        top: 36px;
+        left: -134px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        top: 19px;
+        left: -79px;
+      }
     }
     .hover-text-wrap {
       .recommended {
