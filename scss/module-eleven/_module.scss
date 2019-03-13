@@ -1,0 +1,165 @@
+.sectionwrap {
+	position: relative;
+	.benefits {
+		background: url('../../images/module-eleven/bg-image.jpg') no-repeat center center / cover;
+		padding: 45px 0;
+		.description {
+			position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    h2 {
+	    	color: $white;
+				font-size: $h4-fontsize;
+	      font-family: $base-font-family;
+	      font-weight: $fontweight-regular;
+	      margin: 0 0 30px;
+	    }
+	    p {
+	    	color: $white;
+				font-size: $p-fontsize;
+	      font-family: $base-font-family;
+	      font-weight: $fontweight-regular;
+	      margin: 0;
+	    }
+		}
+		.benefits-wrapper {
+			.holder {
+				float: left;
+				width: calc(100%/3);
+				padding-bottom: 30px;
+	      text-align: center;
+	      cursor: pointer;
+	      .icon {
+	      	border: 1px solid $white;
+			    border-radius: 50%;
+			    height: 100px;
+			    margin: 0 auto 15px;
+			    position: relative;
+			    width: 100px;
+			    transition: all 0.5s ease 0s;
+			    i {
+			    	color: $white;
+				    font-size: $h1-fontsize + 10px;
+				    left: 0;
+				    position: absolute;
+				    text-align: center;
+				    top: 50%;
+				    transform: translateY(-50%);
+				    width: 100%;
+				    transition: all 0.5s ease 0s;
+			    }
+	      }
+	      .text {
+	      	h4 {
+	      		color: $white;
+						font-size: $p-fontsize;
+			      font-family: $base-font-family;
+			      font-weight: $fontweight-regular;
+	          margin: 0;
+    				text-align: center;
+	      	}
+	      }
+			}
+		}
+	}
+	.allblocks {
+		position: absolute;
+    top: 0;
+    width: 100%;
+    .each-block {
+	    height: 460px;
+	    overflow: hidden;
+	    display: none;
+	    .rhssection {
+	    	float: left;
+		    height: 460px;
+		    position: relative;
+		    width: 50%;
+		    background-color: $gray-one;
+		    .icon-text {
+		    	position: absolute;
+			    text-align: center;
+			    top: 50%;
+			    transform: translateY(-50%);
+			    width: 100%;
+			    i {
+			    	color: $white;
+			    	font-size: $h1-fontsize + 50px;
+			    	font-family: $base-font-family;
+			      font-weight: $fontweight-regular;
+	          padding-bottom: 20px;
+			    }
+			    h2 {
+			    	color: $white;
+						font-size: $h4-fontsize;
+			      font-family: $base-font-family;
+			      font-weight: $fontweight-regular;
+	          margin: 0;
+			    }
+		    }
+	    }
+	    .lhssection {
+	    	background: $grey-three;
+		    float: left;
+		    position: relative;
+		    height: 460px;
+		    width: 50%;
+		    .holder {
+    	    position: absolute;
+			    text-align: center;
+			    top: 50%;
+			    transform: translateY(-50%);
+			    width: 100%;
+			    padding: 0 30px;
+			    h3 {
+			    	color: $tertiary-color;
+						font-size: $h4-fontsize;
+			      font-family: $base-font-family;
+			      font-weight: $fontweight-regular;
+	          margin: 0 0 20px;
+			    }
+			    ul {
+			    	margin: 0;
+			    	padding: 0 0 0 20px;
+			    	li {
+			    		color: $tertiary-color;
+							font-size: $p-fontsize;
+				      font-family: $base-font-family;
+				      font-weight: $fontweight-regular;
+		          margin: 0;
+    					padding: 0 0 10px 0;
+			    	}
+			    }
+			    .keyfeatures-list {
+			    	border-right: 1px solid #b5b6ad;
+				    display: inline-block;
+				    margin-right: 30px;
+				    min-height: 250px;
+				    padding-top: 30px;
+				    text-align: left;
+				    width: 48%;
+			    }
+			    .benefits-list {
+	    	    display: inline-block;
+					  min-height: 250px;
+					  padding-top: 30px;
+					  text-align: left;
+					  width: 48%;
+			    }
+		    }
+	    }
+    }
+	}
+	.closebtn {
+    background: #b9bab4;
+    padding: 10px 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    cursor: pointer;
+    i {
+    	color: #484942;
+    }
+  }
+}
