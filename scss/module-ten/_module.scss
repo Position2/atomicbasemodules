@@ -1,0 +1,38 @@
+.two-col-icon-text {
+	padding-top: 30px;
+	.each-block	{
+    margin-bottom: 50px;
+    .icon {
+    	display: inline-block;
+	    width: 90px;
+	    vertical-align: middle;
+	    margin-right: 30px;
+	    @media (min-width: 0) and (max-width: 1198.98px) {
+		  	margin-right: 0;
+		  	margin-bottom: 20px;
+		  }
+    	i {
+				font-size: $h1-fontsize + 40;
+    		color: $primary-utility-one;
+    		&.fa-telegram {
+    			color: $primary-color;
+    		}
+    	}
+    }
+    .content {
+	    display: inline-block;
+		  width: 73%;
+		  vertical-align: middle;
+		  @media (min-width: 0) and (max-width: 1198.98px) {
+		  	width: 100%;
+		  }
+		  p {
+		  	color: $tertiary-color;
+				font-size: $h5-fontsize;
+				font-family: $base-font-family;
+				font-weight: $fontweight-thin;
+				margin: 0;
+		  }
+    }
+	}
+}
