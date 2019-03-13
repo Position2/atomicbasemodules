@@ -1,1 +1,102 @@
-    
+.block-section {
+  padding-top: 30px;
+  .each-block {
+    a {
+      text-decoration: none;
+    }
+    h2 {
+      font-size: $mobile-h1-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-thin;
+      margin: 0 0 10px;
+      height: 80px;
+      a {
+        color: $secondry-color;
+      }
+    }
+    .author-section {
+      p {
+        color: $tertiary-color;
+        font-size: $h6-fontsize;
+        font-family: $base-font-family;
+        font-weight: $fontweight-thin;
+        margin: 0 0 5px;
+      }
+    }
+    .tag-section {
+      margin-bottom: 5px;
+      p {
+        display: inline-block;
+        color: $tertiary-color;
+        font-size: $h6-fontsize;
+        font-family: $base-font-family;
+        font-weight: $fontweight-thin;
+        margin: 0 0 5px 0;
+      }
+      a {
+        display: inline-block;
+        color: $tertiary-color;
+        font-size: $h6-fontsize;
+        font-family: $base-font-family;
+        font-weight: $fontweight-bold;
+      }
+    }
+    .each-block-image {
+      height: 240px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .blog-posted-date {
+        background: $primary-utility-one;
+        text-align: center;
+        position: absolute;
+        padding: 5px 20px;
+        right: 0;
+        bottom: 0;
+        p {
+          color: $white;
+          font-size: $h5-fontsize;
+          font-family: $base-font-family;
+          font-weight: $fontweight-thin;
+          margin-bottom: 0;
+          strong {
+            color: $white;
+            font-size: $h3-fontsize;
+            font-family: $base-font-family;
+            font-weight: $fontweight-thin;
+          }
+        }
+      }
+    }
+    .blog-content {
+      color: $tertiary-color;
+      font-size: $p-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-thin;
+      margin-bottom: 30px;
+    }
+    .read-more {
+      a {
+        color: $tertiary-color;
+        font-size: $h5-fontsize;
+        font-family: $base-font-family;
+        font-weight: $fontweight-bold;
+        transition: all 0.5s;
+        &:hover {
+          color: $primary-utility-one;
+          transition: all 0.5s;
+        }
+        i {
+          color: $primary-utility-one;
+          padding-left: 10px;
+          font-size: $mobile-h1-fontsize - 6;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
