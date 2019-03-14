@@ -11,6 +11,7 @@ var paths = [
   ["scss/slider-three/styles.scss","css/slider-three","scss/slider-three/*.scss"],
   ["scss/slider-four/styles.scss","css/slider-four","scss/slider-four/*.scss"],
   ["scss/slider-five/styles.scss","css/slider-five","scss/slider-five/*.scss"],
+  ["scss/slider-six/styles.scss","css/slider-six","scss/slider-six/*.scss"],
   ["scss/resource-block-one/styles.scss","css/resource-block-one","scss/resource-block-one/*.scss"],
   ["scss/resource-block-two/styles.scss","css/resource-block-two","scss/resource-block-two/*.scss"],
   ["scss/resource-block-three/styles.scss","css/resource-block-three","scss/resource-block-three/*.scss"],
