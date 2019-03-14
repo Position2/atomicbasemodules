@@ -67,15 +67,15 @@
     top: 0;
     width: 100%;
     .each-block {
-	    height: 460px;
+	    height: 464px;
 	    overflow: hidden;
 	    display: none;
 	    .rhssection {
 	    	float: left;
-		    height: 460px;
+		    height: 464px;
 		    position: relative;
 		    width: 50%;
-		    background-color: $gray-one;
+		    background-color: $dark-grey-one;
 		    .icon-text {
 		    	position: absolute;
 			    text-align: center;
@@ -85,8 +85,6 @@
 			    i {
 			    	color: $white;
 			    	font-size: $h1-fontsize + 50px;
-			    	font-family: $base-font-family;
-			      font-weight: $fontweight-regular;
 	          padding-bottom: 20px;
 			    }
 			    h2 {
@@ -102,7 +100,7 @@
 	    	background: $grey-three;
 		    float: left;
 		    position: relative;
-		    height: 460px;
+		    height: 464px;
 		    width: 50%;
 		    .holder {
     	    position: absolute;
@@ -113,9 +111,9 @@
 			    padding: 0 30px;
 			    h3 {
 			    	color: $tertiary-color;
-						font-size: $h4-fontsize;
+						font-size: $h5-fontsize + 8;
 			      font-family: $base-font-family;
-			      font-weight: $fontweight-regular;
+			      font-weight: $fontweight-bold;
 	          margin: 0 0 20px;
 			    }
 			    ul {
@@ -131,7 +129,7 @@
 			    	}
 			    }
 			    .keyfeatures-list {
-			    	border-right: 1px solid #b5b6ad;
+			    	border-right: 1px solid $gray-two;
 				    display: inline-block;
 				    margin-right: 30px;
 				    min-height: 250px;
