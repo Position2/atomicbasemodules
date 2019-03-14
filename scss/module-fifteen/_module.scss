@@ -1,0 +1,89 @@
+.prod-wrap {
+	background: $primary-color-light;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.prodct-location {
+		.each-box {
+			float: left;
+			width: calc(100%/3 - 10px);
+			margin: 0 10px 10px 0;
+			padding: 20px;
+			text-align: center;
+			background: $white;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			@media (min-width: 0) and (max-width: 767.98px) {
+				float: none;
+				width: calc(100%);
+				margin: 0 0 10px 0;
+			}
+			@media (min-width: 768px) and (max-width: 991.98px) {
+				width: calc(100%/2 - 10px);
+				margin: 0 10px 10px 0;
+				&:nth-child(3n) {
+					margin-right: 10px;
+				}
+				&:nth-child(2n) {
+					margin-right: 10px;
+				}
+			}
+			h4 {
+				color: $primary-color;
+				font-family: $base-font-family;
+				font-size: $h5-fontsize + 4;
+				font-weight: $fontweight-regular;
+				margin-bottom: 10px;
+				min-height: 74px;
+			}
+			img {
+		    border-bottom: 2px solid $dark-grey-one;
+		    padding-bottom: 12px;
+		    margin-bottom: 20px;
+			}
+			.details {
+		    padding-bottom: 18px;
+	    	min-height: 79px;
+	    	ul {
+	    		margin: 0;
+	    		padding: 0;
+	    		li {
+	    			margin: 0;
+	    			padding: 0;
+	    			list-style-type: none;
+	    			color: $primary-color;
+						font-family: $base-font-family;
+						font-size: $h5-fontsize;
+						font-weight: $fontweight-regular;
+						display: inline-block;
+	    			&:first-child {
+							border-right: 2px solid $dark-grey-one;
+		    			padding-right: 18px;
+		    			margin-right: 15px;
+	    			}
+	    		}
+	    	}
+			}
+			p {
+				color: $secondry-color;
+				font-family: $base-font-family;
+				font-size: $h5-fontsize;
+				font-weight: $fontweight-regular;
+				min-height: 80px;
+				margin-bottom: 30px;
+			}
+			a {
+				display: inline-block;
+				text-decoration: none;
+				padding: 10px 20px;
+				color: $white;
+				background: $primary-color;
+				font-weight: $fontweight-regular;
+				font-size: $h5-fontsize;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}
