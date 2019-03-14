@@ -1,0 +1,101 @@
+.featured-blog {
+	padding-top: 30px;
+	h2 {
+		color: $secondry-color;
+    font-size: $h4-fontsize;
+    font-family: $base-font-family;
+    font-weight: $fontweight-regular;
+    margin-bottom: 30px;
+	}
+	ul.vertical-slider {
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			.each-blog {
+				.img-holder {
+					width: 200px;
+					float: left;
+					padding-right: 20px;
+					@media (min-width: 0) and (max-width: 767.98px) {
+						padding-right: 0;
+						padding-bottom: 30px;
+					}
+					a {
+						display: block;
+						text-decoration: none;
+					}
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+				.content {
+			    float: left;
+    	    width: calc(100% - 200px);
+    	    @media (min-width: 0) and (max-width: 767.98px) {
+    	    	width: 100%;
+    	    }
+    	    a {
+    	    	display: inline-block;
+    	    	text-decoration-color: $primary-color;
+    	    	color: $secondry-color;
+    	    	h3 {
+							color: $secondry-color;
+					    font-size: $p-fontsize + 6;
+					    font-family: $base-font-family;
+					    font-weight: $fontweight-regular;
+			        margin: 0 0 12px;
+	            line-height: 1.3;
+    	    	}
+    	    }
+  	    	p {
+  	    		color: $dark-grey-one;
+				    font-size: $h5-fontsize - 2;
+				    font-family: $base-font-family;
+				    font-weight: $fontweight-regular;
+		        margin: 0;
+  	    	}
+				}
+			}
+		}
+	}
+	.bx-wrapper {
+		.bx-controls {
+			bottom: -40px;
+	    position: absolute;
+	    right: 0;
+	    @media (min-width: 0) and (max-width: 767.98px) {
+	    	bottom: -80px;
+	    	right: 20px;
+	    }
+	    a {
+	    	position: absolute;
+		    top: 50%;
+		    margin-top: -16px;
+		    outline: 0;
+		    width: 32px;
+		    height: 32px;
+		    text-indent: -9999px;
+		    z-index: 9999;
+		    &.bx-prev {
+		    	width: 22px;
+			    height: 22px;
+			    background: url('../../images/module-twelve/latestpost-slider-arrow.png') no-repeat left center;
+			    position: absolute;
+			    left: -58px;
+			    z-index: 999;
+		    }
+		    &.bx-next {
+		    	width: 22px;
+			    height: 22px;
+			    background: url('../../images/module-twelve/latestpost-slider-arrow.png') no-repeat right center;
+			    right: 0px;
+			    z-index: 999;
+		    }
+	    }
+		}
+	}
+}

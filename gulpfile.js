@@ -52,6 +52,7 @@ var paths = [
   ["scss/module-nine/styles.scss","css/module-nine","scss/module-nine/*.scss"],
   ["scss/module-ten/styles.scss","css/module-ten","scss/module-ten/*.scss"],
   ["scss/module-eleven/styles.scss","css/module-eleven","scss/module-eleven/*.scss"],
+  ["scss/module-twelve/styles.scss","css/module-twelve","scss/module-twelve/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
