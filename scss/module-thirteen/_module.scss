@@ -17,11 +17,17 @@
     height: 630px;
     width: 100%;
     z-index: 1;
+    @media (min-width: 0) and (max-width: 767.98px) {
+    	display: none;
+    }
 	}
 	.slide-wrapper {
     position: relative;
     height: 540px;
     overflow: hidden;
+    @media (min-width: 0) and (max-width: 767.98px) {
+    	height: auto;
+    }
     &::before {
     	content: url('../../images/module-thirteen/dotted-lines.svg');
     	height: 1px;
@@ -29,15 +35,40 @@
     	top: 35px;
     	position: absolute;
     	width: 100%;
+    	@media (min-width: 0) and (max-width: 767.98px) {
+    		display: none;
+    	}
+    }
+     &::after {
+      content: url('../../images/module-thirteen/dotted-lines-vertical.svg');
+      height: 100%;
+      left: 4px;
+      top: 35px;
+      position: absolute;
+      width: 2px;
+      z-index: -1;
+      display: none;
+      @media (min-width: 0) and (max-width: 767.98px) {
+        display: block;
+      }
     }
     .year-blocks-row {
 	    position: relative;
 	    width: 1500px;
 	    height: 530px;
+	    @media (min-width: 0) and (max-width: 767.98px) {
+	    	overflow: hidden;
+	    	height: auto;
+	    	width: 100%;
+	    }
 	    .year-block {
 	    	display: inline-block;
 		    vertical-align: top;
 		    margin-right: 45px;
+		    @media (min-width: 0) and (max-width: 767.98px) {
+		    	margin: 0 0 30px 0;
+		    	width: 100%;
+		    }
 		    .year-span {
     	    color: $primary-color;
 				  font-size: $h4-fontsize;
@@ -46,6 +77,10 @@
 				  line-height: 1;
 				  display: inline-block;
 				  margin-bottom: 10px;
+				  @media (min-width: 0) and (max-width: 767.98px) {
+				  	font-size: $p-fontsize + 6;
+				  	margin-left: 15px;
+				  }
 		    }
 		    .the-dots {
     	    height: 10px;
@@ -53,6 +88,9 @@
 				  border-radius: 50%;
 				  background-color: $primary-color;
 				  margin-bottom: 40px;
+				  @media (min-width: 0) and (max-width: 767.98px) {
+				  	margin-bottom: -10px;
+				  }
 		    }
 		    .the-brief {
     	    background-color: $primary-color;
@@ -61,6 +99,10 @@
 			    position: relative;
 			    width: 180px;
 			    margin-left: 5px;
+			    @media (min-width: 0) and (max-width: 767.98px) {
+			    	width: 90%;
+			    	float: right;
+			    }
 			    p {
 			    	color: $white;
 					  font-size: $h5-fontsize;
@@ -69,6 +111,7 @@
 			      margin: 0 0 15px;
 			    }
 			    &::before {
+			    	content: "";
 	    	    border-color: transparent transparent $primary-color $primary-color;
 				    border-style: solid;
 				    border-width: 10px;
@@ -77,7 +120,14 @@
 				    position: absolute;
 				    top: -20px;
 				    left: 0;
-				    content: "";
+				    @media (min-width: 0) and (max-width: 767.98px) {
+				    	border-color: $primary-color $primary-color transparent transparent;
+					    border-width: 7px;
+					    height: 7px;
+					    width: 7px;
+					    left: -14px;
+					    top: 0;					
+				    }
 			    }
 		    }
 		    &:nth-child(2) {
@@ -91,6 +141,9 @@
 		    		background-color: $primary-utility-one;
 		    		&::before {
 		    			border-color: transparent transparent $primary-utility-one $primary-utility-one;
+		    			@media (min-width: 0) and (max-width: 767.98px) {
+		    				border-color: $primary-utility-one $primary-utility-one transparent transparent;
+		    			}
 		    		}
 		    	}
 		    }
@@ -105,6 +158,9 @@
 		    		background-color: $primary-utility-two;
 		    		&::before {
 		    			border-color: transparent transparent $primary-utility-two $primary-utility-two;
+		    			@media (min-width: 0) and (max-width: 767.98px) {
+		    				border-color: $primary-utility-two $primary-utility-two transparent transparent;
+		    			}
 		    		}
 		    	}
 		    }
@@ -119,6 +175,9 @@
 		    		background-color: $red;
 		    		&::before {
 		    			border-color: transparent transparent $red $red;
+		    			@media (min-width: 0) and (max-width: 767.98px) {
+		    				border-color: $red $red transparent transparent;
+		    			}
 		    		}
 		    	}
 		    }
@@ -133,6 +192,9 @@
 		    		background-color: $orange;
 		    		&::before {
 		    			border-color: transparent transparent $orange $orange;
+		    			@media (min-width: 0) and (max-width: 767.98px) {
+		    				border-color: $orange $orange transparent transparent;
+		    			}
 		    		}
 		    	}
 		    }
@@ -147,6 +209,9 @@
 		    		background-color: $primary-color-light;
 		    		&::before {
 		    			border-color: transparent transparent $primary-color-light $primary-color-light;
+		    			@media (min-width: 0) and (max-width: 767.98px) {
+		    				border-color: $primary-color-light $primary-color-light transparent transparent;
+		    			}
 		    		}
 		    	}
 		    }
@@ -185,6 +250,9 @@
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 450px;
+    @media (min-width: 0) and (max-width: 767.98px) {
+    	display: none;
+    }
     span {
     	color: $tertiary-color;
 	    font-size: 14px;
@@ -193,6 +261,9 @@
 	    &:first-child {
   	    left: -46px;
     		padding-right: 15px;
+    		@media (min-width: 0) and (max-width: 767.98px) {
+    			left: -36px;
+    		}
     		&::before {
 					background-color: #666;
 			    border-radius: 50%;
