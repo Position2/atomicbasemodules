@@ -6,6 +6,7 @@
     }
     a {
       text-decoration: none;
+      display: block;
     }
     h2 {
       font-size: $mobile-h1-fontsize;
@@ -53,7 +54,7 @@
       position: relative;
       margin-bottom: 30px;
       @media (min-width: 0) and (max-width: 767.98px) {
-        height: 200px;
+        height: 188px;
       }
       img {
         width: 100%;

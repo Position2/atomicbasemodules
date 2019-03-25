@@ -52,6 +52,9 @@
     	height: 50px;
     	width: 50px;
     }
+    &:focus {
+      outline: 0;
+    }
   }
   &:hover {
   	.social-wrap {

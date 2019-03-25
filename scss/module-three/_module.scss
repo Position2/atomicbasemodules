@@ -42,6 +42,13 @@
 				.count_pp {
 					display: inline;
 				}
+				@media (min-width: 0) and (max-width: 1199.98px) {
+					display: none;
+				}
+			}
+			&.disabled {
+				color: #cccccc;
+    		cursor: default;
 			}
 		}
 	}
