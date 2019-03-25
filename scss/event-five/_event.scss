@@ -59,7 +59,7 @@
         .social-wrap {
           display: none;
           @media (min-width: 0) and (max-width: 1199.98px) {
-            display: block;
+            display: inline-block;
           }
           a {
             margin-right: 5px;
