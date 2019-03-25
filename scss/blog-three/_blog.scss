@@ -6,6 +6,7 @@
     height: auto;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 		img {
 	    width: 100%;
 	    height: auto;
@@ -123,6 +124,10 @@
 		margin-right: 30px;
 		margin-bottom: 30px;
 		position: relative;
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			max-width: calc(31%);
+			-ms-flex: 1 0 calc(31% - 30px);
+		}
 			@media (min-width: 0) and (max-width: 767.98px) {
 	    	max-width: 100%;
 	    	flex: 1 0 100%;;
