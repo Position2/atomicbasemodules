@@ -16,6 +16,10 @@
       border-right: 1px solid $secondry-color;
 	    line-height: 1;
 	    position: relative;
+	    @media (min-width: 0) and (max-width: 767.98px) {
+	    	padding: 0 18px;
+	    	font-size: $h6-fontsize;
+	    }
 	    a {
 	    	color: $secondry-color;
 	    	text-decoration: none;
@@ -50,9 +54,13 @@
 	}
 }
 .isotope-wrapper {
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		width: 550px;
+		margin: 0 auto;
+	}
 	.eachblock {
     background-color: $white;
-    border: 1px solid #dddddd;
+    border: 1px solid $grey-four;
     cursor: pointer;
     float: left;
     height: 145px;
@@ -60,16 +68,31 @@
     padding: 15px;
     width: 270px;
     cursor: pointer;
+    @media (min-width: 0) and (max-width: 767.98px) {
+	    height: 130px;
+	    margin-bottom: 10px;
+	    padding: 15px;
+	    width: 100%;
+    }
     .default-info {
     	float: left;
 	    margin: 0;
 	    overflow: hidden;
 	    padding: 0;
 	    position: relative;
+	    @media (min-width: 0) and (max-width: 767.98px) {
+	    	float: none;
+	    }
 	    .port-logo-image {
+	    	@media (min-width: 0) and (max-width: 767.98px) { 
+	    		text-align: center;
+	    	}
 	    	img {
     			width: 100%;
 	    		height: auto;
+	    		@media (min-width: 0) and (max-width: 767.98px) { 
+	    			width: 200px;
+	    		}
 	    	}
 	    }
     }
@@ -81,6 +104,9 @@
 		    max-height: 150px;
 		    overflow-y: auto;
 		    padding-top: 15px;
+		    @media (min-width: 0) and (max-width: 767.98px) { 
+		    	max-height: 200px;
+		    }
 		    p {
 		    	color: $secondry-color;
 			    font-size: $p-fontsize;
@@ -104,6 +130,10 @@
     &.active {
 	    height: 300px;
     	width: 550px;
+    	@media (min-width: 0) and (max-width: 767.98px) {
+    		height: auto;
+    		width: 100%;
+    	}
     	.additional-info {
     		display: block;
 		    float: left;
