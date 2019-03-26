@@ -1,0 +1,118 @@
+.isotope-menu {
+	padding: 50px 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		li {
+			margin: 0;
+			padding: 0 30px;
+			list-style-type: none;
+			display: inline-block;
+			color: $secondry-color;
+	    font-size: $p-fontsize + 6;
+      font-family: $base-font-family;
+      font-weight: $fontweight-regular;
+      border-right: 1px solid $secondry-color;
+	    line-height: 1;
+	    position: relative;
+	    a {
+	    	color: $secondry-color;
+	    	text-decoration: none;
+	    }
+	    &:last-child {
+	    	padding-right: 0;
+	    	margin-right: 0;
+	    	border-right: 0;
+	    }
+	    span.menu-hover {
+	    	background-color: $primary-utility-two;
+		    display: block;
+		    height: 2px;
+		    left: 0;
+		    position: absolute;
+		    top: 35px;
+		    width: 0;
+		    -webkit-transition: all 0.4s ease 0s;
+		    -moz-transition: all 0.4s ease 0s;
+		    transition: all 0.4s ease 0s;
+	    }
+	    &.active {
+				span.menu-hover {
+					width: 100%;
+				}
+				font-weight: $fontweight-bold;
+				a {
+					color: $primary-utility-two;
+				}
+	    }
+		}
+	}
+}
+.isotope-wrapper {
+	.eachblock {
+    background-color: $white;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    float: left;
+    height: 145px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 270px;
+    .default-info {
+    	float: left;
+	    margin: 0;
+	    overflow: hidden;
+	    padding: 0;
+	    position: relative;
+	    .port-logo-image {
+	    	img {
+    			width: 100%;
+	    		height: auto;
+	    	}
+	    }
+    }
+    .additional-info {
+	    display: none;
+    	padding: 0;
+    	.additional-info-content {
+    		display: inline-block;
+		    max-height: 150px;
+		    overflow-y: auto;
+		    padding-top: 15px;
+		    p {
+		    	color: $secondry-color;
+			    font-size: $p-fontsize;
+	        font-family: $base-font-family;
+	        font-weight: $fontweight-regular;
+			    margin: 0 0 10px;
+		    }
+    	}
+    }
+    .close {
+    	float: right;
+	    font-size: 1.5rem;
+	    font-weight: 700;
+	    line-height: 1;
+	    color: #000;
+	    text-shadow: 0 1px 0 #fff;
+	    opacity: .2;
+	    font-weight: $fontweight-thin;
+    }
+    &.active {
+	    height: 300px;
+    	width: 550px;
+    	.additional-info {
+    		display: block;
+		    float: left;
+		    min-width: 100%;
+    	}
+    	.close {
+    		font-size: 20px;
+		    position: absolute;
+		    right: 10px;
+		    top: 10px;
+    	}
+    }
+	}
+}

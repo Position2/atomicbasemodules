@@ -7,6 +7,10 @@
 		margin: 0 2px 2px 0;
 		position: relative;
     overflow: hidden;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			max-width: calc(19%);
+			-ms-flex: 1 0 calc(19% - 30px);
+		}
 		@media (min-width: 0) and (max-width: 479.98px) {
 			max-width: calc(100%/2);
 			flex: 1 0 calc(100%/2 - 2px);
