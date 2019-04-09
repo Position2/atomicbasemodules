@@ -143,10 +143,52 @@
     }
   }
 }
-.mobileview {
+body.mobileview {
   .blog-share {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    z-index: 99;
+    @media (min-width: 0) and (max-width: 767.98px) {
+      bottom: 10px;
+      right: 20px;
+    }
+    i.fa-share-alt {
+      color: $white;
+      font-size: $mobile-h1-fontsize - 4;
+      cursor: pointer;
+      padding-right: 8px;
+    }
     .social-wrap {
+      width: 98px;
+      position: absolute;
+      bottom: 0;
+      right: 22px;
       display: inline-block;
+      a {
+        margin-right: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        &:nth-child(1) {
+          background: $fb-color;
+          padding: 4px 13px;
+        }
+        &:nth-child(2) {
+          background: $twitter-color;
+          padding: 3px 9px;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      i.fa-facebook {
+        color: $white;
+        font-size: $h6-fontsize - 1;
+      }
+      i.fa-twitter {
+        color: $white;
+        font-size: $p-fontsize;
+      }
     }
     &:hover {
       .social-wrap {
