@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../../css/blog-one/styles.css">
+<script type="text/javascript" src="../../js/all-plugins.js"></script>
 </head>
 <body>
   <div class="container">
@@ -53,5 +54,14 @@
       </div>
     </div>
   </div>
+   <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          $("body").addClass("mobileview");
+        }
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>
