@@ -82,3 +82,16 @@
     }
 	}
 }
+body.mobileview {
+  .events-listing {
+    .each-listing {
+      .venue-descp {
+        .event-share {
+          .social-wrap {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
