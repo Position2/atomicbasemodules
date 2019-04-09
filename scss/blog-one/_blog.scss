@@ -144,7 +144,14 @@
   }
 }
 .mobileview {
-  @media (min-width: 0) and (max-width: 1199.98px) {
-    display: inline-block;
+  .blog-share {
+    .social-wrap {
+      display: inline-block;
+    }
+    &:hover {
+      .social-wrap {
+        display: inline-block;
+      }
+    }
   }
 }
