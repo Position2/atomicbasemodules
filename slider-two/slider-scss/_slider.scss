@@ -165,6 +165,7 @@
 			    height: 5px;
 			    left: 0;
 			    transition: all 0.2s;
+			    top: auto;
 			    @media (min-width: 0) and (max-width: 1199.98px) {
 			    	content: none;
 			    }
@@ -177,6 +178,7 @@
 			    right: -1px;
 			    top: 10px;
 			    width: 1px;
+			    left: auto;
 			    @media (min-width: 0) and (max-width: 1199.98px) {
 			    	content: none;
 			    }
