@@ -1,0 +1,101 @@
+.video-slider {
+  position: relative;
+  overflow: hidden;
+  .video-block {
+  	overflow: hidden;
+    font-size: 0;
+    line-height: 1;
+    height: 75vh;
+    @media (min-width: 0) and (max-width: 1199.98px) {
+    	height: 60vh;
+    }
+    &::before {
+    	background-color: rgba(0,0,0,0.3);
+	    content: '';
+	    left: 0;
+	    height: 75vh;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+    }
+    video.video {
+			width: 100%;
+			display: block;
+			@media (min-width: 0) and (max-width: 1199.98px) {
+				display: none;
+			}
+    }
+  }
+  picture {
+  	display: none;
+  	width: 100%;
+  	img {
+  		width: 100%;
+  		height: auto;
+  	}
+  	@media (min-width: 0) and (max-width: 1199.98px) {
+			display: block;
+		}
+  }
+  .banner-text {
+  	position: absolute;
+    text-align: center;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+  	h1 {
+			color: $white;
+			font-size: $h1-fontsize -10px;
+			font-family: $base-font-family;
+			font-weight: $fontweight-regular;
+			line-height: 1;
+			margin: 0 0 15px;
+			@media (min-width: 1680px)  {
+				font-size: $h1-fontsize + 10px; 
+			}
+			@media (min-width: 0) and (max-width: 767.98px) {
+				font-size: $mobile-h1-fontsize;
+			}
+			@media (min-width: 768px) and (max-width: 991.98px) {
+				font-size: $h4-fontsize;
+			}
+			@media (min-width: 992px) and (max-width: 1199.98px) {
+				font-size: $h4-fontsize;
+			}
+			@media (min-width: 1200px) and (max-width: 1365.98px) {
+	      font-size: $mobile-h1-fontsize;
+	  	}
+		}
+		p {
+			color: $white;
+			font-size: $p-fontsize;
+			font-family: $base-font-family;
+			font-weight: $fontweight-regular;
+			line-height: 1.6;
+			margin: 0 0 30px;
+			@media (min-width: 1680px)  {
+				font-size: $p-fontsize + 2px;
+			}
+			@media (min-width: 0) and (max-width: 767.98px) {
+				font-size: $h6-fontsize;
+			}
+			@media (min-width: 992px) and (max-width: 1199.98px) {
+				margin-bottom: 20px;
+			}
+		}
+  }
+}
+.mobile-device {
+	.video-slider {
+		.video-block {
+      video.video {
+				display: none;
+			}
+		}
+		picture {
+			display: block;
+		}
+	}
+}
