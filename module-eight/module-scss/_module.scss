@@ -1,0 +1,56 @@
+.about-company {
+	display: flex;
+	flex-wrap: wrap;
+	.each-section {
+		max-width: calc(100%/3);
+		flex: 1 0 calc(100%/3);
+		position: relative;
+		height: 400px;
+		text-align: center;
+		@media (min-width: 0) and (max-width: 1199.98px) {
+			max-width: 100%;
+			flex: 1 0 calc(100%);
+			position: relative;
+			height: 350px;
+		}
+		&:nth-child(1) {
+			background: url('../images/image-one.jpg') no-repeat center center / cover;
+		}
+		&:nth-child(2) {
+			background: url('../images/image-two.jpg') no-repeat center center / cover;
+		}
+		&:nth-child(3) {
+			background: url('../images/image-one.jpg') no-repeat center center / cover;
+		}
+		.content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 80%;
+			h1 {
+				color: $white;
+				font-size: $h3-fontsize;
+	      font-family: $base-font-family;
+	      font-weight: $fontweight-bold;
+	      text-transform: uppercase;
+	      line-height: 1.2;
+	      margin: 0 0 20px;
+	      @media (min-width: 0) and (max-width: 767.98px) {
+	      	font-size: $mobile-h1-fontsize;
+	      }
+	      @media (min-width: 768px) and (max-width: 1199.98px) {
+	      	font-size: $h4-fontsize;
+	      }
+			}
+			p {
+				color: $white;
+				font-size: $p-fontsize;
+	      font-family: $base-font-family;
+	      font-weight: $fontweight-bold;
+	      line-height: 1.4;
+	      margin: 0;
+			}
+		}
+	}
+}

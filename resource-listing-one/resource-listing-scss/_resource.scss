@@ -1,0 +1,171 @@
+.resource-title {
+	margin: 30px 0 30px;
+	h1 {
+		color: $primary-color;
+		font-size: $h1-fontsize -10;
+		font-family: $base-font-family;
+		font-weight: $fontweight-regular;
+		line-height: 1;
+		margin: 0;
+		@media (min-width: 0) and (max-width: 767.98px) {
+			font-size: $mobile-h1-fontsize;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			font-size: $h4-fontsize;
+		}
+		@media (min-width: 992px) and (max-width: 1199.98px) {
+			font-size: $h4-fontsize;
+		}
+		@media (min-width: 1200px) and (max-width: 1365.98px) {
+      font-size: $mobile-h1-fontsize;
+  	}
+	}
+	.custom-dropdown {
+    border: 1px solid $primary-color;
+    width: 280px;
+    float: right;
+    margin-top: 12px; 
+    position: relative;
+    @media (min-width: 0) and (max-width: 991.98px) {
+    	float: none;
+    	margin: 0 auto;
+    }
+    .custom-dd-selected {
+    	background: url("../images/resource-drop-down.png") no-repeat 94% center;
+    	color: $secondry-color;
+    	font-size: $h6-fontsize;
+			font-family: $base-font-family;
+			font-weight: $fontweight-regular;
+			line-height: 1;
+			box-shadow: 0 5px 5px -5px rgba(0,0,0,.5);
+			padding: 10px 23px 8px;
+			cursor: pointer;
+			text-transform: uppercase;
+    }
+    .custom-dd-list {
+	    display: none;
+      position: absolute;
+	    width: 100%;
+	    z-index: 999;
+	    background: $white;
+	    outline: 1px solid $primary-color;
+	    ul {
+	    	margin: 0;
+	    	padding: 0;
+	    	li {
+  		    display: block;
+  		    a {
+  		    	color: $secondry-color;
+  		    	font-size: $h6-fontsize;
+						font-family: $base-font-family;
+						font-weight: $fontweight-regular;
+						line-height: 1;
+						padding: 14px 23px 13px;
+						display: block;
+						text-decoration: none;
+						text-transform: uppercase;
+  		    }
+  		    &.active, &:hover {
+  		    	background: $primary-color;
+  		    	a {
+              color: $white;
+  		    	}
+  		    }
+	    	}
+	    }
+    }
+	}
+} 
+.listing-wrap {
+  margin-right: -15px;
+  margin-left: -15px;
+  @media (min-width: 0) and (max-width: 991.98px) {
+  	margin-left: 0;
+  	margin-right: 0;
+  }
+  a {
+    float: left;
+	  width: calc(100%/3 - 30px);
+	  margin: 0 15px;
+	  display: block;
+	  text-decoration: none;
+    @media (min-width: 0) and (max-width: 991.98px) {
+    	width: 100%;
+    	margin: 0 0 15px 0;
+    }
+	  .each-block {
+	  	.block-introtitle {
+		    position: relative;
+		    height: 200px;
+		    overflow: hidden;
+		    &::before {
+    	    background-image: linear-gradient(to bottom,rgba(221,221,221,0) 0%,rgba(0,0,0, 0.7) 95%);
+			    content: "";
+			    height: 100%;
+			    left: 0;
+			    position: absolute;
+			    top: 0;
+			    width: 100%;
+			    z-index: 1;
+		    }
+	  		img {
+	  			width: 100%;
+	  			height: auto;
+	  		}
+	  		h4 {
+	  			width: 100%;
+			    color: $white;
+			    font-size: $mobile-h1-fontsize - 10;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-regular;
+			    position: absolute;
+			    bottom: 0;
+			    margin: 0;
+			    padding: 0 20px 20px 20px;
+			    z-index: 99;
+	  		}
+	  	}
+	  	.block-introcontent {
+				padding: 20px 20px 30px;
+				p {
+			    min-height: 82px;
+			    color: $secondry-color;
+			    font-size: $h5-fontsize;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-regular;
+			    overflow: hidden;
+			    margin: 0 0 20px;
+				}
+				span {
+			    color: #333333;
+  				color: $secondry-color;
+			    font-size: $h5-fontsize;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-bold;
+			    i {
+	    	    color: $primary-color;
+  					padding-left: 8px;
+				    vertical-align: middle;
+				    font-size: $p-fontsize + 6;
+			    }
+				}
+	  	}
+	  }
+	  &:hover {
+	  	.block-introcontent {
+	  		background-color: $black;
+	  		p {
+	  			color: $white;
+	  		}
+	  		span {
+	  			color: $white;
+	  			i {
+	  				color: $white;
+	  			}
+	  		}
+	  	}
+	  }
+  }
+}
