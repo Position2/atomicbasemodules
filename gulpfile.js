@@ -12,6 +12,7 @@ var paths = [
   ["slider-four/slider-scss/style.scss","slider-four/css","slider-four/slider-scss/*.scss"],
   ["slider-five/slider-scss/style.scss","slider-five/css","slider-five/slider-scss/*.scss"],
   ["slider-six/slider-scss/style.scss","slider-six/css","slider-six/slider-scss/*.scss"],
+  ["slider-seven/slider-scss/style.scss","slider-seven/css","slider-seven/slider-scss/*.scss"],
   ["resource-one/resource-scss/style.scss","resource-one/css","resource-one/resource-scss/*.scss"],
   ["resource-two/resource-scss/style.scss","resource-two/css","resource-two/resource-scss/*.scss"],
   ["resource-three/resource-scss/style.scss","resource-three/css","resource-three/resource-scss/*.scss"],
@@ -58,6 +59,7 @@ var paths = [
   ["module-fourteen/module-scss/style.scss","module-fourteen/css","module-fourteen/module-scss/*.scss"],
   ["module-fifteen/module-scss/style.scss","module-fifteen/css","module-fifteen/module-scss/*.scss"],
   ["module-sixteen/module-scss/style.scss","module-sixteen/css","module-sixteen/module-scss/*.scss"],
+  ["module-seventeen/module-scss/style.scss","module-seventeen/css","module-seventeen/module-scss/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
