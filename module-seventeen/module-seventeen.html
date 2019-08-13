@@ -24,10 +24,73 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/all-plugins.js"></script>
 </head>
 <body>
-  <div class="container">
-    
+  <div class="div-holder">
+    <div class="container">
+      <div class="sponsors-wrap">
+        <div class="each-sponsor">
+          <div class="sponsorlogo-img">
+            <img src="images/client-logo-one.jpg" alt="Client Logo">
+          </div>
+          <div class="sponsor-desc-bg"></div>
+          <div class="sponsor-desc">
+            <div class="inner-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsa minima temporibus similique amet id, ratione aut exercitationem debitis quod, consequatur repellendus voluptatum aspernatur. Aspernatur itaque ipsa tenetur officiis, illo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="each-sponsor">
+          <div class="sponsorlogo-img">
+            <img src="images/client-logo-one.jpg" alt="Client Logo">
+          </div>
+          <div class="sponsor-desc-bg"></div>
+          <div class="sponsor-desc">
+             <div class="inner-wrap">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nisi quas dolorum reiciendis optio. Minus quis doloribus ipsum, dignissimos corporis neque, facere perspiciatis omnis magni quam sed, debitis sequi doloremque!</p>
+            </div>
+          </div>
+        </div>
+        <div class="each-sponsor">
+          <div class="sponsorlogo-img">
+            <img src="images/client-logo-one.jpg" alt="Client Logo">
+          </div>
+          <div class="sponsor-desc-bg"></div>
+          <div class="sponsor-desc">
+             <div class="inner-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, alias, commodi! Doloremque aut assumenda ullam tempore itaque natus eum nam? Molestiae nesciunt ut nam perferendis quibusdam non, officiis atque vero.</p>
+            </div>
+          </div>
+        </div>
+        <div class="each-sponsor">
+          <div class="sponsorlogo-img">
+            <img src="images/client-logo-one.jpg" alt="Client Logo">
+          </div>
+          <div class="sponsor-desc-bg"></div>
+          <div class="sponsor-desc">
+             <div class="inner-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, molestiae reiciendis nesciunt officia vero. Est, repudiandae ducimus nostrum commodi deleniti cum similique dolores omnis quidem. Veritatis vel temporibus magnam soluta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+       if(jQuery(window).width() < 1199) {
+         $('.sponsors-wrap').bxSlider({
+          controls: false,
+          auto: true,
+          pause: 12000,
+          adaptiveHeight: true,
+          responsive: true
+        });
+       } 
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>
