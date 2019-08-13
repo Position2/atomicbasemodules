@@ -1,13 +1,13 @@
-.abt-company-info {
+.information {
 	height: 430px;
 	overflow: hidden;
 	@media (min-width: 0) and (max-width: 767.98px) {
 		height: auto;
 	}
-	.abt-outer-holder { 
+	.outer-holder { 
 		position: relative;
 	}
-	.abt-image-wrap {
+	.image-wrap {
 		.each-image {
 			float: left;
 			img {
@@ -16,7 +16,7 @@
 			}
 		}
 	}
-	.abt-description {
+	.description {
 		position: absolute;
     top: 166px;
     width: 700px;
@@ -110,7 +110,7 @@
 		margin-bottom: 40px;
     height: 361px;
 	}
-	.abt-image-wrap { 
+	.image-wrap { 
 		.each-image {
 			&.small-img {
 		    width: calc(38%/2 - 15px);
@@ -143,7 +143,7 @@
 			}
 		}
 	}
-	.abt-description {  
+	.description {  
 		text-align: right;
     left: 0;
     p {
@@ -198,7 +198,7 @@
 		margin-bottom: 50px;
     height: 422px;
 	}
-	.abt-image-wrap { 
+	.image-wrap { 
 		.each-image {
 			&.small-img {
 		    width: calc(38%/2 - 15px);
@@ -234,7 +234,7 @@
 			}
 		}
 	}
-	.abt-description {
+	.description {
     right: 0;
     p {
 	  	color: $secondry-color;
