@@ -1,0 +1,191 @@
+.each-slider-content {
+	position: relative;
+	padding: 0 0 0 50px;
+	margin-top: 60px;
+	@media (min-width: 768px) and (max-width: 1199.98px) {
+		padding-left: 25px;
+	}
+	@media (min-width: 0) and (max-width: 767.98px) {
+		padding: 0;
+	}
+	.event-img {
+		position: relative;
+		height: 430px;
+		background: url('../images/image-one.jpg') no-repeat 0 0 / cover;
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			height: 340px;
+		}
+		@media (min-width: 0) and (max-width: 767.98px) {
+			height: 250px;
+			background-position: center center;
+		}
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+      background: linear-gradient(90deg, rgba(0,0,0,0.55) 35%, rgba(0,0,0,1) 100%); /* w3c */
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* ie6-9 */ 
+	    @media (min-width: 0) and (max-width: 767.98px) {
+	    	content: none;
+	    }
+    }
+    &:after {
+    	@media (min-width: 0) and (max-width: 767.98px) {
+    		position: absolute;
+				left: 0;
+				top: 0;
+				content: "";
+				width: 100%;
+				height: 100%;
+        background: linear-gradient(180deg, rgba(0,0,0,0.3) 80%, rgba(0,0,0,1) 100%); /* w3c */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* ie6-9 */ 
+	    }
+    }
+    img {
+    	width: 100%;
+    	height: auto;
+    }
+	}
+	.event-text {
+		position: absolute;
+    top: 50%;
+		left: 90%;
+		transform: translate(-90%,-50%);
+		width: 37%;
+		@media (min-width: 768px) and (max-width: 1199.98px) {
+			width: 40%;
+		}
+		@media (min-width: 0) and (max-width: 767.98px) {
+			width: 100%;
+			position: static;
+			transform: none;
+			padding: 25px;
+			background-color: $black;
+		}
+		h4 {
+			font: {
+				size: $h4-fontsize - 10;
+				family: $base-font-family;
+				weight: $fontweight-regular;
+			}
+			@media (min-width: 0) and (max-width: 767.98px) {
+				font-size: $h5-fontsize;
+			}
+			color: $white;
+			margin: 0 0 10px;
+		}
+		h3 {
+			font: {
+				size: $h3-fontsize;
+				family: $base-font-family;
+				weight: $fontweight-bold;
+			}
+			@media (min-width: 768px) and (max-width: 1199.98px) {
+				size: $h3-fontsize - 4;
+			}
+			@media (min-width: 0) and (max-width: 767.98px) {
+				font-size: $h4-fontsize - 10;
+			}
+			color: $white;
+			border-bottom: 1px solid $white;
+			padding-bottom: 15px;
+			margin: 0 0 10px;
+			@media (min-width: 0) and (max-width: 767.98px) {
+				padding-bottom: 10px;
+				margin-bottom: 8px;
+			}
+		}
+		p {
+			font: {
+				size: $h5-fontsize + 2;
+				family: $base-font-family;
+				weight: $fontweight-regular;
+			}
+			color: $white;
+			margin: 0 0 12px;
+			
+		}
+		a { 
+    	color: $white;
+			border: 1px solid $white;
+			font: {
+				size: $h6-fontsize;
+				family: $base-font-family;
+				weight: $fontweight-regular;
+			}
+			@media (min-width: 0) and (max-width: 767.98px) {
+				font-size: $h6-fontsize;
+			}
+			text-transform: uppercase;  
+			line-height: 1;
+			text-decoration: none;
+			padding: 8px 40px;
+			display: inline-block;
+			transition: all 0.5s ease;
+			letter-spacing: 1px;
+	    	padding: 10px 16px;
+			@media (min-width: 1200px) {
+				&:hover{
+					color: $black;
+					background: $white;
+					border-color: $white;
+					transition: all 0.5s ease; 
+				}
+			}
+    }
+	}
+	.date {
+		position: absolute;
+		top: 36px;
+		left: 0;
+		background-color: $grey-six;
+		padding: 10px 20px;
+		text-align: center;
+		width: 100px;
+		@media (min-width: 768px) and (max-width: 1199.98px) {
+			width: 75px;
+			padding: 10px;
+		}
+		@media (min-width: 0) and (max-width: 767.98px) {
+			width: 70px;
+			padding: 10px;
+			top: 25px;
+			left: 25px;
+		}
+		span {
+			font: {
+				size: $h5-fontsize;
+				family: $base-font-family;
+				weight: $fontweight-regular;
+			}
+			@media (min-width: 768px) and (max-width: 1199.98px) {
+				font-size: $h5-fontsize;
+			}
+			@media (min-width: 0) and (max-width: 767.98px) {
+				font-size: $h6-fontsize;
+			}
+			color: $black;
+			display: block;
+			line-height: 1;
+			&.day {
+				font-size: $h2-fontsize;
+				font-weight: $fontweight-bold;
+				line-height: 1;
+				@media (min-width: 768px) and (max-width: 1199.98px) {
+					font-size: $h5-fontsize + 8;
+				}
+				@media (min-width: 0) and (max-width: 767.98px) {
+					font-size: $h5-fontsize + 4;
+				}
+			}
+			&.year{
+				font-size: $h6-fontsize;
+				font-weight: $fontweight-regular;
+				line-height: 1;
+			}
+	  }
+	}
+}
