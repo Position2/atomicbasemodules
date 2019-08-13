@@ -1,9 +1,9 @@
 .abt-company-info {
 	height: 430px;
 	overflow: hidden;
-	// @include media-breakpoint-down(sm) {
-	// 	height: auto;
-	// }
+	@media (min-width: 0) and (max-width: 767.98px) {
+		height: auto;
+	}
 	.abt-outer-holder { 
 		position: relative;
 	}
@@ -23,49 +23,59 @@
     background: $white;
     height: calc(100% - 166px);
     padding: 30px 50px;
-   //  @include media-breakpoint-down(sm) {
-   //  	position: static;
-	  //   width: 100%;
-	  //   height: auto;
-	  //   padding: 30px 30px;
-   //  }
-   //  @include media-breakpoint-only(md) {
-   //  	top: 95px;
-	  //   width: 500px;
-	  //   height: auto;
-	  //   padding: 30px 30px;
-   //  }
-   //  @include media-breakpoint-only(lg) {
-  	// 	top: 124px;
-  	// 	height: auto;
-  	// }
+    @media (min-width: 0) and (max-width: 767.98px) {
+    	position: static;
+	    width: 100%;
+	    height: auto;
+	    padding: 30px 30px;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    	top: 95px;
+	    width: 500px;
+	    height: auto;
+	    padding: 30px 30px;
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+  		top: 124px;
+  		height: auto;
+  	}
     h3 {
     	color: $black;
       font: {
         size: $h4-fontsize;
         family: $base-font-family;
-        weight: $fontweight-regular;
+        weight: $fontweight-bold;
       }
       line-height: 1;
       margin:0 0 20px;
-      // @include media-breakpoint-down(lg) {
-      // 	font: {
-	     //    size: $company-info-title;
-	     //  }
-	     //  line-height: 1.2;
-      // }
+      @media (min-width: 0) and (max-width: 767.98px) {
+      	font: {
+	        size: $h5-fontsize + 10;
+	      }
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+      	font: {
+	        size: $h4-fontsize - 10;
+	      }
+      }
+     	@media (min-width: 992px) and (max-width: 1199.98px) {
+      	font: {
+	        size: $h5-fontsize;
+	      }
+	      line-height: 1.2;
+      }
     }
     a {
     	color: $black;
 			border: 1px solid $black;
 			font: {
-				size: $h4-fontsize;
+				size: $h6-fontsize;
 				family: $base-font-family;
 				weight: $fontweight-regular;
 			}
-			// @include media-breakpoint-down(sm) {
-			// 	font-size: $h6-font-size;
-			// }
+			@media (min-width: 0) and (max-width: 767.98px) {
+				font-size: $h6-fontsize;
+			}
 			text-transform: uppercase;  
 			line-height: 1;
 			text-decoration: none;
@@ -74,62 +84,62 @@
 			transition: all 0.5s ease;
 			letter-spacing: 1px;
 	    	padding: 10px 16px;
-			// @include media-breakpoint-up(xl) {
-			// 	&:hover{
-			// 		color: $white;
-			// 		background: $black;
-			// 		border-color: $black;
-			// 		transition: all 0.5s ease; 
-			// 	}
-			// }
+			@media (min-width: 1200px) {
+				&:hover{
+					color: $white;
+					background: $black;
+					border-color: $black;
+					transition: all 0.5s ease; 
+				}
+			}
     }
 	}
 }
 #RightImage {
 	margin: 60px 0px 60px 0;
-	// @include media-breakpoint-down(sm) {
-	// 	margin-top: 50px;
-	// 	margin-bottom: 20px;
-	// }
-	// @include media-breakpoint-only(md) {
-	// 	margin-top: 40px;
-	// 	margin-bottom: 10px;
- //    height: 350px;
-	// }
-	// @include media-breakpoint-only(lg) {
-	// 	margin-bottom: 40px;
- //    height: 361px;
-	// }
+	@media (min-width: 0) and (max-width: 767.98px) {
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		margin-top: 40px;
+		margin-bottom: 10px;
+    height: 350px;
+	}
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		margin-bottom: 40px;
+    height: 361px;
+	}
 	.abt-image-wrap { 
 		.each-image {
 			&.small-img {
 		    width: calc(38%/2 - 15px);
 	    	margin-right: 15px;
 	    	height: 166px;
-	    	// @include media-breakpoint-down(sm) {
-	    	// 	width: calc(100%/2 - 10px);
-	    	// 	margin: 0;
-	    	// 	height: auto;
-	    	// 	&:nth-child(1) {
-						// margin-right: 10px;
-	    	// 	}
-	    	// 	&:nth-child(2) {
-						// margin-left: 10px;
-	    	// 	}
-	    	// }
-	    	// @include media-breakpoint-only(md) {
-	    	// 	height: 92px;
-	    	// }
-	    	// @include media-breakpoint-only(lg) {
-	    	// 	height: 124px;
-	    	// }
+	    	@media (min-width: 0) and (max-width: 767.98px) {
+	    		width: calc(100%/2 - 10px);
+	    		margin: 0;
+	    		height: auto;
+	    		&:nth-child(1) {
+						margin-right: 10px;
+	    		}
+	    		&:nth-child(2) {
+						margin-left: 10px;
+	    		}
+	    	}
+	    	@media (min-width: 768px) and (max-width: 991.98px) {
+	    		height: 92px;
+	    	}
+	    	@media (min-width: 992px) and (max-width: 1199.98px) {
+	    		height: 124px;
+	    	}
 			}
 			&.big-img {
 		    width: calc(100% - 38%);
-		    // @include media-breakpoint-down(sm) {
-		    // 	width: 100%;
-		    // 	margin-top: 20px;
-		    // }
+		    @media (min-width: 0) and (max-width: 767.98px) {
+		    	width: 100%;
+		    	margin-top: 20px;
+		    }
 			}
 		}
 	}
@@ -141,72 +151,86 @@
 	    font: {
 	      size: $h5-fontsize;
 	      family: $base-font-family;
-	      weight: $fontweight-thin;
+	      weight: $fontweight-regular;
 	    }
 	    line-height: 1.4;
 	    margin:0 0 25px;
-	    // @include media-breakpoint-only(md) {
-	    // 	font: {
-	    // 		size: $font-size-base;
-	    //   }
-	    // }
+	    @media (min-width: 768px) and (max-width: 991.98px) {
+	    	font: {
+	    		size: $h6-fontsize;
+	      }
+	    }
 	  }
-   //   @include media-breakpoint-down(sm) {
-		 // 	 	@include about-us-p-value;
-		 // }
-   //  @include media-breakpoint-down(sm) {
-			// text-align: left;
-   //  }
+     @media (min-width: 0) and (max-width: 767.98px) {
+		 	 p {
+		  	color: $secondry-color;
+		    font: {
+		      size: $h5-fontsize;
+		      family: $base-font-family;
+		      weight: $fontweight-regular;
+		    }
+		    line-height: 1.4;
+		    margin:0 0 25px;
+		    @media (min-width: 768px) and (max-width: 991.98px) {
+		    	font: {
+		    		size: $h6-fontsize;
+		      }
+		    }
+		  }
+		 }
+    @media (min-width: 0) and (max-width: 767.98px) {
+			text-align: left;
+    }
 	}
 }
 #LeftImage {
 	height: 470px;
 	margin: 0 0px 70px 0;
-	// @include media-breakpoint-down(sm) {
-	// 	margin-bottom: 20px;
-	// 	height: auto;
-	// }
-	// @include media-breakpoint-only(md) {
-	// 	margin-bottom: 50px;
- //    height: 410px;;
-	// }
-	// @include media-breakpoint-only(lg) {
-	// 	margin-bottom: 50px;
- //    height: 422px;
-	// }
+	@media (min-width: 0) and (max-width: 767.98px) {
+		margin-bottom: 20px;
+		height: auto;
+	}
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		margin-bottom: 50px;
+    height: 410px;;
+	}
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		margin-bottom: 50px;
+    height: 422px;
+	}
 	.abt-image-wrap { 
 		.each-image {
 			&.small-img {
 		    width: calc(38%/2 - 15px);
 	    	margin-left: 15px;
 	    	height: 166px;
-	    	// @include media-breakpoint-down(sm) {
-	    	// 	width: calc(100%/2 - 10px);
-	    	// 	margin-left: 0;
-	    	// 	height: auto;
-	    	// 	&:nth-child(2) {
-	    	// 		margin-right: 10px;
-	    	// 	}
-	    	// 	&:nth-child(3) {
-	    	// 		margin-left: 10px;
-	    	// 	}
-	    	// }
-	    	// @include media-breakpoint-only(md) {
-	    	// 	height: 92px;
-	    	// }
-	    	// @include media-breakpoint-only(lg) {
-	    	// 	height: 124px;
-	    	// }
+	    	@media (min-width: 0) and (max-width: 767.98px) {
+	    		width: calc(100%/2 - 10px);
+	    		margin-left: 0;
+	    		height: auto;
+	    		&:nth-child(2) {
+	    			margin-right: 10px;
+	    		}
+	    		&:nth-child(3) {
+	    			margin-left: 10px;
+	    		}
+	    	}
+	    	@media (min-width: 768px) and (max-width: 991.98px) {
+	    		height: 92px;
+	    	}
+	    	@media (min-width: 992px) and (max-width: 1199.98px) {
+	    		height: 124px;
+	    	}
 	    	.no-margin {
 	    		margin-left: 0;
 	    	}
 			}
 			&.big-img {
 		    width: calc(100% - 38%);
-		    // @include media-breakpoint-down(sm) {
-		    // 	width: 100%;
-		    // 	margin-bottom: 20px;
-		    // }
+		    @media (min-width: 0) and (max-width: 767.98px) {
+		    	width: 100%;
+		    	margin-bottom: 20px;
+		    }
 			}
 		}
 	}
@@ -217,15 +241,15 @@
 	    font: {
 	      size: $h5-fontsize;
 	      family: $base-font-family;
-	      weight: $fontweight-thin;
+	      weight: $fontweight-regular;
 	    }
 	    line-height: 1.4;
 	    margin:0 0 25px;
-	    // @include media-breakpoint-only(md) {
-	    // 	font: {
-	    // 		size: $font-size-base;
-	    //   }
-	    // }
+	    @media (min-width: 768px) and (max-width: 991.98px) {
+	    	font: {
+	    		size: $h6-fontsize;
+	      }
+	    }
 	  }
 	}
 }
