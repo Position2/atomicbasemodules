@@ -7,8 +7,9 @@ var gulp = require("gulp"),
 
 var paths = [
   ["menu-one/menu-scss/style.scss","menu-one/css","menu-one/menu-scss/*.scss"],
-  ["menu-one/menu-scss/style.scss","menu-two/css","menu-two/menu-scss/*.scss"],
-  ["menu-one/menu-scss/style.scss","menu-three/css","menu-three/menu-scss/*.scss"],
+  ["menu-two/menu-scss/style.scss","menu-two/css","menu-two/menu-scss/*.scss"],
+  ["menu-three/menu-scss/style.scss","menu-three/css","menu-three/menu-scss/*.scss"],
+  ["menu-four/menu-scss/style.scss","menu-four/css","menu-four/menu-scss/*.scss"],
   ["slider-one/slider-scss/style.scss","slider-one/css","slider-one/slider-scss/*.scss"],
   ["slider-two/slider-scss/style.scss","slider-two/css","slider-two/slider-scss/*.scss"],
   ["slider-three/slider-scss/style.scss","slider-three/css","slider-three/slider-scss/*.scss"],
