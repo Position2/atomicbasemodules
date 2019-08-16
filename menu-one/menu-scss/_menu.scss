@@ -25,6 +25,9 @@ body.mmactive{overflow:hidden}.mobile_menu{display:none;position:relative}.sm_me
 .sm_menu_outer {
   height: 100vh;
   padding-top: 150px;
+  @media (min-width: 0) and (max-width: 991.98px) {
+    padding-top: 100px;
+  }
   .mobile_menu {
     & > li {
       display: inline-block;
