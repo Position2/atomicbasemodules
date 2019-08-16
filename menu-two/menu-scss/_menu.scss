@@ -1,0 +1,40 @@
+#Header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: $white;
+  a.logo {
+    display: inline-block;
+    width: 120px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}  
+.mobile_menu {
+  float: right;
+  padding: 12px 0 0 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0;
+    &:last-child {
+      padding: 0;
+    }
+    .submenu {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: $secondry-color;
+      font: {
+        size: $p-fontsize;
+        family: $base-font-family;
+        weight: $fontweight-regular;
+      }
+    }
+  }
+}
