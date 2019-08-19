@@ -85,6 +85,19 @@
               </li>
             </ul>
           </div>
+          <ul class="mobile_menu">
+          	<li><a href="javascript:void(0)">About</a>
+          		<ul class="submenu">
+          			<li><a href="javascript:void(0)">Overview</a></li>
+                  <li><a href="javascript:void(0)">Contact</a></li>
+                  <li><a href="javascript:void(0)">Team</a></li>
+                  <li><a href="javascript:void(0)">Careers</a></li>
+          		</ul>
+          	</li>
+        	 	<li><a href="javascript:void(0)">Blog</a></li>
+            <li><a href="javascript:void(0)">Resource</a></li>
+            <li><a href="javascript:void(0)">Contact</a></li>
+          </ul>
 				</div>
 			</div>
 		</div>
@@ -92,5 +105,12 @@
   <div class="image-tag">
   	<img src="images/slider-image-one.jpg" alt="Slider image" style="width: 100%; height: auto;">
   </div>
+   <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+        $(".mobile_menu").simpleMobileMenu();
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>
