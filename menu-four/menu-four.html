@@ -29,7 +29,7 @@
 <body>
 	<div class="stickymenu-wrapper">
 		<div class="fixed-menu">
-			<ul class="mainemenu hide-one">
+			<ul class="mainmenu hide-one">
 				<li><a href="javascript:void(0)" data-submenu="about-us">About Us</a></li>
 				<li><a href="javascript:void(0)" data-submenu="service">Service</a></li>
 				<li><a href="javascript:void(0)" data-submenu="industry">Industry</a></li>
@@ -163,7 +163,7 @@
 		          smWrap = $(".submenu-wrapper"),
 		          sMenus = smWrap.find(".submenu"),
 		          mClose = $("#menuoverlay,.sm-close"),
-		          mLinks = $("mainemenu [data-submenu]");
+		          mLinks = $("mainmenu [data-submenu]");
 		          //isHome = $("body").hasClass("front");
 		      function mainMenuOpen(e) {
 		        var dis     = $(this),
@@ -180,18 +180,18 @@
 		      }
 		      function mainMenuClose() {
 		        body.addClass("menuClose").removeClass("menuOpened");
-		        $("mainemenu li.active").removeClass("active");
+		        $("mainmenu li.active").removeClass("active");
 		        //isHome ? $.fn.fullpage.setAllowScrolling(true) : "";
 		      }
-		      mLinks.not($("mainemenu .more a")).mouseenter(mainMenuOpen);
-		      mLinks.filter($("mainemenu .more a")).click(mainMenuOpen);
+		      mLinks.not($("mainmenu .more a")).mouseenter(mainMenuOpen);
+		      mLinks.filter($("mainmenu .more a")).click(mainMenuOpen);
 		      mClose.not(".sm-close").mouseenter(mainMenuClose);
 		      mClose.filter(".sm-close").click(mainMenuClose);
 		      /*Menu auto active for first menu*/
 		      var currentPath = window.location.pathname;
 		      if(typeof currentPath != "undefined") {
 		        var targetData  = $(".submenu-content .submenu:not(#more) h2 a[href='"+currentPath+"']").parents(".submenu").attr("id");
-		        $("mainemenu li a[data-submenu='"+targetData+"']").parents("li").addClass("default-active");
+		        $("mainmenu li a[data-submenu='"+targetData+"']").parents("li").addClass("default-active");
 		      }
 		      /*Menu auto active for first menu based on submenu active*/
 		      var submenuActive = $(".submenu-wrapper .submenu a.active");
@@ -202,10 +202,10 @@
 		    }
 		    // /* mainMenu show/hide */
 		    // function mainMenuAlign() {
-		    //   var mainMenu = $("mainemenu"),
+		    //   var mainMenu = $("mainmenu"),
 		    //       mmCclass = mainMenu.attr("class");
 		    //   mainMenu.removeClass("hide-three hide-two hide-one");   
-		    //   mainMenu     = $("mainemenu");
+		    //   mainMenu     = $("mainmenu");
 		    //   var mmMore   = mainMenu.find("li.more"),
 		    //       mmAbout  = mainMenu.find("li:eq(5)"),
 		    //       mmRes    = mainMenu.find("li:eq(4)"),
