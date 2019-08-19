@@ -163,7 +163,7 @@
 		          smWrap = $(".submenu-wrapper"),
 		          sMenus = smWrap.find(".submenu"),
 		          mClose = $("#menuoverlay,.sm-close"),
-		          mLinks = $("mainmenu [data-submenu]");
+		          mLinks = $(".mainmenu [data-submenu]");
 		          //isHome = $("body").hasClass("front");
 		      function mainMenuOpen(e) {
 		        var dis     = $(this),
@@ -180,18 +180,18 @@
 		      }
 		      function mainMenuClose() {
 		        body.addClass("menuClose").removeClass("menuOpened");
-		        $("mainmenu li.active").removeClass("active");
+		        $(".mainmenu li.active").removeClass("active");
 		        //isHome ? $.fn.fullpage.setAllowScrolling(true) : "";
 		      }
-		      mLinks.not($("mainmenu .more a")).mouseenter(mainMenuOpen);
-		      mLinks.filter($("mainmenu .more a")).click(mainMenuOpen);
+		      mLinks.not($(".mainmenu .more a")).mouseenter(mainMenuOpen);
+		      mLinks.filter($(".mainmenu .more a")).click(mainMenuOpen);
 		      mClose.not(".sm-close").mouseenter(mainMenuClose);
 		      mClose.filter(".sm-close").click(mainMenuClose);
 		      /*Menu auto active for first menu*/
 		      var currentPath = window.location.pathname;
 		      if(typeof currentPath != "undefined") {
 		        var targetData  = $(".submenu-content .submenu:not(#more) h2 a[href='"+currentPath+"']").parents(".submenu").attr("id");
-		        $("mainmenu li a[data-submenu='"+targetData+"']").parents("li").addClass("default-active");
+		        $(".mainmenu li a[data-submenu='"+targetData+"']").parents("li").addClass("default-active");
 		      }
 		      /*Menu auto active for first menu based on submenu active*/
 		      var submenuActive = $(".submenu-wrapper .submenu a.active");
@@ -200,27 +200,33 @@
 		        $("[data-submenu='"+dataId+"']").parent().addClass("default-active");
 		      }
 		    }
-		    // /* mainMenu show/hide */
-		    // function mainMenuAlign() {
-		    //   var mainMenu = $("mainmenu"),
-		    //       mmCclass = mainMenu.attr("class");
-		    //   mainMenu.removeClass("hide-three hide-two hide-one");   
-		    //   mainMenu     = $("mainmenu");
-		    //   var mmMore   = mainMenu.find("li.more"),
-		    //       mmAbout  = mainMenu.find("li:eq(5)"),
-		    //       mmRes    = mainMenu.find("li:eq(4)"),
-		    //       mmNaE    = mainMenu.find("li:eq(3)");
-		    //   if(!(mmMore.position().top > (mmNaE.position().top + mmNaE.height()))) {
-		    //     mainMenu.addClass("hide-three").removeClass("hide-two hide-one");
-		    //   } else if(!(mmMore.position().top > (mmRes.position().top + mmRes.height()))) {
-		    //     mainMenu.addClass("hide-two").removeClass("hide-three hide-one");
-		    //   } else if(!(mmMore.position().top > (mmAbout.position().top + mmAbout.height()))) {
-		    //     mainMenu.addClass("hide-one").removeClass("hide-two hide-three");
-		    //   } else {
-		    //     mainMenu.removeClass("hide-three hide-two hide-one");
-		    //   }
-		    // }
-		    // mainMenuAlign();
+		    /* mainMenu show/hide */
+		    function mainMenuAlign() {
+		      var mainMenu = $(".mainmenu"),
+		          mmCclass = mainMenu.attr("class");
+		      mainMenu.removeClass("hide-three hide-two hide-one");   
+		      mainMenu     = $(".mainmenu");
+		      var mmMore   = mainMenu.find("li.more"),
+		          mmAbout  = mainMenu.find("li:eq(5)"),
+		          mmRes    = mainMenu.find("li:eq(4)"),
+		          mmNaE    = mainMenu.find("li:eq(3)");
+		      if(!(mmMore.position().top > (mmNaE.position().top + mmNaE.height()))) {
+		        mainMenu.addClass("hide-three").removeClass("hide-two hide-one");
+		      } else if(!(mmMore.position().top > (mmRes.position().top + mmRes.height()))) {
+		        mainMenu.addClass("hide-two").removeClass("hide-three hide-one");
+		      } else if(!(mmMore.position().top > (mmAbout.position().top + mmAbout.height()))) {
+		        mainMenu.addClass("hide-one").removeClass("hide-two hide-three");
+		      } else {
+		        mainMenu.removeClass("hide-three hide-two hide-one");
+		      }
+		    }
+		    mainMenuAlign();
+		     // Window Resize
+		    $(window).resize(function(){
+		      mainMenuAlign(); /*Left extra menus auto hide/show*/
+		    });
+		    // Window Load
+		    $(window).load(mainMenuAlign);
       });
     })(jQuery);
   </script>
