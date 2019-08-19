@@ -21,11 +21,9 @@
     display: inline-block;
     padding: 0 20px;
     margin: 0;
+    vertical-align: top;
     &:last-child {
       padding: 0;
-    }
-    .submenu {
-      display: none;
     }
     a {
       text-decoration: none;
@@ -33,7 +31,84 @@
       font: {
         size: $p-fontsize;
         family: $base-font-family;
-        weight: $fontweight-regular;
+        weight: $fontweight-bold;
+        padding-bottom: 32px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    ul.submenu {
+      padding: 0;
+      margin: 0;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      padding: 20px 20px 10px 20px;
+      top: 80px;
+      background-color: $white;
+      transition: 0.5s ease 0s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      li {
+        display: block;
+        padding: 0;
+        margin: 0 0 10px 0;
+        position: relative;
+        a {
+          font: {
+            weight: $fontweight-regular;
+            line-height: 1;
+          }
+        }
+        ul.submenu {
+          visibility: hidden;
+          opacity: 0;
+        }
+        &:hover {
+          .submenu {
+            visibility: visible;
+            opacity: 1;
+            top: 0;
+            transition: 0.5s ease 0s;
+            left: 130px;
+          }
+        }
+      }
+    }
+    &:hover {
+      .submenu {
+        visibility: visible;
+        opacity: 1;
+        top: 70px;
+        transition: 0.5s ease 0s;
+      }
+    }
+  }
+}
+.mobile_menu {
+  li {
+    & > ul {
+      &::before {
+        content: "";
+        background: $primary-color;
+        top: 0;
+        width: 0;
+        height: 3px;
+        left: 0;
+        position: absolute;
+        -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+      }
+    }
+    &:hover {
+      & > ul {
+        &::before {
+          width: 100%;
+          -webkit-transition: all 0.75s ease 0s;
+          -moz-transition: all 0.75s ease 0s;
+          transition: all 0.75s ease 0s;
+        }
       }
     }
   }
