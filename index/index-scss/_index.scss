@@ -40,6 +40,7 @@
 				text-align: center;
 				i {
 					font-size: 195px;
+					background-color: $primary-color;
 				}
 			}
 			.keyword {
@@ -68,7 +69,7 @@
 				h3 {
 					color: $secondry-color;
 					font: {
-						size: $h5-fontsize;
+						size: $h5-fontsize - 4;
 						weight: $fontweight-bold;
 						family: $base-font-family; 
 					}
