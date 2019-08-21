@@ -222,16 +222,6 @@
 		      }
 		    }
 		    mainMenuAlign();
-		      /*mobile menu start*/
-		    $("#MobileMenu .mobile-menu-icon,.mobilewrapper .menu-close").click(function() {
-		      $("body").toggleClass("mm-active");
-		      var mWrap = $(".mobilesubwrap");
-		      if(mWrap.hasClass("mm-sub-active")) {
-		        setTimeout(function() {
-		          $(".mobilesubwrap").removeClass("mm-sub-active");
-		        }, 1000);
-		      }
-		    });
 		     // Window Resize
 		    $(window).resize(function(){
 		      mainMenuAlign(); /*Left extra menus auto hide/show*/
