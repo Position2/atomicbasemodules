@@ -201,6 +201,16 @@
 			}
 		}
 	}
+	.tags_wrapper {
+		margin-bottom: 10px;
+		.badge {
+			font: {
+				size: $h6-fontsize;
+				weight: $fontweight-regular;
+				family: $base-font-family; 
+			}
+		}
+	}
 }
 .fa-light {
 	background: $black;
