@@ -36,7 +36,7 @@ body {
 		    padding: 0;
 		    position: relative;
 		    a {
-		    	font-size: $h5-fontsize;
+		    	font-size: $h5-fontsize - 2;
           font-family: $base-font-family;
           font-weight: $fontweight-regular;
           color: $white;
@@ -60,7 +60,7 @@ body {
 		    	background-color: $red;
 		    }
 		    &:nth-child(6) {
-		    	background-color: $primary-utility-one;
+		    	background-color: $red;
 		    }
 		    &.more {
 					position: absolute;
