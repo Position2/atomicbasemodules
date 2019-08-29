@@ -1,6 +1,9 @@
 .module-list {
 	.title {
 		padding: 40px 0;
+		@media (min-width: 0) and (max-width: 767.98px) {
+			text-align: center;
+		}
 		h1 {
 			color: $primary-color;
 			font: {
@@ -33,18 +36,52 @@
 	    margin-bottom: 30px;
 	    transition: 0.3s all;
 	    border-bottom: 4px solid #fff;
+	    @media (max-width: 575.98px) {
+				max-width: calc(280px);
+				margin: 0 auto 20px;
+	    }
+	    @media (min-width: 576px) and (max-width: 767.98px) {
+	    	max-width: calc(100%/2 - 20px);
+	    }
+	    @media (min-width: 768px) and (max-width: 991.98px) {
+				max-width: calc(100%/3 - 20px);
+	    }
 	    .icon-holder {
 				border: 1px solid #c9c9c9;
 				text-align: center;
 				i {
 					font-size: 187px;
 					color: $primary-color;
+					@media (max-width: 575.98px) {
+						font-size: 200px;
+					}
+					@media (min-width: 576px) and (max-width: 767.98px) {
+						font-size: 170px;
+					}
+					@media (min-width: 768px) and (max-width: 991.98px) {
+						font-size: 152px;
+					}
+					@media (min-width: 992px) and (max-width:1200px) {
+						font-size: 154px;
+					}
 				}
 			}
 			.tags {
 				padding: 16px 10px 10px 10px;
 				border-bottom: 1px solid #c9c9c9;
 				min-height: 195px;
+				@media (max-width: 575.98px) {
+					min-height: 10px;
+				}
+				@media (min-width: 576px) and (max-width: 767.98px) {
+					min-height: 231px;
+				}
+				@media (min-width: 992px) and (max-width:1200px) {
+					min-height: 265px;
+				}
+				@media (min-width: 768px) and (max-width: 991.98px) {
+					min-height: 268px;
+				}
 				span {
 					background-color: #788088;
 					color: $white;
@@ -75,6 +112,13 @@
 					margin-bottom: 0;
 					display: inline-block;
 					vertical-align: middle;
+					@media (min-width: 576px) and (max-width: 767.98px) {
+						display: block;
+					}
+					@media (min-width: 768px) and (max-width:1200px) {
+						display: block;
+						font-size: $h5-fontsize - 2;
+					}
 				}
 				.preview-btn {
 					display: inline-block;
@@ -85,6 +129,9 @@
 						color: $black;
 						transform: scale(1);
 						transition: all 0.3s
+					}
+					@media (min-width: 576px) and (max-width:1200px) {
+						display: block;
 					}
 				}
 			}
@@ -116,6 +163,11 @@
 		width: 300px;
 		vertical-align: middle;
 		background: #fff url("../images/arrow-drop-down.svg") no-repeat 94% center / 20px auto;
+		@media (min-width: 0) and (max-width: 767.98px) {
+			display: block;
+			width: 265px;
+			margin: 0 auto;
+		}
 		.custom-dd-selected {
 			color: $secondry-color;
 			font: {
@@ -162,6 +214,9 @@
 		margin-left: 30px;
 		position: relative;
 		width: calc(100% - 338px);
+		@media (min-width: 0) and (max-width: 767.98px) {
+			display: none;
+		}
 		#text_search input {
 			border: 1px solid $primary-color;
 			padding: 10px 23px 8px;
@@ -204,12 +259,18 @@
 						background-color: $primary-color;
 						color: $white;
 					}
+					&.focused {
+						font-weight: bold;
+					}
 				}
 			}
 		}
 	}
 	.tags_wrapper {
 		margin-bottom: 10px;
+		@media (min-width: 0) and (max-width: 767.98px) {
+			margin-bottom: 0;
+		}
 		.badge {
 			font: { 
 				size: $h6-fontsize;
