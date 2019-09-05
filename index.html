@@ -35,7 +35,10 @@
       </div>
       <div class="module-holder">
         <div class="search">
-          <div class="tags_wrapper"></div>
+          <div class="tags_wrapper_outer clearfix">
+            <div class="tags_wrapper"></div>
+            <div class="clearall" style="display: none;">Clear All</div>
+          </div>
           <div class="custom-dropdown">
             <div class="custom-dd-selected"></div>
             <div class="custom-dd-list">
@@ -262,7 +265,7 @@
             <div class="keyword-preview-wrap">
             <div class="tags">
               <span class="badge">slider</span>
-              <span class="badge">custom pagination</span>
+              <span class="badge">custom-pagination</span>
               <span class="badge">heading</span>
               <span class="badge">description</span>
               <span class="badge">link</span>
@@ -284,7 +287,7 @@
             <div class="keyword-preview-wrap">
             <div class="tags">
               <span class="badge">slider</span>
-              <span class="badge">full screen</span> 
+              <span class="badge">full-screen</span> 
               <span class="badge">pagination</span>
               <span class="badge">heading</span>
               <span class="badge">description</span>
@@ -306,7 +309,7 @@
             <div class="keyword-preview-wrap">
             <div class="tags">
              <span class="badge">slider</span>
-             <span class="badge">infinite loop</span>
+             <span class="badge">infinite-loop</span>
              <span class="badge">ticker</span>
              <span class="badge">mobile</span>
              <span class="badge">desktop</span>
@@ -597,7 +600,7 @@
               <span class="badge">description</span>
               <span class="badge">link</span>
               <span class="badge">icon</span>
-              <span class="badge">gated form</span>
+              <span class="badge">gated-form</span>
               <span class="badge">category</span>
               <span class="badge">animation</span>
               <span class="badge">mobile</span>
@@ -621,7 +624,7 @@
               <span class="badge">click</span>
               <span class="badge">share</span>
               <span class="badge">image</span>
-              <span class="badge">inline popup</span>
+              <span class="badge">inline-popup</span>
               <span class="badge">animation</span>
               <span class="badge">slidedown</span>
               <span class="badge">close</span>
@@ -696,7 +699,7 @@
               <span class="badge">description</span>
               <span class="badge">date</span>
               <span class="badge">animation</span>
-              <span class="badge">left to right</span>
+              <span class="badge">left-to-right</span>
               <span class="badge">background color</span>
               <span class="badge">animation</span>
               <span class="badge">ease</span>
@@ -1048,7 +1051,7 @@
             <div class="tags">
               <span class="badge">floater</span>
               <span class="badge">sticky</span>
-              <span class="badge">slide left</span>
+              <span class="badge">slide-left</span>
               <span class="badge">desktop</span>
             </div>
             <div class="page-preview clearfix">
@@ -1065,7 +1068,7 @@
             <div class="tags">
               <span class="badge">floater</span>
               <span class="badge">sticky</span>
-              <span class="badge">slide down</span>
+              <span class="badge">slide-down</span>
               <span class="badge">desktop</span>
               <span class="badge">animation</span>
               <span class="badge">ease-in-out</span>
@@ -1171,7 +1174,7 @@
             <div class="keyword-preview-wrap">
             <div class="tags">
               <span class="badge">module</span>
-              <span class="badge">alphabetic filter</span>
+              <span class="badge">alphabetic-filter</span>
               <span class="badge">title</span>
               <span class="badge">description</span>
               <span class="badge">click</span>
@@ -1257,7 +1260,7 @@
               <span class="badge">slider</span>
               <span class="badge">pagination</span>
               <span class="badge">navigation</span>
-              <span class="badge">infinite loop</span>
+              <span class="badge">infinite-loop</span>
               <span class="badge">mobile</span>
               <span class="badge">desktop</span>
             </div>
@@ -1335,7 +1338,7 @@
               <span class="badge">description</span>
               <span class="badge">icon</span>
               <span class="badge">title</span>
-              <span class="badge">background image</span>
+              <span class="badge">background-image</span>
               <span class="badge">mobile</span>
               <span class="badge">desktop</span>
             </div>
@@ -1356,7 +1359,7 @@
                 <span class="badge">title</span>
                 <span class="badge">description</span>
                 <span class="badge">slider</span>
-                <span class="badge">vertical slide</span>
+                <span class="badge">vertical-slide</span>
                 <span class="badge">click</span>
                 <span class="badge">mobile</span>
                 <span class="badge">desktop</span>
@@ -1523,6 +1526,7 @@
             firstLevelFilter.show();
           }
           $("#noresult").toggle($(".each-module-prview:visible").length <= 0)
+          $(".clearall").toggle($(".ac-tag").length > 0)
         }
 
         /*Custom Dropdown - Starts*/
@@ -1595,6 +1599,7 @@
           }
         });
         $(".autocomplete ul li").click(function() {
+          $(".autocomplete ul li").show();
           var disLi = $(this),
               disLiVal = disLi.text().toLowerCase();
           $("#search").val("");
@@ -1610,6 +1615,10 @@
         $("body").on("click",".ac-tag",function() {
           $(".autocomplete ul li").eq($(this).data("map")).removeClass("hidden");
           $(this).remove();
+          allFilter();
+        })
+        $(".clearall").click(function() {
+          $(".ac-tag").remove();
           allFilter();
         })
         /*Autocomplete - Ends*/

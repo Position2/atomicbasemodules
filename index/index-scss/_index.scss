@@ -279,7 +279,10 @@
 		}
 	}
 	.tags_wrapper {
-		margin-bottom: 10px;
+		padding-right: 40px;
+		span {
+			margin-bottom: 10px;
+		}
 		@media (min-width: 0) and (max-width: 767.98px) {
 			margin-bottom: 0;
 		}
@@ -292,6 +295,23 @@
 			padding: 5px 10px 7px 10px;
 			line-height: 1;
 			margin-right: 10px;
+		}
+	}
+	.tags_wrapper_outer {
+		.tags_wrapper {
+			float: left;
+		}
+		.clearall {
+			float: right;
+			cursor: pointer;
+			border: 2px solid #da423e;
+			padding: 0 10px;
+			border-radius: 10px;
+			transition: all 0.3s;
+			&:hover {
+				color: $white;
+				background-color: #da423e;
+			}
 		}
 	}
 }
