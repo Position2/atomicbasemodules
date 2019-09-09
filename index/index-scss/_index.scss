@@ -279,7 +279,7 @@
 		}
 	}
 	.tags_wrapper {
-		padding-right: 40px;
+		padding-right: 70px;
 		span {
 			margin-bottom: 10px;
 		}
@@ -299,15 +299,19 @@
 	}
 	.tags_wrapper_outer {
 		.tags_wrapper {
-			float: left;
+			display: inline-block;
+			vertical-align: top;
+			width: 93%;
 		}
 		.clearall {
-			float: right;
+			display: inline-block;
+			vertical-align: top;
 			cursor: pointer;
 			border: 2px solid #da423e;
 			padding: 0 10px;
 			border-radius: 10rem;
 			transition: all 0.3s;
+			margin-bottom: 10px;
 			&:hover {
 				color: $white;
 				background-color: #da423e;
