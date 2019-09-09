@@ -27,6 +27,7 @@
 	.module-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		display: -ms-flexbox !important;
 		.each-module-prview {
 			max-width: calc(100%/4 - 20px);
 	    margin-left: 10px;
@@ -172,6 +173,10 @@
 		vertical-align: middle;
 		background: #fff url("../images/arrow-drop-down.svg") no-repeat 94% center / 20px auto;
 		height: 46px;
+    @media all and (-ms-high-contrast:none) {
+    	background-size: 50px auto;
+    	height: auto;
+    }
 		@media (min-width: 0) and (max-width: 767.98px) {
 			display: block;
 			width: 265px;
