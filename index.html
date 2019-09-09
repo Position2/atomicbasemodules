@@ -144,6 +144,7 @@
                 <li data-filter="video">Video</li>
                 <li data-filter="year">Year</li>
               </ul>
+              <span class="no_match" style="display:none;">No Match</span>
             </div>
           </div>
         </div>
@@ -1592,6 +1593,7 @@
           $(".autocomplete ul li").hide().filter(function() {
             return $(this).data("filter").toLowerCase().indexOf(filterVal) >= 0;
           }).show();
+          $(".no_match").toggle($(".autocomplete").find("li:visible").length <= 0)
           if(event.which == 38) {
             findNextActive(true)      
           } else if(event.which == 40) {

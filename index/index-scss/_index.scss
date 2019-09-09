@@ -294,6 +294,16 @@
 					}
 				}
 			}
+			.no_match {
+				font: {
+					size: $h5-fontsize;
+					weight: $fontweight-regular;
+					family: $base-font-family; 
+				}
+				color: $secondry-color;
+				padding: 10px 20px;
+				display: block;
+			}
 		}
 	}
 	.tags_wrapper {
