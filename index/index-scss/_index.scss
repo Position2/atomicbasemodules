@@ -27,7 +27,9 @@
 	.module-wrapper {
 		display: flex;
 		flex-wrap: wrap;
-		display: -ms-flexbox !important;
+    @media all and (-ms-high-contrast:none) {
+    	display: block;
+    }
 		.each-module-prview {
 			max-width: calc(100%/4 - 20px);
 	    margin-left: 10px;
@@ -36,6 +38,11 @@
 	    margin-bottom: 30px;
 	    transition: 0.3s all;
 	    border-bottom: 4px solid #fff;
+	    @media all and (-ms-high-contrast:none) {
+	    	max-width: 100%;
+	    	width: 254px;
+   			display: inline-block;
+	    }
 	    @media (max-width: 575.98px) {
 				max-width: calc(280px);
 				margin: 0 auto 20px;
@@ -49,9 +56,15 @@
 	    .icon-holder {
 				border: 1px solid #c9c9c9;
 				text-align: center;
+				@media all and (-ms-high-contrast:none) {
+					 height: 177px;
+				}
 				i {
 					font-size: 187px;
 					color: $primary-color;
+					@media all and (-ms-high-contrast:none) {
+						 font-size: 160px;
+					}
 					@media (max-width: 575.98px) {
 						font-size: 200px;
 					}
