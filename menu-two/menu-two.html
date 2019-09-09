@@ -71,7 +71,9 @@
    <script type="text/javascript">
     (function($) {
       $(document).ready(function() {
-        $(".mobile_menu").simpleMobileMenu();
+      	if ($(window).width() >= 991.98) {
+        	$(".mobile_menu").simpleMobileMenu();
+      	}
       });
     })(jQuery);
   </script>
