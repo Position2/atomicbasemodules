@@ -1592,9 +1592,12 @@
         }).keyup(function(event) {
           var filterVal = $(this).val().toLowerCase();
           $(".autocomplete ul li").hide().filter(function() {
-            return $(this).data("filter").toLowerCase().indexOf(filterVal) >= 0;
+            var reg = new RegExp("^("+filterVal+".*)$");
+            return reg.test($(this).text().toLowerCase());
           }).show();
-          $(".no_match").toggle($(".autocomplete").find("li:visible").length <= 0)
+          var liVisibles = ($(".autocomplete").find("li:visible").length <= 0);
+          liVisibles ? $(".autocomplete ul").addClass("hideme") : $(".autocomplete ul").removeClass("hideme");
+          $(".no_match").toggle(liVisibles);
           if(event.which == 38) {
             findNextActive(true)      
           } else if(event.which == 40) {

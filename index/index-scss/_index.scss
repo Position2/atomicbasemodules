@@ -274,6 +274,9 @@
 				padding: 0;
 				max-height: 287px;
 				overflow-y: scroll;
+				&.hideme {
+					max-height: 0;
+				}
 				li {
 					border-bottom: 1px solid $primary-color;
 					margin: 0;
