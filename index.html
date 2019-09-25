@@ -32,6 +32,12 @@
     <div class="container">
       <div class="title">
         <h1><span><img src="index/images/p2.png" alt="Position 2"></span>UI Module</h1>
+        <!-- Newly added start -->
+        <label class="switch">
+          Browse <input type="checkbox" id="changeview" value="builder"> 
+          <span class="slider round"></span> Builder
+        </label>
+        <!-- Newly added end -->
       </div>
       <div class="module-holder">
         <div class="search">
@@ -1505,6 +1511,13 @@
         <div id="noresult">No Result</div>
       </div>
     </div>
+    <div class="builderpanel">
+      <h5>Builder</h5>
+      <div id="builderpanel_wrapper"></div>
+      <div id="builderpanel_footer">
+        <a href="" target="_blank" id="generate_url">Generate</a>
+      </div>
+    </div>
   </div>
    <script type="text/javascript">
     (function($) {
@@ -1642,6 +1655,41 @@
             $(".autocomplete").hide();
           }
         })
+        /*Newly added - Start*/
+        function generateURL() {
+          var url = "https://app-ui-modules.herokuapp.com/?folder=";
+          var fns = $(".bp_p_each").map(function() {
+            return $(this).data("folder-name");
+          }).get();
+          url += fns.join("--");
+          console.log(url)
+          $("#generate_url").attr("href",url);
+        }
+        $("#changeview").click(function() {
+          $("body").toggleClass("builder",$(this).prop("checked"));
+        });
+        $(document).on("click",".builder .each-module-prview",function(e) {
+          e.preventDefault();
+          var dis = $(this),
+              folderName = dis.attr("href").split("/")[1],
+              wrapper = $("<div/>",{ "class" : "bp_p_each" });
+          if(!dis.hasClass("added-to-builder")) {
+            dis.addClass("added-to-builder");
+            dis.find(".page-preview h3").clone().appendTo(wrapper);
+            dis.find(".icon-holder").clone().appendTo(wrapper);
+            $("<span/>",{class:"remove"}).html("remove").appendTo(wrapper);
+            wrapper.attr("data-origin",dis.index())
+                  .attr("data-folder-name",folderName)
+                  .appendTo($("#builderpanel_wrapper"));
+            generateURL();
+          }
+        });
+        $(document).on("click",".builder .bp_p_each",function(e) {
+          $(".each-module-prview").eq($(this).attr("data-origin")).removeClass("added-to-builder")
+          $(this).remove();
+        });
+        $("body").toggleClass("builder",$("#changeview").prop("checked"));
+        /*Newly added - End*/
       });
     })(jQuery);
   </script>
