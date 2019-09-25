@@ -1,5 +1,4 @@
 .module-list {
-	margin-right: 250px;
 	.title {
 		padding: 40px 10px 20px;
 		@media (min-width: 0) and (max-width: 767.98px) {
@@ -468,14 +467,20 @@ input:-moz-placeholder { /* Firefox 18- */
   top: 0px;
   right: -255px;
   background: #f0f6ff;
-  border-left:1px solid #3765a0;
+  box-shadow: 0 0 40px rgba(0,0,0,.2);
   transition:all 0.5s;
   h5 {
   	margin: 0px 0px 6px 0px;
 	  width: 100%;
 	  text-align: center;
-	  border-bottom: 1px solid #3765a0;
-	  padding: 6px 0px;
+	  padding: 10px 0px;
+	  color: $white;
+	  background: $primary-color;
+	  font: {
+			size: $p-fontsize + 2;
+			weight: $fontweight-bold;
+			family: $base-font-family; 
+		}
   }
 }
 
