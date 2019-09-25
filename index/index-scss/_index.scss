@@ -1,6 +1,7 @@
 .module-list {
+	margin-right: 250px;
 	.title {
-		padding: 40px 0;
+		padding: 40px 10px 20px;
 		@media (min-width: 0) and (max-width: 767.98px) {
 			text-align: center;
 		}
@@ -11,7 +12,7 @@
 				weight: $fontweight-bold;
 				family: $base-font-family; 
 			}
-			margin-bottom: 0;
+			margin-bottom: 30px;
 			span {
 				width: 50px;
 				display: inline-block;
@@ -404,6 +405,14 @@ input:-moz-placeholder { /* Firefox 18- */
 .switch {
   position: relative;
   display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  color: $secondry-color;
+  font: {
+		size: $p-fontsize + 2;
+		weight: $fontweight-regular;
+		family: $base-font-family; 
+	}
   input { 
 	  opacity: 0;
 	  width: 0;
@@ -419,6 +428,8 @@ input:-moz-placeholder { /* Firefox 18- */
 	  width: 60px;
 	  height: 34px;
 	  display: inline-block;
+	  vertical-align: middle;
+	  margin: 0 14px 0 10px;
 	  &::before {
 			position: absolute;
 		  content: "";
