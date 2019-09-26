@@ -1,0 +1,131 @@
+#Footer {
+	background-color: $grey;
+	padding: 40px 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+	}
+	.footer-wrapper-lhs {
+		border-right: 1px solid $secondry-color;
+		margin-right: 20px;
+		.footer-content-top {
+			margin-bottom: 40px;
+			h2 {
+				color: $primary-color;
+				font-size: $h5-fontsize + 4;
+		    font-family: $base-font-family;
+		    font-weight: $fontweight-bold;
+		    line-height: 1;
+		    margin: 0 0 16px 0;
+			}
+			ul.menu {
+				li {
+					color: $secondry-color;
+					font-size: $h6-fontsize;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-regular;
+			    line-height: 1;
+			    margin: 0 0 10px 0;
+			    a {
+			    	color: $secondry-color;
+			    	&:hover {
+			    		color: $primary-color;
+			    		text-decoration: none;
+			    	}
+			    }
+				}
+			}
+		}
+		.footer-content-bottom {
+			p {
+				float: left;
+				color: $secondry-color;
+				font-size: $h6-fontsize;
+		    font-family: $base-font-family;
+		    font-weight: $fontweight-regular;
+		    line-height: 1;
+		    margin: 0 10px 0 0;
+			}
+			.privacy-list {
+				float: left;
+				line-height: 1;
+				li {
+					color: $secondry-color;
+					font-size: $h6-fontsize;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-regular;
+			    line-height: 1;
+			    margin: 0 0 0 10px;
+			    display: inline-block;
+			    a {
+			    	color: $secondry-color;
+			    	&:hover {
+			    		color: $primary-color;
+			    		text-decoration: none;
+			    	}
+			    }
+				}
+			}
+		}
+	}
+	.footer-wrapper-rhs {
+		.footercontactsection {
+			.address-section {
+				margin-bottom: 20px;
+				h3 {
+					color: $primary-color;
+					font-size: $h5-fontsize + 4;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-bold;
+			    line-height: 1;
+			    margin: 0 0 10px 0;
+				}
+				p {
+					color: $secondry-color;
+					font-size: $h6-fontsize;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-regular;
+			    line-height: 1.4;
+			    margin: 0;
+				}
+			}
+			.contcat-section {
+				margin-bottom: 20px;
+				color: $primary-color;
+				font-size: $h5-fontsize;
+		    font-family: $base-font-family;
+		    font-weight: $fontweight-bold;
+		    line-height: 1;
+			}
+			.social-link {
+				li {
+					display: inline-block;
+					margin: 0;
+					padding: 0 10px 0 0;
+					i {
+						color: $secondry-color;
+						font-size: $h5-fontsize + 2;
+						transform: scale(1);
+						transition: 0.3s all;
+					}
+					&:last-child {
+						padding: 0;
+					}
+					a {
+						&:hover {
+							i {
+								transform: scale(1.4);
+								transition: 0.3s all;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
