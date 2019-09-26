@@ -13,6 +13,15 @@
 	.footer-wrapper-lhs {
 		border-right: 1px solid $secondry-color;
 		margin-right: 20px;
+		@media (min-width: 0) and (max-width: 767.98px) {
+			border-right: 0;
+			margin-right: 0;
+			text-align: center;
+		}
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			border-right: 0;
+			margin-right: 0;
+		}
 		.footer-content-top {
 			margin-bottom: 40px;
 			h2 {
@@ -42,6 +51,9 @@
 			}
 		}
 		.footer-content-bottom {
+			@media (min-width: 768px) and (max-width: 991.98px) {
+				margin-bottom: 20px;
+			}
 			p {
 				float: left;
 				color: $secondry-color;
@@ -50,10 +62,31 @@
 		    font-weight: $fontweight-regular;
 		    line-height: 1;
 		    margin: 0 10px 0 0;
+		    @media (min-width: 0) and (max-width: 767.98px) {
+		    	line-height: 1.4;
+		    	margin-right: 0;
+		    	margin-bottom: 20px;
+		    	float: none;
+		    }
+		    @media (min-width: 768px) and (max-width: 991.98px) {
+		    	font-size: $h6-fontsize - 2;
+		    }
+		    @media (min-width: 992px) and (max-width: 1199.98px) {
+					float: none;
+					margin-right: 0;
+					margin-bottom: 20px;
+		    }
 			}
 			.privacy-list {
 				float: left;
 				line-height: 1;
+				@media (min-width: 0) and (max-width: 767.98px) {
+					margin-bottom: 30px;
+					float: none;
+				}
+				@media (min-width: 992px) and (max-width: 1199.98px) {
+					float: none;
+				}
 				li {
 					color: $secondry-color;
 					font-size: $h6-fontsize;
@@ -62,6 +95,27 @@
 			    line-height: 1;
 			    margin: 0 0 0 10px;
 			    display: inline-block;
+			    @media (min-width: 0) and (max-width: 767.98px) {
+			    	margin-bottom: 20px;
+			    	border-right: 1px solid $secondry-color;
+			    	margin-left: 0;
+						margin-right: 10px;
+						padding-right: 10px;
+						&:last-child {
+							border-right: 0;
+				    	margin-left: 0;
+							margin-right: 0;
+							padding-right: 0;
+						}
+			    }
+			    @media (min-width: 768px) and (max-width: 991.98px) {
+			    	font-size: $h6-fontsize - 2;
+			    }
+			    @media (min-width: 992px) and (max-width: 1199.98px) {
+			    	&:first-child {
+			    		margin-left: 0;
+			    	}
+			    }
 			    a {
 			    	color: $secondry-color;
 			    	&:hover {
@@ -74,6 +128,9 @@
 		}
 	}
 	.footer-wrapper-rhs {
+		@media (min-width: 0) and (max-width: 767.98px) {
+			text-align: center;
+		}
 		.footercontactsection {
 			.address-section {
 				margin-bottom: 20px;
@@ -94,13 +151,16 @@
 			    margin: 0;
 				}
 			}
-			.contcat-section {
+			.contact-section {
 				margin-bottom: 20px;
 				color: $primary-color;
 				font-size: $h5-fontsize;
 		    font-family: $base-font-family;
 		    font-weight: $fontweight-bold;
 		    line-height: 1;
+		    @media (min-width: 992px) and (max-width: 1199.98px) {
+		    	line-height: 1.4;
+		    }
 			}
 			.social-link {
 				li {
