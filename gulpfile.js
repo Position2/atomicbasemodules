@@ -53,6 +53,7 @@ var paths = [
   ["gallery-one/gallery-scss/style.scss","gallery-one/css","gallery-one/gallery-scss/*.scss"],
   ["footer-one/footer-scss/style.scss","footer-one/css","footer-one/footer-scss/*.scss"],
   ["footer-two/footer-scss/style.scss","footer-two/css","footer-two/footer-scss/*.scss"],
+  ["footer-three/footer-scss/style.scss","footer-three/css","footer-three/footer-scss/*.scss"],
   ["module-one/module-scss/style.scss","module-one/css","module-one/module-scss/*.scss"],
   ["module-two/module-scss/style.scss","module-two/css","module-two/module-scss/*.scss"],
   ["module-one/module-scss/style.scss","module-one/css","module-one/module-scss/*.scss"],
