@@ -70,6 +70,7 @@ var paths = [
   ["module-sixteen/module-scss/style.scss","module-sixteen/css","module-sixteen/module-scss/*.scss"],
   ["module-seventeen/module-scss/style.scss","module-seventeen/css","module-seventeen/module-scss/*.scss"],
   ["module-eighteen/module-scss/style.scss","module-eighteen/css","module-eighteen/module-scss/*.scss"],
+  ["footer-one/footer-scss/style.scss","footer-one/css","footer-one/footer-scss/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
