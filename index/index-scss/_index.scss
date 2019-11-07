@@ -11,7 +11,7 @@
 				weight: $fontweight-bold;
 				family: $base-font-family; 
 			}
-			margin-bottom: 30px;
+			margin-bottom: 0;
 			span {
 				width: 50px;
 				display: inline-block;
@@ -412,6 +412,7 @@ input:-moz-placeholder { /* Firefox 18- */
 		weight: $fontweight-regular;
 		family: $base-font-family; 
 	}
+	padding-top: 12px;
 	@media (min-width: 0) and (max-width: 1199.98px) {
 		display: none;
 	}
