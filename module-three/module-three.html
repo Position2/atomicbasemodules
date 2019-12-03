@@ -69,7 +69,7 @@
       $(document).ready(function() {
         var filterUl = $("<ul/>");
 			    $("<li/>", {
-			      "html": "ALL <span class='count_pp'>" + $(".alpha-filter").size() + "</span>",
+			      "html": "ALL <span class='count_pp'>" + $(".alpha-filter").length + "</span>",
 			      "data-filter": "*"
 			    }).appendTo(filterUl);
 			    for (var i = 65; i <= 90; i++) {
