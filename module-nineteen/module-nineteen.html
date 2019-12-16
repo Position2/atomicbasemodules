@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<title>UI Module | Module Nineteen</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/all-plugins.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="tab-wrapper">
+      <div class="left-section">
+        <div class="text-wrap">
+          <h3>Lorum Ipsum</h3>
+        </div>
+        <div class="tab-video">
+          <img src="images/image-one.png" alt="Image One">
+        </div>
+      </div>
+      <div class="right-section desktop">
+        <ul class="tabs-section">
+          <li class="each-tab">
+            <h2>Lorem Ipsum One</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui architecto quam magni tempore excepturi nemo sit voluptatibus maiores vero illum labore numquam hic, maxime doloribus iusto temporibus dolores sapiente facere.</p>
+          </li>
+          <li class="each-tab">
+            <h2>Lorem Ipsum Two</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui architecto quam magni tempore excepturi nemo sit voluptatibus maiores vero illum labore numquam hic, maxime doloribus iusto temporibus dolores sapiente facere.</p>
+          </li>
+          <li class="each-tab">
+            <h2>Lorem Ipsum Three</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui architecto quam magni tempore excepturi nemo sit voluptatibus maiores vero illum labore numquam hic, maxime doloribus iusto temporibus dolores sapiente facere.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="right-section device">
+        <ul class="tabs-section">
+          <li class="each-tab">
+            <h2>Lorem Ipsum One</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui architecto quam magni tempore excepturi nemo sit voluptatibus maiores vero illum labore numquam hic, maxime doloribus iusto temporibus dolores sapiente facere.</p>
+          </li>
+          <li class="each-tab">
+            <h2>Lorem Ipsum Two</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui architecto quam magni tempore excepturi nemo sit voluptatibus maiores vero illum labore numquam hic, maxime doloribus iusto temporibus dolores sapiente facere.</p>
+          </li>
+          <li class="each-tab">
+            <h2>Lorem Ipsum Three</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui architecto quam magni tempore excepturi nemo sit voluptatibus maiores vero illum labore numquam hic, maxime doloribus iusto temporibus dolores sapiente facere.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+	 <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+        function isRealDevice() {
+          return /Android|webOS|iPhone|iPad|macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (typeof(window.orientation) != "undefined" || (navigator.maxTouchPoints > 1));
+        }
+      	var tb_timer;
+        function TabSlider(activate) {
+          activate = activate || false;
+          if(activate) {
+            tb_timer = setInterval(function() {
+              var target = $(".each-tab"),
+                  currentActive = target.filter(".active"),
+                  nextActive = currentActive.next();
+              nextActive = nextActive.length > 0 ? nextActive : target.eq(0);
+              // nextActive.trigger("click");
+              nextActive.addClass("active").siblings().removeClass("active");
+            },4000)
+          } else {
+            clearInterval(tb_timer);
+          }
+        }
+        TabSlider(".each-tab");
+        function initTab(selc,tSelc,attr,fPrefix,callback) {
+          $(selc).click(function(){
+            var dis = $(this),
+              disTarget = dis.attr(attr||"data-target");
+            dis.addClass("active").siblings().removeClass("active");
+            $(tSelc).removeClass("active").filter((fPrefix||"")+disTarget).addClass("active");
+            (typeof(callback) == "function")&&callback(disTarget);
+          }).eq(0).trigger("click");
+        }
+        initTab(".each-tab",null,null,null);
+        var MoSlr = "";
+        function MobileSlider() {
+          var elem = $('.device .tabs-section');
+          if(($(window).width() <= 1200) && elem.length > 0) {
+            (MoSlr != "" && MoSlr.length > 0)&&(MoSlr.destroySlider());
+              MoSlr = elem.bxSlider({
+                controls: false,
+                auto: true,
+                pause: 4000,
+                //speed: 2000,
+                adaptiveHeight: true,
+                touchEnabled: true,
+                preventDefaultSwipeX: true
+              });
+            }   
+          } 
+          MobileSlider('.device .tabs-section');
+          var prop_resize_time = "",
+          wRevent = isRealDevice() ? "orientationchange" : "resize";
+          $(window).on(wRevent,function() {
+            clearTimeout(prop_resize_time);
+            prop_resize_time = setTimeout(200);
+          });
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>
