@@ -50,6 +50,7 @@ var paths = [
   ["floater-one/floater-scss/style.scss","floater-one/css","floater-one/floater-scss/*.scss"],
   ["floater-two/floater-scss/style.scss","floater-two/css","floater-two/floater-scss/*.scss"],
   ["testimonial-one/testimonial-scss/style.scss","testimonial-one/css","testimonial-one/testimonial-scss/*.scss"],
+  ["testimonial-two/testimonial-scss/style.scss","testimonial-two/css","testimonial-two/testimonial-scss/*.scss"],
   ["gallery-one/gallery-scss/style.scss","gallery-one/css","gallery-one/gallery-scss/*.scss"],
   ["footer-one/footer-scss/style.scss","footer-one/css","footer-one/footer-scss/*.scss"],
   ["footer-two/footer-scss/style.scss","footer-two/css","footer-two/footer-scss/*.scss"],
