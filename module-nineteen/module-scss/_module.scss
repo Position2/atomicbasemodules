@@ -28,6 +28,10 @@
     }
     .tab-video {
       margin-left: 60px;
+      @media (min-width: 0) and (max-width: 767.98px) {
+        margin-left: 0;
+        text-align: center;
+      }
     }
     h3 {
       color: $gray-two;
@@ -46,20 +50,13 @@
       direction: rtl;
       -ms-direction: rtl;
       @media (min-width: 0) and (max-width: 767.98px) {
-        font-size: $secondry-color;
+        font-size: $h2-fontsize;
         writing-mode: horizontal-tb;
         transform: none;
         margin: 0 0 20px 0;
       }
       @media (min-width: 768px) and (max-width: 991.98px) { 
         font-size: $secondry-color;
-      }
-    }
-    .video-section {
-      margin-left: 55px;
-      @media (min-width: 0) and (max-width: 767.98px) {
-        margin-left: 0;
-        text-align: center;
       }
     }
   }
