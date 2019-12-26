@@ -30,6 +30,7 @@ var paths = [
   ["resource-listing-five/resource-listing-scss/style.scss","resource-listing-five/css","resource-listing-five/resource-listing-scss/*.scss"],
   ["team-one/team-scss/style.scss","team-one/css","team-one/team-scss/*.scss"],
   ["team-two/team-scss/style.scss","team-two/css","team-two/team-scss/*.scss"],
+  ["team-three/team-scss/style.scss","team-three/css","team-three/team-scss/*.scss"],
   ["event-one/event-scss/style.scss","event-one/css","event-one/event-scss/*.scss"],
   ["event-two/event-scss/style.scss","event-two/css","event-two/event-scss/*.scss"],
   ["event-three/event-scss/style.scss","event-three/css","event-three/event-scss/*.scss"],

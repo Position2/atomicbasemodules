@@ -1,0 +1,193 @@
+.meet-our-team {
+  padding: 60px 0;
+  position: relative;
+    @media (min-width: 0) and (max-width: 1199.98px) { 
+      padding: 40px 0;
+    }
+  h1 {
+    color: $secondry-color;
+    font: {
+      size: $h5-fontsize + 4;
+      weight: $fontweight-bold;
+    }
+    margin: 0 0 30px 0;
+    line-height: 1;
+    text-align: center;
+    @media (min-width: 0) and (max-width: 1199.98px) {  
+      font-size: $h5-fontsize;
+    }
+  }
+  .tab-list-warp {
+    ul {
+      margin: 0;
+      padding: 0;
+      @media (min-width: 0) and (max-width: 767.98px) {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      li {
+        list-style-type: none;
+        margin: 0 16px 0 0;
+        padding: 0;
+        display: inline-block;
+        width: 60px;
+        cursor: pointer;
+        border-radius: 50px;
+        padding: 2px;
+        border: 2px solid transparent;
+        transition: all 0.5s;
+        position: relative;
+        @media (min-width: 0) and (max-width: 767.98px) {
+          margin-right: 8px;
+          width: 50px;
+        }
+        .overlay {
+          position: absolute;
+          background: rgba(102, 102, 102,0.6);
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+          top: 0;
+          left: 0;
+          transition: all 0.5s;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 50px;
+        }
+        &.active, &:hover {
+          border: 2px solid $primary-color;
+          &::before {
+            content: "";
+            border-top: 6px solid $primary-color;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            position: absolute;
+            bottom: -6px;
+            left: 23px;
+            @media (min-width: 0) and (max-width: 767.98px) {
+              bottom: -7px;
+              left: 18px;
+            }
+          }
+          .overlay {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+  .team-description {
+    .each-team {
+      display: none;
+      &.active {
+        display: block;
+      }
+      @media (min-width: 0) and (max-width: 767.98px) {
+        .img-wrap {
+          width: 280px;
+          margin: 0 auto;
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .right-descrp {
+        padding-top: 100px;
+        @media (min-width: 0) and (max-width: 767.98px) {
+          padding-top: 40px;
+        }
+        @media (min-width: 0) and (max-width: 767.98px) {
+          padding-top: 40px;
+        }
+        h2 {
+          color: $tertiary-color;
+          font: {
+            size: $h5-fontsize;
+            weight: $fontweight-bold;
+          }
+          margin: 0 0 6px 0;
+          line-height: 1;
+          @media (min-width: 0) and (max-width: 1199.98px) { 
+            font-size: $h5-fontsize;
+          }
+        }
+        h3.designation {
+          color: $tertiary-color;
+          font: {
+            size: $h6-fontsize;
+            weight: $fontweight-regular;
+          }
+          margin: 0 0 20px 0;
+          line-height: 1;
+        }
+        p {
+          color: $tertiary-color;
+          font: {
+            size: $h5-fontsize;
+            weight: $fontweight-regular;
+          }
+          margin: 0 0 20px 0;
+          line-height: 1.3;
+        }
+        a {
+          display: inline-block;
+          margin-bottom: 20px;
+          i {
+            color: $grey;
+            border: 1px solid $grey;
+            border-radius: 50px;
+            padding: 10px;
+            transition: all 0.5s;
+            &:hover {
+              background: $grey;
+              color: $white;
+            }
+          }
+        }
+        h4 {
+          color: $secondry-color;
+          font: {
+            size: $h5-fontsize;
+            weight: $fontweight-bold;
+          }
+          margin: 0 0 18px 0;
+          line-height: 1;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            margin: 0 10px 10px 0;
+            padding: 7px 20px;
+            list-style-type: none;
+            display: inline-block;
+            border: 1px solid $primary-utility-one;
+            border-radius: 20px;
+            color: $primary-utility-one;
+            font: {
+              size: $secondry-color;
+              weight: $fontweight-bold;
+            }
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+  .team-list {
+    position: relative;
+    .tab-list-warp {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 99;
+      @media (min-width: 0) and (max-width: 767.98px) {
+        position: static;
+      }
+    }
+  }
+}
