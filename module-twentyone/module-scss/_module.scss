@@ -83,11 +83,17 @@
 				@media (min-width: 0) and (max-width: 767.98px) {
 					width: 50px;
 				}
+				@media (min-width: 768px) and (max-width: 991.98px) { 
+					width: 60px;
+				}
     		i {
 					color: $white;
 					font-size: 100px;
 					@media (min-width: 0) and (max-width: 767.98px) {
 						font-size: 50px;
+					}
+					@media (min-width: 768px) and (max-width: 991.98px) { 
+						font-size: 60px;
 					}
     		}
     	}
@@ -127,6 +133,10 @@
 							vertical-align: middle;
 							width: 50px;
 							font-size: 50px;
+							@media (min-width: 0) and (max-width: 1199.98px) {
+								width: 30px;
+								font-size: 30px;
+							}
 						}
 						h3 {
 							width: 76%;
@@ -138,6 +148,10 @@
 							font-weight: $fontweight-regular;
 							padding: 0 0 0 20px;
 							border: 0;
+							@media (min-width: 0) and (max-width: 1199.98px) {
+								width: 71%;
+								padding-left: 14px;
+							}
 						}
 					}
 				}
