@@ -1,0 +1,39 @@
+.error-page {
+	background: url('../images/bg-image.jpg') no-repeat 0 0 / cover; 
+	height: 100vh;
+	position: relative;
+	.errorpage-wrapper {
+		background: rgba(0,0,0,0.8);
+		padding: 40px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 400px;
+		@media (min-width: 0) and (max-width: 767.98px) {
+			width: 70%;
+		}
+		h1 {
+			color: $white;
+			font-size: $h4-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-bold;
+      margin-bottom: 15px;
+      line-height: 1.1;
+      @media (min-width: 0) and (max-width: 767.98px) {
+      	font-size: $h4-fontsize - 10;
+      }
+		} 
+		p {
+			color: $white;
+			font-size: $h5-fontsize;
+      font-family: $base-font-family;
+      font-weight: $fontweight-regular;
+      margin: 0;
+      line-height: 1.4;
+      a {
+      	color: $white;
+      	text-decoration: underline;
+      }
+		}
+	}
+}
