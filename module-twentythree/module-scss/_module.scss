@@ -1,0 +1,80 @@
+.block-wrapper {
+	padding: 100px 0;
+	.each-resource {
+		float: left;
+		width: 50%;
+		position: relative;
+    text-align: center;
+    z-index: 9;
+    @media (max-width: 575.98px) {
+    	width: 100%;
+    }
+		.image-holder {
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+				&.hover-img {
+					display: none;
+				}
+			}
+		}
+		.resource-content {
+	    width: 90%;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+			h2 {
+				color: $white;
+				font-size: $h4-fontsize;
+				font-family: $base-font-family;
+				font-weight: $fontweight-bold;
+				margin: 0 0 10px;
+				@media (min-width: 0) and (max-width: 767.98px) { 
+					font-size: $h4-fontsize - 6;
+				}
+			}
+			h3 {
+				color: $white;
+				font-size: $h5-fontsize;
+				font-family: $base-font-family;
+				font-weight: $fontweight-regular;
+				margin: 0 0 20px;
+			}
+			span {
+				color: $white;
+				font-size: $h5-fontsize + 4;
+				font-family: $base-font-family;
+				font-weight: $fontweight-bold;
+				vertical-align: middle;
+				i {
+					margin-left: 6px;
+					color: $white;
+					font-size: $h5-fontsize + 4;
+					vertical-align: middle;
+					transition: all 0.5s;
+				}
+			}
+		}
+		&:hover {
+			.image-holder {
+				img {
+					&.default-img {
+						display: none;
+					}
+					&.hover-img {
+						display: block;
+					}
+				}
+			}
+			.resource-content {
+				span {
+					i {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}
