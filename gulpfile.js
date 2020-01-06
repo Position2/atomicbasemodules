@@ -41,6 +41,7 @@ var paths = [
   ["event-eight/event-scss/style.scss","event-eight/css","event-eight/event-scss/*.scss"],
   ["event-nine/event-scss/style.scss","event-nine/css","event-nine/event-scss/*.scss"],
   ["event-ten/event-scss/style.scss","event-ten/css","event-ten/event-scss/*.scss"],
+  ["event-eleven/event-scss/style.scss","event-eleven/css","event-eleven/event-scss/*.scss"],
   ["contactus-one/contactus-scss/style.scss","contactus-one/css","contactus-one/contactus-scss/*.scss"],
   ["contactus-two/contactus-scss/style.scss","contactus-two/css","contactus-two/contactus-scss/*.scss"],
   ["contactus-three/contactus-scss/style.scss","contactus-three/css","contactus-three/contactus-scss/*.scss"],
