@@ -1,0 +1,130 @@
+.form-warpper {
+	background: url('../images/resource-two.jpg') no-repeat 0 0 / cover;
+	height: 100vh;
+	position: relative;
+	.inner-wrap {
+    width: 1000px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    border: 1px solid $gray-two;
+    @media (min-width: 0) and (max-width: 767.98px) {
+    	width: auto;
+    }
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+			width: 700px;
+    }
+    .left-image {
+    	flex: 0 0 50%;
+    	max-width: 50%;
+    	img {
+    		width: 100%;
+    		height: auto;
+    	}
+    	@media (min-width: 0) and (max-width: 767.98px) {
+				display: none;
+    	}
+    }
+    .right-form {
+    	flex: 0 0 50%;
+    	max-width: 50%;
+    	position: relative;
+    	background: $white;
+    	.form-inner-wrap {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+		    h4 {
+		    	color: $secondry-color;
+		    	font-size: $h5-fontsize;
+			    font-family: $base-font-family;
+			    font-weight: $fontweight-bold;
+			    text-transform: uppercase;
+			    margin: 0 0 20px;
+		    }
+		    form {
+		    	width: 400px;
+		    	 @media (min-width: 768px) and (max-width: 1199.98px) {
+		    	 	width: 300px;
+		    	 }
+		    	 @media (min-width: 0) and (max-width: 767.98px) {
+		    	 	width: 300px;
+		    	 	background: $white;
+		    	 	padding: 20px;
+		    	 }
+		    	.form-group {
+		    		display: inline-block;
+		    		width: 49%;
+		    		vertical-align: bottom;
+		    		margin-bottom: 0;
+		    		&:nth-child(1) {
+							margin-bottom: 20px;
+		    		}
+		    		&:nth-child(2) {
+							margin-bottom: 40px;
+		    		}
+		    		&.full-width {
+		    			width: 100%;
+		    			display: block;
+		    		}
+		    		input {
+		    			width: 100%;
+		    			color: $secondry-color;
+				    	font-size: $h6-fontsize;
+					    font-family: $base-font-family;
+					    font-weight: $fontweight-bold;
+					    text-transform: uppercase;
+					    border-bottom: 1px solid $secondry-color;
+					    border-top: none;
+					    border-right: none;
+					    border-left: none;
+					    border-radius: 0;
+					    padding: 0;
+					    &::-webkit-input-placeholder { /* Edge */
+							  color: $tertiary-color;
+							  text-transform: capitalize;
+							}
+
+							&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+							  color: $tertiary-color;
+							  text-transform: capitalize;
+							}
+
+							&::placeholder {
+							  color: $tertiary-color;
+							  text-transform: capitalize;
+							}
+							&:focus {
+								box-shadow: none;
+							}
+		    		}
+		    		input[type="submit"] {
+		    			border: 1px solid $secondry-color;
+		    			border-radius: 20px;
+		    			width: 100px;
+		    			transition: all 0.3s;
+		    			&:hover {
+		    				color: $white;
+		    				background: $secondry-color;
+		    			}
+		    		}
+		    		p.forgot-pwd {
+		    			margin-bottom: 0;
+		    			text-align: right;
+		    			@media (min-width: 0) and (max-width: 767.98px) {
+		    				font-size: $h6-fontsize - 2;
+		    			}
+							a {
+								color: $secondry-color;
+							}
+		    		}
+		    	}
+		    }
+			}
+    }
+	}
+}
