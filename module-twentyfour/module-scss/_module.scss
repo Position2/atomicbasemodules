@@ -1,1 +1,71 @@
- 
+ .threeblock {
+  padding: 40px 0 50px;
+  background: $block-bg;
+   @media (min-width: 0) and (max-width: 767.98px) { 
+      background-color: $white;
+   }
+  .each-block-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    display: -ms-flexbox;
+    @media (min-width: 0) and (max-width: 767.98px) { 
+     display:block;
+    }
+    .each-block {
+      flex: 1;
+      text-align: center;
+      margin-right: 50px;
+      padding: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      @media (min-width: 0) and (max-width: 767.98px) { 
+        margin:0 0 60px;
+        padding:0;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        margin-right: 20px;
+        padding: 0;
+      }
+      &:nth-child(3) {
+        margin-right:0; 
+      }
+      &:hover {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 3px 15.36px 0.64px rgba(20, 80, 145, 0.1);
+        transition: all 0.3s ease;
+      }
+      h3 {
+        color: $secondry-color;
+        font-family: $base-font-family;
+        font-size: $h5-fontsize + 10;
+        font-weight: $fontweight-bold;
+        line-height: 130%;
+        margin:0 0 20px;
+       @media (min-width: 768px) and (max-width: 1199.98px) { 
+          min-height: 55px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {  
+          font-size: 22px;
+        }
+        @media (min-width: 0) and (max-width: 767.98px) {  
+          min-height: auto;
+        }
+      }
+      .icon-wrap {
+        margin: 0 auto 20px;
+        i {
+        	color: $primary-color;
+        	font-size: 80px;
+        }
+      }
+      p {
+        color: $secondry-color;
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        font-weight: $fontweight-regular;
+        line-height: 150%;
+        margin:0;
+      }
+    }
+  }
+}
