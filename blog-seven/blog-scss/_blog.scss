@@ -1,0 +1,116 @@
+.portfolio-wrap {
+  padding: 100px 0;
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .each-portfolio {
+    float: left;
+    border: 1px solid $white;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    &.one {
+      width: 50%;
+      @media (min-width: 0) and (max-width: 1199.98px) {
+        width: 100%;
+      }
+    }
+    &.two {
+      width: 25%;
+      @media (min-width: 0) and (max-width: 1199.98px) {
+        width: 100%;
+      }
+    }
+    &.three {
+      width: 50%;
+      @media (min-width: 0) and (max-width: 1199.98px) {
+        width: 100%;
+      }
+    }
+    .overlay-shadow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      top: 0;
+      opacity: 0;
+      transition: all 0.5s;
+      @media (min-width: 0) and (max-width: 1199.98px) {
+        opacity: 1;
+      }
+    }
+    .image-wrap {
+      img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        transform: scale(1);
+        transition: transform .5s;
+      }
+    }
+    .overlay {
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px 0 20px;
+      transition: all 0.8s;
+      left: -100px;
+      @media (min-width: 0) and (max-width: 1199.98px) {
+        opacity: 1;
+        left: 0;
+      }
+      .links-wrapper {
+        .links {
+          .portfolio-icons {
+            a {
+              display: inline-block;
+              color: $white;
+              margin-right: 10px;
+              i {
+                font-size: $h5-fontsize + 6;
+              }
+            }
+          }
+          .overlay-line {
+            background: $white;
+            width: 100%;
+            height: 2px;
+            margin: 15px 0;
+          }
+          .caption {
+            .title {
+              color: $white;
+              font-size: $h5-fontsize;
+              font-family: $base-font-family;
+              font-weight: $fontweight-bold;
+              margin-bottom: 6px;
+            }
+            .subtitle {
+              color: $white;
+              font-size: $h6-fontsize;
+              font-family: $base-font-family;
+              font-weight: $fontweight-regular;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .overlay-shadow {
+        opacity: 1;
+      }
+      .image-wrap {
+        img {
+          transform: scale(1.2);
+        }
+      }
+      .overlay {
+        opacity: 1;
+        left: 0;
+      }
+    }
+  }
+}
