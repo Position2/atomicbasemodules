@@ -1,0 +1,100 @@
+.blog-section {
+  padding: 100px 0;
+  .blog-box {
+    float: left;
+    margin: 0 10px;
+    width: calc(100%/3 - 20px);
+    @media (min-width: 0) and (max-width: 767.98px) {
+      width: calc(100%);
+      margin: 0 0 20px 0;
+    }
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      width: calc(100%/2 - 20px);
+      margin-bottom: 20px;
+    }
+    .blog-post {
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .hover-post {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        background: $white;
+        text-align: center;
+        background: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        p {
+          color: $secondry-color;
+          font-size: $h6-fontsize;
+          font-family: $base-font-family;
+          font-weight: $fontweight-regular;
+          margin-bottom: 30px;
+          span {
+            display: inline-block;
+            margin: 0 10px;
+          }
+        }
+        h2 {
+          color: $secondry-color;
+          font-size: $h4-fontsize - 4;
+          font-family: $base-font-family;
+          font-weight: $fontweight-bold;
+          text-transform: uppercase;
+          margin-bottom: 40px;
+          line-height: 1.5;
+          a {
+            color: $secondry-color;
+            text-decoration: none;
+          }
+        }
+        .post-tags {
+          margin: 0;
+          padding: 0;
+          li {
+            display: inline-block;
+            margin-right: 7px;
+            color: $secondry-color;
+            font-size: $h6-fontsize - 2;
+            font-family: $base-font-family;
+            font-weight: $fontweight-regular;
+            position: relative;
+            a {
+              color: $secondry-color;
+              text-decoration: none;
+              i {
+                color: $secondry-color;
+                margin-right: 10px;
+              }
+            }
+            &:last-child {
+              margin-right: 0;
+              margin-left: 7px;
+              &::before {
+                content: "|";
+                margin-right: 11px;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .hover-post {
+          opacity: 1;
+          top: 20px;
+          left: 20px;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}
