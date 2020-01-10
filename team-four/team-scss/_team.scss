@@ -1,1 +1,74 @@
- 
+ .team-wrap {
+  padding: 100px 0;
+  .each-team {
+    position: relative;
+    overflow: hidden;
+    @media (min-width: 0) and (max-width: 991.98px) {
+      margin-bottom: 20px;
+    }
+    .image-wrap {
+      img {
+        width: 100%;
+        height: auto;
+      }
+      a {
+        display: block;
+      }
+    }
+    .content {
+      text-align: center;
+      width: 75%;
+      background-color: $white;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(180%);
+      transition: all 0.6s linear 0s;
+      padding: 20px 0;
+      opacity: 0;
+      a {
+        display: block;
+        color: $secondry-color;
+        text-decoration: none;
+        margin-bottom: 6px;
+        h4 {
+          color: $secondry-color;
+          font-size: $h4-fontsize - 6;
+          font-family: $base-font-family;
+          font-weight: $fontweight-bold;
+          margin-bottom: 0;
+        }
+      }
+      span {
+        color: $secondry-color;
+        font-size: $h6-fontsize;
+        font-family: $base-font-family;
+        font-weight: $fontweight-regular;
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0 10px 0 0;
+          padding: 0;
+          display: inline-block;
+          vertical-align: middle;
+          i {
+            color: $secondry-color;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .content {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0%);
+      }
+    }
+  }
+}
