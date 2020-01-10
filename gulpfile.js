@@ -90,6 +90,7 @@ var paths = [
   ["module-twentyfive/module-scss/style.scss","module-twentyfive/css","module-twentyfive/module-scss/*.scss"],
   ["module-twentysix/module-scss/style.scss","module-twentysix/css","module-twentysix/module-scss/*.scss"],
   ["module-twentyseven/module-scss/style.scss","module-twentyseven/css","module-twentyseven/module-scss/*.scss"],
+  ["module-twentyeight/module-scss/style.scss","module-twentyeight/css","module-twentyeight/module-scss/*.scss"],
   ["errorpage-one/errorpage-scss/style.scss","errorpage-one/css","errorpage-one/errorpage-scss/*.scss"],
   ["errorpage-two/errorpage-scss/style.scss","errorpage-two/css","errorpage-two/errorpage-scss/*.scss"],
   ["login-one/login-scss/style.scss","login-one/css","login-one/login-scss/*.scss"],
