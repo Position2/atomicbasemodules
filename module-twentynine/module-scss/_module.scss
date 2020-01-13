@@ -1,0 +1,47 @@
+.content-wrap {
+  padding: 100px 0;
+  .bx-controls {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+}
+.playlist-wrap {
+  .playlist-item {
+    .img-wrap {
+      position: relative;
+      margin-bottom: 20px;
+      a.img-hover {
+        display: block;
+        z-index: 10;
+        box-shadow: 0 0 0 -2px rgba(0, 0, 0, 0.5);
+        -webkit-transition: all 200ms ease;
+        transition: all 200ms ease;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        &:hover {
+          box-shadow: 0 15px 45px -5px rgba(0, 0, 0, 0.2);
+          filter: brightness(110%);
+          transform: translate(0px, -2px);
+        }
+      }
+    }
+    margin-bottom: 30px;
+    a {
+      display: inline-block;
+      color: $secondry-color;
+      font-family: $base-font-family;
+      font-size: $h5-fontsize + 2;
+      font-weight: $fontweight-regular;
+      h3 {
+        color: $secondry-color;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $primary-color;
+      }
+    }
+  }
+}
