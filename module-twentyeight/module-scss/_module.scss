@@ -1,9 +1,12 @@
 .blog-post {
-  border-radius: 0.5rem;
+  border-radius: 8px;
   box-shadow: 0 1px 60px rgba(0, 0, 0, 0.055);
-  padding: 4.06rem 4.375rem 3.125rem 4.75rem;
+  padding: 65px 70px 50px 76px;
   background-color: $white;
   margin-bottom: 40px;
+  @media (min-width: 0) and (max-width: 767.98px) {
+    padding: 28px;
+  }
   &:before {
     content: " ";
     display: table;
@@ -27,16 +30,15 @@
     .blog-meta {
       margin: 20px 0;
       font-size: $h6-fontsize;
-
       letter-spacing: .02rem;
       line-height: 1.2;
       .blog-time {
         color: #818181;
         letter-spacing: -.02rem;
-        padding-right: .2rem;
+        padding-right: 3px;
       }
       .blog-author {
-        padding-left: .3rem;
+        padding-left: 5px;
       }
     }
   }
@@ -56,18 +58,21 @@
       float: left;
       text-align: left;
     }
-    img.alignleft {
+    img.blog-image {
       margin: 0px 32px 24px 0;
+      @media only screen and (min-device-width: 0) and (max-device-width: 767.98px) and (orientation: portrait) {
+        float: none;
+      }
     }
     .blog-share {
       clear: both;
-      margin: 1rem 0 2rem -.2rem;
+      margin: 16px 0 22px 0px;
       .share-list {
         -ms-touch-action: manipulation;
         touch-action: manipulation;
         a {
           cursor: pointer;
-          padding-right: 0.4rem;
+          padding-right: 6.5px;
           border: 0;
           box-shadow: none;
           display: inline-block;
@@ -75,6 +80,168 @@
           padding: 0 4px;
           vertical-align: middle;
           text-decoration: none;
+        }
+        .icon-button {
+          background-color: white;
+          border-radius: 2.6rem;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 1.3rem;
+          height: 2.6rem;
+          line-height: 2.6rem;
+          margin: 0 5px;
+          position: relative;
+          text-align: center;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          width: 2.6rem;
+
+          span {
+            border-radius: 0;
+            display: block;
+            height: 0;
+            left: 50%;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            width: 0;
+          }
+
+          &:hover span {
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 2.6rem;
+            margin: -1.3rem;
+          }
+
+          i {
+            background: none;
+            //color: white;
+            height: 2.6rem;
+            left: 0;
+            line-height: 2.6rem;
+            position: absolute;
+            top: 0;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            width: 2.6rem;
+            z-index: 10;
+          }
+        }
+
+        /* Circle */
+
+        /* Icons */
+
+        .twitter span {
+          background-color: #4099ff;
+        }
+
+        .facebook span {
+          background-color: #3B5998;
+        }
+
+        .google-plus span {
+          background-color: #db5a3c;
+        }
+
+        .tumblr span {
+          background-color: #34526f;
+        }
+
+        .instagram span {
+          background-color: #517fa4;
+        }
+
+        .youtube span {
+          background-color: #bb0000;
+        }
+
+        .pinterest span {
+          background-color: #cb2027;
+        }
+
+        .icon-button {
+          .icon-twitter {
+            color: #4099ff;
+          }
+
+          .icon-facebook {
+            color: #3B5998;
+          }
+
+          .fa-tumblr {
+            color: #34526f;
+          }
+
+          .icon-google-plus {
+            color: #db5a3c;
+          }
+
+          .fa-instagram {
+            color: #517fa4;
+          }
+
+          .fa-youtube {
+            color: #bb0000;
+          }
+
+          .fa-pinterest {
+            color: #cb2027;
+          }
+
+          &:hover {
+            .icon-twitter,
+            .icon-facebook,
+            .icon-google-plus,
+            .fa-tumblr,
+            .fa-instagram,
+            .fa-youtube,
+            .fa-pinterest {
+              color: white;
+            }
+          }
+        }
+
+        @media all and (max-width: 680px) {
+          .icon-button {
+            border-radius: 1.6rem;
+            font-size: 0.8rem;
+            height: 1.6rem;
+            line-height: 1.6rem;
+            width: 1.6rem;
+
+            &:hover span {
+              width: 1.6rem;
+              height: 1.6rem;
+              border-radius: 1.6rem;
+              margin: -0.8rem;
+            }
+
+            i {
+              height: 1.6rem;
+              line-height: 1.6rem;
+              width: 1.6rem;
+            }
+          }
+
+          /* Icons */
+
+          body {
+            padding: 10px;
+          }
+
+          .pinterest {
+            display: none;
+          }
         }
       }
     }
