@@ -142,7 +142,7 @@
           top: 50%;
           left: -14px;
           transform: translateY(-50%);
-          transition: all 1s ease-in-out;
+          transition: all 1s all;
           @media (min-width: 0) and (max-width: 1199.98px) {
             content: none;
           }
