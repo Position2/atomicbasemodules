@@ -1,9 +1,55 @@
 .content-wrap {
   padding: 100px 0;
+  .bx-wrapper {
+    position: relative; 
+    text-align: center;
+    margin: 0 auto;
+  }
   .bx-controls {
-    position: absolute;
-    top: 45%;
+    position: absolute; 
+    top: 28%;
     transform: translateY(-50%);
+    width: 100%;
+    .bx-controls-direction {
+      a {
+        border: 1px solid $black;
+        text-indent: -9999px;
+        display: block;
+        padding: 40px 15px;
+        @media (min-width: 0) and (max-width: 991.98px) {
+          padding: 30px 10px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          padding: 30px 12px;
+        }
+        &.bx-prev {
+          position: absolute;
+          left: -44px;
+          background: url('../images/arrow-left.svg') no-repeat center center;
+          @media (min-width: 0) and (max-width: 767.98px) {
+            left: -28px;
+          }
+          @media (min-width: 768px) and (max-width: 1199.98px) {
+            left: -34px;
+          }
+        }
+        &.bx-next {
+          position: absolute;
+          left: auto;
+          right: -44px;
+          background: url('../images/arrow-right.svg') no-repeat center center;
+          @media (min-width: 0) and (max-width: 767.98px) {
+            right: -28px;
+          }
+          @media (min-width: 768px) and (max-width: 1199.98px) {
+            right: -34px;
+          }
+        }
+      }
+    }
+    .disabled {
+      opacity: 0;
+    }
   }
 }
 .playlist-wrap {
