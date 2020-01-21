@@ -119,6 +119,7 @@
   <script type="text/javascript">
     (function($) {
       $(document).ready(function() {
+        function isMobile() { return ($(window).width() < 768) }
           $('.playlist-wrap').bxSlider({
             useCSS: true,
             auto: true,
@@ -126,11 +127,11 @@
             speed: 1000,
             pager: false,
             controls: true,
-            maxSlides: 4,
-            minSlides: 4,
+            maxSlides: (isMobile()) ? 1 : 4,
+            minSlides: (isMobile()) ? 1 : 4,
             mouseDrag: true,
             pause: 12000,
-            slideWidth: 468,
+            slideWidth: (isMobile()) ? 240 : 468,
             infiniteLoop: false,
             slideMargin: 30,
             hideControlOnEnd: true
