@@ -27,8 +27,65 @@
     .blog-meta {
       margin: 20px 0;
       font-size: $h6-fontsize;
+
       letter-spacing: .02rem;
       line-height: 1.2;
+      .blog-time {
+        color: #818181;
+        letter-spacing: -.02rem;
+        padding-right: .2rem;
+      }
+      .blog-author {
+        padding-left: .3rem;
+      }
+    }
+  }
+  .blog-content {
+    font-size: 18px;
+    font-weight: $fontweight-regular;
+    &:before {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+      content: " ";
+      display: table;
+    }
+    .alignleft {
+      float: left;
+      text-align: left;
+    }
+    img.alignleft {
+      margin: 0px 32px 24px 0;
+    }
+    .blog-share {
+      clear: both;
+      margin: 1rem 0 2rem -.2rem;
+      .share-list {
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        a {
+          cursor: pointer;
+          padding-right: 0.4rem;
+          border: 0;
+          box-shadow: none;
+          display: inline-block;
+          font-size: 16px;
+          padding: 0 4px;
+          vertical-align: middle;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  footer {
+    &.blog-footer {
+      p.blog-meta {
+        border-top: 1px solid #eee;
+        padding-top: 15px !important;
+        margin-bottom: -10px !important;
+      }
     }
   }
 }
