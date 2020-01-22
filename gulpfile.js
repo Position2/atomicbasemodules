@@ -99,6 +99,7 @@ var paths = [
   ["errorpage-two/errorpage-scss/style.scss","errorpage-two/css","errorpage-two/errorpage-scss/*.scss"],
   ["login-one/login-scss/style.scss","login-one/css","login-one/login-scss/*.scss"],
   ["form-one/form-scss/style.scss","form-one/css","form-one/form-scss/*.scss"],
+  ["form-two/form-scss/style.scss","form-two/css","form-two/form-scss/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
