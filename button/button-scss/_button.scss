@@ -403,7 +403,7 @@ button {
 }
 //lets talk ends
 
-//Skeuomorphic Buttons
+//Skew Buttons
 .button-effect {
   padding: 30px 0px;
 
@@ -433,7 +433,7 @@ button {
     &:last-child {
       margin-right: 0px;
     }
-    &:hover{
+    &:hover {
       color: $white;
     }
   }
@@ -607,9 +607,9 @@ button {
     }
   }
 }
- //Skeuomorphic Buttons ends
+//Skew Buttons ends
 
-.download-button{
+.download-button {
   box-sizing: border-box;
   height: 50px;
   width: 200px;
@@ -619,8 +619,8 @@ button {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
   transition: background .5s;
   cursor: pointer;
-  
-  span{
+
+  span {
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -628,33 +628,111 @@ button {
     box-shadow: 0 0 0 3px $primary-utility-one inset;
     background: transparent;
   }
-  
-  .away{
+
+  .away {
     display: table-cell;
     vertical-align: middle;
-    text-align:center;
+    text-align: center;
   }
-  
-  .over{
+
+  .over {
     display: none;
   }
-  
-  &:hover span.away{
+
+  &:hover span.away {
     display: none;
   }
-  
-  &:hover span.over{
+
+  &:hover span.over {
     display: table-cell;
     vertical-align: middle;
-    text-align:center;
+    text-align: center;
     color: white;
     box-shadow: none;
   }
-  
-  &:hover{
+
+  &:hover {
     background: $primary-utility-one;
   }
 }
+
+//learn button
+.learn-more {
+  a {
+    color: #333;
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 10px 28px 10px 30px;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    &:before {
+      content: "";
+      background-color: #f4b72a;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 14px;
+      -webkit-transition: width .2s;
+      transition: width .2s;
+      z-index: -1;
+
+    }
+    &:hover {
+      color: #fff;
+      &:before {
+        width: 100%;
+        -webkit-transition: width .2s;
+        transition: width .2s;
+      }
+    }
+  }
+}
+//////
+.read-more {
+  a {
+    color: #3765a0;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border: 2px solid #3765a0;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0;
+      z-index: -1;
+      content: "";
+      color: #fff !important;
+      background: #3765a0;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    &:hover {
+      color: #fff !important;
+      background-color: transparent;
+      &:before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+//learn buton ends
+
 
 
 
