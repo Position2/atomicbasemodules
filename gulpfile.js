@@ -7,6 +7,7 @@ var gulp = require("gulp"),
 
 var paths = [
   ["index/index-scss/style.scss","index/css","index/index-scss/*.scss"],
+  ["editor/editor-scss/style.scss","editor/css","editor/editor-scss/*.scss"],
   ["menu-one/menu-scss/style.scss","menu-one/css","menu-one/menu-scss/*.scss"],
   ["menu-two/menu-scss/style.scss","menu-two/css","menu-two/menu-scss/*.scss"],
   ["menu-three/menu-scss/style.scss","menu-three/css","menu-three/menu-scss/*.scss"],
