@@ -5,7 +5,7 @@ body.menu-one, body.menu-two, body.menu-three, body.menu-four {
 	z-index: 99;
 }
 .divider {
-	margin: 60px 0 0 0;
+	padding: 60px 0 0 0;
 }
 body.menu-one.slider-one div.divider:nth-of-type(2), body.menu-one.slider-two div.divider:nth-of-type(2), body.slider-three.menu-one div.divider:nth-of-type(2) {
 	display: none;
