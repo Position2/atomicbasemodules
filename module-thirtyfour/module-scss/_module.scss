@@ -1,0 +1,303 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+.ca-1 {
+  background: url("https://farm1.staticflickr.com/571/21101592188_f5da31c3f5_o.jpg") no-repeat center center;
+}
+
+.ca-2 {
+  background: url("https://i.redd.it/ool7yp323aux.jpg") no-repeat center center;
+}
+
+.ca-3 {
+  background: url("https://i.redd.it/cz572ctve9ux.jpg") no-repeat center center;
+}
+
+.ca-4 {
+  background: url("https://i.redd.it/etwqy45ntqcx.jpg") no-repeat center center;
+}
+
+.ca-5 {
+  background: url("https://farm6.staticflickr.com/5692/21342201074_aef835df8d_k.jpg") no-repeat center center;
+}
+
+.ca-6 {
+  background: url("https://i.redd.it/co3a6ufwmuqx.jpg") no-repeat center center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clear-after:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.main-wrapper {
+  .hero-image .hero-content .hc-footer:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .scroll-content .sc-row {
+    &:after, .content-article .article-info .ai-footer:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+body {
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: Oxygen;
+  color: white;
+}
+
+.main-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .hero-image {
+    z-index: 3;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("https://c1.staticflickr.com/1/632/21136101110_1dde1c1a7e_o.jpg") no-repeat center center fixed;
+    background-size: cover;
+    box-shadow: 0 5px 60px 10px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease;
+
+    &.browsing-content {
+      height: 40%;
+      background-position: center -150px;
+
+      &:after {
+        opacity: 1;
+        height: 100%;
+      }
+
+      .hcft-icon {
+        &.closed {
+          opacity: 0 !important;
+        }
+
+        &.opened {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: linear-gradient(0deg, black, rgba(0, 0, 0, 0));
+      height: 50%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      opacity: 0.65;
+      transition: all 0.5s ease;
+    }
+
+    .hero-content {
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      padding: 40px;
+      bottom: 0;
+
+      .hc-label {
+        font-size: 44px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .hc-desc {
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+
+      .hc-footer {
+        margin-top: calc(40px / 1.5);
+        line-height: 32px;
+        font-size: 14px;
+
+        .hcf-divider {
+          float: left;
+          margin: 7px 10px;
+          height: 18px;
+          width: 1px;
+          background-color: white;
+        }
+
+        .hcf-comments, .hcf-shares {
+          float: left;
+          text-transform: uppercase;
+        }
+
+        .hcf-comments .amount, .hcf-shares .amount {
+          margin-right: 5px;
+          font-weight: 700;
+        }
+
+        .hcf-toggle {
+          float: right;
+
+          .hcft-label {
+            float: left;
+            line-height: 32px;
+            margin-right: 10px;
+            text-transform: uppercase;
+          }
+
+          .hcft-icon-holder {
+            float: left;
+            position: relative;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.25);
+            transition: background-color 0.25s ease;
+
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .hcft-icon {
+              cursor: pointer;
+              line-height: 32px;
+              width: 32px;
+              left: 0;
+              position: absolute;
+              font-size: 14px;
+              transition: all 0.5s ease;
+
+              &.closed {
+                opacity: 1;
+              }
+
+              &.opened {
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    height: calc(100% - 40%);
+
+    .sc-row {
+      z-index: 1;
+
+      .content-article {
+        float: left;
+        cursor: pointer;
+        width: 50%;
+        height: 360px;
+        overflow: hidden;
+        position: relative;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1));
+          height: 100%;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          opacity: 1;
+          transition: opacity 0.25s ease;
+        }
+
+        &:hover {
+          &:after {
+            opacity: 0;
+          }
+
+          .article-image {
+            transform: scale(1.1) !important;
+          }
+        }
+
+        .article-image {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          transform: scale(1);
+          transition: all 0.25s ease;
+        }
+
+        .article-number {
+          z-index: 2;
+          position: absolute;
+          top: 40px;
+          left: 40px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 2px;
+        }
+
+        .article-info {
+          z-index: 2;
+          position: absolute;
+          bottom: 0;
+          padding: 40px;
+          text-transform: uppercase;
+
+          .ai-label {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: calc(40px / 4);
+          }
+
+          .ai-desc {
+            font-size: 16px;
+            font-weight: 300;
+          }
+
+          .ai-footer {
+            line-height: 20px;
+            margin-top: calc(40px / 4);
+
+            .aif-comments, .aif-shares {
+              float: left;
+              font-size: 14px;
+            }
+
+            .aif-comments .amount, .aif-shares .amount {
+              font-weight: 700;
+              margin-right: 5px;
+            }
+
+            .aif-divider {
+              float: left;
+              height: 14px;
+              margin: 3px 10px;
+              width: 1px;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
