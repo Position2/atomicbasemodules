@@ -1,5 +1,6 @@
 main .section {
   padding: 40px 0;
+  font-family: $base-font-family;
 
   &.section-gray {
     background: #eee;
@@ -71,6 +72,7 @@ main .section {
         .product-name {
           font-size: 20px;
           font-weight: bold;
+          font-family: $base-font-family;
         }
 
         .product-price {
