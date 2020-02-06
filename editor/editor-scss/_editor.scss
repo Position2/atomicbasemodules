@@ -25,6 +25,9 @@ body.menu-four div.divider:nth-of-type(3) {
 }
 body.footer-one div.divider:nth-last-child(1),
 body.footer-two div.divider:nth-last-child(1),
-body.footer-three div.divider:nth-last-child(1) {
+body.footer-three div.divider:nth-last-child(1),
+body.menu-one.footer-one div.divider:nth-last-child(3),
+body.menu-one.footer-two div.divider:nth-last-child(3),
+body.menu-one.footer-three div.divider:nth-last-child(3) {
 	display: none;
 }

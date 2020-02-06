@@ -30,6 +30,9 @@
     @media all and (-ms-high-contrast:none) {
     	display: block;
     }
+    a:hover, a {
+    	text-decoration: none;
+    }
 		.each-module-prview {
 			max-width: calc(100%/4 - 20px);
 	    margin-left: 10px;
@@ -567,14 +570,47 @@ input:-moz-placeholder { /* Firefox 18- */
   border-radius: 20px;
   color:#fff;
   text-decoration: none;
-  font: {
-		size: $h5-fontsize;
-		weight: $fontweight-regular;
-		family: $base-font-family; 
+  
+}
+.link-github-wrap {
+	position: relative;
+	&:hover {
+		.artboard {
+			opacity: 1;
+		}
 	}
 }
-
-
+.artboard {
+	opacity: 0;
+  background: #f4b72a;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 45px;
+  color: #fff;
+  height: 48px;
+  left: 0;
+  span {
+  	margin-right: 10px;
+  	display: inline-block;
+  	vertical-align: middle;
+  	font: {
+			size: $h5-fontsize;
+			weight: $fontweight-bold;
+			family: $base-font-family; 
+		}
+  } 
+  a {
+  	display: inline-block;
+  	vertical-align: middle;
+  	margin-right: 8px;
+  	i {
+  		color: #fff;
+  		font-size: 26px;
+	    vertical-align: middle;
+  	}
+  }
+}
 
 
 
