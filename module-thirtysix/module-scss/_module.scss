@@ -7,6 +7,7 @@
 		background: #145091;
 		padding: 40px 20px 20px;
 		border: 8px solid #fff;
+		position: relative;
 		.dental-offices-address {
 			color: $white;
 			font-size: 16px;
@@ -160,7 +161,7 @@
 		}
 		.autocomplete-items {
 			width: 359px;
-			top: 88px;
+			top: 43px;
 			position: absolute;
 			height: 466px;
 			box-shadow: 0px 2px 12.48px 0.52px rgba(38,80,140,0.12);
@@ -208,4 +209,18 @@
   overflow-y: auto;
   width: 429px;
   box-shadow: 0px 2px 12.48px 0.52px rgba(38,80,140,0.12);
+  li {
+  	list-style: none;
+	  padding: 10px;
+	  cursor: pointer;
+	  background-color: #fff; 
+	  border-bottom: 1px solid #d4d4d4; 
+	  color: $breadcrumb-color;
+	  font-family: $font-family-open-sans;
+	  font-size: $font-size-base;
+	  font-weight: $font-weight-semi-bold;
+	  line-height: 100%;
+	  margin:0;
+	  transition: all 0.3s;
+  }
 }
