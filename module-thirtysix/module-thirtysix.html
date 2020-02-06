@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<title>UI Module | Module Thirty Six</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/all-plugins.js"></script>
+</head>
+<body>
+  <section id="LocationOverview">
+    <div class="container">
+      <div class="location-overview clearfix">
+        <div class="lhs-wrap">
+          <form autocomplete="off" action="/locations" method="get">
+            <input type="text" name="p">
+            <select name="miles">
+              <option value="all">All</option>
+              <option value="5">5 Miles</option>
+              <option value="15" selected="">15 Miles</option>
+            </select>
+            <ul id="autocomplete-lists" class="autocomplete-items"> </ul>
+            <input type="submit">
+          </form>
+          <!-- <div id="message" class="alert alert-warning">
+            <strong>Warning!</strong> </a>.
+          </div> -->
+          <div id="offices"></div>
+        </div>
+        <div class="rhs-wrap">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  	initMapfn = "";
+(function($) {
+  $(document).ready(function() {
+    function isDesktop() { return ($(window).width() > 1024) }
+    function islargerScreen() { return ($(window).width() > 1440) }
+    function isResponsive() { return ($(window).width() < 1199) }
+    function isMobile() { return ($(window).width() < 768) }
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("body").addClass("mobileview");
+    }
+    // Google Map 
+    var map, bounds, infoWindow;
+    var mapElem = $('#map')[0];
+    var latlngs = [],
+      markers = [];
+    var directionsService, directionsDisplay, autocomplete;
+    function generateMapTooltip(val) {
+      var tooltip = $("<div/>", { "class": "each_tooltip", "id": "tt-" + val["title"].toLowerCase().replace(/ /g, "-") }),
+        tt_title = $("<p/>").html(val["title"]),
+        tt_address = $("<p/>").html(val["address"]),
+        tt_cityStateZip = $("<p/>").html(val["cityStateZip"]),
+        tt_phone = $("<a/>", { "href": "tel:" + val["phone"].replace(/[ ()-]/g, ""), "html": val["phone"] }),
+        tt_dist = $("<p/>", { "id": "tdist" }),
+        tt_btWrap = $("<div/>", { "class": "link-wrap" }),
+        tt_gd = $("<span/>", { "class": "get-direction" }),
+        tt_link = $("<span/>", { "class": "link" }).html("<a href='" + val["link"] + "'>Book an Appointment</a>");
+
+      tt_gd.add(tt_link).appendTo(tt_btWrap);
+      tt_title.add(tt_address).add(tt_cityStateZip).add(tt_phone) /*.add(tt_dist)*/ .add(tt_btWrap).appendTo(tooltip);
+      return tooltip;
+    }
+    $("#mylocations .custom-dd-list li").each(function() {
+      var target = $(".lc_" + $(this).data("val")),
+        t_lhs = target.find(".address-wrap .lhs-wrap"),
+        t_rhs = target.find(".address-wrap .rhs-wrap");
+      var val = {
+        "title": t_lhs.find("h3").text().trim(),
+        "address": t_lhs.find(".address p:eq(0)").text().trim(),
+        "cityStateZip": t_lhs.find(".address p:eq(1)").text().trim(),
+        "phone": t_rhs.find(".form-tel a").text().trim(),
+        "link": ""
+      }
+      latlngs.push({
+        lat: $(this).data("lat"),
+        lng: $(this).data("lng"),
+        html: generateMapTooltip(val)
+      })
+    })
+    $(".loc_map_data").each(function() {
+      latlngs.push({
+        lat: $(this).data("lat"),
+        lng: $(this).data("lng"),
+        html: $($(this).data("tooltip"))
+      })
+    })
+    function setMarker(i, lat, lng) {
+      markers[i] = new google.maps.Marker({
+        position: { lat: lat, lng: lng },
+        map: map,
+        draggable: false
+      });
+    }
+    function setInfoWindow(marker, content, index) {
+      google.maps.event.addListener(marker, 'click', (function(mm, tt, index) {
+        return function() {
+          content.find(".get-direction").html('<input name="saddr" id="saddr" type="text" placeholder="Enter a location" autocomplete="off">');
+          infoWindow.setContent(content.prop('outerHTML'));
+          infoWindow.open(map, mm);
+          map.setZoom(14);
+          map.panTo(mm.getPosition());
+          if ($(".each_offices").length > 0) {
+            $(".each_offices").removeClass("active").eq(index).addClass("active");
+          }
+        }
+      })(marker, content, index));
+    }
+    function calculateAndDisplayRoute(pointA, pointB) {
+      if (directionsDisplay) directionsDisplay.setMap(null);
+      directionsService = new google.maps.DirectionsService;
+      directionsDisplay = new google.maps.DirectionsRenderer({
+        map: map
+      })
+      directionsService.route({
+        origin: pointA,
+        destination: pointB,
+        travelMode: google.maps.TravelMode.DRIVING
+      }, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(response);
+        } else {
+          window.alert('Directions request failed due to ' + status);
+          if (bounds != "") map.fitBounds(bounds);
+        }
+      });
+    }
+    function onPlaceChanged(curPos) {
+      var place = autocomplete.getPlace();
+      if (place.geometry) {
+        map.panTo(place.geometry.location);
+        pointA = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+        pointB = new google.maps.LatLng(curPos.lat(), curPos.lng());
+        calculateAndDisplayRoute(pointA, pointB);
+      }
+    }
+    function googleMapInit(fitBound) {
+      fitBound = fitBound || false;
+      if (fitBound) bounds = new google.maps.LatLngBounds();
+      map = new google.maps.Map(mapElem, {
+        zoom: 14,
+        center: latlngs[0],
+        mapTypeControl: false,
+        panControl: false,
+        zoomControl: true,
+        streetViewControl: false
+      });
+      infoWindow = new google.maps.InfoWindow();
+      for (var i = 0; i < latlngs.length; i++) {
+        setMarker(i, latlngs[i].lat, latlngs[i].lng);
+        setInfoWindow(markers[i], latlngs[i].html,i);
+        if (fitBound) bounds.extend(markers[i].getPosition());
+      }
+      if (fitBound) map.fitBounds(bounds);
+      google.maps.event.addListener(infoWindow, 'domready', function() {
+        autocomplete = new google.maps.places.Autocomplete(document.getElementById("saddr"));
+        var curPos = this.position;
+        autocomplete.addListener('place_changed', function() {
+          onPlaceChanged(curPos);
+        });
+      });
+      google.maps.event.addListener(infoWindow, 'closeclick', function() {
+        if (directionsDisplay) directionsDisplay.setMap(null);
+        $("#" + $(this.content).attr("id").replace(/tt-/g, "")).removeClass("active");
+        if (bounds != "") map.fitBounds(bounds);
+      });
+    }
+    var gmTimer;
+    gmTimer = setInterval(function() {
+      if (window.googleMapLoaded) {
+        clearInterval(gmTimer);
+        googleMapInit();
+        var myLoc = $("#mylocations");
+        (myLoc.length > 0) && (myLoc.trigger("setActive", "default"));
+      }
+    }, 200)
+    var cities = [],
+      currentFocus;
+
+    function getCity(mText) {
+      var thisCities = [],
+        allCities = localStorage.getItem("gd_cities");
+      $.each(JSON.parse(allCities), function(key, val) {
+        var thisText = val.city + ", " + val.state;
+        /*thisText.toLowerCase().substr(0, matchText.length).toLowerCase() == matchText.toLowerCase()*/
+        if (thisText.toLowerCase().indexOf(mText) >= 0) {
+          thisCities.push(thisText)
+        }
+      });
+      return thisCities;
+    }
+    function getCityList() {
+      var allCities = localStorage.getItem("gd_cities");
+      if (!allCities || allCities == "") {
+        $.getJSON("./js/cities.json", function(cData) {
+          if (cData && cData != "") {
+            localStorage.setItem("gd_cities", JSON.stringify(cData.autocompleteList));
+          }
+        })
+      }
+    }
+    function addActive() {
+      var cities = $("#autocomplete-lists li");
+      cities.removeClass("autocomplete-active");
+      if (currentFocus >= cities.length) { currentFocus = 0 };
+      if (currentFocus < 0) { currentFocus = (cities.length - 1) };
+      var activeCity = cities.eq(currentFocus);
+      activeCity.addClass("autocomplete-active");
+      $("[name='p']").val(activeCity.text().trim());
+    }
+    getCityList();
+    $("[name='p']").on("input", function() {
+      var disVal = $(this).val().trim().toLowerCase(),
+        acDD = $("#autocomplete-lists");
+      currentFocus = -1;
+      acDD.html("");
+      var cities = getCity(disVal);
+      for (i = 0; i < cities.length; i++) {
+        $("<li/>").html(cities[i]).appendTo(acDD)
+      }
+      acDD.toggle(cities.length > 0);
+    }).on("keydown", function(e) {
+      if (e.keyCode == 40 || e.keyCode == 38) {
+        e.keyCode == 40 ? currentFocus++ : currentFocus--;
+        addActive();
+      } else if (e.keyCode == 13) {
+        if (currentFocus > -1) {
+          $("#autocomplete-lists li").eq(currentFocus).trigger("click");
+        }
+      }
+    });
+    $("#autocomplete-lists").on("click", "li", function() {
+      $("[name='p']").val($(this).text().trim());
+    })
+    var hp_lc = $("[name='p']");
+    if (hp_lc.val() != "") {
+      hp_lc.trigger("input").focus();
+    }
+    // Location-Overview Map
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    function distanceCalc(lat1, lon1, lat2, lon2, unit) {
+      var radlat1 = Math.PI * lat1 / 180,
+        radlat2 = Math.PI * lat2 / 180,
+        radlon1 = Math.PI * lon1 / 180,
+        radlon2 = Math.PI * lon2 / 180,
+        theta = lon1 - lon2,
+        radtheta = Math.PI * theta / 180,
+        dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+      dist = Math.acos(dist)
+      dist = dist * 180 / Math.PI
+      dist = dist * 60 * 1.1515
+      if (unit == "K") { dist = dist * 1.609344 }
+      if (unit == "N") { dist = dist * 0.8684 }
+      return dist
+    }
+    function getOfficeData(opt) {
+      $.ajax({
+        url: './js/list.php',
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify({ "lat": opt.lat, "lng": opt.lng, "miles": opt.miles }),
+        success: function(dData) {
+          if (typeof(dData.gdOffices) != "undefined") {
+            $.each(dData.gdOffices, function(key, val) {
+              latlngs.push({
+                lat: Number(val["geoLocation"].lat),
+                lng: Number(val["geoLocation"].lng),
+                html: generateMapTooltip(val)
+              });
+              var eachOff = $("<div/>", { "class": "each_offices", "id": val["title"].toLowerCase().replace(/ /g, "-") }),
+                title = $("<h4/>").html(val["title"]),
+                address = $("<p/>").html(val["address"]),
+                cityStateZip = $("<p/>").html(val["cityStateZip"]),
+                contact = $("<div/>", { "class": "contact" }),
+                phone = $("<span/>", { "class": "tel" }).html("<a href='tel:" + val["phone"].replace(/[ ()-]/g, "") + "'>" + val["phone"] + "</a>"),
+                link = $("<span/>", { "class": "link" }).html("<a href='" + val["link"] + "'>Book an Appointment</a>");
+              phone.add(link).appendTo(contact);
+              title.add(address).add(cityStateZip).add(contact).appendTo(eachOff);
+              eachOff.appendTo($("#offices"));
+            });
+            if (typeof(dData.message) != "undefined" && dData.message != "") {
+              $("<div/>", { class: "alert alert-warning" }).html(dData.message).prependTo($("#offices"));
+            }
+            googleMapInit(true);
+          }
+        }
+      })
+    }
+    var sLoc = getParameterByName("p"),
+      sMiles = getParameterByName("miles") || 15,
+      cLoc = { "lat": "42.360406", "lng": "-71.057993", "miles": 0 };
+    if (sLoc && sLoc != "") {
+      $("[name='p']").val(sLoc);
+      $("[name='miles']").val(sMiles);
+      $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCsb5UkztmmgNXAk6zmtu0eyUJyaNIXDFw&address=" + sLoc, function(sData) {
+        if (sData.status == "OK") {
+          cLoc = sData.results[0].geometry.location;
+          cLoc["miles"] = sMiles;
+          getOfficeData(cLoc);
+        }
+      });
+    } else if ($(".location-overview").length > 0) {
+      getOfficeData(cLoc);
+    }
+    $("#location-search").on("submit", function() {
+      var sVal = $("[name='p']").val();
+      return (typeof(sVal) != "undefined" && sVal != "")
+    })
+    function bounceMarker(index, bounce) {
+      var thisMarker = markers[index];
+      if (thisMarker.getAnimation() !== null && !bounce) {
+        thisMarker.setAnimation(null);
+      } else if (bounce) {
+        thisMarker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
+    function clearMarkerBounce() {
+      for (var i = 0; i < markers.length; i++) {
+        bounceMarker(i, false);
+      }
+    }
+    function stopMarkerBounce(dis) {
+      if (!dis.hasClass("each_offices") && dis.parents(".each_offices").length <= 0) {
+        clearMarkerBounce();
+      }
+    }
+    $("body").on("mouseenter", ".each_offices", function() {
+      clearMarkerBounce();
+      bounceMarker($(this).index(), true);
+    });
+    $("body").on("click", ".each_offices", function() {
+      clearMarkerBounce();
+      new google.maps.event.trigger(markers[$(this).index()], 'click');
+    });
+    $("body").mouseover(function(e) {
+      if (map) stopMarkerBounce($(e.target));
+    });
+  });
+})(jQuery);
+	</script>
+	<script>
+		window.googleMapLoaded = false;
+    function initMap() {
+      window.googleMapLoaded = true;
+    }
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsb5UkztmmgNXAk6zmtu0eyUJyaNIXDFw&libraries=geometry,places&callback=initMap"
+        async defer></script>
+</body>
+</html>

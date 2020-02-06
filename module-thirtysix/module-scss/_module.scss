@@ -1,0 +1,198 @@
+.location-overview {
+	margin-bottom: 40px;
+	box-shadow: 0px 2px 12.48px 0.52px rgba(38, 80, 140, 0.12);
+	.lhs-wrap {
+		float:left; 
+		width: 40%;
+		background: #145091;
+		padding: 40px 20px 20px;
+		border: 8px solid #fff;
+		.dental-offices-address {
+			color: $white;
+			font-size: 16px;
+			font-weight: $fontweight-regular;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		input[type="text"] {
+			background: url("../images/location-icon-blue.png") 10px center / 18px auto no-repeat;
+			border-width: 1px;
+			border-color:#d7d7d7;
+			border-style: solid;
+			background-color:#fff;
+			margin: 0 3px 15px 0;
+			border-radius: none;
+			width: 260px;
+			padding: 8px 8px 8px 40px;
+			outline: none;
+			color:#333;
+			font-size: 16px;
+			font-weight: $fontweight-thin;
+			display: inline-block;
+			vertical-align: top;
+		}
+		select {
+			background: url("../images/location-icon-drop-down.png") 90% center / 10px auto no-repeat;
+			display: inline-block;
+			vertical-align: top;
+			width: 160px;
+			border-width: 1px;
+			border-color:#d7d7d7;
+			border-style: solid;
+			border-radius: none;
+			background-color:#fff;
+			padding: 8px;
+			outline: none;
+			color:#333;
+			font-size: 16px;
+			font-weight: $fontweight-thin;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+			-ms-appearance: none;
+		}
+		input[type="submit"] {
+			background-image: none;
+			display: inline-block;
+			vertical-align: top;
+			width: 180px;
+			padding: 17px 30px;
+			text-align: center;
+			color:#fff;
+			font-weight: $fontweight-bold;
+			font-size: 16px;
+			background-color:$primary-color;
+			text-transform: uppercase;
+			transition: all 0.5s;
+			position: relative;
+			overflow: hidden;
+			line-height: 1;
+			height: auto;
+			min-height: auto;
+			margin: 0;
+			border: none;
+			box-shadow: none;
+			&:hover {
+				text-decoration: none;
+				color:#fff !important;
+				opacity: 1 !important;
+				background-color:$primary-utility-one;
+				cursor: pointer;
+			}
+		}
+		#message {
+			margin-top: 20px;
+		}
+		#offices {
+			background-color: #fff;
+			margin-top: 30px;
+			height: 367px;
+			overflow-y: scroll;
+			.each_offices {
+				padding: 20px 20px 0;
+				transition: all 0.3s;
+				cursor: pointer;
+				h4 {
+					color: #264673;
+					font-size: 18px;
+					font-family: $base-font-family;
+					font-weight: $fontweight-regular;
+					line-height: 100%;
+					margin: 0 0 10px;
+				}
+				p{
+						color: #000;
+			      font-family: $base-font-family;
+			      font-size: 16px;
+			      font-weight: $fontweight-thin;
+			      line-height: 130%;
+			      margin: 0 0 5px;
+				}
+				.contact {
+					margin-top: 15px;
+					border-bottom: 1px solid #ccc;
+					padding-bottom: 20px;
+					span {
+						&.tel {
+							border-right: 1px solid #ddd;
+							margin-right: 10px;
+							padding-right: 15px;
+							a {
+							color:#53c0e9;
+							text-decoration: none;
+							transition: all 0.3s;
+							font-weight: $fontweight-regular;
+							font-size: 18px;
+							@media (min-width: 1200px) {  
+									&:hover {
+										color:$primary-utility-one;
+										transition: all 0.3s;
+									}
+								}
+							}
+						}
+						&.link {
+							a {
+								text-decoration: none;
+								transition: all 0.3s;
+								font-weight: $fontweight-regular;
+								font-size: 18px;
+								@media (min-width: 1200px) {  
+									&:hover {
+										color:$primary-utility-one;
+										transition: all 0.3s;
+									}
+								}
+							}
+						}
+					}
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+				&.active {
+					background: #f2f2f2;
+				}
+				&.active .contact{
+					border: none;
+				}
+			}
+		}
+		.autocomplete-items {
+			width: 359px;
+			top: 38px;
+			height: 466px;
+			box-shadow: 0px 2px 12.48px 0.52px rgba(38,80,140,0.12);
+		}
+	}
+	.rhs-wrap {
+		float:left;
+		width: 60%;
+		border-top: 8px solid #fff;
+		border-right: 8px solid #fff;
+		border-bottom: 8px solid #fff;
+		#map {
+			height: 632px;
+		}
+		.gm-style-iw-d p:first-child {
+			color: #145091;
+			font-size: 16px;
+			font-family: $base-font-family;
+			font-weight: $fontweight-regular;
+			line-height: 100%;
+			margin: 0 0 10px !important;
+		}
+		.gm-style-iw-d p{
+				color: #333;
+	      font-family: $base-font-family;
+	      font-size: 15px;
+	      font-weight: $fontweight-thin;
+	      line-height: 130%;
+	      margin: 0 0 5px !important;
+		}
+		#map #saddr {
+			margin-top: 0;
+			padding: 5px;
+		}
+	}
+}
