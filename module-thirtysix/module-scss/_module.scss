@@ -137,6 +137,7 @@
 						}
 						&.link {
 							a {
+								color: $primary-color;
 								text-decoration: none;
 								transition: all 0.3s;
 								font-weight: $fontweight-regular;
