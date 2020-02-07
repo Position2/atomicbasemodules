@@ -6,7 +6,7 @@
 		width: 40%;
 		background: #145091;
 		padding: 40px 20px 20px;
-		border: 8px solid #fff;
+		border: 8px solid $white;
 		position: relative;
 		.dental-offices-address {
 			color: $white;
@@ -21,15 +21,15 @@
 		input[type="text"] {
 			background: url("../images/location-icon-blue.png") 10px center / 18px auto no-repeat;
 			border-width: 1px;
-			border-color:#d7d7d7;
+			border-color: $tertiary-color;
 			border-style: solid;
-			background-color:#fff;
+			background-color:$white;
 			margin: 0 3px 15px 0;
 			border-radius: none;
 			width: 260px;
 			padding: 8px 8px 8px 40px;
 			outline: none;
-			color:#333;
+			color: $secondry-color;
 			font-size: 16px;
 			font-weight: $fontweight-thin;
 			display: inline-block;
@@ -41,13 +41,13 @@
 			vertical-align: top;
 			width: 120px;
 			border-width: 1px;
-			border-color:#d7d7d7;
+			border-color: $tertiary-color;
 			border-style: solid;
 			border-radius: none;
-			background-color:#fff;
+			background-color:$white;
 			padding: 8px;
 			outline: none;
-			color:#333;
+			color:$secondry-color;
 			font-size: 16px;
 			font-weight: $fontweight-thin;
 			-moz-appearance: none;
@@ -62,7 +62,7 @@
 			width: 180px;
 			padding: 17px 30px;
 			text-align: center;
-			color:#fff;
+			color:$white;
 			font-weight: $fontweight-bold;
 			font-size: 16px;
 			background-color:$primary-color;
@@ -78,7 +78,7 @@
 			box-shadow: none;
 			&:hover {
 				text-decoration: none;
-				color:#fff !important;
+				color:$white !important;
 				opacity: 1 !important;
 				background-color:$primary-utility-one;
 				cursor: pointer;
@@ -88,7 +88,7 @@
 			margin-top: 20px;
 		}
 		#offices {
-			background-color: #fff;
+			background-color: $white;
 			margin-top: 30px;
 			height: 367px;
 			overflow-y: scroll;
@@ -97,7 +97,7 @@
 				transition: all 0.3s;
 				cursor: pointer;
 				h4 {
-					color: #264673;
+					color: $primary-color;
 					font-size: 18px;
 					font-family: $base-font-family;
 					font-weight: $fontweight-regular;
@@ -105,7 +105,7 @@
 					margin: 0 0 10px;
 				}
 				p{
-						color: #000;
+						color: $black;
 			      font-family: $base-font-family;
 			      font-size: 16px;
 			      font-weight: $fontweight-thin;
@@ -114,15 +114,15 @@
 				}
 				.contact {
 					margin-top: 15px;
-					border-bottom: 1px solid #ccc;
+					border-bottom: 1px solid $gray-two;
 					padding-bottom: 20px;
 					span {
 						&.tel {
-							border-right: 1px solid #ddd;
+							border-right: 1px solid $grey-four;
 							margin-right: 10px;
 							padding-right: 15px;
 							a {
-							color:#53c0e9;
+							color:$primary-utility-one;
 							text-decoration: none;
 							transition: all 0.3s;
 							font-weight: $fontweight-regular;
@@ -155,7 +155,7 @@
 					border-bottom: none;
 				}
 				&.active {
-					background: #f2f2f2;
+					background: $grey-five;
 				}
 				&.active .contact{
 					border: none;
@@ -173,14 +173,14 @@
 	.rhs-wrap {
 		float:left;
 		width: 60%;
-		border-top: 8px solid #fff;
-		border-right: 8px solid #fff;
-		border-bottom: 8px solid #fff;
+		border-top: 8px solid $white;
+		border-right: 8px solid $white;
+		border-bottom: 8px solid $white;
 		#map {
 			height: 564px;
 		}
 		.gm-style-iw-d p:first-child {
-			color: #145091;
+			color: $black;
 			font-size: 16px;
 			font-family: $base-font-family;
 			font-weight: $fontweight-regular;
@@ -188,7 +188,7 @@
 			margin: 0 0 10px !important;
 		}
 		.gm-style-iw-d p{
-				color: #333;
+				color: $secondry-color;
 	      font-family: $base-font-family;
 	      font-size: 15px;
 	      font-weight: $fontweight-thin;
@@ -205,7 +205,7 @@
   position: absolute;
   z-index: 99;
   left: 0;
-  background: #FFF;
+  background: $white;
   padding: 0px; 
   display: none;
   height: 243px;
@@ -216,8 +216,8 @@
   	list-style: none;
 	  padding: 10px;
 	  cursor: pointer;
-	  background-color: #fff; 
-	  border-bottom: 1px solid #d4d4d4; 
+	  background-color: $white; 
+	  border-bottom: 1px solid $grey-four; 
 	  color: $secondry-color;
 	  font-family: $base-font-family;
 	  font-size: $p-fontsize;
