@@ -15,6 +15,9 @@
 			line-height: 1.5;
 			margin-bottom: 20px;
 		}
+		form {
+			position: relative;
+		}
 		input[type="text"] {
 			background: url("../images/location-icon-blue.png") 10px center / 18px auto no-repeat;
 			border-width: 1px;
@@ -174,7 +177,7 @@
 		border-right: 8px solid #fff;
 		border-bottom: 8px solid #fff;
 		#map {
-			height: 632px;
+			height: 564px;
 		}
 		.gm-style-iw-d p:first-child {
 			color: #145091;
@@ -203,7 +206,7 @@
   z-index: 99;
   left: 0;
   background: #FFF;
-  padding: 0px;
+  padding: 0px; 
   display: none;
   height: 243px;
   overflow-y: auto;
@@ -215,10 +218,10 @@
 	  cursor: pointer;
 	  background-color: #fff; 
 	  border-bottom: 1px solid #d4d4d4; 
-	  color: $breadcrumb-color;
-	  font-family: $font-family-open-sans;
-	  font-size: $font-size-base;
-	  font-weight: $font-weight-semi-bold;
+	  color: $secondry-color;
+	  font-family: $base-font-family;
+	  font-size: $p-fontsize;
+	  font-weight: $fontweight-bold;
 	  line-height: 100%;
 	  margin:0;
 	  transition: all 0.3s;
