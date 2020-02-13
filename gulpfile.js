@@ -105,6 +105,7 @@ var paths = [
   ["module-thirtysix/module-scss/style.scss","module-thirtysix/css","module-thirtysix/module-scss/*.scss"],
   ["module-thirtyseven/module-scss/style.scss","module-thirtyseven/css","module-thirtyseven/module-scss/*.scss"],
   ["module-thirtyeight/module-scss/style.scss","module-thirtyeight/css","module-thirtyeight/module-scss/*.scss"],
+  ["module-thirtynine/module-scss/style.scss","module-thirtynine/css","module-thirtynine/module-scss/*.scss"],
   ["errorpage-one/errorpage-scss/style.scss","errorpage-one/css","errorpage-one/errorpage-scss/*.scss"],
   ["errorpage-two/errorpage-scss/style.scss","errorpage-two/css","errorpage-two/errorpage-scss/*.scss"],
   ["login-one/login-scss/style.scss","login-one/css","login-one/login-scss/*.scss"],

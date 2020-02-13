@@ -1,0 +1,72 @@
+#ThumbnailList {
+  .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .each-card {
+      max-width: 33.33%;
+      padding: 15px;
+      @media (min-width: 0) and (max-width: 767.98px) {
+        max-width: 100%;
+      }
+      .img-thumb-holder {
+        position: relative;
+        .overlay {
+          transition: all 0.9s linear;
+          display: none;
+          border-radius: 0 0 10px 10px;
+        }
+        img {
+          width: 100%;
+          transition: all 0.3s linear;
+        }
+      }
+      .details-thumb-holder {
+        text-align: center;
+        border-width: 0;
+        background-color: #fafafa;
+        border-radius: 0 0 10px 10px;
+        padding: 30px 30px 0;
+        transition: all 0.5s linear;
+        >h5 {
+          font-size: 20px;
+          font-weight: 700;
+          margin: 5px 0 15px;
+          display: inline-block;
+          text-transform: none;
+          line-height: 28px;
+          a {
+            color: #000;
+          }
+        }
+      }
+      @media (min-width: 1200px) {
+        &:hover {
+          border-radius: 0 0 10px 10px;
+          .overlay {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            border-top-left-radius: 40px;
+            background: rgba(218, 66, 62, 0.5);
+            transition: all 0.5s ease;
+            display: block;
+          }
+          .img-thumb-holder img {
+            width: 100%;
+            border-top-left-radius: 40px;
+            transition: all 0.3s linear;
+          }
+          .details-thumb-holder {
+            background-color: #FFF;
+            -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+            -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+            transition: all 0.3s linear;
+          }
+        }
+      }
+
+    }
+  }
+}
