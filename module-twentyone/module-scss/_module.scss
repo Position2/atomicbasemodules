@@ -58,7 +58,7 @@
     	}
       .lhs-text {
 				float: left;
-				width: 74%;
+				width: calc(100% - 130px);
 				position: relative;
 				h2 {
 					color: $white;
@@ -79,6 +79,7 @@
     		width: 120px;
 				float: right;
 				position: relative;
+				    text-align: center;
 				@media (min-width: 0) and (max-width: 767.98px) {
 					width: 50px;
 				}
