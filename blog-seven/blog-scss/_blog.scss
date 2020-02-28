@@ -52,6 +52,7 @@
         transition: transform .5s;
         @media (min-width: 0) and (max-width: 767.98px) {
           width: auto;
+          transform: scale(1.5);
         }
       }
     }
