@@ -47,6 +47,9 @@
 			height: 350px;
     	padding: 30px 30px 10px;
     	position: relative;
+    	@media (min-width: 0) and (max-width: 1199.98px) {
+    		height: 350px;
+    	}
     	&::before {
     		position: absolute;
 				content: "";
@@ -60,6 +63,9 @@
 				float: left;
 				width: calc(100% - 130px);
 				position: relative;
+				@media (min-width: 0) and (max-width: 991.98px) {
+					width: 100%;
+				}
 				h2 {
 					color: $white;
 					font-size: $h4-fontsize - 10;
@@ -80,8 +86,8 @@
 				float: right;
 				position: relative;
 				    text-align: center;
-				@media (min-width: 0) and (max-width: 767.98px) {
-					width: 50px;
+				@media (min-width: 0) and (max-width: 991.98px) {
+					display: none;
 				}
 				@media (min-width: 768px) and (max-width: 991.98px) { 
 					width: 60px;
@@ -111,6 +117,11 @@
 			-ms-transition: all .5s ease 0s;
 			-o-transition: all .5s ease 0s;
 			z-index: 9;
+			@media (min-width: 0) and (max-width: 1199.98px) {
+				position: static;
+				height: auto;
+				padding-bottom: 30px;
+			}
 			h3 {
 				color: $white;
 				font-size: $h5-fontsize + 4;
@@ -127,6 +138,10 @@
 						float: left;
 						width: 50%;
 						margin-bottom: 30px;
+						@media (min-width: 0) and (max-width: 991.98px) {
+							float: none;
+							width: 100%;
+						}
 						i {
 							color: $white;
 							display: inline-block;
@@ -134,8 +149,8 @@
 							width: 50px;
 							font-size: 50px;
 							@media (min-width: 0) and (max-width: 1199.98px) {
-								width: 30px;
-								font-size: 30px;
+								width: 40px;
+								font-size: 40px;
 							}
 						}
 						h3 {
