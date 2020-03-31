@@ -79,6 +79,7 @@
         function isRealDevice() {
           return /Android|webOS|iPhone|iPad|macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (typeof(window.orientation) != "undefined" || (navigator.maxTouchPoints > 1));
         }
+        // Tab
       	var tb_timer;
         function TabSlider(activate) {
           activate = activate || false;
@@ -106,35 +107,37 @@
           }).eq(0).trigger("click");
         }
         initTab(".each-tab",null,null,null);
+
+        // Sldier
         var tabSectionSlider = "";
-    function tabSectionSliderInit() {
-      if (tabSectionSlider != "") {
-        (tabSectionSlider.length > 0) && (tabSectionSlider.destroySlider())
-      }
-      if (!isDesktop()) {
-        tabSectionSlider = $('.tabs-section').bxSlider({
-          controls: false,
-          auto: false,
-          useCSS: true,
-          adaptiveHeight: true
+          function tabSectionSliderInit() {
+            if (tabSectionSlider != "") {
+              (tabSectionSlider.length > 0) && (tabSectionSlider.destroySlider())
+            }
+            if (!isDesktop()) {
+              tabSectionSlider = $('.tabs-section').bxSlider({
+                controls: false,
+                auto: false,
+                useCSS: true,
+                adaptiveHeight: true
+              });
+            }
+          }
+        tabSectionSliderInit();
+        function init() { 
+          tabSectionSliderInit();
+        }
+
+        init();
+
+        var prop_resize_time = "",
+          wRevent = isRealDevice() ? "orientationchange" : "resize";
+        $(window).on(wRevent, function() {
+          clearTimeout(prop_resize_time);
+          prop_resize_time = setTimeout(init, 200);
         });
-      }
-    }
-    tabSectionSliderInit();
-function init() { 
-  tabSectionSliderInit();
-}
-
-init();
-
-var prop_resize_time = "",
-    wRevent = isRealDevice() ? "orientationchange" : "resize";
-$(window).on(wRevent,function() {
-  clearTimeout(prop_resize_time);
-  prop_resize_time = setTimeout(init,200); // Use function which you init
-});
-      });
-    })(jQuery);
+          });
+        })(jQuery);
   </script>
 </body>
 </html>
