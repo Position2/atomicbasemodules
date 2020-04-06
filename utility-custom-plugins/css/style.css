@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic);
+#toast-container {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.border-radius,
+body .tutorial,
+body .code {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+body {
+  background-color: #dee;
+  /*background: linear-gradient(to bottom,#f15b2a,#e80a89);*/
+  /*background: linear-gradient(134deg, #00B2E2 0%, #2DBE60 100%);*/
+  background-position: fixed;
+  margin: 100px 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+body .tutorial {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 50%;
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
+  padding: 60px 80px;
+}
+
+body .tutorial h1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 32px;
+}
+
+body .tutorial h4 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 28px;
+}
+
+body .tutorial h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 24px;
+}
+
+body .tutorial label {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-style: italic;
+  display: block;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+body .tutorial p {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  display: block;
+  text-align: justify;
+}
+.cp_embed_wrapper {
+  margin-top: 20px;
+}
+ul li {
+  font-family: "Montserrat", Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+body .tutorial p.f-t::first-letter {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 54px;
+  color: #67caca;
+  line-height: 50px;
+  margin: 0 0 30px;
+}
+
+body .code {
+  padding: 10px 0 30px 40px;
+  font-size: 16px;
+  line-height: 28px;
+}
+p.ft {
+    margin-bottom: 40px;
+}
+.rule {
+  margin: 0 0 50px 0;
+  font-size: 0;
+}
+
+.label-sm {
+  background-color: #ce2b2b;
+  color: #fff;
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  line-height: 1;
+}
+
+.nav-list {
+  font-family: "Montserrat", Arial, sans-serif;
+  position: fixed;
+  width: auto;
+  margin-left: 2%;
+  background-color: #67caca;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .4s ease 0s;
+}
+
+.nav-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 30px;
+  border-left: 5px solid transparent;
+  transition: all .4s ease 0s;
+  cursor: pointer;
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: #FFF;
+  color: #000;
+  transition: all .4s ease 0s;
+}
+.tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.tabs li {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  margin: 0 -2px -4px 3px;
+  line-height: 140%;
+  color: #FFF;
+  font-size: 14px;
+  background-color: #42433e;
+  transition: all .4s ease 0s;
+   -webkit-transform: perspective(230px) rotateX(30deg);
+   -moz-transform: perspective(230px) rotateX(30deg);
+   cursor: pointer;
+   border-radius: 4px;
+   border-radius-bottom: 0;
+}
+.tabs li a {
+  color: #fff;
+  text-decoration: none;
+   padding: 15px 40px;
+   display: inline-block;
+}
+.tabs li a:hover {
+  background: #23241f;
+  transition: all .2s ease 0s;
+  z-index: 1;
+}
+.tabs li a.active {
+  background: #23241f;
+  color: #FFF;
+  transition: all .2s ease 0s;
+  z-index: 1;
+}
+.tab-content {
+  display: none;
+  background: #23241f;
+  line-height: 1.4;
+  transition: all .2s ease 0s;
+}
+.tab-content.active {
+  display: block;
+  transition: all .2s ease 0s;
+}
+#embed-nav.embed-nav {
+  display: none !important;
+}
+#rerun-button { display: none !important; }

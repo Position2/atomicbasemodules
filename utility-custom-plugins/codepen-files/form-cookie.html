@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Utility Custom Plugin #3 - Form Cookie</title>
+  <style>
+  .form-wrap {
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #dede;
+  }
+
+  .form-rows {
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  input {
+    width: 64%;
+    display: inline-block;
+    padding: 10px;
+  }
+
+  label {
+    width: 150px;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  select {
+    width: 68%;
+    height: 30px;
+  }
+
+  .val_error {
+    color: #f00;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+  }
+
+  .btn {
+    width: 150px;
+    padding: 10px;
+    display: block;
+    margin: 50px auto 0;
+    cursor: pointer;
+  }
+  </style>
+  <script>
+  window.console = window.console || function(t) {};
+  </script>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+  </script>
+</head>
+
+<body translate="no">
+  <div class="form-wrap">
+    <form id="form" class="additional-cookie">
+      <div class="form-rows">
+        <label for="firstname">First Name *</label>
+        <input autoComplete="first-name" name="first-name" type="text" value="" data-sfv-minlength="3" data-sfv-required="yes">
+      </div>
+      <div class="form-rows">
+        <label for="lastname">Last Name *</label>
+        <input autoComplete="last-name" name="last-name" type="text" value="" data-sfv-minlength="3" data-sfv-required="yes">
+      </div>
+      <div class="form-rows">
+        <label for="mail">Email *</label>
+        <input autoComplete="email" name="email" type="text" value="" data-sfv-required="yes" data-sfv-validation="email">
+      </div>
+      <div class="form-rows">
+        <label for="company">Company *</label>
+        <input autoComplete="company-name" name="company-name" type="text" value="" data-sfv-minlength="5" data-sfv-required="yes">
+      </div>
+      <div class="form-rows">
+        <label for="phonenumber">Phone Number *</label>
+        <input autoComplete="phone" data-sfv-required="yes" data-sfv-validation="number" name="phone" value="" type="text">
+      </div>
+      <label for="country">Country *</label>
+      <select autoComplete="country-name" name="dropdown" data-sfv-required="yes">
+        <option autoComplete="country-name" selectedvalue="SelectCoutry">Select Country</option>
+        <option autoComplete="country-name" value="India">India</option>
+        <option autoComplete="country-name" value="USA">USA</option>
+      </select>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <script src='https://cdn.rawgit.com/js-cookie/js-cookie/master/src/js.cookie.js'></script>
+  <script src='https://cdn.rawgit.com/Position2/jQuery-Simple-Form-Validation/master/dist/simplevalidation.min.js'></script>
+  <script>
+  $('.input2').each(function() {
+    $(this).on('blur', function() {
+      if ($(this).val().trim() != "") {
+        $(this).addClass('has-val');
+      } else {
+        $(this).removeClass('has-val');
+      }
+    })
+  })
+  var form = $("#form");
+  if (form.hasClass("additional-cookie")) {
+    var formData = Cookies.getJSON('fujitsu_formdata');
+    if (typeof(formData) != "undefined") {
+      form.find('input[name="first-name"]').val(formData.f_name);
+      form.find('input[name="last-name"]').val(formData.l_name);
+      form.find('input[name="email"]').val(formData.e_mail);
+      form.find('input[name="company-name"]').val(formData.company_name);
+      form.find('input[name="phone"]').val(formData.phone);
+      form.find('select[name="dropdown"]').val(formData.select);
+    }
+  }
+  form.simpleValidation({
+    "errorMsgClass": "val_error",
+    "errorMsgTag": "span",
+    "beforeSubmit": function(form) {
+      if (form.hasClass("additional-cookie")) {
+        var fname = form.find('input[name="first-name"]').val();
+        var lname = form.find('input[name="last-name"]').val();
+        var email = form.find('input[name="email"]').val();
+        var companyname = form.find('input[name="company-name"]').val();
+        var phone = form.find('input[name="phone"]').val();
+        var select = form.find('select[name="dropdown"]').val();
+        Cookies.set('fujitsu_formdata', {
+          "f_name": fname,
+          "l_name": lname,
+          "e_mail": email,
+          "company_name": companyname,
+          "phone": phone,
+          "select": select
+        });
+      }
+    }
+  });
+  //# sourceURL=pen.js
+  </script>
+</body>
+
+</html>

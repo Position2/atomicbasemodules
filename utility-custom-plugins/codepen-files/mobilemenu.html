@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Utility Custom Plugin #4 - Custom Mobile Menu</title>
+  <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/Position2/jQuery-Simple-MobileMenu/master/dist/styles/jquery-simple-mobilemenu.css'>
+  <style>
+  body {
+    background-color: #dee;
+  }
+
+  #sm_menu_ham span {
+    background-color: #000;
+  }
+
+  .sm_menu_outer .mobile_menu li.hasChild>a {
+    background-position: center center;
+  }
+
+  .sm_menu_outer .mobile_menu a {
+    width: 300px;
+  }
+
+  .sm_menu_outer .mobile_menu li.active>.submenu {
+    right: -25px;
+  }
+
+  .sm_menu_outer.active .mobile_menu {
+    padding: 0 0 0 10px;
+  }
+  </style>
+  <script>
+  window.console = window.console || function(t) {};
+  </script>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+  </script>
+</head>
+
+<body translate="no">
+  <ul class="mobile_menu">
+    <li><a href="">Menu 1</a></li>
+    <li>
+      <a href="">Menu 2</a>
+      <ul class="submenu">
+        <li><a href="">Sub Menu 1</a></li>
+        <li>
+          <a href="">Sub Menu 2</a>
+          <ul class="submenu">
+            <li><a href="">Sub Sub Menu 1</a></li>
+            <li><a href="">Sub Sub Menu 2</a></li>
+            <li><a href="">Sub Sub Menu 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="">Menu 3</a></li>
+  </ul>
+  <script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdn.rawgit.com/Position2/jQuery-Simple-MobileMenu/master/dist/jquery-simple-mobilemenu.min.js'></script>
+  <script>
+  $(document).ready(function() {
+    $(".mobile_menu").simpleMobileMenu()
+  });
+  //# sourceURL=pen.js
+  </script>
+</body>
+
+</html>

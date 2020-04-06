@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Utility Custom Plugin #1 - Custom Dropdown</title>
+  <style>
+  .custom-dropdown {
+    background: #fff url("https://thumb.ibb.co/m6mBn7/drop_down_arrow.png") no-repeat 94% center;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    width: 250px;
+  }
+
+  .custom-dd-selected {
+    color: #000;
+    font: 600 16px/120% "Source Sans Pro", sans-serif;
+  }
+
+  .custom-dropdown .custom-dd-list {
+    width: 100%;
+    background: #fff;
+    display: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    left: 0;
+    position: absolute;
+    top: 37px;
+    overflow-y: auto;
+    z-index: 99;
+  }
+
+  .custom-dd-list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom-dd-list ul li {
+    font: 600 16px/120% "Source Sans Pro", sans-serif;
+    border-bottom: 1px solid #b2b2b2;
+    padding: 10px;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .custom-dd-list ul li.cdd-active,
+  .custom-dd-list ul li:hover,
+  .custom-dd-list ul li:hover a {
+    background: #ce2b2b;
+    color: #fff;
+  }
+  </style>
+  <script>
+  window.console = window.console || function(t) {};
+  </script>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+  </script>
+</head>
+
+<body translate="no">
+  <div class="custom-dropdown">
+    <div class="custom-dd-selected">2015</div>
+    <div class="custom-dd-list">
+      <ul>
+        <li class="" data-val="">All</li>
+        <li data-val="year_2018">2018</li>
+        <li data-val="year_2017">2017</li>
+        <li data-val="year_2016">2016</li>
+        <li data-val="year_2015">2015</li>
+        <li data-val="year_2014">2014</li>
+        <li data-val="year_2013">2013</li>
+      </ul>
+    </div>
+  </div>
+  <script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+  <script>
+  $(".custom-dropdown").click(function() {
+    var dis = $(this),
+      disList = dis.find(".custom-dd-list");
+    dis.toggleClass("active");
+    $(".custom-dropdown").not(dis).removeClass("active").find(".custom-dd-list").hide();
+    disList.toggle();
+  }).change(function() {
+    var selectedVal = $(this).find(".custom-dd-list li.cdd-active").data("val")
+  });
+  $(".custom-dropdown").find(".custom-dd-list ul li").click(function() {
+    var dis = $(this),
+      parent = dis.parents(".custom-dropdown"),
+      selVal = dis.attr("data-val"),
+      selHtml = dis.text();
+    dis.siblings().removeClass("cdd-active");
+    (typeof selVal != "undefined") && (parent.find(".custom-dd-selected").html(selHtml));
+    if ((selVal != "") && (typeof selVal != "undefined")) {
+      dis.addClass("cdd-active");
+      dis.removeClass("active").find(".custom-dd-list").hide();
+    }
+    parent.trigger("change");
+  });
+  $(document).click(function(e) {
+    var dis = $(e.target);
+    if (!dis.hasClass("custom-dropdown") && dis.parents(".custom-dropdown").length <= 0) {
+      $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
+    }
+  })
+  //# sourceURL=pen.js
+  </script>
+</body>
+
+</html>

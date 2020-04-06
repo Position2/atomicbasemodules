@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Utility Custom Plugin #6 - Custom Filter With Load More</title>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #wrapper {
+    width: 720px;
+    margin: auto;
+  }
+
+  .content {
+    padding: 50px;
+    background-color: red;
+    float: left;
+    margin: 10px;
+    font-family: 'Arial';
+    color: #fff;
+  }
+
+  .hidden-box {
+    display: none;
+  }
+
+  .btn {
+    width: 306px;
+    margin: auto;
+  }
+
+  .button {
+    padding: 7px 10px;
+    background-color: #000;
+    text-decoration: none;
+    color: #fff;
+  }
+  </style>
+  <script>
+  window.console = window.console || function(t) {};
+  </script>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+  </script>
+</head>
+
+<body translate="no">
+  <div id="wrapper">
+    <div class="content hidden-box">
+      Content 1
+    </div>
+    <div class="content hidden-box">
+      Content 2
+    </div>
+    <div class="content hidden-box">
+      Content 3
+    </div>
+    <div class="content hidden-box">
+      Content 4
+    </div>
+    <div class="content hidden-box">
+      Content 5
+    </div>
+    <div class="content hidden-box">
+      Content 6
+    </div>
+    <div class="content hidden-box">
+      Content 7
+    </div>
+    <div class="content hidden-box">
+      Content 8
+    </div>
+    <div class="content hidden-box">
+      Content 9
+    </div>
+    <div class="btn">
+      <a id="close" class="button" href="javascript:void(0)">Load More Work</a>
+    </div>
+  </div>
+  <script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script>
+  $(document).ready(function() {
+    $(".hidden-box").slice(0, 3).show();
+    $(".button").on('click', function() {
+      $(".hidden-box:hidden").slice(0, 3).slideDown();
+    });
+  });
+  //# sourceURL=pen.js
+  </script>
+</body>
+
+</html>

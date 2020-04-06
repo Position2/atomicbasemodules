@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"/>    
+    <title>CodePen - Utility Custom Plugin #7 - Custom Isotope Filter</title>
+    <style>
+    .container {
+        width: 940px;
+        margin: 0 auto;
+    }
+
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    .portfolio-menu {
+        text-align: center;
+    }
+
+    .portfolio-menu {
+        margin-bottom: 10px;
+    }
+
+    .portfolio-menu ul li {
+        display: inline-block;
+        list-style: none;
+        font-size: 18px;
+        font-family: arial;
+        padding: 10px 15px;
+        border: 1px solid #ff654a;
+        cursor: pointer;
+        text-align: center;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+    .portfolio-menu li.active {
+        background-color: #ff654a;
+        color: #fff;
+    }
+
+    .portfolio-menu ul li:hover {
+        background-color: #f5a20c;
+        color: #fff;
+    }
+
+    .portfolio-item .item {
+        width: 18%;
+        float: left;
+        margin: 0 8px 5px 0;
+    }
+
+    .portfolio-item .item a {
+        display: inline-block;
+    }
+
+    .portfolio-item .item img {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Isotope Filter</h1>
+        <div class="portfolio-menu">
+            <ul class="menu">
+                <li class="active" data-filter="*"><span>All</span></li>
+                <li data-filter=".web"><span>Web Design</span></li>
+                <li data-filter=".seo"><span>Seo</span></li>
+                <li data-filter=".graphics"><span>Graphics</span></li>
+            </ul>
+        </div>
+      <div class="portfolio-item">
+            <div class="item web">
+                <a href=""><img src="https://images.unsplash.com/photo-1473181488821-2d23949a045a?ixlib=rb-0.3.5&s=d0e680e2d7915801cb4ac4bd90882330&auto=format&fit=crop&w=750&q=80" alt="subscription Image"></a>
+            </div>
+            <div class="item seo">
+                <a href=""><img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=163911de43447625eb10010bac6d2a1f&auto=format&fit=crop&w=750&q=80" alt="subscription Image"></a>
+            </div>
+            <div class="item web">
+                <a href=""><img src="https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=241b98f654afdcfa95a7afeeeebaa9c8&auto=format&fit=crop&w=750&q=80" alt="subscription Image"></a>
+            </div>
+            <div class="item web">
+                <a href=""><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07bcd69444b1da123c309e5f4485371b&auto=format&fit=crop&w=750&q=80"></a>
+            </div>
+            <div class="item graphics">
+                <a href=""><img src="https://images.unsplash.com/photo-1525167827853-bbf32804dde2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=050bee90ebc14cb2f982325ad5650a35&auto=format&fit=crop&w=750&q=80" alt="subscription Image"></a>
+            </div>
+            <div class="item seo">
+                <a href=""><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c52e5be19eaabb3a7ae64eeb57a56f7e&auto=format&fit=crop&w=750&q=80"></a>
+            </div>
+            <div class="item graphics">
+                <a href=""><img src="https://images.unsplash.com/photo-1476763752342-d5cf7e5eb6cc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=503843460e549122bdea862a301e4c41&auto=format&fit=crop&w=500&q=60" alt="subscription Image"></a>
+            </div>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+    <!-- <script src="https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.js"></script> -->
+
+    <script>
+    $(window).load(function() {
+        $('.portfolio-item').isotope({
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+        });
+        $('.portfolio-menu ul li').click(function() {
+            $('.portfolio-menu ul li').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $('.portfolio-item').isotope({
+                filter: selector
+            });
+            return false;
+        });
+    });
+    </script>
+</body>
+
+</html>

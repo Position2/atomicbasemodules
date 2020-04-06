@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Utility Custom Plugins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai_sublime.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <style>
+    iframe {
+        border: 1px solid #ccc;
+        margin-bottom: 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="tutorial">
+      <!-- Custom Drop Down starts-->
+        <div class="rule" id="custom-drop-down">
+            <div class="title">
+                <h1>1. Custom Drop Down</h1>
+            </div>
+            <div class="rule" id="1">
+                <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+                <ul class="tabs" data-tabgroup="first-tab-group">
+                    <li class="tab"><a href="#cddhtml" class="active">HTML</a></li>
+                    <li class="tab"><a href="#cddcss">Styling</a></li>
+                    <li class="tab"><a href="#cddjs">Script</a></li>
+                </ul>
+                <pre>
+            <div id="first-tab-group" class="tabgroup">
+              <div id="cddhtml">
+<code id=code-html-one class="code html" data-clipboard-target="#code-html">
+&lt;div class="custom-dropdown"&gt;
+  &lt;div class="custom-dd-selected"&gt;2015&lt;/div&gt;
+    &lt;div class="custom-dd-list"&gt;
+      &lt;ul&gt;
+        &lt;li class="" data-val=""&gt;All&lt;/li&gt;
+        &lt;li data-val="year_2018"&gt;2018&lt;/li&gt;
+        &lt;li data-val="year_2017"&gt;2017&lt;/li&gt;
+        &lt;li data-val="year_2016"&gt;2016&lt;/li&gt;
+        &lt;li data-val="year_2015"&gt;2015&lt;/li&gt;
+        &lt;li data-val="year_2014"&gt;2014&lt;/li&gt;
+        &lt;li data-val="year_2013"&gt;2013&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="cddcss">
+<code id=code-css-one class="code css" data-clipboard-target=#code-css>
+.custom-dropdown {
+  background: #fff url("https://thumb.ibb.co/m6mBn7/drop_down_arrow.png") no-repeat 
+              94% center;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  width: 250px;
+}
+.custom-dd-selected {
+  color: #000;
+  font: 600 16px/120% "Source Sans Pro", sans-serif;
+}
+.custom-dropdown .custom-dd-list {
+  width: 100%;
+  background: #fff;
+  display: none;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  left: 0;
+  position: absolute;
+  top: 37px;
+  overflow-y: auto;
+  z-index: 99;
+}
+.custom-dd-list ul {
+  margin: 0;
+  padding: 0;
+}
+.custom-dd-list ul li {
+  font: 600 16px/120% "Source Sans Pro", sans-serif;
+  border-bottom: 1px solid #b2b2b2;
+  padding: 10px;
+  margin: 0;
+  list-style-type: none;
+}
+.custom-dd-list ul li.cdd-active,
+.custom-dd-list ul li:hover,
+.custom-dd-list ul li:hover a {
+  background: #ce2b2b;
+  color: #fff;
+}
+</code>
+</div>
+<div id="cddjs">
+<code id=code-css-one class="code javascript" data-clipboard-target=#code-javascript>
+$(".custom-dropdown").click(function() {
+  var dis = $(this),
+    disList = dis.find(".custom-dd-list");
+  dis.toggleClass("active");
+  $(".custom-dropdown").not(dis).removeClass("active").find(".custom-dd-list").hide();
+  disList.toggle();
+}).change(function() {
+  var selectedVal = $(this).find(".custom-dd-list li.cdd-active").data("val")
+});
+$(".custom-dropdown").find(".custom-dd-list ul li").click(function() {
+  var dis = $(this),
+    parent = dis.parents(".custom-dropdown"),
+    selVal = dis.attr("data-val"),
+    selHtml = dis.text();
+  dis.siblings().removeClass("cdd-active");
+  (typeof selVal != "undefined") && (parent.find(".custom-dd-selected").html(selHtml));
+  if ((selVal != "") && (typeof selVal != "undefined")) {
+    dis.addClass("cdd-active");
+    dis.removeClass("active").find(".custom-dd-list").hide();
+  }
+  parent.trigger("change");
+});
+$(document).click(function(e) {
+  var dis = $(e.target);
+  if (!dis.hasClass("custom-dropdown") && dis.parents(".custom-dropdown").length <= 0) {
+    $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
+  }
+})
+</code>
+</div>
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/custom-dropdown.html"></iframe>
+      </div>
+      </div>
+    </div>
+     <!-- Custom Drop Down ends-->
+     <!-- Pagination starts -->
+     <div class="rule" id="pagination">
+      <div class="title">
+         <h1>2. Pagination</h1>
+      </div>
+      <div class="rule" id="2">
+        <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+        <ul class="tabs" data-tabgroup="second-tab-group">
+          <li class="tab"><a href="#pghtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#pgcss">Styling</a></li>
+          <li class="tab"><a href="#pgjs">Script</a></li>
+        </ul>
+        <pre>
+          <div id="second-tab-group" class="tabgroup">
+           <div id="pghtml" class="tab-content current">
+<code id=code-html-two class="code html" data-clipboard-target="#code-html">
+ &lt;div id="content"&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;4&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;5&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;6&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;7&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;8&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;9&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="each-content"&gt;
+      &lt;p&gt;10&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;div id="paging"&gt;&lt;/div&gt;
+</code>
+</div>
+<div id="pgcss">
+<code id=code-css-two class="code css" data-clipboard-target=#code-css>
+body {
+  text-align: center;
+  padding: 50px 0;
+}
+#paging {
+  margin: 0 auto;
+  display: inline-block;
+}
+#content .each-content {
+  width: 80px;
+  height: 50px;
+  padding: 30px;
+  display: inline-block;
+  vertical-align: top;
+  background: #02ccba;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  position: relative;
+}
+#content .each-content p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+</code>
+</div>
+<div id="pgjs">
+<code id=code-css-two class="code javascript" data-clipboard-target=#code-javascript>
+function initPagination(itemSelector) {
+  var perPage = 3;
+  $("#content .each-content").removeClass(function(index, css) {
+    return (css.match(/(^|\s)page-\S+/g) || []).join(' ');
+  });
+  $(itemSelector).addClass(function(key, val) {
+    return "page-" + (Math.floor(key / perPage) + 1);
+  })
+  $("#paging")
+    .pagination('destroy')
+    .pagination({           
+      items: $(itemSelector).length,
+      itemsOnPage: perPage,
+      cssStyle: 'light-theme',
+      onPageClick: function(pgno, e) {
+        e.preventDefault();
+        $(itemSelector).hide(0).filter(".page-" + pgno).show(0)
+      },
+      onInit: function() {
+        $(itemSelector).hide(0).filter(".page-1").show(0)
+      }
+  });
+}
+initPagination("#content .each-content");
+</code>
+</div>
+ </div>     
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/pagination.html"></iframe>
+      </div>
+      </div>
+    </div>
+    <!-- Pagination ends -->
+    <!-- Form Cookie starts -->
+<div class="rule" id="formcookie">
+  <div class="title">
+    <h1>3. Form Cookie</h1>
+  </div>
+  <div class="rule" id="3">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="third-tab-group">
+      <li class="tab"><a href="#fchtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#fccss">Styling</a></li>
+      <li class="tab"><a href="#fcjs">Script</a></li>
+    </ul>
+    <pre>
+      <div id="third-tab-group" class="tabgroup">
+           <div id="fchtml">
+<code id=code-html-three class="code html" data-clipboard-target="#code-html">
+&lt;div class="form-wrap"&gt;
+  &lt;form id="form" class="additional-cookie"&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="firstname"&gt;First Name *&lt;/label&gt;
+      &lt;input autoComplete="first-name" name="first-name" type="text" value="" data-sfv-minlength="3" 
+      data-sfv-required="yes"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="lastname"&gt;Last Name *&lt;/label&gt;
+      &lt;input autoComplete="last-name" name="last-name" type="text" value="" data-sfv-minlength="3" 
+      data-sfv-required="yes"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="mail"&gt;Email *&lt;/label&gt;
+      &lt;input autoComplete="email" name="email" type="text" value="" data-sfv-required="yes" 
+      data-sfv-validation="email"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="company"&gt;Company *&lt;/label&gt;
+      &lt;input autoComplete="company-name" name="company-name" type="text" value="" data-sfv-minlength="5" 
+      data-sfv-required="yes"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="phonenumber"&gt;Phone Number *&lt;/label&gt;
+      &lt;input autoComplete="phone" data-sfv-required="yes" data-sfv-validation="number" name="phone" value="" 
+      type="text"&gt;
+    &lt;/div&gt;
+    &lt;label for="country"&gt;Country *&lt;/label&gt;
+    &lt;select autoComplete="country-name" name="dropdown" data-sfv-required="yes"&gt;
+      &lt;option autoComplete="country-name" selectedvalue="SelectCoutry"&gt;Select Country&lt;/option&gt;
+      &lt;option autoComplete="country-name" value="India"&gt;India&lt;/option&gt;
+      &lt;option autoComplete="country-name" value="USA"&gt;USA&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button class="btn" type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="fccss">
+<code id=code-css-three class="code css" data-clipboard-target=#code-css>
+body {
+  text-align: center;
+  padding: 50px 0;
+}
+#paging {
+  margin: 0 auto;
+  display: inline-block;
+}
+#content .each-content {
+  width: 80px;
+  height: 50px;
+  padding: 30px;
+  display: inline-block;
+  vertical-align: top;
+  background: #02ccba;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  position: relative;
+}
+#content .each-content p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+</code>
+</div>
+<div id="fcjs">
+<code id=code-css-one class="code javascript" data-clipboard-target=#code-javascript>
+function initPagination(itemSelector) {
+  var perPage = 3;
+  $("#content .each-content").removeClass(function(index, css) {
+    return (css.match(/(^|\s)page-\S+/g) || []).join(' ');
+  });
+  $(itemSelector).addClass(function(key, val) {
+    return "page-" + (Math.floor(key / perPage) + 1);
+  })
+  $("#paging")
+    .pagination('destroy')
+    .pagination({           
+      items: $(itemSelector).length,
+      itemsOnPage: perPage,
+      cssStyle: 'light-theme',
+      onPageClick: function(pgno, e) {
+        e.preventDefault();
+        $(itemSelector).hide(0).filter(".page-" + pgno).show(0)
+      },
+      onInit: function() {
+        $(itemSelector).hide(0).filter(".page-1").show(0)
+      }
+  });
+}
+initPagination("#content .each-content");
+</code>
+</div>
+ </div>
+</div>
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/form-cookie.html"></iframe>
+      </div>
+      </div>
+    </div>
+    <!-- Form Cookie ends -->
+    <!-- smooth scroll starts -->
+    <div class="rule" id="smoothscroll">
+  <div class="title">
+    <h1>4. Smooth Scroll</h1>
+  </div>
+  <div class="rule" id="4">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="fourth-tab-group">
+      <li class="tab"><a href="#sshtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#sscss">Styling</a></li>
+      <li class="tab"><a href="#ssjs">Script</a></li>
+    </ul>
+    <pre>
+      <div id="fourth-tab-group" class="tabgroup">
+           <div id="sshtml">
+<code id=code-html-four class="code html" data-clipboard-target="#code-html">
+&lt;div id="PageWrapper"&gt;
+&lt;div class="menu-wrapper"&gt;
+  &lt;ul class="sub-menu"&gt;
+    &lt;li&gt;&lt;a class="smooth-scroll active" data-href="#Section1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="smooth-scroll" data-href="#Section2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="smooth-scroll" data-href="#Section3"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="smooth-scroll" data-href="#Section4"&gt;Section 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="Section1" class="section"&gt;
+  &lt;h1&gt;Section 1&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id="Section2" class="section"&gt;
+  &lt;h1&gt;Section 2&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id="Section3" class="section"&gt;
+  &lt;h1&gt;Section 3&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id="Section4" class="section"&gt;
+  &lt;h1&gt;Section 4&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="sscss">
+<code id=code-css-four class="code css" data-clipboard-target=#code-css>
+#PageWrapper {
+  text-align: center;
+}
+ul.sub-menu {
+  padding: 40px 0;
+  background-color: #b0aac2;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  text-transform: uppercase;
+}
+ul.sub-menu li {
+  display: inline-block;
+  padding: 0 50px;
+  border-right: 2px solid #dfdfdf;
+}
+ul.sub-menu li a {
+  color: #000;
+  font: 14px/140% "Arial", sans-serif;
+  cursor: pointer;
+}
+ul.sub-menu li a:hover {
+  color: #000;
+  border-bottom: 5px solid #000;
+  padding-bottom: 5px;
+}
+ul.sub-menu li a.active {
+  color: #000;
+  border-bottom: 5px solid #000;
+  padding-bottom: 5px;
+}
+ul.sub-menu li:last-child {
+  border-right: none;
+}
+.section {
+  height: 500px;
+  padding-top: 108px;
+  position: relative;
+}
+.section h1 {
+  font: 32px/140% "Arial", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0;
+  text-transform: uppercase;
+}
+#Section1 {
+  background-color: #f2efe8;
+}
+#Section2 {
+  background-color: #c2d4d8;
+}
+#Section3 {
+  background-color: #dbe9d8;
+}
+#Section4 {
+  background-color: #f2efe8;
+}
+</code>
+</div>
+<div id="ssjs">
+<code id=code-css-four class="code javascript" data-clipboard-target=#code-javascript>
+$(".smooth-scroll").click(function() {
+  var dis = $(this),
+      target = dis.data("href"),
+      offset = parseInt($(target).offset().top),
+      header = $(".menu-wrapper");
+  dis.addClass("active").siblings().removeClass("active");
+  var newOffset = ($(window).width() > 1024) ? offset - (header.outerHeight()) : offset;
+  $('html,body').stop().animate({ scrollTop: newOffset }, 200);
+});
+
+function findActiveSection() {
+  var winHO = $(window).height(),
+      winH = winHO - 200;
+  return $(".section").map(function() {
+    var dis = $(this),
+        disY = dis[0].getBoundingClientRect().top;
+    if ((disY < winH) && (disY > -200))
+      return dis;
+    else if ((disY < winHO) && (disY > -200))
+      return dis;
+  });
+}
+var prop_scrol_time = "";
+if ($(window).width() > 1024) {
+  $(window).scroll(function() {
+    clearTimeout(prop_scrol_time);
+    prop_scrol_time = setTimeout(function() {
+      var cActive = findActiveSection();
+      $(".smooth-scroll").removeClass("active").filter("[data-href='#" + $(cActive[0]).attr("id") + "']").addClass("active");
+    }, 200);
+  })
+}
+</code>
+</div>
+</div>
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/smooth-scroll.html"></iframe>
+      </div>
+      </div>
+    </div>
+    <!-- smooth scroll ends -->
+    <!-- Custom Mobile Menu starts -->
+  <div class="rule" id="mobilemenu">
+  <div class="title">
+    <h1>5. Custom Mobile Menu</h1>
+  </div>
+  <div class="rule" id="5">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+     <ul class="tabs" data-tabgroup="fifth-tab-group">
+        <li class="tab"><a href="#cmmhtml" class="active">HTML</a></li>
+        <li class="tab"><a href="#cmmcss">Styling</a></li>
+        <li class="tab"><a href="#cmmjs">Script</a></li>
+      </ul>
+    <pre>
+      <div id="fifth-tab-group" class="tabgroup">
+           <div id="cmmhtml">
+<code id=code-html-five class="code html" data-clipboard-target="#code-html">
+  &lt;ul class="mobile_menu"&gt;
+    &lt;li&gt;&lt;a href=""&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=""&gt;Menu 2&lt;/a&gt;
+      &lt;ul class="submenu"&gt;
+        &lt;li&gt;&lt;a href=""&gt;Sub Menu 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=""&gt;Sub Menu 2&lt;/a&gt;
+          &lt;ul class="submenu"&gt;
+            &lt;li&gt;&lt;a href=""&gt;Sub Sub Menu 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Sub Sub Menu 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Sub Sub Menu 3&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</div>
+<div id="cmmcss">
+<code id=code-css-five class="code css" data-clipboard-target=#code-css>
+.sm_menu_outer .mobile_menu li.hasChild>a {
+  background-position: center center;
+}
+.sm_menu_outer .mobile_menu a {
+  width: 300px;
+}
+.sm_menu_outer .mobile_menu li.active > .submenu {
+  right: -25px;
+}
+.sm_menu_outer.active .mobile_menu {
+  padding: 0 0 0 10px;
+}
+</code>
+</div>
+<div id="cmmjs">
+<code id=code-css-five class="code javascript" data-clipboard-target=#code-javascript>
+$(document).ready(function(){
+  $(".mobile_menu").simpleMobileMenu()
+});
+</code>
+</div>
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/mobilemenu.html"></iframe>
+      </div>
+      </div>
+    </div>
+    <!-- Custom Mobile Menu ends -->
+    <!-- Custom Filter With Load More starts-->
+    <div class="rule" id="loadmore">
+  <div class="title">
+    <h1>6. Custom Filter With Load More</h1>
+  </div>
+  <div class="rule" id="6">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="sixth-tab-group">
+      <li class="tab"><a href="#cflhtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#cflcss">Styling</a></li>
+      <li class="tab"><a href="#cfljs">Script</a></li>
+    </ul>
+    <pre>
+      <div id="sixth-tab-group" class="tabgroup">
+      <div id="cflhtml">
+<code id=code-html-six class="code html" data-clipboard-target="#code-html">
+&lt;div id="wrapper"&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 1
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 2
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 3
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 4
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 5
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 6
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 7
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 8
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 9
+  &lt;/div&gt;
+  &lt;div class="btn"&gt;
+    &lt;a class="button" href=""&gt;Load More Work&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="cflcss">
+<code id=code-css-six class="code css" data-clipboard-target=#code-css>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+}
+#wrapper {  
+  width: 720px;
+  margin: auto;
+}
+.content {
+  padding: 50px;
+  background-color: #ff0000;
+  float: left;
+  margin: 10px;  
+  color: #fff;
+}
+.hidden-box {
+  display: none;
+}
+.btn {
+  width: 306px;
+  margin: auto;
+}
+.button {
+  padding: 7px 10px;
+  background-color: #000;
+  text-decoration: none;
+  color: #fff;
+}
+</code>
+</div>
+<div id="cfljs">
+<code id=code-css-six class="code javascript" data-clipboard-target=#code-javascript>
+$(document).ready(function() {
+  $(".hidden-box").slice(0, 3).show();
+  $(".button").on('click', function(){
+    $(".hidden-box:hidden").slice(0, 3).slideDown();
+  });
+});
+</code>
+</div>
+</div>
+</div>
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/load-more.html"></iframe>
+      </div>
+      </div>
+    </div>  
+  <!-- Custom Filter With Load More ends-->
+  <!-- Custom Filter With Isotope starts-->
+   <div class="rule" id="isotope">
+  <div class="title">
+    <h1>7. Custom Filter With Isotope</h1>
+  </div>
+  <div class="rule" id="7">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="seventh-tab-group">
+      <li class="tab"><a href="#cfihtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#cficss">Styling</a></li>
+      <li class="tab"><a href="#cfijs">Script</a></li>
+    </ul>
+    <pre>
+      <div id="seventh-tab-group" class="tabgroup">
+           <div id="cfihtml" class="tab-content current">
+<code id=code-html-seven class="code html" data-clipboard-target="#code-html">
+&lt;div id="container"&gt;
+    &lt;h1&gt;Isotope Filter&lt;/h1&gt;
+&lt;div class="portfolio-menu"&gt;
+&lt;ul class="menu"&gt;
+    &lt;li class="active" data-filter="*"&gt;&lt;span&gt;All&lt;/span&gt;&lt;/li&gt;
+    &lt;li data-filter=".web"&gt;&lt;span&gt;Web Design&lt;/span&gt;&lt;/li&gt;
+    &lt;li data-filter=".seo"&gt;&lt;span&gt;Seo&lt;/span&gt;&lt;/li&gt;
+    &lt;li data-filter=".graphics"&gt;&lt;span&gt;Graphics&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="portfolio-item"&gt;
+  &lt;div class="item web"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1473181488821-2d23949a045a?ixlib=rb-0.3.5&s=d0e680e2d7915801cb4ac4bd90882330&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item seo"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=163911de43447625eb10010bac6d2a1f&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item web"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=241b98f654afdcfa95a7afeeeebaa9c8&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item web"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07bcd69444b1da123c309e5f4485371b&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item graphics"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1525167827853-bbf32804dde2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=050bee90ebc14cb2f982325ad5650a35&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item seo"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c52e5be19eaabb3a7ae64eeb57a56f7e&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item graphics"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1476763752342-d5cf7e5eb6cc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=503843460e549122bdea862a301e4c41&auto=format&fit=crop&w=500&q=60" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="cficss">
+<code id=code-css-seven class="code css" data-clipboard-target=#code-css>
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+h1, .portfolio-menu {
+  text-align: center;
+}
+.portfolio-menu {
+  margin-bottom: 10px;
+}
+.portfolio-menu ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  font-family: arial;
+  padding: 10px 15px; 
+  border: 1px solid #ff654a;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.portfolio-menu li.active {
+  background-color: #ff654a;
+  color: #fff;
+}
+.portfolio-menu ul li:hover {
+  background-color: #f5a20c;
+  color: #fff;
+}
+.portfolio-item .item {
+  width: 32.3%;
+  float: left;
+  margin: 0 8px 5px 0;
+}
+.portfolio-item .item a {
+  display: inline-block;
+}
+.portfolio-item .item img {
+  width: 100%;
+}
+</code>
+</div>
+<div id="cfijs">
+<code id=code-css-seven class="code javascript" data-clipboard-target=#code-javascript>
+$(window).load(function(){
+  $('.portfolio-item').isotope({
+    itemSelector:'.item',
+    layoutMode: 'fitRows'
+  });
+  $('.portfolio-menu ul li').click(function(){
+    $('.portfolio-menu ul li').removeClass('active');
+    $(this).addClass('active');    
+    var selector = $(this).attr('data-filter');
+    $('.portfolio-item').isotope({
+      filter: selector
+    });
+    return false;
+  });
+});
+</code>
+</div>
+</div>
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/isotope-filter.html"></iframe>
+      </div>
+      </div>
+    </div>
+<!-- Custom Filter With Isotope starts-->
+<div class="rule" id="customtabs">
+  <div class="title">
+    <h1>8. Tabs</h1>
+  </div>
+  <div class="rule" id="8">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="eight-tab-group">
+      <li class="tab"><a href="#tabhtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#tabcss">Styling</a></li>
+      <li class="tab"><a href="#tabjs">Script</a></li>
+    </ul>
+    <pre>
+      <div id="eight-tab-group" class="tabgroup">
+           <div id="tabhtml" class="tab-content current">
+<code id=code-html-eight class="code html" data-clipboard-target="#code-html">
+&lt;div class="container"&gt;
+  &lt;div class="wrapper-one"&gt;
+    &lt;ul class="tabs" data-tabgroup="first-tab-group"&gt;
+      &lt;li class="tab"&gt;&lt;a href="#tab1" class="active"&gt;TAB1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="tab"&gt;&lt;a href="#tab2"&gt;TAB2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="tab"&gt;&lt;a href="#tab3"&gt;TAB3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id="first-tab-group" class="tabgroup"&gt;
+      &lt;div id="tab1"&gt;
+        &lt;p&gt;TAB 1&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="tab2"&gt;
+        &lt;p&gt;TAB 2&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="tab3"&gt;
+        &lt;p&gt;TAB 3&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="wrapper-two"&gt;
+    &lt;ul class="tabs" data-tabgroup="second-tab-group"&gt;
+      &lt;li class="tab"&gt;&lt;a href="#tab6" class="active"&gt;TAB6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="tab"&gt;&lt;a href="#tab7"&gt;TAB7&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="tab"&gt;&lt;a href="#tab8"&gt;TAB8&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id="second-tab-group" class="tabgroup"&gt;
+      &lt;div id="tab6"&gt;
+        &lt;p&gt;TAB 6&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="tab7"&gt;
+        &lt;p&gt;TAB 7&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="tab8"&gt;
+        &lt;p&gt;TAB 8&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="tabcss">
+<code id=code-css-seven class="code css" data-clipboard-target=#code-css>
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+.wrapper-one {
+  margin-bottom: 50px;
+}
+.tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.tabs li {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  margin: 0 -2px -4px 3px;
+  line-height: 140%;
+  color: #000;
+  font-size: 14px;
+  background-color: #67caca;
+  transition: all .4s ease 0s;
+  -webkit-transform: perspective(230px) rotateX(30deg);
+  -moz-transform: perspective(230px) rotateX(30deg);
+  cursor: pointer;
+  border-radius: 4px;
+  border-radius-bottom: 0;
+}
+.tabs li a {
+  color: #000;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+}
+.tabs li a:hover {
+  background: #dee;
+  transition: all .2s ease 0s;
+  z-index: 1;
+}
+.tabs li a.active {
+  background: #dee;
+  color: #000;
+  transition: all .2s ease 0s;
+  z-index: 1;
+}
+.tab-content {
+  display: none;
+  background: #23241f;
+  line-height: 1.4;
+  transition: all .2s ease 0s;
+}
+.tab-content.active {
+  display: block;
+  transition: all .2s ease 0s;
+}
+.tabgroup {
+  background: #dee;
+  height: 200px;
+  width: 700px;
+  color: #fff;
+  position: relative;
+}
+.tabgroup p {
+  color: #000;
+  font-size: 30px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</code>
+</div>
+<div id="tabjs">
+<code id=code-css-eight class="code javascript" data-clipboard-target=#code-javascript>
+$$('.tabgroup > div').hide();
+$('.tabgroup > div:first-of-type').show();
+$('.tabs a').click(function(e) {
+  e.preventDefault();
+  var $this = $(this),
+    tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
+    others = $this.closest('li').siblings().children('a'),
+    target = $this.attr('href');
+  others.removeClass('active');
+  $this.addClass('active');
+  $(tabgroup).children('div').hide();
+  $(target).show();
+})
+</code>
+</div>
+</div>
+      <div class="result">
+        <p><u>Result</u></p>
+          <iframe width="100%" height="260px" src="codepen-files/tab.html"></iframe>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- Custom Filter With Isotope ends-->
+  <div class="nav-list" id="mainNav">
+    <a class="nav-link active" data-href="#custom-drop-down">Custom Drop Down</a>
+    <a class="nav-link" data-href="#pagination">Pagination</a>
+    <a class="nav-link" data-href="#formcookie">Form Cookie</a>
+    <a class="nav-link" data-href="#smoothscroll">Smooth Scroll</a>
+    <a class="nav-link" data-href="#mobilemenu">Custom Mobile Menu</a>
+    <a class="nav-link" data-href="#loadmore">Load More Filter</a>
+    <a class="nav-link" data-href="#isotope">Isotope Filter</a>
+    <a class="nav-link" data-href="#customtabs">Tabs</a>
+    <a class="nav-link" data-href="#delaypopup">Delay Popup</a>
+  </div>
+</div>
+  <script>
+  document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"><\/script>')
+  </script>
+  <script>
+  hljs.initHighlightingOnLoad();
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/plugins-activate.js"></script>
+</body>
+
+</html>

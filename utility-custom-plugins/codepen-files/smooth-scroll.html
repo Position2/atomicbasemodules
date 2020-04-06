@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Utility Custom Plugin #4 - Smooth Scroll</title>
+  <style>
+  body {
+    margin: 0 auto;
+  }
+
+  #PageWrapper {
+    text-align: center;
+  }
+
+  ul.sub-menu {
+    padding: 40px 0;
+    background-color: #b0aac2;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    text-transform: uppercase;
+  }
+
+  ul.sub-menu li {
+    display: inline-block;
+    padding: 0 50px;
+    border-right: 2px solid #dfdfdf;
+  }
+
+  ul.sub-menu li a {
+    color: #000;
+    font: 14px/140% "Arial", sans-serif;
+    cursor: pointer;
+  }
+
+  ul.sub-menu li a:hover {
+    color: #000;
+    border-bottom: 5px solid #000;
+    padding-bottom: 5px;
+  }
+
+  ul.sub-menu li a.active {
+    color: #000;
+    border-bottom: 5px solid #000;
+    padding-bottom: 5px;
+  }
+
+  ul.sub-menu li:last-child {
+    border-right: none;
+  }
+
+  .section {
+    height: 500px;
+    padding-top: 108px;
+    position: relative;
+  }
+
+  .section h1 {
+    font: 32px/140% "Arial", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  #Section1 {
+    background-color: #f2efe8;
+  }
+
+  #Section2 {
+    background-color: #c2d4d8;
+  }
+
+  #Section3 {
+    background-color: #dbe9d8;
+  }
+
+  #Section4 {
+    background-color: #f2efe8;
+  }
+  </style>
+  <script>
+  window.console = window.console || function(t) {};
+  </script>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+  </script>
+</head>
+
+<body translate="no">
+  <div id="PageWrapper">
+    <div class="menu-wrapper">
+      <ul class="sub-menu">
+        <li><a class="smooth-scroll active" data-href="#Section1">Section 1</a></li>
+        <li><a class="smooth-scroll" data-href="#Section2">Section 2</a></li>
+        <li><a class="smooth-scroll" data-href="#Section3">Section 3</a></li>
+        <li><a class="smooth-scroll" data-href="#Section4">Section 4</a></li>
+      </ul>
+    </div>
+    <div id="Section1" class="section">
+      <h1>Section 1</h1>
+    </div>
+    <div id="Section2" class="section">
+      <h1>Section 2</h1>
+    </div>
+    <div id="Section3" class="section">
+      <h1>Section 3</h1>
+    </div>
+    <div id="Section4" class="section">
+      <h1>Section 4</h1>
+    </div>
+  </div>
+  <script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+  <script>
+  $(".smooth-scroll").click(function() {
+    var dis = $(this),
+      target = dis.data("href"),
+      offset = parseInt($(target).offset().top),
+      header = $(".menu-wrapper");
+    dis.addClass("active").siblings().removeClass("active");
+    var newOffset = ($(window).width() > 1024) ? offset - (header.outerHeight()) : offset;
+    $('html,body').stop().animate({ scrollTop: newOffset }, 200);
+  });
+
+  function findActiveSection() {
+    var winHO = $(window).height(),
+      winH = winHO - 200;
+    return $(".section").map(function() {
+      var dis = $(this),
+        disY = dis[0].getBoundingClientRect().top;
+      if ((disY < winH) && (disY > -200))
+        return dis;
+      else if ((disY < winHO) && (disY > -200))
+        return dis;
+    });
+  }
+  var prop_scrol_time = "";
+  if ($(window).width() > 1024) {
+    $(window).scroll(function() {
+      clearTimeout(prop_scrol_time);
+      prop_scrol_time = setTimeout(function() {
+        var cActive = findActiveSection();
+        $(".smooth-scroll").removeClass("active").filter("[data-href='#" + $(cActive[0]).attr("id") + "']").addClass("active");
+      }, 200);
+    })
+  }
+  //# sourceURL=pen.js
+  </script>
+</body>
+
+</html>
