@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>UI Module | Thumbnail</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+     <main>
+        <section class="front">
+            <span class="bars"></span>
+            <span class="pro">pro</span>
+            <figure>
+                <img src="https://pbs.twimg.com/profile_images/874417950/003-2-square_400x400.jpg" alt="profile Image">
+            </figure>
+            <div class="arrow-box" onclick="clickEvent()">
+                <i class="fas fa-arrow-alt-circle-right"></i>
+            </div>
+        </section>
+        <section class="back">
+            <div>
+                <h1>Aniket Singh</h1>
+                <h3>@aniketx27</h3>
+            </div>
+
+            <div class="social-stats">
+                <div>
+                    <h3>stats</h3>
+                    <h1>23</h1>
+                </div>
+
+                <div>
+                    <h3>following</h3>
+                    <h1>320</h1>
+                </div>
+
+                <div>
+                    <h3>followers</h3>
+                    <h1>500</h1>
+                </div>
+            </div>
+
+            <div>
+                <a href="#" class="btn">send message</a>
+            </div>
+        </section>
+    </main>
+  </div>
+ 
+  <script>
+  function clickEvent() {
+    var back = document.querySelector(".back");
+    back.classList.toggle("onClick");
+
+    var front = document.querySelector(".front");
+    front.classList.toggle("onClick");
+
+    var main = document.querySelector("main");
+    main.classList.toggle("onClick");
+
+    var btn = document.querySelector(".fa-arrow-alt-circle-right");
+    btn.classList.toggle("btnOnClick");
+  }
+  </script>
+</body>
+
+</html>

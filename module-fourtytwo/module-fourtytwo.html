@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>UI Module | Thumbnail</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <section id="tab-panel">
+    <div class="container">
+      <div class="tab-wrapper">
+        <div class="nav">
+          <div class="nav-cont">
+            <a href="#profile" class="profile" title="Profile"><i class="icon ion-person checked"></i></a>
+            <a href="#cart" class="cart" title="Cart"><i class="icon ion-ios-cart"></i></a>
+            <a href="#sales" class="sales" title="Sales"><i class="icon ion-ios-pricetags"></i></a>
+            <a href="#archive" class="archive" title="Archive"><i class="icon ion-ios-filing archive"></i></a>
+            <a href="#settings" class="settings" title="Settings"><i class="icon ion-ios-gear settings"></i></a>
+          </div>
+        </div>
+        <div class="content">
+          <div id="profile" class="active">
+            <h1>Profile</h1>
+            <p>Eam putant latine eu, in admodum ancillae molestie his, duo in accommodare definitionem signiferumque. Has dictas aliquam consectetuer et. Sea cu dolore incorrupte. Vero fabulas tincidunt duo eu, pro in sententiae cotidieque. Rebum omnium persequeris has ad, veri adhuc nemore ut qui. In sit maluisset reformidans, argumentum dissentiet mei te.</p>
+          </div>
+          <div id="cart">
+            <h1>Shopping Cart</h1>
+            <p>Eam putant latine eu, in admodum ancillae molestie his, duo in accommodare definitionem signiferumque. Has dictas aliquam consectetuer et. Sea cu dolore incorrupte. Vero fabulas tincidunt duo eu, pro in sententiae cotidieque. Rebum omnium persequeris has ad, veri adhuc nemore ut qui. In sit maluisset reformidans, argumentum dissentiet mei te.</p>
+          </div>
+          <div id="sales">
+            <h1>Sales</h1>
+            <p>Eam putant latine eu, in admodum ancillae molestie his, duo in accommodare definitionem signiferumque. Has dictas aliquam consectetuer et. Sea cu dolore incorrupte. Vero fabulas tincidunt duo eu, pro in sententiae cotidieque. Rebum omnium persequeris has ad, veri adhuc nemore ut qui. In sit maluisset reformidans, argumentum dissentiet mei te.</p>
+          </div>
+          <div id="archive">
+            <h1>Archive</h1>
+            <p>Eam putant latine eu, in admodum ancillae molestie his, duo in accommodare definitionem signiferumque. Has dictas aliquam consectetuer et. Sea cu dolore incorrupte. Vero fabulas tincidunt duo eu, pro in sententiae cotidieque. Rebum omnium persequeris has ad, veri adhuc nemore ut qui. In sit maluisset reformidans, argumentum dissentiet mei te.</p>
+          </div>
+          <div id="settings">
+            <h1>Settings</h1>
+            <p>Eam putant latine eu, in admodum ancillae molestie his, duo in accommodare definitionem signiferumque. Has dictas aliquam consectetuer et. Sea cu dolore incorrupte. Vero fabulas tincidunt duo eu, pro in sententiae cotidieque. Rebum omnium persequeris has ad, veri adhuc nemore ut qui. In sit maluisset reformidans, argumentum dissentiet mei te.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  var profileIcon = $(".profile"),
+    cartIcon = $(".cart"),
+    salesIcon = $(".sales"),
+    archiveIcon = $(".archive"),
+    settingsIcon = $(".settings");
+
+  var profile = $("#profile"),
+    cart = $("#cart"),
+    sales = $("#sales"),
+    archive = $("#archive"),
+    settings = $("#settings");
+
+  $('i.icon').on('click', function() {
+    $(this).addClass('checked no-hover').parent().siblings('a').find('.icon').removeClass('checked no-hover');
+  });
+
+  profileIcon.on('click', function() {
+    profile.addClass("active").siblings().removeClass("active");
+  });
+
+  cartIcon.on('click', function() {
+    cart.addClass("active").siblings().removeClass("active");
+  });
+
+  salesIcon.on('click', function() {
+    sales.addClass("active").siblings().removeClass("active");
+  });
+
+  archiveIcon.on('click', function() {
+    archive.addClass("active").siblings().removeClass("active");
+  });
+
+  settingsIcon.on('click', function() {
+    settings.addClass("active").siblings().removeClass("active");
+  });
+  </script>
+</body>
+
+</html>
