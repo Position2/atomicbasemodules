@@ -5,7 +5,20 @@
       float: left;
       width: 25vw;
       height: 25vh;
+      @media (min-width: 0) and (max-width: 1199.98px) {
+      	height: 20vh;
+      }
       position: relative;
+      @media (max-width: 575.98px) {
+      	width: calc(100% - 20px);
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+      	width: calc(100%/2 - 20px);
+      	margin: 0 10px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+				width: calc(100%/3);	
+      }
       .company-card-overlay {
         position: absolute;
         top: 0;
@@ -14,6 +27,9 @@
         height: 100%;
         opacity: 0;  
         transition: opacity .3s cubic-bezier(.25,.1,.25,1);    
+        @media (min-width: 0) and (max-width: 1199.98px) {
+					opacity: 1;
+        }
       }
       img {
         width: auto;
@@ -21,9 +37,9 @@
         transition: filter .15s;
         transform: translateZ(0);
         position: absolute;
-        top: 50%;
+        top: 50%; 
         left: 50%;
-        transform: translate(-50% ,-50%);
+        transform: translate(-50% ,-50%); 
       }
       &:hover {
         .company-card-overlay {

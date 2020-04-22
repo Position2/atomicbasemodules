@@ -45,10 +45,13 @@
           margin: 0 auto;
         }
         .item-caption {
-          max-height: 0;
+          max-height: 200px;
           margin-top: 25px;
           overflow: hidden;
           transition: max-height .5s;
+          @media (min-width: 1200px) {
+            max-height: 0;
+          }
           .item-descr {
             font-size: $h6-fontsize;
             font-family: $base-font-family;
@@ -58,9 +61,11 @@
           }
         }
       }
-      &:hover {
-        .item-caption {
-          max-height: 200px;
+      @media (min-width: 1200px) {
+        &:hover {
+          .item-caption {
+            max-height: 200px;
+          }
         }
       }
     }
