@@ -115,7 +115,7 @@
               (tabSectionSlider.length > 0) && (tabSectionSlider.destroySlider())
             }
             if (!isDesktop()) {
-              tabSectionSlider = $('.tabs-section').bxSlider({
+              tabSectionSlider = $('.right-section.device .tabs-section').bxSlider({
                 controls: false,
                 auto: false,
                 useCSS: true, 
@@ -128,13 +128,11 @@
           tabSectionSliderInit();
         }
 
-        init();
-
         var prop_resize_time = "",
           wRevent = isRealDevice() ? "orientationchange" : "resize";
         $(window).on(wRevent, function() {
           clearTimeout(prop_resize_time);
-          prop_resize_time = setTimeout(init, 200);
+          prop_resize_time = setTimeout(init, 100);
         });
           });
         })(jQuery);
