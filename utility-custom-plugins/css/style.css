@@ -381,7 +381,7 @@ p.ft {
   width: 100%;
   height: auto;
 }
-#result {
+.result-wrap {
   display: block;
 overflow-x: auto;
 padding: 0.5em;
