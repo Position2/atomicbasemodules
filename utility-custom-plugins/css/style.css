@@ -1,9 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i);
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic);
 #toast-container {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
 }
-
+ iframe {
+       /* border: 1px solid #ccc;
+        margin-bottom: 30px;*/
+    }
 .border-radius,
 body .tutorial,
 body .code {
@@ -17,41 +20,39 @@ body {
   /*background: linear-gradient(to bottom,#f15b2a,#e80a89);*/
   /*background: linear-gradient(134deg, #00B2E2 0%, #2DBE60 100%);*/
   background-position: fixed;
-  margin: 100px 0;
+  margin: 60px 0;
 }
 
 .title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 body .tutorial {
   background-color: #fff;
   margin: 0 auto;
-  width: 50%;
-  -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
-  padding: 60px 80px;
+  width: 100%;
+  box-shadow: 0px 0px 7.44px 0.56px rgba(0,0,0,0.1);
+  padding: 40px;
 }
 
 body .tutorial h1 {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 32px;
 }
 
 body .tutorial h4 {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 28px;
 }
 
 body .tutorial h3 {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 24px;
 }
 
 body .tutorial label {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-style: italic;
   display: block;
   margin: 0 0 10px 0;
@@ -59,7 +60,7 @@ body .tutorial label {
 }
 
 body .tutorial p {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 18px;
   line-height: 28px;
   display: block;
@@ -69,12 +70,12 @@ body .tutorial p {
   margin-top: 20px;
 }
 ul li {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   margin-bottom: 10px;
 }
 
 body .tutorial p.f-t::first-letter {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 54px;
   color: #67caca;
   line-height: 50px;
@@ -87,10 +88,10 @@ body .code {
   line-height: 28px;
 }
 p.ft {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .rule {
-  margin: 0 0 50px 0;
+  margin: 0;
   font-size: 0;
 }
 
@@ -105,7 +106,7 @@ p.ft {
 }
 
 .nav-list {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   position: fixed;
   width: auto;
   margin-left: 2%;
@@ -132,7 +133,7 @@ p.ft {
   transition: all .4s ease 0s;
 }
 .tabs {
-  margin: 0px;
+  margin:0 0 0 1px;
   padding: 0px;
   list-style: none;
 }
@@ -155,7 +156,7 @@ p.ft {
 .tabs li a {
   color: #fff;
   text-decoration: none;
-   padding: 15px 40px;
+   padding: 16px 40px;
    display: inline-block;
 }
 .tabs li a:hover {
@@ -211,7 +212,7 @@ p.ft {
     color: #333;
     font-size: 18px;
     font-weight: 700;
-    font-family: "Montserrat", Arial, sans-serif
+    font-family: "Lato", Arial, sans-serif
 }
 
 .search .custom-dropdown .custom-dd-list {
@@ -239,13 +240,13 @@ p.ft {
     color: #333;
     font-size: 18px;
     font-weight: 400;
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     padding: 10px 20px;
     display: block
 }
 
 .search .custom-dropdown .custom-dd-list ul li:hover {
-    background-color: #eaeaea;
+    background-color: #005096;
     color: #fff
 }
 
@@ -264,7 +265,7 @@ p.ft {
     width: 100%;
     font-size: 18px;
     font-weight: 700;
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     height: 46px;
     border-radius: 0;
     border: 0;
@@ -299,14 +300,14 @@ p.ft {
     color: #333;
     font-size: 18px;
     font-weight: 400;
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     padding: 10px 20px;
     display: block;
     cursor: pointer
 }
 
 .search .autocomplete_wrapper .autocomplete ul li:hover {
-    background-color: #eaeaea;
+    background-color: #005096;
     color: #fff
 }
 
@@ -317,7 +318,7 @@ p.ft {
 .search .autocomplete_wrapper .autocomplete .no_match {
     font-size: 18px;
     font-weight: 400;
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     color: #333;
     padding: 10px 20px;
     display: block
@@ -334,7 +335,7 @@ p.ft {
 .search .tags_wrapper .badge {
     font-size: 16px;
     font-weight: 400;
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     padding: 5px 10px 7px;
     line-height: 1;
     margin-right: 10px
@@ -360,5 +361,41 @@ p.ft {
 
 .search .tags_wrapper_outer .clearall:hover {
     color: #fff;
-    background-color: #da423e
+    background-color: #da423e;
+}
+.module-list .title {
+  text-align: left;
+}
+.module-list .title h1 {
+  color:  #005096;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: Lato,sans-serif;
+  margin-bottom: 0;
+}
+.module-list .title h1 span {
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.module-list .title h1 span img {
+  width: 100%;
+  height: auto;
+}
+#result {
+  display: block;
+overflow-x: auto;
+padding: 0.5em;
+background:#23241f;
+-webkit-text-size-adjust: none;
+}
+#noresult {
+  display: none;
+  background-color:#fff;
+margin: 0 auto;
+width: 100%;
+box-shadow: 0px 0px 7.44px 0.56px
+rgba(0,0,0,0.1);
+padding: 40px;
 }

@@ -20,13 +20,20 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <title>Utility Custom Plugin</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai_sublime.min.css'>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Utility Custom Plugins</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/all-plugins.js"></script>
   <script type="text/javascript" src="js/plugins-activate.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai_sublime.min.css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+  document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"><\/script>')
+  </script>
+  <script>
+  hljs.initHighlightingOnLoad();
+  </script>
 </head>
 <body>
   <div class="module-list">
@@ -34,7 +41,7 @@
       <div class="title">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <h1><span><img src="index/images/p2.png" alt="Position 2"></span>UI Module</h1>
+            <h1><span><img src="../index/images/p2.png" alt="Position 2"></span>Utility Custom Plugins</h1>
           </div>
         </div>
       </div>
@@ -49,23 +56,15 @@
             <div class="custom-dd-list">
               <ul>
                 <li data-val="*" class="cdd-active">All</li>
-                <li data-val=".blog">Blog</li>
-                <li data-val=".contactus">Contact Us</li>
-                <li data-val=".event">Event</li>
-                <!-- <li data-val=".error">Error</li> -->
-                <!-- <li data-val=".form">Form</li> -->
-                <li data-val=".floater">Floater</li>
-                <li data-val=".footer">Footer</li>
-                <li data-val=".gallery">Gallery</li>
-                <!-- <li data-val=".login">Login</li> -->
-                <li data-val=".menu">Menu</li>
-                <li data-val=".modules">Modules</li>
-                <li data-val=".news">News</li>
-                <li data-val=".pressrelease">Press Release</li>
-                <li data-val=".resource">Resource</li>
-                <li data-val=".slider">Slider</li>
-                <li data-val=".team">Team</li>
-                <li data-val=".testimonial">Testimonial</li>
+                <li data-val=".customdropdown">Custom Drop Down</li>
+                <li data-val=".pagination">Pagination</li>
+                <li data-val=".formcookie">Form Cookie</li>
+                <li data-val=".smoothscroll">Smooth Scroll</li>
+                <li data-val=".custommobilemenu">Custom Mobile Menu</li>
+                <li data-val=".loadmorefilter">Load More Filter</li>
+                <li data-val=".isotopefilter">Isotope Filter</li>
+                <li data-val=".tabs">Tabs</li>
+                <li data-val=".delaypopup">Delay Popup</li>
               </ul>
             </div>
           </div>
@@ -75,102 +74,148 @@
             </div>
             <div class="autocomplete">
               <ul>
-                <li data-filter="accordion">Accordion</li>
-                <li data-filter="address">Address</li>
-                <li data-filter="alphabetic-filter">Alphabetic Filter</li>
-                <li data-filter="animation">Animation</li>
-                <li data-filter="amount">Amount</li>
-                <li data-filter="author">Author</li>
-                <li data-filter="background">Background</li>
-                <li data-filter="background-color">Background Color</li>
-                <li data-filter="background-image">Background Image</li>
-                <li data-filter="blog">Blog</li>
-                <!-- <li data-filter="button">Button</li> -->
-                <li data-filter="category">Category</li>
-                <li data-filter="click">Click</li>
-                <li data-filter="columns">Columns</li>
-                <li data-filter="contactus">Contact Us</li>
-                <li data-filter="close">Close</li>
-                <li data-filter="count">Count</li>
-                <li data-filter="custom-pagination">Custom Pagination</li>
-                <li data-filter="date">Date</li>
-                <li data-filter="desktop">Desktop</li>
-                <li data-filter="description">Description</li>
-                <li data-filter="ease">Ease</li>
-                <li data-filter="ease-in-out">Ease In Out</li>
-                <li data-filter="event">Event</li>
-                <li data-filter="expand">Expand</li>
-                <li data-filter="featured-article">Featured Article</li>
-                <li data-filter="floater">Floater</li>
-                <li data-filter="fluid">Fluid</li>
-                <li data-filter="filter">Filter</li>
-                <li data-filter="full-screen">Full Screen</li>
-                <li data-filter="gallery">Gallery</li>
-                <li data-filter="google-map">Google Map</li>
-                <li data-filter="heading">Heading</li>
-                <li data-filter="home">Home</li>
-                <li data-filter="hover">Hover</li>
-                <!-- <li data-filter="input">Input</li> -->
-                <li data-filter="icon">Icon</li>
-                <li data-filter="image">Image</li>
-                <li data-filter="infinite-loop">Infinite Loop</li>
-                <li data-filter="inline-popup">Inline Popup</li>
-                <!-- <li data-filter="label">Label</li> -->
-                <li data-filter="location">Location</li>
-                <!-- <li data-filter="login">Login</li> -->
-                <li data-filter="linear">Linear</li>
-                <li data-filter="link">Link</li>
-                <li data-filter="left-to-right">Left To Right</li>
-                <li data-filter="logo">Logo</li>
-                <li data-filter="menu">Menu</li>
-                <li data-filter="mobile">Mobile</li>
-                <li data-filter="module">Module</li>
-                <li data-filter="more">More</li>
-                <li data-filter="navigation">Navigation</li>
-                <li data-filter="next">Next</li>
-                <li data-filter="open">Open</li>
-                <li data-filter="opacity">Opacity</li>
+                <li data-filter="customdropdown">Custom Drop Down</li>
                 <li data-filter="pagination">Pagination</li>
-                <li data-filter="phone-number">Phone Number</li>
-                <li data-filter="prev">Prev</li>
-                <li data-filter="popup">Popup</li>
-                <li data-filter="quote">Quote</li>
-                <li data-filter="resource">Resource</li>
-                <li data-filter="skew">Skew</li>
-                <li data-filter="scale">Scale</li>
-                <li data-filter="scroll-bar">Scroll Bar</li>
-                <li data-filter="share">Share</li>
-                <li data-filter="slide">Slide</li>
-                <li data-filter="slidedown">Slidedown</li>
-                <li data-filter="slideleft">Slide Left</li>
-                <li data-filter="slideup">Slideup</li>
-                <li data-filter="submenu">Submenu</li>
-                <li data-filter="sticky">Sticky</li>
-                <li data-filter="tab">Tab</li>
-                <li data-filter="tag">Tag</li>
-                <li data-filter="testimonial">Testimonial</li>
-                <li data-filter="team">Team</li>
-                <li data-filter="title">Title</li>
-                <li data-filter="time">Time</li>
-                <li data-filter="translateY">TranslateY</li>
-                <li data-filter="vertical-slide">Vertical Slide</li>
-                <li data-filter="video">Video</li>
-                <li data-filter="year">Year</li>
+                <li data-filter="formcookie">Form Cookie</li>
+                <li data-filter="smoothscroll">Smooth Scroll</li>
+                <li data-filter="custommobilemenu">Custom Mobile Menu</li>
+                <li data-filter="loadmorefilter">Load More Filter</li>
+                <li data-filter="isotopefilter">Isotope Filter</li>
+                <li data-filter="tabs">Tabs</li>
+                <li data-filter="delaypopup">Delay Popup</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
           </div>
         </div>
         <div class="module-wrapper">
-          <div class="link-github-wrap each-module-prview menu">
-       
-          </div>
+          <div class="container">
+            
          
-        
+          <div class="tutorial each-module-prview customdropdown">
+               <div class="rule" id="custom-drop-down">
+            <div class="title">
+                <h1>1. Custom Drop Down</h1>
+            </div>
+            <div class="rule" id="1">
+                <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+                <ul class="tabs" data-tabgroup="first-tab-group">
+                    <li class="tab"><a href="#cddhtml" class="active">HTML</a></li>
+                    <li class="tab"><a href="#cddcss">Styling</a></li>
+                    <li class="tab"><a href="#cddjs">Script</a></li>
+                    <li class="tab"><a href="#result">Result</a></li>
+                </ul>
+                <pre>
+            <div id="first-tab-group" class="tabgroup">
+              <div id="cddhtml">
+<code id=code-html-one class="code html" data-clipboard-target="#code-html">
+&lt;div class="custom-dropdown"&gt;
+  &lt;div class="custom-dd-selected"&gt;2015&lt;/div&gt;
+    &lt;div class="custom-dd-list"&gt;
+      &lt;ul&gt;
+        &lt;li class="" data-val=""&gt;All&lt;/li&gt;
+        &lt;li data-val="year_2018"&gt;2018&lt;/li&gt;
+        &lt;li data-val="year_2017"&gt;2017&lt;/li&gt;
+        &lt;li data-val="year_2016"&gt;2016&lt;/li&gt;
+        &lt;li data-val="year_2015"&gt;2015&lt;/li&gt;
+        &lt;li data-val="year_2014"&gt;2014&lt;/li&gt;
+        &lt;li data-val="year_2013"&gt;2013&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="cddcss">
+<code id=code-css-one class="code css" data-clipboard-target=#code-css>
+.custom-dropdown {
+  background: #fff url("https://thumb.ibb.co/m6mBn7/drop_down_arrow.png") no-repeat 
+              94% 20px/ auto;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  width: 250px;
+}
+.custom-dd-selected {
+  color: #000;
+  font: 600 16px/120% "Source Sans Pro", sans-serif;
+}
+.custom-dropdown .custom-dd-list {
+  width: 100%;
+  background: #fff;
+  display: none;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  left: 0;
+  position: absolute;
+  top: 37px;
+  overflow-y: auto;
+  z-index: 99;
+}
+.custom-dd-list ul {
+  margin: 0;
+  padding: 0;
+}
+.custom-dd-list ul li {
+  font: 600 16px/120% "Source Sans Pro", sans-serif;
+  border-bottom: 1px solid #b2b2b2;
+  padding: 10px;
+  margin: 0;
+  list-style-type: none;
+}
+.custom-dd-list ul li.cdd-active,
+.custom-dd-list ul li:hover,
+.custom-dd-list ul li:hover a {
+  background: #ce2b2b;
+  color: #fff;
+}
+</code>
+</div>
+<div id="cddjs">
+<code id=code-css-one class="code javascript" data-clipboard-target=#code-javascript>
+$(".custom-dropdown").click(function() {
+  var dis = $(this),
+    disList = dis.find(".custom-dd-list");
+  dis.toggleClass("active");
+  $(".custom-dropdown").not(dis).removeClass("active").find(".custom-dd-list").hide();
+  disList.toggle();
+}).change(function() {
+  var selectedVal = $(this).find(".custom-dd-list li.cdd-active").data("val")
+});
+$(".custom-dropdown").find(".custom-dd-list ul li").click(function() {
+  var dis = $(this),
+    parent = dis.parents(".custom-dropdown"),
+    selVal = dis.attr("data-val"),
+    selHtml = dis.text();
+  dis.siblings().removeClass("cdd-active");
+  (typeof selVal != "undefined") && (parent.find(".custom-dd-selected").html(selHtml));
+  if ((selVal != "") && (typeof selVal != "undefined")) {
+    dis.addClass("cdd-active");
+    dis.removeClass("active").find(".custom-dd-list").hide();
+  }
+  parent.trigger("change");
+});
+$(document).click(function(e) {
+  var dis = $(e.target);
+  if (!dis.hasClass("custom-dropdown") && dis.parents(".custom-dropdown").length <= 0) {
+    $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
+  }
+})
+</code>
+</div>
+      <div id="result">
+       
+          <iframe width="100%" height="260px" src="codepen-files/custom-dropdown.html"></iframe>
+      </div>
+      </div>
+    </div>
+          </div>
         </div>
         <div id="noresult">No Result</div>
       </div>
     </div>
   </div>
+   </div>
 </body>
 </html>
