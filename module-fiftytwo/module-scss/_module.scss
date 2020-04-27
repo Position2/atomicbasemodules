@@ -1,0 +1,60 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.4rem;
+    height: 100%;
+    background: #888;
+    z-index: 1;
+  }
+  .item {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "content-left image content-right";
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    + {
+      .item {
+        margin-top: 4rem;
+      }
+    }
+    &:nth-child(even) {
+      .wrap {
+        grid-area: content-right;
+      }
+    }
+    .img {
+      width: 15rem;
+      height: 15rem;
+      background: #888;
+      border: 0.5rem solid #888;
+      border-radius: 50%;
+      grid-area: image;
+      overflow: hidden;
+      >img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .wrap {
+      grid-area: content-left;
+      padding: 1rem;
+      max-width: 25rem;
+    }
+  }
+}
+
+
+
+body {
+  padding: 2rem;
+  line-height: 1.5;
+  background: #fafafa;
+}
