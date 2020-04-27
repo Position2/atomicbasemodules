@@ -344,9 +344,136 @@ initPagination("#content .each-content");
               </div>
             </div>
     </div>
+     <!-- Form Cookie starts -->
+<div class="rule each-module-prview formcookie">
+  <div class="title">
+    <h1>3. Form Cookie</h1>
   </div>
-    <!-- Pagination ends -->
-       
+  <div class="rule" id="3">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="third-tab-group">
+      <li class="tab"><a href="#fchtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#fccss">Styling</a></li>
+      <li class="tab"><a href="#fcjs">Script</a></li>
+      <li class="tab"><a href="#cookieresult">Result</a></li>
+    </ul>
+    <pre>
+      <div id="third-tab-group" class="tabgroup">
+           <div id="fchtml">
+<code id=code-html-three class="code html" data-clipboard-target="#code-html">
+&lt;div class="form-wrap"&gt;
+  &lt;form id="form" class="additional-cookie"&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="firstname"&gt;First Name *&lt;/label&gt;
+      &lt;input autoComplete="first-name" name="first-name" type="text" value="" data-sfv-minlength="3" 
+      data-sfv-required="yes"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="lastname"&gt;Last Name *&lt;/label&gt;
+      &lt;input autoComplete="last-name" name="last-name" type="text" value="" data-sfv-minlength="3" 
+      data-sfv-required="yes"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="mail"&gt;Email *&lt;/label&gt;
+      &lt;input autoComplete="email" name="email" type="text" value="" data-sfv-required="yes" 
+      data-sfv-validation="email"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="company"&gt;Company *&lt;/label&gt;
+      &lt;input autoComplete="company-name" name="company-name" type="text" value="" data-sfv-minlength="5" 
+      data-sfv-required="yes"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-rows"&gt;
+      &lt;label for="phonenumber"&gt;Phone Number *&lt;/label&gt;
+      &lt;input autoComplete="phone" data-sfv-required="yes" data-sfv-validation="number" name="phone" value="" 
+      type="text"&gt;
+    &lt;/div&gt;
+    &lt;label for="country"&gt;Country *&lt;/label&gt;
+    &lt;select autoComplete="country-name" name="dropdown" data-sfv-required="yes"&gt;
+      &lt;option autoComplete="country-name" selectedvalue="SelectCoutry"&gt;Select Country&lt;/option&gt;
+      &lt;option autoComplete="country-name" value="India"&gt;India&lt;/option&gt;
+      &lt;option autoComplete="country-name" value="USA"&gt;USA&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button class="btn" type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="fccss">
+<code id=code-css-three class="code css" data-clipboard-target=#code-css>
+body {
+  text-align: center;
+  padding: 50px 0;
+}
+#paging {
+  margin: 0 auto;
+  display: inline-block;
+}
+#content .each-content {
+  width: 80px;
+  height: 50px;
+  padding: 30px;
+  display: inline-block;
+  vertical-align: top;
+  background: #02ccba;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  position: relative;
+}
+#content .each-content p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+</code>
+</div>
+<div id="fcjs">
+<code id=code-css-one class="code javascript" data-clipboard-target=#code-javascript>
+function initPagination(itemSelector) {
+  var perPage = 3;
+  $("#content .each-content").removeClass(function(index, css) {
+    return (css.match(/(^|\s)page-\S+/g) || []).join(' ');
+  });
+  $(itemSelector).addClass(function(key, val) {
+    return "page-" + (Math.floor(key / perPage) + 1);
+  })
+  $("#paging")
+    .pagination('destroy')
+    .pagination({           
+      items: $(itemSelector).length,
+      itemsOnPage: perPage,
+      cssStyle: 'light-theme',
+      onPageClick: function(pgno, e) {
+        e.preventDefault();
+        $(itemSelector).hide(0).filter(".page-" + pgno).show(0)
+      },
+      onInit: function() {
+        $(itemSelector).hide(0).filter(".page-1").show(0)
+      }
+  });
+}
+initPagination("#content .each-content");
+</code>
+</div>
+  <div id="cookieresult" class="result-wrap">
+          <iframe width="100%" height="260px" src="codepen-files/form-cookie.html"></iframe>
+      </div>
+ </div>
+</pre>
+</div>
+     <div class="keyword-preview-wrap">
+              <div class="tags">
+                <span class="formcookie">formcookie</span>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- Form Cookie ends -->
 
         <div id="noresult">No Result</div>
 
