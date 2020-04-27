@@ -305,13 +305,14 @@ p.ft {
     cursor: pointer
 }
 
-.search .autocomplete_wrapper .autocomplete ul li:hover {
+/*.search .autocomplete_wrapper .autocomplete ul li:hover {
     background-color: #005096;
     color: #fff
-}
+}*/
 
 .search .autocomplete_wrapper .autocomplete ul li.focused {
-    font-weight: 700
+    background-color: #005096;
+    color: #fff;
 }
 
 .search .autocomplete_wrapper .autocomplete .no_match {
@@ -335,7 +336,7 @@ p.ft {
     font-size: 16px;
     font-weight: 400;
     font-family: "Lato", Arial, sans-serif;
-    padding: 5px 10px 7px;
+    padding: 10px 20px 15px;
     line-height: 1;
     margin-right: 10px
 }
@@ -350,9 +351,10 @@ p.ft {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
-    border: 2px solid #da423e;
-    padding: 0 10px;
+    background-color: #da423e;
+    padding: 10px 15px;
     border-radius: 10rem;
+    color: #fff;
     -webkit-transition: all .3s;
     transition: all .3s;
     margin-bottom: 10px
@@ -361,6 +363,7 @@ p.ft {
 .search .tags_wrapper_outer .clearall:hover {
     color: #fff;
     background-color: #da423e;
+    opacity: .8;
 }
 .module-list .title {
   text-align: left;
@@ -392,9 +395,10 @@ background:#23241f;
 #noresult {
   display: none;
   background-color:#fff;
-margin: 0 auto;
-width: 100%;
-box-shadow: 0px 0px 7.44px 0.56px
-rgba(0,0,0,0.1);
-padding: 40px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px 40px;
+}
+.badge-primary {
+  background-color: #005096;
 }
