@@ -348,7 +348,7 @@ p.ft {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
-    background-color: #da423e;
+    background-color: #e03e36;
     padding: 10px 15px;
     border-radius: 10rem;
     color: #fff;
@@ -359,7 +359,7 @@ p.ft {
 
 .search .tags_wrapper_outer .clearall:hover {
     color: #fff;
-    background-color: #da423e;
+    background-color: #e03e36;
     opacity: .8;
 }
 .module-list .title {
