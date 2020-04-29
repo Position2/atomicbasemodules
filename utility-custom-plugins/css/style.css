@@ -16,6 +16,7 @@ body {
   /*background: linear-gradient(134deg, #00B2E2 0%, #2DBE60 100%);*/
   background-position: fixed;
   margin: 60px 0;
+  font-family: "Lato", Arial, sans-serif;
 }
 
 .title {
@@ -395,6 +396,9 @@ background:#23241f;
   margin: 0 auto;
   width: 100%;
   padding: 0 40px 40px;
+  font-weight: bold;
+  font-size: 18px;
+  color:#005096;
 }
 .badge-primary {
   background-color: #005096;

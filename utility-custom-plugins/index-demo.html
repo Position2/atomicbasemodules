@@ -91,10 +91,10 @@
         <div class="module-wrapper">
           <div class="container">
             
-         
+         <!-- Main filter content Wrap Starts -->
           <div class="tutorial">
-            <!-- Custom Drop Starts here -->
-               <div class="rule each-module-prview customdropdown">
+          <!-- Custom Drop Starts here -->
+          <div class="rule each-module-prview customdropdown">
             <div class="title">
                 <h1>1. Custom Drop Down</h1>
             </div>
@@ -106,23 +106,23 @@
                     <li class="tab"><a href="#cddjs">Script</a></li>
                     <li class="tab"><a href="#result">Result</a></li>
                 </ul>
-                <pre>
-            <div id="first-tab-group" class="tabgroup">
-              <div id="cddhtml">
+<pre>
+<div id="first-tab-group" class="tabgroup">
+<div id="cddhtml">
 <code id=code-html-one class="code html" data-clipboard-target="#code-html">
 &lt;div class="custom-dropdown"&gt;
-  &lt;div class="custom-dd-selected"&gt;2015&lt;/div&gt;
-    &lt;div class="custom-dd-list"&gt;
-      &lt;ul&gt;
-        &lt;li class="" data-val=""&gt;All&lt;/li&gt;
-        &lt;li data-val="year_2018"&gt;2018&lt;/li&gt;
-        &lt;li data-val="year_2017"&gt;2017&lt;/li&gt;
-        &lt;li data-val="year_2016"&gt;2016&lt;/li&gt;
-        &lt;li data-val="year_2015"&gt;2015&lt;/li&gt;
-        &lt;li data-val="year_2014"&gt;2014&lt;/li&gt;
-        &lt;li data-val="year_2013"&gt;2013&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
+&lt;div class="custom-dd-selected"&gt;2015&lt;/div&gt;
+  &lt;div class="custom-dd-list"&gt;
+    &lt;ul&gt;
+      &lt;li class="" data-val=""&gt;All&lt;/li&gt;
+      &lt;li data-val="year_2018"&gt;2018&lt;/li&gt;
+      &lt;li data-val="year_2017"&gt;2017&lt;/li&gt;
+      &lt;li data-val="year_2016"&gt;2016&lt;/li&gt;
+      &lt;li data-val="year_2015"&gt;2015&lt;/li&gt;
+      &lt;li data-val="year_2014"&gt;2014&lt;/li&gt;
+      &lt;li data-val="year_2013"&gt;2013&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code>
 </div>
@@ -176,41 +176,40 @@
 <div id="cddjs">
 <code id=code-css-one class="code javascript" data-clipboard-target=#code-javascript>
 $(".custom-dropdown").click(function() {
-  var dis = $(this),
-    disList = dis.find(".custom-dd-list");
-  dis.toggleClass("active");
-  $(".custom-dropdown").not(dis).removeClass("active").find(".custom-dd-list").hide();
-  disList.toggle();
+var dis = $(this),
+  disList = dis.find(".custom-dd-list");
+dis.toggleClass("active");
+$(".custom-dropdown").not(dis).removeClass("active").find(".custom-dd-list").hide();
+disList.toggle();
 }).change(function() {
-  var selectedVal = $(this).find(".custom-dd-list li.cdd-active").data("val")
+var selectedVal = $(this).find(".custom-dd-list li.cdd-active").data("val")
 });
 $(".custom-dropdown").find(".custom-dd-list ul li").click(function() {
-  var dis = $(this),
-    parent = dis.parents(".custom-dropdown"),
-    selVal = dis.attr("data-val"),
-    selHtml = dis.text();
-  dis.siblings().removeClass("cdd-active");
-  (typeof selVal != "undefined") && (parent.find(".custom-dd-selected").html(selHtml));
-  if ((selVal != "") && (typeof selVal != "undefined")) {
-    dis.addClass("cdd-active");
-    dis.removeClass("active").find(".custom-dd-list").hide();
-  }
-  parent.trigger("change");
+var dis = $(this),
+  parent = dis.parents(".custom-dropdown"),
+  selVal = dis.attr("data-val"),
+  selHtml = dis.text();
+dis.siblings().removeClass("cdd-active");
+(typeof selVal != "undefined") && (parent.find(".custom-dd-selected").html(selHtml));
+if ((selVal != "") && (typeof selVal != "undefined")) {
+  dis.addClass("cdd-active");
+  dis.removeClass("active").find(".custom-dd-list").hide();
+}
+parent.trigger("change");
 });
 $(document).click(function(e) {
-  var dis = $(e.target);
-  if (!dis.hasClass("custom-dropdown") && dis.parents(".custom-dropdown").length <= 0) {
-    $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
-  }
+var dis = $(e.target);
+if (!dis.hasClass("custom-dropdown") && dis.parents(".custom-dropdown").length <= 0) {
+  $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
+}
 })
 </code>
 </div>
-      <div id="result" class="result-wrap">
-       
-          <iframe width="100%" height="260px" src="codepen-files/custom-dropdown.html"></iframe>
-      </div>
-      </div>
-    </pre>
+<div id="result" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/custom-dropdown.html"></iframe>
+</div>
+</div>
+</pre>
     </div>
     <div class="keyword-preview-wrap">
         <div class="tags">
@@ -232,9 +231,9 @@ $(document).click(function(e) {
           <li class="tab"><a href="#pgjs">Script</a></li>
           <li class="tab"><a href="#paginationresult">Result</a></li>
         </ul>
-        <pre>
-          <div id="second-tab-group" class="tabgroup">
-           <div id="pghtml" class="tab-content current">
+<pre>
+<div id="second-tab-group" class="tabgroup">
+<div id="pghtml" class="tab-content current">
 <code id=code-html-two class="code html" data-clipboard-target="#code-html">
  &lt;div id="content"&gt;
     &lt;div class="each-content"&gt;
@@ -332,11 +331,11 @@ function initPagination(itemSelector) {
 initPagination("#content .each-content");
 </code>
 </div>
- <div id="paginationresult" class="result-wrap">
-          <iframe width="100%" height="260px" src="codepen-files/pagination.html"></iframe>
-      </div>
- </div>   
- </pre>  
+<div id="paginationresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/pagination.html"></iframe>
+</div>
+</div>   
+</pre>  
   </div>
     <div class="keyword-preview-wrap">
       <div class="tags">
@@ -344,6 +343,7 @@ initPagination("#content .each-content");
       </div>
     </div>
 </div>
+<!-- pagination ends -->
 <!-- Form Cookie starts -->
 <div class="rule each-module-prview formcookie">
   <div class="title">
@@ -357,9 +357,9 @@ initPagination("#content .each-content");
       <li class="tab"><a href="#fcjs">Script</a></li>
       <li class="tab"><a href="#cookieresult">Result</a></li>
     </ul>
-    <pre>
-      <div id="third-tab-group" class="tabgroup">
-           <div id="fchtml">
+<pre>
+<div id="third-tab-group" class="tabgroup">
+<div id="fchtml">
 <code id=code-html-three class="code html" data-clipboard-target="#code-html">
 &lt;div class="form-wrap"&gt;
   &lt;form id="form" class="additional-cookie"&gt;
@@ -460,10 +460,10 @@ function initPagination(itemSelector) {
 initPagination("#content .each-content");
 </code>
 </div>
-  <div id="cookieresult" class="result-wrap">
-          <iframe width="100%" height="260px" src="codepen-files/form-cookie.html"></iframe>
-      </div>
- </div>
+<div id="cookieresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/form-cookie.html"></iframe>
+</div>
+</div>
 </pre>
 </div>
 <div class="keyword-preview-wrap">
@@ -486,9 +486,9 @@ initPagination("#content .each-content");
       <li class="tab"><a href="#ssjs">Script</a></li>
       <li class="tab"><a href="#smoothscrollresult">Result</a></li>
     </ul>
-    <pre>
-      <div id="fourth-tab-group" class="tabgroup"> 
-           <div id="sshtml">
+<pre>
+<div id="fourth-tab-group" class="tabgroup"> 
+<div id="sshtml">
 <code id=code-html-four class="code html" data-clipboard-target="#code-html">
 &lt;div id="PageWrapper"&gt;
 &lt;div class="menu-wrapper"&gt;
@@ -629,10 +629,325 @@ if ($(window).width() > 1024) {
 </div>
 </div>
 <!-- smooth scroll ends -->
-
-
-<div id="noresult">No Result</div>
+<!-- Custom Mobile Menu starts -->
+  <div class="rule each-module-prview custommobilemenu">
+  <div class="title">
+    <h1>5. Custom Mobile Menu</h1>
+  </div>
+  <div class="rule" id="5">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+     <ul class="tabs" data-tabgroup="fifth-tab-group">
+        <li class="tab"><a href="#cmmhtml" class="active">HTML</a></li>
+        <li class="tab"><a href="#cmmcss">Styling</a></li>
+        <li class="tab"><a href="#cmmjs">Script</a></li>
+        <li class="tab"><a href="#custommobilemenuresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fifth-tab-group" class="tabgroup">
+<div id="cmmhtml">
+<code id=code-html-five class="code html" data-clipboard-target="#code-html">
+  &lt;ul class="mobile_menu"&gt;
+    &lt;li&gt;&lt;a href=""&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=""&gt;Menu 2&lt;/a&gt;
+      &lt;ul class="submenu"&gt;
+        &lt;li&gt;&lt;a href=""&gt;Sub Menu 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=""&gt;Sub Menu 2&lt;/a&gt;
+          &lt;ul class="submenu"&gt;
+            &lt;li&gt;&lt;a href=""&gt;Sub Sub Menu 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Sub Sub Menu 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Sub Sub Menu 3&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
 </div>
+<div id="cmmcss">
+<code id=code-css-five class="code css" data-clipboard-target=#code-css>
+.sm_menu_outer .mobile_menu li.hasChild>a {
+  background-position: center center;
+}
+.sm_menu_outer .mobile_menu a {
+  width: 300px;
+}
+.sm_menu_outer .mobile_menu li.active > .submenu {
+  right: -25px;
+}
+.sm_menu_outer.active .mobile_menu {
+  padding: 0 0 0 10px;
+}
+</code>
+</div>
+<div id="cmmjs">
+<code id=code-css-five class="code javascript" data-clipboard-target=#code-javascript>
+$(document).ready(function(){
+  $(".mobile_menu").simpleMobileMenu()
+});
+</code>
+</div>
+<div id="custommobilemenuresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/mobilemenu.html"></iframe>
+</div>
+</div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="custommobilemenu">custommobilemenu</span>
+  </div>
+</div>
+</div>
+</div>
+<!-- Custom Mobile Menu ends -->
+    <!-- Custom Filter With Load More starts-->
+    <div class="rule each-module-prview loadmorefilter">
+      <div class="title">
+        <h1>6. Custom Filter With Load More</h1>
+      </div>
+      <div class="rule" id="6">
+        <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+        <ul class="tabs" data-tabgroup="sixth-tab-group">
+          <li class="tab"><a href="#cflhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#cflcss">Styling</a></li>
+          <li class="tab"><a href="#cfljs">Script</a></li>
+          <li class="tab"><a href="#loadmorefilterresult">Result</a></li>
+        </ul>
+<pre>
+<div id="sixth-tab-group" class="tabgroup">
+<div id="cflhtml">
+<code id=code-html-six class="code html" data-clipboard-target="#code-html">
+&lt;div id="wrapper"&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 1
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 2
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 3
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 4
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 5
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 6
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 7
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 8
+  &lt;/div&gt;
+  &lt;div class="content hidden-box"&gt;
+    Content 9
+  &lt;/div&gt;
+  &lt;div class="btn"&gt;
+    &lt;a class="button" href=""&gt;Load More Work&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="cflcss">
+<code id=code-css-six class="code css" data-clipboard-target=#code-css>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+}
+#wrapper {  
+  width: 720px;
+  margin: auto;
+}
+.content {
+  padding: 50px;
+  background-color: #ff0000;
+  float: left;
+  margin: 10px;  
+  color: #fff;
+}
+.hidden-box {
+  display: none;
+}
+.btn {
+  width: 306px;
+  margin: auto;
+}
+.button {
+  padding: 7px 10px;
+  background-color: #000;
+  text-decoration: none;
+  color: #fff;
+}
+</code>
+</div>
+<div id="cfljs">
+<code id=code-css-six class="code javascript" data-clipboard-target=#code-javascript>
+$(document).ready(function() {
+  $(".hidden-box").slice(0, 3).show();
+  $(".button").on('click', function(){
+    $(".hidden-box:hidden").slice(0, 3).slideDown();
+  });
+});
+</code>
+</div>
+<div id="loadmorefilterresult" class="result-wrap">
+  <iframe width="100%" height="260px" src="codepen-files/load-more.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="loadmorefilter">loadmorefilter</span>
+  </div>
+</div>
+</div>
+<!-- Custom Filter With Load More ends-->
+<!-- Custom Filter With Isotope starts-->
+<div class="rule each-module-prview isotopefilter">
+  <div class="title">
+    <h1>7. Custom Filter With Isotope</h1>
+  </div>
+  <div class="rule" id="7">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="seventh-tab-group">
+      <li class="tab"><a href="#cfihtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#cficss">Styling</a></li>
+      <li class="tab"><a href="#cfijs">Script</a></li>
+      <li class="tab"><a href="#isotoperesult">result</a></li>
+    </ul>
+<pre>
+<div id="seventh-tab-group" class="tabgroup">
+<div id="cfihtml" class="tab-content current">
+<code id=code-html-seven class="code html" data-clipboard-target="#code-html">
+&lt;div id="container"&gt;
+    &lt;h1&gt;Isotope Filter&lt;/h1&gt;
+&lt;div class="portfolio-menu"&gt;
+&lt;ul class="menu"&gt;
+    &lt;li class="active" data-filter="*"&gt;&lt;span&gt;All&lt;/span&gt;&lt;/li&gt;
+    &lt;li data-filter=".web"&gt;&lt;span&gt;Web Design&lt;/span&gt;&lt;/li&gt;
+    &lt;li data-filter=".seo"&gt;&lt;span&gt;Seo&lt;/span&gt;&lt;/li&gt;
+    &lt;li data-filter=".graphics"&gt;&lt;span&gt;Graphics&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="portfolio-item"&gt;
+  &lt;div class="item web"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1473181488821-2d23949a045a?ixlib=rb-0.3.5&s=d0e680e2d7915801cb4ac4bd90882330&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item seo"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=163911de43447625eb10010bac6d2a1f&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item web"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=241b98f654afdcfa95a7afeeeebaa9c8&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item web"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07bcd69444b1da123c309e5f4485371b&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item graphics"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1525167827853-bbf32804dde2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=050bee90ebc14cb2f982325ad5650a35&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item seo"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c52e5be19eaabb3a7ae64eeb57a56f7e&auto=format&fit=crop&w=750&q=80" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="item graphics"&gt;
+      &lt;a href=""&gt;&lt;img src="https://images.unsplash.com/photo-1476763752342-d5cf7e5eb6cc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=503843460e549122bdea862a301e4c41&auto=format&fit=crop&w=500&q=60" alt="subscription Image"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</div>
+<div id="cficss">
+<code id=code-css-seven class="code css" data-clipboard-target=#code-css>
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+h1, .portfolio-menu {
+  text-align: center;
+}
+.portfolio-menu {
+  margin-bottom: 10px;
+}
+.portfolio-menu ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  font-family: arial;
+  padding: 10px 15px; 
+  border: 1px solid #ff654a;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.portfolio-menu li.active {
+  background-color: #ff654a;
+  color: #fff;
+}
+.portfolio-menu ul li:hover {
+  background-color: #f5a20c;
+  color: #fff;
+}
+.portfolio-item .item {
+  width: 32.3%;
+  float: left;
+  margin: 0 8px 5px 0;
+}
+.portfolio-item .item a {
+  display: inline-block;
+}
+.portfolio-item .item img {
+  width: 100%;
+}
+</code>
+</div>
+<div id="cfijs">
+<code id=code-css-seven class="code javascript" data-clipboard-target=#code-javascript>
+$(window).load(function(){
+  $('.portfolio-item').isotope({
+    itemSelector:'.item',
+    layoutMode: 'fitRows'
+  });
+  $('.portfolio-menu ul li').click(function(){
+    $('.portfolio-menu ul li').removeClass('active');
+    $(this).addClass('active');    
+    var selector = $(this).attr('data-filter');
+    $('.portfolio-item').isotope({
+      filter: selector
+    });
+    return false;
+  });
+});
+</code>
+</div>
+<div id="isotoperesult" class="result-wrap">
+    <iframe width="100%" height="260px" src="codepen-files/isotope-filter.html"></iframe>
+</div>
+</div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="isotopefilter">isotopefilter</span>
+  </div>
+</div>
+</div>
+</div>
+<!-- Custom Filter With Isotope starts-->
+<!-- No result starts-->
+<div id="noresult">No Result</div>
+<!-- No result ends-->
+</div>
+ <!-- Main filter content Wrap Starts -->
 </div>
 </div>
 </div>
