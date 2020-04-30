@@ -1,25 +1,100 @@
-<!DOCTYPE html> 
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
-    <title>Utility Custom Plugins</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai_sublime.min.css'>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <style>
-    iframe {
-        border: 1px solid #ccc;
-        margin-bottom: 30px;
-    }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Utility Custom Plugins</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/all-plugins.js"></script>
+  <script type="text/javascript" src="js/plugins-activate.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai_sublime.min.css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+  document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"><\/script>')
+  </script>
+  <script>
+  hljs.initHighlightingOnLoad();
+  </script>
 </head>
-
 <body>
-    <div class="tutorial">
-      <!-- Custom Drop Down starts-->
-        <div class="rule" id="custom-drop-down">
+  <div class="module-list">
+    <div class="container">
+      <div class="title">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h1><span><img src="../index/images/p2.png" alt="Position 2"></span>Utility Custom Plugins</h1>
+          </div>
+        </div>
+      </div>
+      <div class="module-holder">
+        <div class="search">
+          <div class="tags_wrapper_outer clearfix">
+            <div class="tags_wrapper"></div>
+            <div class="clearall" style="display: none;">Reset</div>
+          </div>
+          <div class="custom-dropdown">
+            <div class="custom-dd-selected"></div>
+            <div class="custom-dd-list">
+              <ul>
+                <li data-val="*" class="cdd-active">All</li>
+                <li data-val=".customdropdown">Custom Drop Down</li>
+                <li data-val=".paginationmodule">Pagination</li>
+                <li data-val=".formcookie">Form Cookie</li>
+                <li data-val=".smoothscroll">Smooth Scroll</li>
+                <li data-val=".custommobilemenu">Custom Mobile Menu</li>
+                <li data-val=".loadmorefilter">Load More Filter</li>
+                <li data-val=".isotopefilter">Isotope Filter</li>
+                <li data-val=".customtabs">Tabs</li>
+                <li data-val=".delaypopup">Delay Popup</li>
+              </ul>
+            </div>  
+          </div>
+          <div class="autocomplete_wrapper">
+            <div id="text_search">
+              <input type="text" id="search" autocomplete="off" placeholder="Search">
+            </div>
+            <div class="autocomplete">
+              <ul>
+                <li data-filter="customdropdown">Custom Drop Down</li>
+                <li data-filter="paginationmodule">Pagination</li>
+                <li data-filter="formcookie">Form Cookie</li>
+                <li data-filter="smoothscroll">Smooth Scroll</li>
+                <li data-filter="custommobilemenu">Custom Mobile Menu</li>
+                <li data-filter="loadmorefilter">Load More Filter</li>
+                <li data-filter="isotopefilter">Isotope Filter</li>
+                <li data-filter="customtabs">Tabs</li>
+                <li data-filter="delaypopup">Delay Popup</li>
+              </ul>
+              <span class="no_match" style="display:none;">No Match</span>
+            </div>
+          </div>
+        </div>
+        <div class="module-wrapper">
+          <div class="container">
+            
+         <!-- Main filter content Wrap Starts -->
+          <div class="tutorial">
+          <!-- Custom Drop Starts here -->
+          <div class="rule each-module-prview customdropdown">
             <div class="title">
                 <h1>1. Custom Drop Down</h1>
             </div>
@@ -29,24 +104,25 @@
                     <li class="tab"><a href="#cddhtml" class="active">HTML</a></li>
                     <li class="tab"><a href="#cddcss">Styling</a></li>
                     <li class="tab"><a href="#cddjs">Script</a></li>
+                    <li class="tab"><a href="#result">Result</a></li>
                 </ul>
-                <pre>
-            <div id="first-tab-group" class="tabgroup">
-              <div id="cddhtml">
+<pre>
+<div id="first-tab-group" class="tabgroup">
+<div id="cddhtml">
 <code id=code-html-one class="code html" data-clipboard-target="#code-html">
 &lt;div class="custom-dropdown"&gt;
-  &lt;div class="custom-dd-selected"&gt;2015&lt;/div&gt;
-    &lt;div class="custom-dd-list"&gt;
-      &lt;ul&gt;
-        &lt;li class="" data-val=""&gt;All&lt;/li&gt;
-        &lt;li data-val="year_2018"&gt;2018&lt;/li&gt;
-        &lt;li data-val="year_2017"&gt;2017&lt;/li&gt;
-        &lt;li data-val="year_2016"&gt;2016&lt;/li&gt;
-        &lt;li data-val="year_2015"&gt;2015&lt;/li&gt;
-        &lt;li data-val="year_2014"&gt;2014&lt;/li&gt;
-        &lt;li data-val="year_2013"&gt;2013&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
+&lt;div class="custom-dd-selected"&gt;2015&lt;/div&gt;
+  &lt;div class="custom-dd-list"&gt;
+    &lt;ul&gt;
+      &lt;li class="" data-val=""&gt;All&lt;/li&gt;
+      &lt;li data-val="year_2018"&gt;2018&lt;/li&gt;
+      &lt;li data-val="year_2017"&gt;2017&lt;/li&gt;
+      &lt;li data-val="year_2016"&gt;2016&lt;/li&gt;
+      &lt;li data-val="year_2015"&gt;2015&lt;/li&gt;
+      &lt;li data-val="year_2014"&gt;2014&lt;/li&gt;
+      &lt;li data-val="year_2013"&gt;2013&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code>
 </div>
@@ -54,7 +130,7 @@
 <code id=code-css-one class="code css" data-clipboard-target=#code-css>
 .custom-dropdown {
   background: #fff url("https://thumb.ibb.co/m6mBn7/drop_down_arrow.png") no-repeat 
-              94% center;
+              94% 20px/ auto;
   border: 1px solid #cccccc;
   border-radius: 3px;
   padding: 10px;
@@ -100,44 +176,50 @@
 <div id="cddjs">
 <code id=code-css-one class="code javascript" data-clipboard-target=#code-javascript>
 $(".custom-dropdown").click(function() {
-  var dis = $(this),
-    disList = dis.find(".custom-dd-list");
-  dis.toggleClass("active");
-  $(".custom-dropdown").not(dis).removeClass("active").find(".custom-dd-list").hide();
-  disList.toggle();
+var dis = $(this),
+  disList = dis.find(".custom-dd-list");
+dis.toggleClass("active");
+$(".custom-dropdown").not(dis).removeClass("active").find(".custom-dd-list").hide();
+disList.toggle();
 }).change(function() {
-  var selectedVal = $(this).find(".custom-dd-list li.cdd-active").data("val")
+var selectedVal = $(this).find(".custom-dd-list li.cdd-active").data("val")
 });
 $(".custom-dropdown").find(".custom-dd-list ul li").click(function() {
-  var dis = $(this),
-    parent = dis.parents(".custom-dropdown"),
-    selVal = dis.attr("data-val"),
-    selHtml = dis.text();
-  dis.siblings().removeClass("cdd-active");
-  (typeof selVal != "undefined") && (parent.find(".custom-dd-selected").html(selHtml));
-  if ((selVal != "") && (typeof selVal != "undefined")) {
-    dis.addClass("cdd-active");
-    dis.removeClass("active").find(".custom-dd-list").hide();
-  }
-  parent.trigger("change");
+var dis = $(this),
+  parent = dis.parents(".custom-dropdown"),
+  selVal = dis.attr("data-val"),
+  selHtml = dis.text();
+dis.siblings().removeClass("cdd-active");
+(typeof selVal != "undefined") && (parent.find(".custom-dd-selected").html(selHtml));
+if ((selVal != "") && (typeof selVal != "undefined")) {
+  dis.addClass("cdd-active");
+  dis.removeClass("active").find(".custom-dd-list").hide();
+}
+parent.trigger("change");
 });
 $(document).click(function(e) {
-  var dis = $(e.target);
-  if (!dis.hasClass("custom-dropdown") && dis.parents(".custom-dropdown").length <= 0) {
-    $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
-  }
+var dis = $(e.target);
+if (!dis.hasClass("custom-dropdown") && dis.parents(".custom-dropdown").length <= 0) {
+  $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
+}
 })
 </code>
 </div>
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/custom-dropdown.html"></iframe>
-      </div>
+<div id="result" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/custom-dropdown.html"></iframe>
+</div>
+</div>
+</pre>
+    </div>
+    <div class="keyword-preview-wrap">
+        <div class="tags">
+          <span class="customdropdown"> customdropdown</span>
+        </div>
       </div>
     </div>
-     <!-- Custom Drop Down ends-->
+    <!-- Custom Drop ends here -->
      <!-- Pagination starts -->
-     <div class="rule" id="pagination">
+     <div class="rule each-module-prview paginationmodule">
       <div class="title">
          <h1>2. Pagination</h1>
       </div>
@@ -147,10 +229,11 @@ $(document).click(function(e) {
           <li class="tab"><a href="#pghtml" class="active">HTML</a></li>
           <li class="tab"><a href="#pgcss">Styling</a></li>
           <li class="tab"><a href="#pgjs">Script</a></li>
+          <li class="tab"><a href="#paginationresult">Result</a></li>
         </ul>
-        <pre>
-          <div id="second-tab-group" class="tabgroup">
-           <div id="pghtml" class="tab-content current">
+<pre>
+<div id="second-tab-group" class="tabgroup">
+<div id="pghtml" class="tab-content current">
 <code id=code-html-two class="code html" data-clipboard-target="#code-html">
  &lt;div id="content"&gt;
     &lt;div class="each-content"&gt;
@@ -248,16 +331,21 @@ function initPagination(itemSelector) {
 initPagination("#content .each-content");
 </code>
 </div>
- </div>     
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/pagination.html"></iframe>
-      </div>
+<div id="paginationresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/pagination.html"></iframe>
+</div>
+</div>   
+</pre>  
+  </div>
+    <div class="keyword-preview-wrap">
+      <div class="tags">
+        <span class="paginationmodule">paginationmodule </span>
       </div>
     </div>
-    <!-- Pagination ends -->
-    <!-- Form Cookie starts -->
-<div class="rule" id="formcookie">
+</div>
+<!-- pagination ends -->
+<!-- Form Cookie starts -->
+<div class="rule each-module-prview formcookie">
   <div class="title">
     <h1>3. Form Cookie</h1>
   </div>
@@ -267,10 +355,11 @@ initPagination("#content .each-content");
       <li class="tab"><a href="#fchtml" class="active">HTML</a></li>
       <li class="tab"><a href="#fccss">Styling</a></li>
       <li class="tab"><a href="#fcjs">Script</a></li>
+      <li class="tab"><a href="#cookieresult">Result</a></li>
     </ul>
-    <pre>
-      <div id="third-tab-group" class="tabgroup">
-           <div id="fchtml">
+<pre>
+<div id="third-tab-group" class="tabgroup">
+<div id="fchtml">
 <code id=code-html-three class="code html" data-clipboard-target="#code-html">
 &lt;div class="form-wrap"&gt;
   &lt;form id="form" class="additional-cookie"&gt;
@@ -371,17 +460,21 @@ function initPagination(itemSelector) {
 initPagination("#content .each-content");
 </code>
 </div>
- </div>
+<div id="cookieresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/form-cookie.html"></iframe>
 </div>
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/form-cookie.html"></iframe>
-      </div>
-      </div>
-    </div>
-    <!-- Form Cookie ends -->
-    <!-- smooth scroll starts -->
-    <div class="rule" id="smoothscroll">
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+<div class="tags">
+  <span class="formcookie">formcookie</span>
+</div>
+</div>
+</div>
+<!-- Form Cookie ends -->
+<!-- smooth scroll starts -->
+<div class="rule each-module-prview smoothscroll">
   <div class="title">
     <h1>4. Smooth Scroll</h1>
   </div>
@@ -391,10 +484,11 @@ initPagination("#content .each-content");
       <li class="tab"><a href="#sshtml" class="active">HTML</a></li>
       <li class="tab"><a href="#sscss">Styling</a></li>
       <li class="tab"><a href="#ssjs">Script</a></li>
+      <li class="tab"><a href="#smoothscrollresult">Result</a></li>
     </ul>
-    <pre>
-      <div id="fourth-tab-group" class="tabgroup">
-           <div id="sshtml">
+<pre>
+<div id="fourth-tab-group" class="tabgroup"> 
+<div id="sshtml">
 <code id=code-html-four class="code html" data-clipboard-target="#code-html">
 &lt;div id="PageWrapper"&gt;
 &lt;div class="menu-wrapper"&gt;
@@ -522,16 +616,21 @@ if ($(window).width() > 1024) {
 }
 </code>
 </div>
+ <div id="smoothscrollresult" class="result-wrap">
+    <iframe width="100%" height="260px" src="codepen-files/smooth-scroll.html"></iframe>
+  </div>
+</div> 
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="smoothscroll">smoothscroll</span>
+  </div>
 </div>
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/smooth-scroll.html"></iframe>
-      </div>
-      </div>
-    </div>
-    <!-- smooth scroll ends -->
-    <!-- Custom Mobile Menu starts -->
-  <div class="rule" id="mobilemenu">
+</div>
+</div>
+<!-- smooth scroll ends -->
+<!-- Custom Mobile Menu starts -->
+  <div class="rule each-module-prview custommobilemenu">
   <div class="title">
     <h1>5. Custom Mobile Menu</h1>
   </div>
@@ -541,10 +640,11 @@ if ($(window).width() > 1024) {
         <li class="tab"><a href="#cmmhtml" class="active">HTML</a></li>
         <li class="tab"><a href="#cmmcss">Styling</a></li>
         <li class="tab"><a href="#cmmjs">Script</a></li>
+        <li class="tab"><a href="#custommobilemenuresult">Result</a></li>
       </ul>
-    <pre>
-      <div id="fifth-tab-group" class="tabgroup">
-           <div id="cmmhtml">
+<pre>
+<div id="fifth-tab-group" class="tabgroup">
+<div id="cmmhtml">
 <code id=code-html-five class="code html" data-clipboard-target="#code-html">
   &lt;ul class="mobile_menu"&gt;
     &lt;li&gt;&lt;a href=""&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
@@ -589,28 +689,35 @@ $(document).ready(function(){
 });
 </code>
 </div>
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/mobilemenu.html"></iframe>
-      </div>
-      </div>
-    </div>
-    <!-- Custom Mobile Menu ends -->
-    <!-- Custom Filter With Load More starts-->
-    <div class="rule" id="loadmore">
-  <div class="title">
-    <h1>6. Custom Filter With Load More</h1>
+<div id="custommobilemenuresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/mobilemenu.html"></iframe>
+</div>
+</div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="custommobilemenu">custommobilemenu</span>
   </div>
-  <div class="rule" id="6">
-    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
-    <ul class="tabs" data-tabgroup="sixth-tab-group">
-      <li class="tab"><a href="#cflhtml" class="active">HTML</a></li>
-      <li class="tab"><a href="#cflcss">Styling</a></li>
-      <li class="tab"><a href="#cfljs">Script</a></li>
-    </ul>
-    <pre>
-      <div id="sixth-tab-group" class="tabgroup">
-      <div id="cflhtml">
+</div>
+</div>
+</div>
+<!-- Custom Mobile Menu ends -->
+    <!-- Custom Filter With Load More starts-->
+    <div class="rule each-module-prview loadmorefilter">
+      <div class="title">
+        <h1>6. Custom Filter With Load More</h1>
+      </div>
+      <div class="rule" id="6">
+        <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+        <ul class="tabs" data-tabgroup="sixth-tab-group">
+          <li class="tab"><a href="#cflhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#cflcss">Styling</a></li>
+          <li class="tab"><a href="#cfljs">Script</a></li>
+          <li class="tab"><a href="#loadmorefilterresult">Result</a></li>
+        </ul>
+<pre>
+<div id="sixth-tab-group" class="tabgroup">
+<div id="cflhtml">
 <code id=code-html-six class="code html" data-clipboard-target="#code-html">
 &lt;div id="wrapper"&gt;
   &lt;div class="content hidden-box"&gt;
@@ -689,17 +796,21 @@ $(document).ready(function() {
 });
 </code>
 </div>
+<div id="loadmorefilterresult" class="result-wrap">
+  <iframe width="100%" height="260px" src="codepen-files/load-more.html"></iframe>
 </div>
 </div>
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/load-more.html"></iframe>
-      </div>
-      </div>
-    </div>  
-  <!-- Custom Filter With Load More ends-->
-  <!-- Custom Filter With Isotope starts-->
-   <div class="rule" id="isotope">
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="loadmorefilter">loadmorefilter</span>
+  </div>
+</div>
+</div>
+<!-- Custom Filter With Load More ends-->
+<!-- Custom Filter With Isotope starts-->
+<div class="rule each-module-prview isotopefilter">
   <div class="title">
     <h1>7. Custom Filter With Isotope</h1>
   </div>
@@ -709,10 +820,11 @@ $(document).ready(function() {
       <li class="tab"><a href="#cfihtml" class="active">HTML</a></li>
       <li class="tab"><a href="#cficss">Styling</a></li>
       <li class="tab"><a href="#cfijs">Script</a></li>
+      <li class="tab"><a href="#isotoperesult">result</a></li>
     </ul>
-    <pre>
-      <div id="seventh-tab-group" class="tabgroup">
-           <div id="cfihtml" class="tab-content current">
+<pre>
+<div id="seventh-tab-group" class="tabgroup">
+<div id="cfihtml" class="tab-content current">
 <code id=code-html-seven class="code html" data-clipboard-target="#code-html">
 &lt;div id="container"&gt;
     &lt;h1&gt;Isotope Filter&lt;/h1&gt;
@@ -818,15 +930,21 @@ $(window).load(function(){
 });
 </code>
 </div>
+<div id="isotoperesult" class="result-wrap">
+    <iframe width="100%" height="260px" src="codepen-files/isotope-filter.html"></iframe>
 </div>
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/isotope-filter.html"></iframe>
-      </div>
-      </div>
-    </div>
+</div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="isotopefilter">isotopefilter</span>
+  </div>
+</div>
+</div>
+</div>
 <!-- Custom Filter With Isotope starts-->
-<div class="rule" id="customtabs">
+<!-- Tabs starts here -->
+<div class="rule each-module-prview customtabs">
   <div class="title">
     <h1>8. Tabs</h1>
   </div>
@@ -836,10 +954,11 @@ $(window).load(function(){
       <li class="tab"><a href="#tabhtml" class="active">HTML</a></li>
       <li class="tab"><a href="#tabcss">Styling</a></li>
       <li class="tab"><a href="#tabjs">Script</a></li>
+      <li class="tab"><a href="#tabresult">Result</a></li>
     </ul>
     <pre>
-      <div id="eight-tab-group" class="tabgroup">
-           <div id="tabhtml" class="tab-content current">
+<div id="eight-tab-group" class="tabgroup">
+<div id="tabhtml" class="tab-content current">
 <code id=code-html-eight class="code html" data-clipboard-target="#code-html">
 &lt;div class="container"&gt;
   &lt;div class="wrapper-one"&gt;
@@ -973,35 +1092,28 @@ $('.tabs a').click(function(e) {
 })
 </code>
 </div>
-</div>
-      <div class="result">
-        <p><u>Result</u></p>
-          <iframe width="100%" height="260px" src="codepen-files/tab.html"></iframe>
-      </div>
-      </div>
-    </div>
+  <div id="tabresult" class="result-wrap">
+      <iframe width="100%" height="260px" src="codepen-files/tab.html"></iframe>
   </div>
-  <!-- Custom Filter With Isotope ends-->
-  <div class="nav-list" id="mainNav">
-    <a class="nav-link active" data-href="#custom-drop-down">Custom Drop Down</a>
-    <a class="nav-link" data-href="#pagination">Pagination</a>
-    <a class="nav-link" data-href="#formcookie">Form Cookie</a>
-    <a class="nav-link" data-href="#smoothscroll">Smooth Scroll</a>
-    <a class="nav-link" data-href="#mobilemenu">Custom Mobile Menu</a>
-    <a class="nav-link" data-href="#loadmore">Load More Filter</a>
-    <a class="nav-link" data-href="#isotope">Isotope Filter</a>
-    <a class="nav-link" data-href="#customtabs">Tabs</a>
-    <a class="nav-link" data-href="#delaypopup">Delay Popup</a>
+  </div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="customtabs">customtabs</span>
   </div>
 </div>
-  <script>
-  document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"><\/script>')
-  </script>
-  <script>
-  hljs.initHighlightingOnLoad();
-  </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="js/plugins-activate.js"></script>
+</div>
+<!-- tab ends here -->
+<!-- No result starts-->
+<div id="noresult">No Result</div>
+<!-- No result ends-->
+</div>
+ <!-- Main filter content Wrap Starts -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
-
 </html>
