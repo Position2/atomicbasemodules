@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+  (function($jq) {
+    $jq(document).ready(function() {
+      //Tabs
+      $('.tabgroup > div').hide();
+      $('.tabgroup > div:first-of-type').show();
+      $('.tabs a').click(function(e) {
+        e.preventDefault();
+        var $this = $(this),
+          tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
+          others = $this.closest('li').siblings().children('a'),
+          target = $this.attr('href');
+        others.removeClass('active');
+        $this.addClass('active');
+        $(tabgroup).children('div').hide();
+        $(target).show();
+      })
+    });
+  })(jQuery)
+  </script>
+  <style>
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .wrapper-one {
+    margin-bottom: 50px;
+  }
+  .tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+  .tabs li {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    margin: 0 -2px -4px 3px;
+    line-height: 140%;
+    color: #000;
+    font-size: 14px;
+    background-color: #67caca;
+    transition: all .4s ease 0s;
+    -webkit-transform: perspective(230px) rotateX(30deg);
+    -moz-transform: perspective(230px) rotateX(30deg);
+    cursor: pointer;
+    border-radius: 4px;
+    border-radius-bottom: 0;
+  }
+  .tabs li a {
+    color: #000;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+  }
+  .tabs li a:hover {
+    background: #dee;
+    transition: all .2s ease 0s;
+    z-index: 1;
+  }
+  .tabs li a.active {
+    background: #dee;
+    color: #000;
+    transition: all .2s ease 0s;
+    z-index: 1;
+  }
+  .tab-content {
+    display: none;
+    background: #23241f;
+    line-height: 1.4;
+    transition: all .2s ease 0s;
+  }
+  .tab-content.active {
+    display: block;
+    transition: all .2s ease 0s;
+  }
+  .tabgroup {
+    background: #dee;
+    height: 180px;
+    width: 700px;
+    color: #fff;
+    position: relative;
+  }
+  .tabgroup p {
+    color: #000;
+    font-size: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper-one">
+      <ul class="tabs" data-tabgroup="first-tab-group">
+        <li class="tab"><a href="#tab1" class="active">TAB1</a></li>
+        <li class="tab"><a href="#tab2">TAB2</a></li>
+        <li class="tab"><a href="#tab3">TAB3</a></li>
+      </ul>
+      <div id="first-tab-group" class="tabgroup">
+        <div id="tab1">
+          <p>TAB 1</p>
+        </div>
+        <div id="tab2">
+          <p>TAB 2</p>
+        </div>
+        <div id="tab3">
+          <p>TAB 3</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-two">
+      <ul class="tabs" data-tabgroup="second-tab-group">
+        <li class="tab"><a href="#tab6" class="active">TAB6</a></li>
+        <li class="tab"><a href="#tab7">TAB7</a></li>
+        <li class="tab"><a href="#tab8">TAB8</a></li>
+      </ul>
+      <div id="second-tab-group" class="tabgroup">
+        <div id="tab6">
+          <p>TAB 6</p>
+        </div>
+        <div id="tab7">
+          <p>TAB 7</p>
+        </div>
+        <div id="tab8">
+          <p>TAB 8</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

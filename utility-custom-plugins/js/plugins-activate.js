@@ -9,7 +9,7 @@
           }).get(),
           matchRegex = tags.join('');
         $("#noresult").hide();
-        var firstLevelFilter = $(".each-module-prview").hide().filter(ddVal)
+        var firstLevelFilter = $(".each-module-preview").hide().filter(ddVal)
         if (tags.length > 0) {
           var secondLevelFilter = firstLevelFilter.filter(function() {
             var disText = $(this).text().toLowerCase().trim().replace(/\s/g, '');
@@ -20,7 +20,7 @@
         } else {
           firstLevelFilter.show();
         }
-        $("#noresult").toggle($(".each-module-prview:visible").length <= 0)
+        $("#noresult").toggle($(".each-module-preview:visible").length <= 0)
         $(".clearall").toggle($(".ac-tag").length > 0)
       }
 
