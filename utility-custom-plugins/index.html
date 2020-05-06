@@ -64,7 +64,7 @@
                 <li data-val=".loadmorefilter">Load More Filter</li>
                 <li data-val=".isotopefilter">Isotope Filter</li>
                 <li data-val=".customtabs">Tabs</li>
-                <li data-val=".delaypopup">OffScreen Image</li>
+                <li data-val=".offscreenimage">OffScreen Image</li>
               </ul>
             </div>  
           </div>
@@ -82,7 +82,7 @@
                 <li data-filter="loadmorefilter">Load More Filter</li>
                 <li data-filter="isotopefilter">Isotope Filter</li>
                 <li data-filter="customtabs">Tabs</li>
-                <li data-filter="delaypopup">OffScreen Image</li>
+                <li data-filter="offscreenimage">OffScreen Image</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -1105,7 +1105,30 @@ $('.tabs a').click(function(e) {
 </div>
 <!-- tab ends here -->
 <!-- OffScreen Image Starts -->
-
+<div class="rule each-module-prview offscreenimage">
+  <div class="title">
+    <h1>9. OffScreen Image</h1>
+  </div>
+  <div class="rule" id="8">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="eight-tab-group">
+      <li class="tab"><a href="#tabhtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#tabjs">Script</a></li>
+      <li class="tab"><a href="#offscreenresult">Result</a></li>
+    </ul>
+<pre>
+<div id="eight-tab-group" class="tabgroup">
+<div id="tabhtml" class="tab-content current">
+<code id=code-html-eight class="code html" data-clipboard-target="#code-html">
+<div class="image-wrap">
+&lt;img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="your-image-here"&gt;
+</div>
+</code>
+</div>
+</div>
+</pre>
+</div>
+</div>
 <!-- OffScreen Image Ends -->
 <!-- No result starts-->
 <div id="noresult">No Result</div>
