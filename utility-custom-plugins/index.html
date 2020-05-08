@@ -65,6 +65,7 @@
                 <li data-val=".isotopefilter">Isotope Filter</li>
                 <li data-val=".customtabs">Tabs</li>
                 <li data-val=".offscreenimage">OffScreen Image</li>
+                <li data-val=".detectingdevicesdesktop">Detecting Device & Desktop</li>
               </ul>
             </div>  
           </div>
@@ -83,6 +84,7 @@
                 <li data-filter="isotopefilter">Isotope Filter</li>
                 <li data-filter="customtabs">Tabs</li>
                 <li data-filter="offscreenimage">OffScreen Image</li>
+                <li data-filter="detectingdevicesdesktop">Detecting Device & Desktop</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -1143,13 +1145,74 @@ window.onload = init;
 </div>
 </div>
 </pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="offscreenimage">offscreenimage</span>
+  </div>
+</div>
 </div>
 </div>
 <!-- OffScreen Image Ends -->
+<!-- Detecting Devices and Desktop Starts -->
+<div class="rule each-module-preview detectingdevicesdesktop">
+  <div class="title">
+    <h1>10. Detecting Devices and Desktop</h1>
+  </div>
+  <div class="rule" id="10">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+     <ul class="tabs" data-tabgroup="tenth-tab-group">
+      <li class="tab"><a href="#detectingdevicesdesktopjs" class="active">Script</a></li>
+    </ul>
+<pre>
+<div id="tenth-tab-group" class="tabgroup">
+<div id="detectingdevicesdesktopjs" class="tab-content current">
+<code id=code-css-tenth class="code javascript" data-clipboard-target=#code-javascript>
+(function($) {
+  $(document).ready(function() {
+    function isDevice() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    function isDesktop() { return ($(window).width() > 1200) }
+    function isMobile() { return ($(window).width() < 768) }
+    function isTablet() { return ($(window).width() >= 768 && $(window).width() <= 1024) }
+    function isOddRes() { return ($(window).width() > 1024 && $(window).width() <= 1200) }
+    function isIpadPro() { return isDevice() && ($(window).width() >= 1366) }
+    function isRealDevice() {
+      return /Android|webOS|iPhone|iPad|macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (typeof(window.orientation) != "undefined" || (navigator.maxTouchPoints > 1));
+    }
+    function initMview() {
+      $("body").addClass("mobileview",isDevice());
+    }
+    function init() { 
+      initMview();
+    }
+
+    init();
+
+    var prop_resize_time = "",
+        wRevent = isRealDevice() ? "orientationchange" : "resize";
+    $(window).on(wRevent,function() {
+      clearTimeout(prop_resize_time);
+      prop_resize_time = setTimeout(init,200); // Use function which you init
+    });
+  })
+})(jQuery);
+</code>
+</div>
+</div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="detectingdevicesdesktop">detectingdevicesdesktop</span>
+  </div>
+</div>
+</div>
+</div>
+<!-- Detecting Devices and Desktop Ends -->
 <!-- No result starts-->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
- <!-- Main filter content Wrap Starts -->
+ <!-- Main filter content Wrap Ends -->
 </div>
 </div>
 </div>
