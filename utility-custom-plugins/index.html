@@ -1191,7 +1191,7 @@ window.onload = init;
         wRevent = isRealDevice() ? "orientationchange" : "resize";
     $(window).on(wRevent,function() {
       clearTimeout(prop_resize_time);
-      prop_resize_time = setTimeout(init,200); // Use function which you init 
+      prop_resize_time = setTimeout(init,200); // Use function which you init  
     });
   })
 })(jQuery);
