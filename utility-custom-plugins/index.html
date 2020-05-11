@@ -66,6 +66,7 @@
                 <li data-val=".customtabs">Tabs</li>
                 <li data-val=".offscreenimage">OffScreen Image</li>
                 <li data-val=".detectingdevicesdesktop">Detecting Device & Desktop</li>
+                <li data-val=".cookiebar">Cookie Bar</li>
               </ul>
             </div>  
           </div>
@@ -85,6 +86,7 @@
                 <li data-filter="customtabs">Tabs</li>
                 <li data-filter="offscreenimage">OffScreen Image</li>
                 <li data-filter="detectingdevicesdesktop">Detecting Device & Desktop</li>
+                <li data-filter="cookiebar">Cookie Bar</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -1217,7 +1219,7 @@ window.onload = init;
     <ul class="tabs" data-tabgroup="eleventh-tab-group">
       <li class="tab"><a href="#cookiebarhtml" class="active">HTML</a></li>
       <li class="tab"><a href="#cookiebarcss">Styling</a></li>
-      <li class="tab"><a href="#cookiebarscript">Script</a></li>
+      <li class="tab"><a href="#cookiebarjs">Script</a></li>
       <li class="tab"><a href="#cookiebarresult">Result</a></li>
     </ul>
 <pre>
@@ -1262,9 +1264,27 @@ window.onload = init;
 }
 </code>
 </div>
+<div id="cookiebarjs">
+<code id="code-css-eleventh" class="code javascript" data-clipboard-target=#code-javascript>
+var cookie_policy = Cookies.get('website_cp');
+if (cookie_policy == "" || typeof(cookie_policy) == "undefined") {
+  $("body").addClass("cookie-bar-active");
+}
+$("a.closecbar").click(function(e) {
+  e.preventDefault();
+  Cookies.set('website_cp', 'true');
+  $("body").removeClass("cookie-bar-active");
+})
+</code>
+</div>
 </div>
 </pre>
-   </div>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="cookiebar">cookiebar</span>
+  </div>
+</div>
+</div>
 </div>
 <!-- Cookie Bar Ends !-->
 <!-- No result starts-->
