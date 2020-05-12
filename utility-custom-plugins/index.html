@@ -1301,6 +1301,7 @@ $("a.closecbar").click(function(e) {
     <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
      <ul class="tabs" data-tabgroup="twevelth-tab-group">
         <li class="tab"><a href="#onclickpopuphtml" class="active">HTML</a></li>
+        <li class="tab"><a href="#onclickpopupcss">Styles</a></li>
         <li class="tab"><a href="#onclickpopupjs">Script</a></li>
         <li class="tab"><a href="#onclickpopupresult">Result</a></li>
       </ul>
@@ -1359,7 +1360,7 @@ $("a.closecbar").click(function(e) {
 &lt;/div&gt;
 </code>
 </div>
-<div id="tabcss">
+<div id="onclickpopupcss">
 <code id="code-css-twevelth" class="code css" data-clipboard-target=#code-css>
 body {
   background-color: #f9f9f9;
@@ -1437,15 +1438,15 @@ body {
 }
 </code>
 </div>
-<div id="tabjs">
-<code id="code-css-twevelth" class="code javascript" data-clipboard-target=#code-javascript>
+<div id="onclickpopupjs">
+<code id="code-js-twevelth" class="code javascript" data-clipboard-target=#code-javascript>
 $(".rhs-wrap li > a, .rhs-wrap li .close-arrow").click(function(e) {
   e.preventDefault();  
   $(this).parents("li").toggleClass("active");
 });
 </code>
 </div>
-<div id="tabresult" class="result-wrap">
+<div id="onclickpopupresult" class="result-wrap">
   <iframe width="100%" height="260px" src="codepen-files/onclickpopup.html"></iframe>
 </div>
 </div>

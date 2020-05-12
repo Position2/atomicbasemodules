@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - onclick popup</title>
+<style>
+body {
+  background-color: #f9f9f9;
+  padding: 50px;
+}
+.rhs-wrap .each-content {
+    display: none;
+}
+.rhs-wrap li.active .each-content {
+    display: block;
+}
+.rhs-wrap {
+	padding: 30px 0 30px 60px;
+	position: relative;
+  width: 560px;
+}
+.rhs-wrap ul {
+    margin: 0;
+    padding: 0;
+}
+.rhs-wrap ul li {
+    list-style: none;
+    margin: 0 0 15px;
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+}
+.rhs-wrap ul li a {
+    list-style: none;
+    color: #145091;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+    transition: all 0.3s ease 0s;
+}
+.rhs-wrap .each-content .inner-content {
+    padding: 30px;
+    box-shadow: 0px 0px 9px 0px 
+    rgba(0,0,0,0.06);
+    position: absolute;
+    top: 50%;
+    background-color:#fff;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    overflow-y: auto;
+    margin: 30px;
+}
+.rhs-wrap .each-content .inner-content h3 {
+    color: #333;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0 0 15px;
+}
+.rhs-wrap .each-content .inner-content p {
+    color: #000;
+}
+.rhs-wrap ul li.active .each-content {
+    display: block;
+}
+.rhs-wrap .close-arrow {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 15px;
+    cursor: pointer;
+}
+.rhs-wrap .close-arrow img {
+    width: 100%;
+    height: auto;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="rhs-wrap">
+<ul>
+<li class=""><a href="javascript:void(0)">What is Lorem Ipsum? </a>
+<div class="each-content">
+<div class="inner-content">
+<h3> What is Lorem Ipsum? </h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+<span class="close-arrow"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="Close Arrow"></span>
+</div>
+</div>
+</li>
+<li class=""><a href="javascript:void(0)">Where does it come from? </a>
+<div class="each-content">
+<div class="inner-content">
+<h3> Where does it come from?</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+<span class="close-arrow"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="Close Arrow"></span>
+</div>
+</div>
+</li>
+<li class=""><a href="javascript:void(0)">Why do we use it?</a>
+<div class="each-content">
+<div class="inner-content">
+<h3> Why do we use it? </h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+<span class="close-arrow"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="Close Arrow"></span>
+</div>
+</div>
+</li>
+<li class=""><a href="javascript:void(0)">Where can I get some? </a>
+<div class="each-content">
+<div class="inner-content">
+<h3> Where can I get some?</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+<span class="close-arrow"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="Close Arrow"></span>
+</div>
+</div>
+</li>
+<li class=""><a href="javascript:void(0)">What is Lorem Ipsum? </a>
+<div class="each-content">
+<div class="inner-content">
+<h3> What is Lorem Ipsum? </h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+<span class="close-arrow"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="Close Arrow"></span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+$(".rhs-wrap li > a,.rhs-wrap li .close-arrow").click(function (e) {
+  e.preventDefault();$(this).parents("li").toggleClass("active");
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
