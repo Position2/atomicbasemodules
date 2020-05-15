@@ -1546,10 +1546,28 @@ $(".rhs-wrap li > a, .rhs-wrap li .close-arrow").click(function(e) {
 </div>
 <div id="scrolltotopjs">
 <code id="code-css-thirteen" class="code javascript" data-clipboard-target=#code-javascript>
+$(window).scroll(function() {
+var scroll = $(window).scrollTop();
+  $(".scroll-to-top").toggleClass("active",(scroll >= 300));
+});
+$('.to-header').click(function() {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 800);
+  return false;
+});
 </code>  
 </div>
+ <div id="scrolltotopresult" class="result-wrap">
+      <iframe width="100%" height="260px" src="codepen-files/scrolltotop.html"></iframe>
+  </div>
 </div>
 </pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="scrolltotop">scrolltotop</span>
+  </div>
+</div>
 </div>
 </div>
 <!-- Scroll to Top Ends -->
