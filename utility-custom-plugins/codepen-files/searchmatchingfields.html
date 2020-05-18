@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Search Matching Fields</title>
+<style>
+#Overview {
+  padding: 60px 0
+}
+
+#Overview h2 {
+  margin-bottom: 30px;
+  text-align: center
+}
+
+#Overview .list-wrap .search-wrap {
+  text-align: center;
+  margin-bottom: 45px
+}
+
+#Overview .list-wrap .search-wrap input {
+  background: url("https://www.pinclipart.com/picdir/middle/4-45027_vector-search-icon-search-icon-vector-png-clipart.png") 97% center/22px auto no-repeat;
+  height: 45px;
+  width: 600px;
+  margin: 0;
+  border-width: 1px;
+  border-color: #ccc;
+  border-style: solid;
+  background-color: #fff;
+  padding: 14px 20px;
+  font-size: 18px;
+}
+
+#Overview .list-wrap .search-wrap input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1
+}
+
+#Overview .list-wrap .search-wrap input::-moz-placeholder {
+  color: #999;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1
+}
+
+#Overview .list-wrap .search-wrap input:-ms-input-placeholder {
+  color: #999;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1
+}
+
+#Overview .list-wrap .search-wrap input::-ms-input-placeholder {
+  color: #999;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1
+}
+
+#Overview .list-wrap .search-wrap input::placeholder {
+  color: #999;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1
+}
+
+#Overview .list-wrap .list {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17);
+  padding: 30px 30px 0
+}
+
+#Overview .list-wrap .list .each-list {
+  display: inline-block;
+  width: 33%;
+  vertical-align: top
+}
+
+#Overview .list-wrap .list .each-list h3 {
+  color: #145091;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 5px
+}
+
+#Overview .list-wrap .list .each-list ul {
+  padding: 0;
+  margin: 0 0 30px
+}
+
+#Overview .list-wrap .list .each-list ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+#Overview .list-wrap .list .each-list ul li a {
+  color: #333;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block
+}
+
+#Overview .list-wrap .list .each-list ul li a:hover {
+  text-decoration: none;
+  color: #AB4399;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s
+}
+
+#Overview .list-wrap .list .each-list ul li a.director {
+  color: #000;
+  font-weight: 600
+}
+
+#Overview .list-wrap .list .each-list ul li a.director:hover {
+  text-decoration: none;
+  color: #AB4399;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s
+}
+
+#noResult {
+  display: none;
+  padding-bottom: 10px
+}
+
+#noResult p {
+  color: #333;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<section id="Overview">
+<div class="container">
+<div class="list-wrap">
+<div class="search-wrap">
+<input type="text" placeholder="Search" id="list-search">
+</div>
+<div class="list">
+<div class="each-list">
+<h3>Bangalore</h3>
+<ul class="bangalore">
+<li><a class="director" href="javascript:void(0)">Dr. E. Michael Thomas, Director</a></li>
+<li><a href="javascript:void(0)">Dr. David Goldberg, Periodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Priya Gopinathan, General Dentist</a></li>
+<li><a href="javascript:void(0)">Dr. Peter Mortelliti, General Dentist</a></li>
+<li><a href="javascript:void(0)">Dr. Paula Wolfert, General Dentist</a></li>
+</ul>
+</div>
+<div class="each-list">
+<h3>Mumbai</h3>
+<ul class="mumbai">
+<li><a class="director" href="javascript:void(0)">Dr. Jacqueline Cash, Periodontist, Director</a></li>
+<li><a href="javascript:void(0)">Dr. Donald J. Gass, Oral Surgeon</a></li>
+<li><a href="javascript:void(0)">Dr. Sirisha Muppidi, General Dentist</a></li>
+<li><a href="javascript:void(0)">Dr. John Walsh, Orthodontist</a></li>
+</ul>
+</div>
+<div class="each-list">
+<h3>Chennai</h3>
+<ul class="chennai">
+<li><a class="director" href="javascript:void(0)">Dr. Minna Kachka, Director</a></li>
+<li><a href="javascript:void(0)">Dr. Katerina Chernykhivska, General Dentist</a></li>
+<li><a href="javascript:void(0)">Dr. Jose Oscar Colon, Periodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Mohamed Elazhri, Periodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Kirill Klimashov, Oral Surgeon</a></li>
+<li><a href="javascript:void(0)">Dr. Isabel McQuattie, Orthodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Clark Smith, Orthodontist</a></li>
+</ul>
+</div>
+<div class="each-list">
+<h3>Pune</h3>
+<ul class="pune">
+<li><a class="director" href="javascript:void(0)">Dr. C. Marissa Alikpala, Director</a></li>
+<li><a href="javascript:void(0)">Dr. Marjan Askari, Orthodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Kirill Klimashov, Oral Surgeon</a></li>
+<li><a href="javascript:void(0)">Dr. Pil Kwon, General Dentist</a></li>
+<li><a href="javascript:void(0)">Dr. Julie Saviano, Endodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Frances Yang, Periodontist</a></li>
+</ul>
+</div>
+<div class="each-list">
+<h3>Coimbatore</h3>
+<ul class="coimbatore">
+<li><a class="director" href="javascript:void(0)">Dr. Alokh Persha, Director</a></li>
+</ul>
+</div>
+<div class="each-list">
+<h3>Cochin</h3>
+<ul class="cochin">
+<li><a class="director" href="javascript:void(0)">Dr. Matteo L. Giamarco, Director</a></li>
+<li><a href="javascript:void(0)">Dr. Jose Oscar Colon, Periodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Natalia Hoffmann, Orthodontist</a></li>
+<li><a href="javascript:void(0)">Dr. Patrick Mangan, General Dentist</a></li>
+<li><a href="javascript:void(0)">Dr. Divi Mittal, General Dentist</a></li>
+<li><a href="javascript:void(0)">Dr. Qian Yang, Oral Surgeon</a></li>
+<li><a href="javascript:void(0)">Dr. John Walsh, Orthodontist</a></li>
+</ul>
+</div>
+<div class="each-list">
+<h3>Mysore</h3>
+<ul class="mysore">
+<li><a class="director" href="javascript:void(0)">Dr. Bhavya Patel, Director</a></li>
+</ul>
+</div>
+<div class="each-list">
+<h3>Nagpur</h3>
+<ul class="nagpur">
+<li><a class="director" href="javascript:void(0)">Dr. Francis Guerra, Director</a></li>
+<li><a href="javascript:void(0)">Dr. Qian Yang, Oral Surgeon</a></li>
+</ul>
+</div>
+<div id="noResult">
+<p>No Result!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+$("#list-search").on("input", function () {
+  var searchText = $(this).val().trim().toLowerCase().replace(/[ ,.]/g, "");
+  if (searchText.length > 1) {
+    $(".each-list ul li").hide().removeClass("match").filter(function () {
+      return $(this).text().toLowerCase().replace(/[ ,.]/g, "").indexOf(searchText) > -1;
+    }).show().addClass("match");
+    $(".each-list").hide().filter(function () {
+      return $(this).find("li.match").length > 0;
+    }).show();
+    $("#noResult").toggle($(".each-list:visible").length <= 0);
+  } else {
+    $(".each-list ul li,.each-list").show();
+  }
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
