@@ -94,7 +94,7 @@
                 <li data-filter="onclickpopup">onClick Popup</li>
                 <li data-filter="scrolltotop">Scroll To Top</li>
                 <li data-filter="searchmatchingfields">Search Matching Fields</li>
-                <li data-val="filterwithpagination">Filter with Pagination</li>
+                <li data-filter="filterwithpagination">Filter with Pagination</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -1835,7 +1835,7 @@ $("#list-search").on("input",function() {
 </div>
 <!-- Search Matching Fields Ends-->
 <!-- Filter Starts here -->
-<div class="rule each-module-preview filter">
+<div class="rule each-module-preview filterwithpagination">
   <div class="title">
     <h1>15. Filter with Pagination</h1>
   </div>
@@ -1852,7 +1852,129 @@ $("#list-search").on("input",function() {
 <!-- html -->
 <div id="filterwithpaginationhtml" class="tab-content current">
 <code id="code-html-fifteen" class="code html" data-clipboard-target="#code-html">
-
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="maincontent"&gt;
+      &lt;div&gt;
+        &lt;div class="filter-clients custom-dropdown"&gt;
+          &lt;div class="custom-dd-selected"&gt;Select&lt;/div&gt;
+          &lt;div class="custom-dd-list"&gt;
+            &lt;ul&gt;
+              &lt;li data-val="all" class="cdd-active"&gt;All&lt;/li&gt;
+              &lt;li data-val="AA"&gt;A&lt;/li&gt;
+              &lt;li data-val="BB"&gt;B&lt;/li&gt;
+              &lt;li data-val="CC"&gt;C&lt;/li&gt;
+              &lt;li data-val="DD"&gt;D&lt;/li&gt;
+              &lt;li data-val="ZZ"&gt;Z&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;div id="Filter"&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div class="each-box CC"&gt;
+            CC
+          &lt;/div&gt;
+          &lt;div class="each-box DD"&gt;
+            DD
+          &lt;/div&gt;
+          &lt;div class="each-box EE"&gt;
+            EE
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div class="each-box CC"&gt;
+            CC
+          &lt;/div&gt;
+          &lt;div class="each-box DD"&gt;
+            DD
+          &lt;/div&gt;
+          &lt;div class="each-box EE"&gt;
+            EE
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div class="each-box CC"&gt;
+            CC
+          &lt;/div&gt;
+          &lt;div class="each-box DD"&gt;
+            DD
+          &lt;/div&gt;
+          &lt;div class="each-box EE"&gt;
+            EE
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div class="each-box CC"&gt;
+            CC
+          &lt;/div&gt;
+          &lt;div class="each-box DD"&gt;
+            DD
+          &lt;/div&gt;
+          &lt;div class="each-box EE"&gt;
+            EE
+          &lt;/div&gt;
+          &lt;div class="each-box AA"&gt;
+            AA
+          &lt;/div&gt;
+          &lt;div class="each-box BB"&gt;
+            BB
+          &lt;/div&gt;
+          &lt;div id="Filter-NoResult"&gt;No Result Found&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="pagination"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
 </code>
 </div>
 <!-- html -->
@@ -1870,7 +1992,7 @@ $("#list-search").on("input",function() {
 </code>
 </div>
 <!-- js -->
- <div id="tabresult" class="result-wrap">
+ <div id="filterwithpaginationresult" class="result-wrap">
       <iframe width="100%" height="260px" src="codepen-files/filterwithpagination.html"></iframe>
   </div>
 </div>
@@ -1880,7 +2002,7 @@ $("#list-search").on("input",function() {
     <span class="filterwithpagination">filterwithpagination</span>
   </div>
 </div>
-   </div>
+</div>
 </div>
 <!-- Filter Ends here-->
 <div id="noresult">No Result</div>
