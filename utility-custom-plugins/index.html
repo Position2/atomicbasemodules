@@ -1981,7 +1981,133 @@ $("#list-search").on("input",function() {
 <!-- css -->
 <div id="filterwithpaginationcss">
 <code id=code-css-fifteen class="code css" data-clipboard-target=#code-css>
+body {
+   background-color: #fdfdfd;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+.maincontent {
+  padding: 40px 0;
+  text-align: center;
+}
+.custom-dropdown {
+  border: 1px solid #b4b1ae;
+  cursor: pointer;
+  padding: 10px 20px;
+  position: relative;
+  width: 220px;
+  border-radius: 5px;
+  text-align:left;
+  margin: 0 auto;
+}
+.custom-dd-selected {
+  color: #999;
+  font-size: 16px;
+}
+.custom-dd-selected::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #999;
+  content: "";
+  right: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.custom-dropdown .custom-dd-list {
+  background: #fff;
+  border: 1px solid #b4b1ae;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 44px;
+  width: 100%;
+  z-index: 999;
+}
+.custom-dd-list ul {
+  margin: 0;
+  padding: 0;
+}
+.custom-dd-list ul li {
+  color: #999;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 15px;
+}
+.custom-dd-list ul li a {
+  color: #999;
+  font-size: 16px;
+  display: block;
+  padding: 10px 20px;
+}
+.custom-dd-list ul li:last-child {
+  border-bottom: 0;
+}
+.custom-dd-list li.active, 
+.custom-dd-list li:hover {
+  background: #eee;
+}
+.each-box {
+  height: 150px; 
+  width: 150px;
+  background-color: #999;
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: left;
+}
+#Filter {
+  padding: 25px 0;
+}
+#Filter-NoResult {
+  display: none;
+  color: #b22d35;
+}
+#Filter-NoResult #pagination {
+  display: none;
+}
+/*pagination style begin*/
+.compact-theme span,span.ellipse.clickable{cursor:pointer}ul.simple-pagination{list-style:none}.simple-pagination{display:block;overflow:hidden;padding:0 5px 5px 0;margin:0}.simple-pagination li,.simple-pagination ul{list-style:none;padding:0;margin:0}.simple-pagination li{float:left}.ellipse input{width:3em}.compact-theme a,.compact-theme span{float:left;color:#333;font-size:14px;line-height:24px;font-weight:400;text-align:center;border:1px solid #AAA;border-left:none;min-width:14px;padding:0 7px;box-shadow:2px 2px 2px rgba(0,0,0,.2);background:#efefef;background:-moz-linear-gradient(top,#fff 0,#efefef 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(100%,#efefef));background:-webkit-linear-gradient(top,#fff 0,#efefef 100%);background:-o-linear-gradient(top,#fff 0,#efefef 100%);background:-ms-linear-gradient(top,#fff 0,#efefef 100%);background:linear-gradient(top,#fff 0,#efefef 100%)}.compact-theme a:hover,.compact-theme li:not(.disabled):not(.active) span:hover{text-decoration:none;background:#efefef;background:-moz-linear-gradient(top,#efefef 0,#bbb 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#efefef),color-stop(100%,#bbb));background:-webkit-linear-gradient(top,#efefef 0,#bbb 100%);background:-o-linear-gradient(top,#efefef 0,#bbb 100%);background:-ms-linear-gradient(top,#efefef 0,#bbb 100%);background:linear-gradient(top,#efefef 0,#bbb 100%)}.compact-theme li:first-child a,.compact-theme li:first-child span{border-left:1px solid #AAA;border-radius:3px 0 0 3px}.compact-theme li:last-child a,.compact-theme li:last-child span{border-radius:0 3px 3px 0}.compact-theme .current{background:#bbb;background:-moz-linear-gradient(top,#bbb 0,#efefef 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#bbb),color-stop(100%,#efefef));background:-webkit-linear-gradient(top,#bbb 0,#efefef 100%);background:-o-linear-gradient(top,#bbb 0,#efefef 100%);background:-ms-linear-gradient(top,#bbb 0,#efefef 100%);background:linear-gradient(top,#bbb 0,#efefef 100%);cursor:default}.compact-theme .ellipse{background:#EAEAEA;padding:0 10px;cursor:default}.dark-theme a,.dark-theme span,.light-theme a,.light-theme span{float:left;font-size:14px;line-height:24px;text-align:center;min-width:14px;padding:0 7px;margin:0 5px 0 0}.light-theme span{cursor:pointer}.light-theme a,.light-theme span{color:#666;font-weight:400;border:1px solid #BBB;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.2);background:#efefef;background:-moz-linear-gradient(top,#fff 0,#efefef 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(100%,#efefef));background:-webkit-linear-gradient(top,#fff 0,#efefef 100%);background:-o-linear-gradient(top,#fff 0,#efefef 100%);background:-ms-linear-gradient(top,#fff 0,#efefef 100%);background:linear-gradient(top,#fff 0,#efefef 100%)}.light-theme a:hover,.light-theme li:not(.disabled):not(.active) span:hover{text-decoration:none;background:#FCFCFC}.light-theme .current{background:#666;color:#FFF;border-color:#444;box-shadow:0 1px 0 rgba(255,255,255,1),0 0 2px rgba(0,0,0,.3) inset;cursor:default}.light-theme .ellipse{background:0 0;border:none;border-radius:0;box-shadow:none;font-weight:700;cursor:default}.dark-theme span{cursor:pointer}.dark-theme a,.dark-theme span{color:#CCC;font-weight:400;border:1px solid #222;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.2);background:#555;background:-moz-linear-gradient(top,#555 0,#333 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#555),color-stop(100%,#333));background:-webkit-linear-gradient(top,#555 0,#333 100%);background:-o-linear-gradient(top,#555 0,#333 100%);background:-ms-linear-gradient(top,#555 0,#333 100%);background:linear-gradient(top,#555 0,#333 100%)}.dark-theme a:hover,.dark-theme li:not(.disabled):not(.active) span:hover{text-decoration:none;background:#444}.dark-theme .current{background:#222;color:#FFF;border-color:#000;box-shadow:0 1px 0 rgba(255,255,255,.2),0 0 1px 1px rgba(0,0,0,.1) inset;cursor:default}.dark-theme .ellipse{background:0 0;border:none;border-radius:0;box-shadow:none;font-weight:700;cursor:default}
+.maincontent #pagination {
+    padding: 20px 0;
+}
 
+.maincontent #pagination ul li {
+  float: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.maincontent #pagination ul li a,
+.maincontent #pagination ul li span {
+  font-size: 18px;
+  float: none;
+  display: inline-block;
+  padding: 4px 12px;
+  box-shadow: none;
+  color: #000;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: all 0.5s ease 0s;
+}
+
+.maincontent #pagination ul li a:hover {
+  background-color: #fff;
+  color: #b22d35;
+  transition: all 0.5s ease 0s;
+}
+
+.maincontent #pagination ul li span.current {
+  background-color: rgba(255, 255, 255, 1);
+  color: #b22d35;
+}
 </code>
 </div>
 <!-- css -->
