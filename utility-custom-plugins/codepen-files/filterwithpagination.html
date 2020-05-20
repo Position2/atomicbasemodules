@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Filter</title>
+<style>
+body {
+	 background-color: #fdfdfd;
+}
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+.maincontent {
+	padding: 40px 0;
+  text-align: center;
+}
+.custom-dropdown {
+	border: 1px solid #b4b1ae;
+	cursor: pointer;
+	padding: 10px 20px;
+	position: relative;
+	width: 220px;
+	border-radius: 5px;
+  text-align:left;
+  margin: 0 auto;
+}
+.custom-dd-selected {
+  color: #999;
+  font-size: 16px;
+}
+.custom-dd-selected::before {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #999;
+	content: "";
+	right: 20px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.custom-dropdown .custom-dd-list {
+  background: #fff;
+  border: 1px solid #b4b1ae;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 44px;
+  width: 100%;
+  z-index: 999;
+}
+.custom-dd-list ul {
+  margin: 0;
+  padding: 0;
+}
+.custom-dd-list ul li {
+  color: #999;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 15px;
+}
+.custom-dd-list ul li a {
+  color: #999;
+  font-size: 16px;
+  display: block;
+  padding: 10px 20px;
+}
+.custom-dd-list ul li:last-child {
+  border-bottom: 0;
+}
+.custom-dd-list li.active, 
+.custom-dd-list li:hover {
+  background: #eee;
+}
+.each-box {
+	height: 150px; 
+	width: 150px;
+	background-color: #999;
+	border: 1px solid #fff;
+	color: #fff;
+	display: inline-block;
+	margin-right: 5px;
+  margin-bottom: 10px;
+	padding: 10px;
+  text-align: left;
+}
+#Filter {
+	padding: 25px 0;
+}
+#Filter-NoResult {
+	display: none;
+	color: #b22d35;
+}
+#Filter-NoResult #pagination {
+  display: none;
+}
+/*pagination style begin*/
+.compact-theme span,span.ellipse.clickable{cursor:pointer}ul.simple-pagination{list-style:none}.simple-pagination{display:block;overflow:hidden;padding:0 5px 5px 0;margin:0}.simple-pagination li,.simple-pagination ul{list-style:none;padding:0;margin:0}.simple-pagination li{float:left}.ellipse input{width:3em}.compact-theme a,.compact-theme span{float:left;color:#333;font-size:14px;line-height:24px;font-weight:400;text-align:center;border:1px solid #AAA;border-left:none;min-width:14px;padding:0 7px;box-shadow:2px 2px 2px rgba(0,0,0,.2);background:#efefef;background:-moz-linear-gradient(top,#fff 0,#efefef 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(100%,#efefef));background:-webkit-linear-gradient(top,#fff 0,#efefef 100%);background:-o-linear-gradient(top,#fff 0,#efefef 100%);background:-ms-linear-gradient(top,#fff 0,#efefef 100%);background:linear-gradient(top,#fff 0,#efefef 100%)}.compact-theme a:hover,.compact-theme li:not(.disabled):not(.active) span:hover{text-decoration:none;background:#efefef;background:-moz-linear-gradient(top,#efefef 0,#bbb 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#efefef),color-stop(100%,#bbb));background:-webkit-linear-gradient(top,#efefef 0,#bbb 100%);background:-o-linear-gradient(top,#efefef 0,#bbb 100%);background:-ms-linear-gradient(top,#efefef 0,#bbb 100%);background:linear-gradient(top,#efefef 0,#bbb 100%)}.compact-theme li:first-child a,.compact-theme li:first-child span{border-left:1px solid #AAA;border-radius:3px 0 0 3px}.compact-theme li:last-child a,.compact-theme li:last-child span{border-radius:0 3px 3px 0}.compact-theme .current{background:#bbb;background:-moz-linear-gradient(top,#bbb 0,#efefef 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#bbb),color-stop(100%,#efefef));background:-webkit-linear-gradient(top,#bbb 0,#efefef 100%);background:-o-linear-gradient(top,#bbb 0,#efefef 100%);background:-ms-linear-gradient(top,#bbb 0,#efefef 100%);background:linear-gradient(top,#bbb 0,#efefef 100%);cursor:default}.compact-theme .ellipse{background:#EAEAEA;padding:0 10px;cursor:default}.dark-theme a,.dark-theme span,.light-theme a,.light-theme span{float:left;font-size:14px;line-height:24px;text-align:center;min-width:14px;padding:0 7px;margin:0 5px 0 0}.light-theme span{cursor:pointer}.light-theme a,.light-theme span{color:#666;font-weight:400;border:1px solid #BBB;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.2);background:#efefef;background:-moz-linear-gradient(top,#fff 0,#efefef 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(100%,#efefef));background:-webkit-linear-gradient(top,#fff 0,#efefef 100%);background:-o-linear-gradient(top,#fff 0,#efefef 100%);background:-ms-linear-gradient(top,#fff 0,#efefef 100%);background:linear-gradient(top,#fff 0,#efefef 100%)}.light-theme a:hover,.light-theme li:not(.disabled):not(.active) span:hover{text-decoration:none;background:#FCFCFC}.light-theme .current{background:#666;color:#FFF;border-color:#444;box-shadow:0 1px 0 rgba(255,255,255,1),0 0 2px rgba(0,0,0,.3) inset;cursor:default}.light-theme .ellipse{background:0 0;border:none;border-radius:0;box-shadow:none;font-weight:700;cursor:default}.dark-theme span{cursor:pointer}.dark-theme a,.dark-theme span{color:#CCC;font-weight:400;border:1px solid #222;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.2);background:#555;background:-moz-linear-gradient(top,#555 0,#333 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#555),color-stop(100%,#333));background:-webkit-linear-gradient(top,#555 0,#333 100%);background:-o-linear-gradient(top,#555 0,#333 100%);background:-ms-linear-gradient(top,#555 0,#333 100%);background:linear-gradient(top,#555 0,#333 100%)}.dark-theme a:hover,.dark-theme li:not(.disabled):not(.active) span:hover{text-decoration:none;background:#444}.dark-theme .current{background:#222;color:#FFF;border-color:#000;box-shadow:0 1px 0 rgba(255,255,255,.2),0 0 1px 1px rgba(0,0,0,.1) inset;cursor:default}.dark-theme .ellipse{background:0 0;border:none;border-radius:0;box-shadow:none;font-weight:700;cursor:default}
+.maincontent #pagination {
+    padding: 20px 0;
+}
+
+.maincontent #pagination ul li {
+  float: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.maincontent #pagination ul li a,
+.maincontent #pagination ul li span {
+	font-size: 18px;
+  float: none;
+  display: inline-block;
+  padding: 4px 12px;
+  box-shadow: none;
+  color: #000;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: all 0.5s ease 0s;
+}
+
+.maincontent #pagination ul li a:hover {
+  background-color: #fff;
+  color: #b22d35;
+  transition: all 0.5s ease 0s;
+}
+
+.maincontent #pagination ul li span.current {
+  background-color: rgba(255, 255, 255, 1);
+  color: #b22d35;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<body>
+<div class="container">
+<div class="maincontent">
+<div>
+<div class="filter-clients custom-dropdown">
+<div class="custom-dd-selected">Select</div>
+<div class="custom-dd-list">
+<ul>
+<li data-val="all" class="cdd-active">All</li>
+<li data-val="AA">A</li>
+<li data-val="BB">B</li>
+<li data-val="CC">C</li>
+<li data-val="DD">D</li>
+<li data-val="ZZ">Z</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div id="Filter">
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div class="each-box CC">
+CC
+</div>
+<div class="each-box DD">
+DD
+</div>
+<div class="each-box EE">
+EE
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div class="each-box CC">
+CC
+</div>
+<div class="each-box DD">
+DD
+</div>
+<div class="each-box EE">
+EE
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div class="each-box CC">
+CC
+</div>
+<div class="each-box DD">
+DD
+</div>
+<div class="each-box EE">
+EE
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div class="each-box CC">
+CC
+</div>
+<div class="each-box DD">
+DD
+</div>
+<div class="each-box EE">
+EE
+</div>
+<div class="each-box AA">
+AA
+</div>
+<div class="each-box BB">
+BB
+</div>
+<div id="Filter-NoResult">No Result Found</div>
+</div>
+<div id="pagination"></div>
+</div>
+</div>
+</div>
+</body>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://flaviusmatis.github.io/simplePagination.js/jquery.simplePagination.js'></script>
+<script id="rendered-js">
+$(".custom-dropdown").click(function () {
+  var dis = $(this),
+  disList = dis.find(".custom-dd-list");
+  dis.toggleClass("active").siblings().removeClass("active").find(".custom-dd-list").hide();
+  $(".custom-dropdown").hasClass("active") ? disList.show() : disList.hide();
+});
+$(".custom-dropdown").change(function () {
+  var dis = $(this),
+  disVal = dis.find(".custom-dd-list ul li.cdd-active").attr("data-val");
+  if (disVal != "" && typeof disVal != "undefined") {
+    if (dis.hasClass("filter-clients")) {
+      filter = disVal == "all" ? "*" : "." + disVal;
+      console.log("filter => " + filter);
+      $("#Filter .each-box." + disVal).size() <= 0 && disVal != "all" ? $("#Filter-NoResult").show() : $("#Filter-NoResult").hide();
+      $("#Filter .each-box").hide(0);
+      initPagination("" + filter + ".each-box");
+    }
+  }
+});
+$(".custom-dropdown").find(".custom-dd-list ul li").click(function () {
+  var dis = $(this),
+  selVal = dis.attr("data-val"),
+  selHtml = dis.text();
+  dis.siblings().removeClass("cdd-active");
+  if (typeof selVal != "undefined")
+  dis.parents(".custom-dropdown").find(".custom-dd-selected").html(selHtml);
+  if (selVal != "" && typeof selVal != "undefined") {
+    dis.addClass("cdd-active");
+    dis.removeClass("active").find(".custom-dd-list").hide();
+  }
+  dis.parents(".custom-dropdown").trigger("change");
+});
+//document click
+$(document).click(function (e) {
+  var dis = $(e.target);
+  //close custom dropdown
+  if (!dis.hasClass("custom-dropdown") && !dis.parents(".custom-dropdown").hasClass("custom-dropdown")) {
+    $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
+  }
+});
+// Pagination
+function toggleTitle() {
+  $(".publication-wrapper").each(function () {
+    $(this).find("h3").toggle($(this).find(".publication-lists:visible").length > 0);
+  });
+}
+function initPagination(itemSelector) {
+  console.log(itemSelector);
+  var perPage = 4;
+  $("#Filter .each-box").removeClass(function (index, css) {
+    return (css.match(/(^|\s)page-\S+/g) || []).join(' ');
+  });
+  $(itemSelector).addClass(function (key, val) {
+    return "page-" + (Math.floor(key / perPage) + 1);
+  });
+  $("#pagination").
+  pagination('destroy').
+  pagination({
+    items: $(itemSelector).length,
+    itemsOnPage: perPage,
+    cssStyle: 'light-theme',
+    onPageClick: function (pgno, e) {
+      e.preventDefault();
+      $(itemSelector).hide(0).filter(".page-" + pgno).show(0, toggleTitle);
+    },
+    onInit: function () {
+      $(itemSelector).hide(0).filter(".page-1").show(0, toggleTitle);
+    } });
+
+}
+initPagination("#Filter .each-box");
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
