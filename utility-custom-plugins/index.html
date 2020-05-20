@@ -2115,6 +2115,77 @@ body {
 <div id="filterwithpaginationjs">
 <code id=code-js-fifteen class="code javascript" data-clipboard-target=#code-javascript>
 
+     $(".custom-dropdown").click(function() {
+      var dis = $(this),
+        disList = dis.find(".custom-dd-list");
+      dis.toggleClass("active").siblings().removeClass("active").find(".custom-dd-list").hide();
+      $(".custom-dropdown").hasClass("active") ? disList.show() : disList.hide();
+    });
+    $(".custom-dropdown").change(function() {
+      var dis = $(this),
+        disVal = dis.find(".custom-dd-list ul li.cdd-active").attr("data-val");
+      if (disVal != "" && typeof(disVal) != "undefined") {
+        if (dis.hasClass("filter-clients")) {
+          filter = disVal == "all" ? "*" : "." + disVal;
+          console.log("filter => "+filter);
+          ($("#Filter .each-box."+disVal).size() <= 0 && disVal != "all") ? $("#Filter-NoResult").show(): $("#Filter-NoResult").hide();
+          $("#Filter .each-box").hide(0);
+          initPagination("" + filter + ".each-box");
+        }
+      } 
+    });
+    $(".custom-dropdown").find(".custom-dd-list ul li").click(function() {
+      var dis = $(this),
+        selVal = dis.attr("data-val"),
+        selHtml = dis.text();
+      dis.siblings().removeClass("cdd-active");
+      if (typeof selVal != "undefined")
+        dis.parents(".custom-dropdown").find(".custom-dd-selected").html(selHtml);
+      if ((selVal != "") && (typeof selVal != "undefined")) {
+        dis.addClass("cdd-active");
+        dis.removeClass("active").find(".custom-dd-list").hide();
+      }
+      dis.parents(".custom-dropdown").trigger("change");
+    });
+    //document click
+    $(document).click(function(e) {
+      var dis = $(e.target);
+      //close custom dropdown
+      if (!dis.hasClass("custom-dropdown") && !dis.parents(".custom-dropdown").hasClass("custom-dropdown")) {
+        $(".custom-dropdown").removeClass("active").find(".custom-dd-list").hide();
+      }
+    });
+    // Pagination
+    function toggleTitle() {
+      $(".publication-wrapper").each(function() {
+        $(this).find("h3").toggle(($(this).find(".publication-lists:visible").length > 0))
+      })
+    }
+    function initPagination(itemSelector) {
+      console.log(itemSelector);
+      var perPage = 4;
+      $("#Filter .each-box").removeClass(function(index, css) {
+          return (css.match(/(^|\s)page-\S+/g) || []).join(' ');
+      });
+      $(itemSelector).addClass(function(key, val) {
+          return "page-" + (Math.floor(key / perPage) + 1);
+      })
+      $("#pagination")
+        .pagination('destroy')
+        .pagination({
+            items: $(itemSelector).length,
+            itemsOnPage: perPage,
+            cssStyle: 'light-theme',
+            onPageClick: function(pgno, e) {
+                e.preventDefault();
+                $(itemSelector).hide(0).filter(".page-" + pgno).show(0,toggleTitle)
+            },
+            onInit: function() {
+                $(itemSelector).hide(0).filter(".page-1").show(0,toggleTitle)
+            }
+        });
+    }
+    initPagination("#Filter .each-box");
 </code>
 </div>
 <!-- js -->
