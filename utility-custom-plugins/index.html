@@ -2203,6 +2203,90 @@ initPagination("#Filter .each-box");
 </div>
 </div>
 <!-- Filter Ends here-->
+<!--jQuery Countup Starts here -->
+<div class="rule each-module-preview jquerynumbercountup">
+  <div class="title">
+    <h1>16. jQuery Number Countup</h1>
+  </div>
+   <div class="rule" id="16">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="sixteen-tab-group">
+      <li class="tab"><a href="#jquerynumbercountuphtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#jquerynumbercountupcss">Styling</a></li>
+      <li class="tab"><a href="#jquerynumbercountupjs">Script</a></li>
+      <li class="tab"><a href="#jquerynumbercountupresult">Result</a></li>
+    </ul>
+<pre>
+<div id="sixteen-tab-group" class="tabgroup">
+<!-- html -->
+<div id="jquerynumbercountuphtml" class="tab-content current">
+<code id="code-html-sixteen" class="code html" data-clipboard-target="#code-html">
+ &lt;div class="counter" data-count="150"&gt;0&lt;/div&gt;
+ &lt;div class="counter" data-count="85"&gt;0&lt;/div&gt;
+ &lt;div class="counter" data-count="2200"&gt;0&lt;/div&gt;
+</code>
+</div>
+<!-- html -->
+<!-- css -->
+<div id="jquerynumbercountupcss">
+<code id=code-css-sixteen class="code css" data-clipboard-target=#code-css>
+  body {
+    background-color: #F46A6A;
+    color:#fff;
+    max-width:800px;
+    margin: 100px auto 0;
+    text-align: center;
+    display: table;
+  }
+  .counter {
+    display: table-cell;
+    margin:1.5%;
+    font-size:50px;
+    background-color: #FF6F6F;
+    width:200px;
+    border-radius: 50%;
+    height:200px;
+    vertical-align: middle;
+  }
+</code>
+</div>
+<!-- css -->
+<!-- js -->
+<div id="jquerynumbercountupjs">
+<code id=code-js-sixteen class="code javascript" data-clipboard-target=#code-javascript>
+$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+  {
+    duration: 8000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+    }
+  });   
+});
+</code>
+</div>
+<!-- js -->
+ <div id="jquerynumbercountupresult" class="result-wrap">
+      <iframe width="100%" height="260px" src="codepen-files/jquerynumbercountup.html"></iframe>
+  </div>
+</div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="jquerynumbercountup">jquerynumbercountup</span>
+  </div>
+</div>
+</div>
+</div>
+<!--jQuery Countup Ends here-->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
