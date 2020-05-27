@@ -2232,23 +2232,44 @@ initPagination("#Filter .each-box");
 <!-- css -->
 <div id="jquerynumbercountupcss">
 <code id=code-css-sixteen class="code css" data-clipboard-target=#code-css>
-  body {
-    background-color: #F46A6A;
-    color:#fff;
-    max-width:800px;
-    margin: 100px auto 0;
-    text-align: center;
-    display: table;
+  .acc-container {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #e0e6e7;
   }
-  .counter {
-    display: table-cell;
-    margin:1.5%;
-    font-size:50px;
-    background-color: #FF6F6F;
-    width:200px;
-    border-radius: 50%;
-    height:200px;
-    vertical-align: middle;
+  .eachaccordion-tab {
+    border-bottom: 1px solid #cecece;
+  }
+  .acc-content.open {
+    display: block;
+  }
+  .acc-content {
+    width: 100%;
+    overflow: hidden;
+    display: none;
+  }
+  .acc-content-inner {
+    padding: 10px 0 25px;
+  }
+  .acc-content-inner p {
+    color: #535252;
+    font: 14px/140% "Helvetica", sans-serif;
+    line-height: 140%;
+    padding: 0 30px;
+    margin: 0;
+  }
+  .acc-btn h4 {
+    color: #10576c;
+    font: 16px/140% "Helvetica", sans-serif;
+    padding: 20px;
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.2s;
+  }
+  .eachaccordion-tab.active h4, .eachaccordion-tab:hover h4 {
+    background-color: #e0e6e7;
+    padding: 20px;
+    transition: all 0.2s;
   }
 </code>
 </div>
