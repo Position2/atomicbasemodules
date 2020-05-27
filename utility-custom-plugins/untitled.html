@@ -84,22 +84,11 @@
 <!-- js -->
 <div id="accordionjs">
 <code id=code-js-seventeen class="code javascript" data-clipboard-target=#code-javascript>
-$('.counter').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
-  {
-    duration: 8000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-    }
-  });   
+ $(".eachaccordion-tab .acc-btn").click(function() {
+    var dis = $(this);
+    dis.next(".acc-content").slideDown();
+    dis.parent().addClass("active").siblings(".eachaccordion-tab").removeClass("active").find(".acc-content").slideUp();
+  }).eq(0).trigger("click");
 });
 </code>
 </div>
