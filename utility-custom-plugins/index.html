@@ -71,8 +71,8 @@
                 <li data-val=".scrolltotop">Scroll To Top</li>
                 <li data-val=".searchmatchingfields">Search Matching Fields</li>
                 <li data-val=".filterwithpagination">Filter with Pagination</li>
-                <li data-val=".jquerynumbercountup">jQuery Number Countup</li>
                 <li data-val=".accordion">Accordion</li>
+                <li data-val=".jquerynumbercountup">jQuery Number Countup</li>
               </ul>
             </div>  
           </div>
@@ -97,8 +97,8 @@
                 <li data-filter="scrolltotop">Scroll To Top</li>
                 <li data-filter="searchmatchingfields">Search Matching Fields</li>
                 <li data-filter="filterwithpagination">Filter with Pagination</li>
-                <li data-filter="jquerynumbercountup">jQuery Number Countup</li>
                 <li data-filter="accordion">Accordion</li>
+                <li data-filter="jquerynumbercountup">jQuery Number Countup</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -2205,117 +2205,12 @@ initPagination("#Filter .each-box");
 </div>
 </div>
 <!-- Filter Ends here-->
-<!--jQuery Countup Starts here -->
-<div class="rule each-module-preview jquerynumbercountup">
-  <div class="title">
-    <h1>16. jQuery Number Countup</h1>
-  </div>
-   <div class="rule" id="16">
-    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
-    <ul class="tabs" data-tabgroup="sixteen-tab-group">
-      <li class="tab"><a href="#jquerynumbercountuphtml" class="active">HTML</a></li>
-      <li class="tab"><a href="#jquerynumbercountupcss">Styling</a></li>
-      <li class="tab"><a href="#jquerynumbercountupjs">Script</a></li>
-      <li class="tab"><a href="#jquerynumbercountupresult">Result</a></li>
-    </ul>
-<pre>
-<div id="sixteen-tab-group" class="tabgroup">
-<!-- html -->
-<div id="jquerynumbercountuphtml" class="tab-content current">
-<code id="code-html-sixteen" class="code html" data-clipboard-target="#code-html">
- &lt;div class="counter" data-count="150"&gt;0&lt;/div&gt;
- &lt;div class="counter" data-count="85"&gt;0&lt;/div&gt;
- &lt;div class="counter" data-count="2200"&gt;0&lt;/div&gt;
-</code>
-</div>
-<!-- html -->
-<!-- css -->
-<div id="jquerynumbercountupcss">
-<code id="code-css-sixteen" class="code css" data-clipboard-target=#code-css>
-  .acc-container {
-    width: 600px;
-    margin: 0 auto;
-    border: 1px solid #e0e6e7;
-  }
-  .eachaccordion-tab {
-    border-bottom: 1px solid #cecece;
-  }
-  .acc-content.open {
-    display: block;
-  }
-  .acc-content {
-    width: 100%;
-    overflow: hidden;
-    display: none;
-  }
-  .acc-content-inner {
-    padding: 10px 0 25px;
-  }
-  .acc-content-inner p {
-    color: #535252;
-    font: 14px/140% "Helvetica", sans-serif;
-    line-height: 140%;
-    padding: 0 30px;
-    margin: 0;
-  }
-  .acc-btn h4 {
-    color: #10576c;
-    font: 16px/140% "Helvetica", sans-serif;
-    padding: 20px;
-    cursor: pointer;
-    margin: 0;
-    transition: all 0.2s;
-  }
-  .eachaccordion-tab.active h4, .eachaccordion-tab:hover h4 {
-    background-color: #e0e6e7;
-    padding: 20px;
-    transition: all 0.2s;
-  }
-</code>
-</div>
-<!-- css -->
-<!-- js -->
-<div id="jquerynumbercountupjs">
-<code id="code-js-sixteen" class="code javascript" data-clipboard-target=#code-javascript>
-$('.counter').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
-  {
-    duration: 8000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-    }
-  });   
-});
-</code>
-</div>
-<!-- js -->
- <div id="jquerynumbercountupresult" class="result-wrap">
-      <iframe width="100%" height="260px" src="codepen-files/jquerynumbercountup.html"></iframe>
-  </div>
-</div>
-</pre>
-<div class="keyword-preview-wrap">
-  <div class="tags">
-    <span class="jquerynumbercountup">jquerynumbercountup</span>
-  </div>
-</div>
-</div>
-</div>
-<!--jQuery Countup Ends here-->
 <!-- Accordion Starts -->
 <div class="rule each-module-preview accordion">
   <div class="title">
-    <h1>17. Accordion</h1>
+    <h1>16. Accordion</h1>
   </div>
-   <div class="rule" id="17">
+   <div class="rule" id="16">
     <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
     <ul class="tabs" data-tabgroup="seventeen-tab-group">
       <li class="tab"><a href="#accordionhtml" class="active">HTML</a></li>
@@ -2418,6 +2313,111 @@ $('.counter').each(function() {
 </div>
 </div>
 <!-- Accordion Ends -->
+<!--jQuery Countup Starts here -->
+<div class="rule each-module-preview jquerynumbercountup">
+  <div class="title">
+    <h1>17. jQuery Number Countup</h1>
+  </div>
+   <div class="rule" id="17">
+    <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+    <ul class="tabs" data-tabgroup="sixteen-tab-group">
+      <li class="tab"><a href="#jquerynumbercountuphtml" class="active">HTML</a></li>
+      <li class="tab"><a href="#jquerynumbercountupcss">Styling</a></li>
+      <li class="tab"><a href="#jquerynumbercountupjs">Script</a></li>
+      <li class="tab"><a href="#jquerynumbercountupresult">Result</a></li>
+    </ul>
+<pre>
+<div id="sixteen-tab-group" class="tabgroup">
+<!-- html -->
+<div id="jquerynumbercountuphtml" class="tab-content current">
+<code id="code-html-sixteen" class="code html" data-clipboard-target="#code-html">
+ &lt;div class="counter" data-count="150"&gt;0&lt;/div&gt;
+ &lt;div class="counter" data-count="85"&gt;0&lt;/div&gt;
+ &lt;div class="counter" data-count="2200"&gt;0&lt;/div&gt;
+</code>
+</div>
+<!-- html -->
+<!-- css -->
+<div id="jquerynumbercountupcss">
+<code id="code-css-sixteen" class="code css" data-clipboard-target=#code-css>
+  .acc-container {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #e0e6e7;
+  }
+  .eachaccordion-tab {
+    border-bottom: 1px solid #cecece;
+  }
+  .acc-content.open {
+    display: block;
+  }
+  .acc-content {
+    width: 100%;
+    overflow: hidden;
+    display: none;
+  }
+  .acc-content-inner {
+    padding: 10px 0 25px;
+  }
+  .acc-content-inner p {
+    color: #535252;
+    font: 14px/140% "Helvetica", sans-serif;
+    line-height: 140%;
+    padding: 0 30px;
+    margin: 0;
+  }
+  .acc-btn h4 {
+    color: #10576c;
+    font: 16px/140% "Helvetica", sans-serif;
+    padding: 20px;
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.2s;
+  }
+  .eachaccordion-tab.active h4, .eachaccordion-tab:hover h4 {
+    background-color: #e0e6e7;
+    padding: 20px;
+    transition: all 0.2s;
+  }
+</code>
+</div>
+<!-- css -->
+<!-- js -->
+<div id="jquerynumbercountupjs">
+<code id="code-js-sixteen" class="code javascript" data-clipboard-target=#code-javascript>
+$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+  {
+    duration: 8000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+    }
+  });   
+});
+</code>
+</div>
+<!-- js -->
+ <div id="jquerynumbercountupresult" class="result-wrap">
+      <iframe width="100%" height="260px" src="codepen-files/jquerynumbercountup.html"></iframe>
+  </div>
+</div>
+</pre>
+<div class="keyword-preview-wrap">
+  <div class="tags">
+    <span class="jquerynumbercountup">jquerynumbercountup</span>
+  </div>
+</div>
+</div>
+</div>
+<!--jQuery Countup Ends here-->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
