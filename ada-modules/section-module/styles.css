@@ -1,0 +1,28 @@
+/* 
+Color classes via: http://clrs.cc/ 
+ALL of the styles below are not necessary / purely presentational.
+*/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  line-height: 1.5;
+}
+
+.box {
+  padding: 5rem 10rem;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: .25rem;
+  max-width: 45rem;
+}
+
+code {
+  background-color: #ddd;
+  padding: 1px 4px;
+  border-radius: 3px;
+}

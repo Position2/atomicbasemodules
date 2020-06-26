@@ -1,0 +1,28 @@
+<!-- https://codepen.io/adamjohnson/pen/Yzwwzxx -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>section</title>
+</head>
+<body>
+	<section aria-labelledby="my-first-section" class="bg-navy aqua box">
+  <h2 id="my-first-section">The first section!</h2>
+  <p>This section has an aria-labelledby that is correct.</p>
+</section>
+
+<section aria-labelledby="second-section" class="bg-teal navy box">
+  <h2 id="second-section">Second section</h2>
+  <p>This section has an aria-labelledby that is correct.</p>
+</section>
+
+<section aria-labelledby="aria__example-id--1233" class="bg-yellow box">
+  <h2 id="aria__example-id--1233">Third section</h2>
+  <p>This section has an aria-labelledby that is, again, correct.</p>
+</section>
+
+<section aria-labelledby="incorrect-stuff" class="bg-red navy box">
+  <h2 id="this-id-and-aria-labelledby-dont-match">Fourth *incorrect* section</h2>
+  <p>This section has an aria-labelledby that <strong>incorrect</strong>! Notice how the <code>aria-labelledby</code> and <code>id</code> attributes don't match. This is what causes accessibility problems. If you have multiple <code>section</code> tags on a page, each respective section tag must have a valid <code>aria-labelledby</code> or <code>aria-label</code> attribute. We should also only use <code>aria-label</code> as a <a href="https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html" class="yellow">last resort</a>.</p>
+</section>
+</body>
+</html>
