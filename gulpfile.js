@@ -111,6 +111,7 @@ var paths = [
   ["module-fourtythree/module-scss/style.scss","module-fourtythree/css","module-fourtythree/module-scss/*.scss"],
   ["module-fiftytwo/module-scss/style.scss","module-fiftytwo/css","module-fiftytwo/module-scss/*.scss"],
   ["module-fiftythree/module-scss/style.scss","module-fiftythree/css","module-fiftythree/module-scss/*.scss"],
+  ["module-fiftyfour/module-scss/style.scss","module-fiftyfour/css","module-fiftyfour/module-scss/*.scss"],
   ["errorpage-one/errorpage-scss/style.scss","errorpage-one/css","errorpage-one/errorpage-scss/*.scss"],
   ["errorpage-two/errorpage-scss/style.scss","errorpage-two/css","errorpage-two/errorpage-scss/*.scss"],
   ["login-one/login-scss/style.scss","login-one/css","login-one/login-scss/*.scss"],
