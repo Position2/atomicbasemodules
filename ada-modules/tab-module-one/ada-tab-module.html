@@ -1,0 +1,98 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ADA tab</title>
+</head>
+<body>
+	<div class="container">
+  <header>
+    <h1>An accessible tabs component</h1>
+    <h2>Supports multiple tabs components on the same page.</h2>
+  </header>
+</div>
+
+<div class="container">
+  <section class="tabs-block">
+    <ul class="tab-wrapper is-d-flex">
+      <li><button data-target="1" data-open="true">Tab 1</button></li>
+      <li><button data-target="2">Tab 2</button></li>
+      <li><button data-target="3">Tab 3</button></li>
+      <li><button data-target="4">Tab 4</button></li>
+    </ul>
+    <div class="panel-wrapper">
+      <div class="panel" data-panel="1">
+        <p>Panel 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="panel" data-panel="2">
+        <p>Panel 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        </p>
+      </div>
+      <div class="panel" data-panel="3">
+        <p>Panel 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+      <div class="panel" data-panel="4">
+        <p>Panel 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="container text-block">
+  <h3>Accessibility attributes dynamically added and toggled:</h3>
+    <ul>
+      <li>role='tablist'</li>
+      <li>role='tab'</li>
+      <li>role='tabpanel'</li>
+      <li>aria-controls='{unique panel id}'</li>
+      <li>aria-labelledby='{unique tab id}'</li>
+      <li>aria-selected='{bool}'</li>
+    </ul>
+    <p>Add <span>data-open='true'</span> to any tab to open by default</p>
+</div>
+
+<div class="container">
+  <section class="tabs-block">
+    <ul class="tab-wrapper is-d-flex">
+      <li><button data-target="1">Tab title 1</button></li>
+      <li><button data-target="2">Tab title 2</button></li>
+      <li><button data-target="3" data-open="true">Tab title 3</button></li>
+      <li><button data-target="4">Tab title 4</button></li>
+    </ul>
+    <div class="panel-wrapper">
+      <div class="panel" data-panel="1">
+        <p>Panel 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="panel" data-panel="2">
+        <p>Panel 2 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+      <div class="panel" data-panel="3">
+        <p>Panel 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="panel" data-panel="4">
+        <p>Panel 4 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
