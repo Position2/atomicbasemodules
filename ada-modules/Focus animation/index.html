@@ -1,0 +1,39 @@
+<!-- https://codepen.io/aledile/pen/jOOqXbw -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div id="header">
+    <h1>Animated Focus outline</h1>
+    <p>Press the <b>[tab]</b> key or click on inputs to move focus from one element to the next.<br />
+The focus element speed is regulated by a parameter (in pixel per second) but there's also a max-speed parameter (in ms) so that the element doesn't move too quickly between two close elements.<br />
+
+    For elements with already very evident focus styles, such as a button, I added a <i>"data-nofocustyle"</i> attribute so that the focus outline just fades out.</p>
+    </div>
+  <span id="indicator"></span>
+  <div class="half">
+<input type="text" placeholder="Insert name..."><br>
+ <input type="text" placeholder="Insert surname..."></div><div class="half">
+  <label for="gender"><b>Select your gender:</b></label><br /><br />
+<input type="radio" name="gender" data-nofocustyle="true"  value="male"> Male<br>
+<input type="radio" name="gender" value="female"> Female<br>
+<input type="radio" name="gender" value="other"> Other<br>
+</div>
+  <div class="full">
+    <input type="checkbox" name="consent"><label for="consent">Consent to <a href="#">privacy</a>?</label><br />
+<button data-nofocustyle="true" 
+">SUBMIT!</button>
+    </div>
+  
+  </div>
+
+	
+</body>
+</html>
