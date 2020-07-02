@@ -42,7 +42,7 @@
 */
 
 class Tabs {
-  tabsBlocks: NodeListOf<HTMLElement>;
+  tabsBlocks: NodeListOf < HTMLElement > ;
 
   constructor() {
     this.tabsBlocks = document.querySelectorAll(".tabs-block");
@@ -86,7 +86,7 @@ class Tabs {
           const associatedTab = tabBlock.querySelector(
             `[data-target="${panel.dataset.panel}"]`
           );
-          
+
           panel.setAttribute("role", "tabpanel");
           panel.setAttribute("aria-labelledby", `${associatedTab.id}`);
         });
