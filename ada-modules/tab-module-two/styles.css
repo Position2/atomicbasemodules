@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #5433ff;
+  background: -webkit-linear-gradient(to right, #a5fecb, #20bdff, #5433ff);
+  background: linear-gradient(to right, #a5fecb, #20bdff, #5433ff);
+}
+
+.tabs {
+  position: relative;
+  height: 500px;
+}
+.tabs .tab-content {
+  overflow: hidden;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 200ms all linear;
+}
+.tabs .tab-content.active {
+  opacity: 1;
+}
+
+.tabs.carousel {
+  position: relative;
+  text-align: center;
+}
+.tabs.carousel .dots {
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
+  padding: 0.25rem;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+.tabs.carousel .tab {
+  margin: 0 auto;
+  border-bottom: none;
+  padding: 0.25rem;
+  min-width: auto;
+  line-height: initial;
+  text-decoration: none;
+  color: white;
+  transition: 200ms all linear;
+}
+.tabs.carousel .tab:hover {
+  border-bottom: none;
+  color: #5433ff;
+}
+.tabs.carousel .tab[aria-selected="true"] {
+  color: #5433ff;
+}
+
+.tabs.carousel.vertical .dots {
+  position: absolute;
+  width: auto;
+  right: 1rem;
+  left: auto;
+}
+.tabs.carousel.vertical .dots a {
+  display: block;
+}
