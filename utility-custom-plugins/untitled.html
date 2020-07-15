@@ -1,761 +1,606 @@
- <!-- skewed slider Starts here -->
-<div class="rule each-module-preview skewedslider">
+ <!-- Simple FIlter Starts here -->
+<div class="rule each-module-preview simplefilter">
   <div class="title">
-      <h1>18. Skewed Slider</h1>
+      <h1>19. Simple Filter</h1>
   </div>
-  <div class="rule" id="18">
+  <div class="rule" id="19">
       <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
-      <ul class="tabs" data-tabgroup="eighteen-tab-group">
-          <li class="tab"><a href="#skewedsliderhtml" class="active">HTML</a></li>
-          <li class="tab"><a href="#skewedslidercss">Styling</a></li>
-          <li class="tab"><a href="#skewedsliderjs">Script</a></li>
-          <li class="tab"><a href="#skewedsliderresult">Result</a></li>
+      <ul class="tabs" data-tabgroup="nineteen-tab-group">
+          <li class="tab"><a href="#simplefilterhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#simplefiltercss">Styling</a></li>
+          <li class="tab"><a href="#simplefilterjs">Script</a></li>
+          <li class="tab"><a href="#simplefilterresult">Result</a></li>
       </ul>
 <pre>
-<div id="eighteen-tab-group" class="tabgroup">
-<div id="skewedsliderhtml">
-<code id="code-html-eighteen" class="code html" data-clipboard-target="#code-html">
- &lt;section id="AboutUs"&gt;
-    &lt;div class="container"&gt;
-      &lt;div class="title-wrap"&gt;
-        &lt;div class="title"&gt;
-          &lt;h1&gt;About Us&lt;/h1&gt;
-        &lt;/div&gt;
-        &lt;div class="title-description"&gt;
-          &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="wrapper"&gt;
-        &lt;div class="slider"&gt;
-          &lt;div class="slider__item active"&gt;
-            &lt;div class="slider__img-gauche"&gt;
-              &lt;div class="about-mob-wrap"&gt;
-                &lt;img src="../images/about-slide-1.jpg" class="about-mob-img" alt=""&gt;               
-              &lt;/div&gt;
-              &lt;div class="slider__textg"&gt;
-                &lt;h3 class="bigtitle"&gt;What is Lorem Ipsum?&lt;/h3&gt; 
-                &lt;p class="description"&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.&lt;/p&gt;
+<div id="nineteen-tab-group" class="tabgroup">
+<div id="simplefilterhtml">
+<code id="code-html-nineteen" class="code html" data-clipboard-target="#code-html">
+   &lt;div class="portfolio-filter"&gt;
+        &lt;div class="filter-wrap"&gt;
+          &lt;div class="portfolio-header-wrap"&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="filter-clients"&gt;
+                &lt;h3&gt;Filter By :&lt;/h3&gt;
+                &lt;ul&gt;
+                  &lt;li data-val="featured" class="active"&gt;Featured&lt;/li&gt;
+                  &lt;li data-val="*"&gt;All&lt;/li&gt;
+                  &lt;li data-val="current"&gt;Current&lt;/li&gt;
+                  &lt;li data-val="exits"&gt;Exits&lt;/li&gt;
+                  &lt;li class="nofilter"&gt;Sector&lt;/li&gt;
+                &lt;/ul&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;div class="slider__item"&gt;
-            &lt;div class="slider__img-droite"&gt;
-              &lt;div class="about-mob-wrap"&gt;
-               &lt;img src="../images/about-slide-2.jpg" class="about-mob-img" alt=""&gt;
-             &lt;/div&gt;
-              &lt;div class="slider__textd"&gt;
-                &lt;h3 class="bigtitle"&gt;Why do we use it?&lt;/h3&gt; 
-                &lt;p class="description"&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. &lt;/p&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="slider__item third"&gt;
-            &lt;div class="slider__img-droite"&gt;
-              &lt;div class="about-mob-wrap"&gt;
-               &lt;img src="../images/about-slide-3.jpg" class="about-mob-img" alt=""&gt;
-             &lt;/div&gt;
-              &lt;div class="slider__textd"&gt;
-                &lt;h3 class="bigtitle"&gt;Where does it come from?&lt;/h3&gt;
-               &lt;p class="description"&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature&lt;/p&gt;
+          &lt;div id="Filter"&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="each-box-wrapper clearfix"&gt;
+                &lt;div class="each-box"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://logodix.com/logo/2004335.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testtwo"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://bankingthefuture.com/wp-content/uploads/2019/04/dummylogo.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testone"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://logopond.com/logos/dc5cc8314658dcbce4536affc4772f78.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.logologo.com/logos/spinning-letter-s-logo.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.logologo.com/logos/blue-y-logo.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://image.shutterstock.com/image-vector/abstract-initial-letter-y-logo-260nw-1711047352.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box current"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.medfood2u.com/assets/logo-main.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box current"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://familydoctor.com.au/wp-content/uploads/sites/15/2018/01/logo-dummy-768x320.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box featured exits"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.designevo.com/res/templates/thumb_small/green-leaf-and-opened-book.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box featured exits"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://image.shutterstock.com/image-vector/education-book-logo-sign-symbol-260nw-548082964.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box featured exits"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.designevo.com/res/templates/thumb_small/green-leaf-and-opened-book.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box sector"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://i.pinimg.com/originals/ce/8a/07/ce8a0754827a1b19c2247333338fa5f0.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box sector"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.designevo.com/res/templates/thumb_small/green-wing-and-blue-round.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testone"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.logoground.com/uploads/201658352016-01-214991427dental-association-logo.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testone"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.sritirumalaelevators.com/img/dummy.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box featured testtwo"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.logologo.com/logos/spinning-letter-s-logo.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box featured testtwo"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.logologo.com/logos/blue-y-logo.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box sector"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://gurukrupahospitality.com/wp-content/uploads/2016/09/Client-2.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box featured"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://peterpanme.com/wp-content/uploads/2018/04/dummy-logo.gif"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testtwo"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.diyconstruction.com/wp-content/uploads/2015/02/logo5.png"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testone"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://ipac.page/images/brand-logo-2.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box current"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://ipac.page/images/brand-logo-1.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testtwo"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://www.logologo.com/logos/abstract-b-logo.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="each-box testtwo"&gt;
+                  &lt;div class="client-logo"&gt;
+                    &lt;img src="https://image.freepik.com/free-vector/real-estate-logo-design_23-2147505121.jpg"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="overlay"&gt;
+                    &lt;div class="client-desc"&gt;
+                      &lt;h3&gt;Logo&lt;/h3&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntet &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
 </code>
 </div>
-<div id="skewedslidercss">
-<code id="code-css-eighteen" class="code css" data-clipboard-target=#code-css>
-#AboutUs {
-  padding: 60px 0 45px;
+<div id="simplefiltercss">
+<code id="code-css-nineteen" class="code css" data-clipboard-target=#code-css>
+portfolio-filter .filter-wrap .portfolio-header-wrap {
+  background-color: rgba(0, 51, 102, 0.078);
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients {
+  padding-top: 20px;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients h3 {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0 40px 0 0;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li {
+  color: #666;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: top;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  width: 180px;
+  text-align: center;
+  position: relative;
+  transition: all 0.1s ease;
+  padding-bottom: 16px;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:hover,
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li.active {
+  color: #2c75bb;
+  cursor: pointer;
   position: relative;
 }
-
-@media (max-width: 767.98px) {
-  #AboutUs {
-    padding: 30px 0 40px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199.98px) {
-  #AboutUs {
-    padding: 40px 0;
-  }
-}
-
-#AboutUs::before {
-  background: url("../images/about-alpha-left-bg.svg") no-repeat 0 0;
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:hover::after,
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li.active::after {
+  position: absolute;
+  bottom: -5px;
+  width: 120px;
+  height: 100%;
+  left: 32px;
+  border-bottom: 2px solid #2c75bb;
   content: "";
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  width: 3px;
+  height: 45px;
+  border-right: 2px solid #c9cccd;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child {
+  position: relative;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child::before,
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child::after {
+  display: none;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child span i {
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  height: 28px;
+  vertical-align: middle;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child ul.filter-sub-menu {
+  display: none;
+  position: absolute;
+  top: 44px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 51, 102, 0.078);
+  z-index: 9;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child ul.filter-sub-menu li {
+  text-align: left;
+  padding: 15px 0 15px 45px;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child ul.filter-sub-menu li::before,
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:last-child ul.filter-sub-menu li::after {
+  display: none;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap .filter-clients ul li:hover ul.filter-sub-menu {
+  display: block;
+}
+.portfolio-filter .filter-wrap #Filter {
+  padding: 60px 0;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box {
+  float: left;
+  width: 25%;
+  position: relative;
+  height: 220px;
+  border-right: 1px solid #f2f2f2;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 10px;
+  width: 10px;
+  background: transparent;
+  border-radius: 50%;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .whitepaper-icon {
+  width: 33px;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .whitepaper-icon img {
+  width: 100%;
+  height: auto;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .overlay {
   position: absolute;
   top: 0;
-  width: 300px;
-  height: 100%;
-  left: -300px;
-  -webkit-transition: 0.8s all;
-  transition: 0.8s all;
-  z-index: 99;
-  z-index: -1;
-}
-
-@media (max-width: 1199.98px) {
-  #AboutUs::before {
-    background-size: contain;
-    width: 150px;
-    left: 0;
-  }
-}
-
-#AboutUs::after {
-  background: url("../images/about-alpha-right-bg.svg") no-repeat bottom;
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 100%;
   bottom: 0;
-  right: -300px;
-  -webkit-transition: 0.8s all;
-  transition: 0.8s all;
-  z-index: 99;
-  z-index: -1;
-}
-
-@media (max-width: 1199.98px) {
-  #AboutUs::after {
-    background-size: contain;
-    width: 150px;
-    right: 0;
-  }
-}
-
-#AboutUs.fade-in-right::before {
   left: 0;
-  -webkit-transition: 0.8s all;
-  transition: 0.8s all;
-}
-
-#AboutUs.fade-in-right::after {
   right: 0;
-  -webkit-transition: 0.8s all;
-  transition: 0.8s all;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #003462;
 }
-
-#AboutUs .title-wrap {
-  margin-bottom: 50px;
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box:hover .overlay {
+  opacity: 1;
 }
-
-@media (max-width: 1199.98px) {
-  #AboutUs .title-wrap {
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .title-wrap {
-    text-align: center;
-  }
-  #AboutUs .title-wrap .title h1 {
-    font-size: 1.875rem;
-    font-weight: 700;
-  }
-  #AboutUs .title-wrap .title-description p {
-    font-size: 1.25rem;
-  }
-}
-
-#AboutUs .title-wrap .title {
-  display: inline-block;
-  vertical-align: middle;
-  border-right: 1px solid #e0e0e0;
-  padding-right: 30px;
-  margin-right: 30px;
-  min-height: 60px;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .title-wrap .title {
-    display: block;
-    border-right: none;
-    padding-right: 0;
-    margin-right: 0;
-    min-height: auto;
-    margin-bottom: 15px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199.98px) {
-  #AboutUs .title-wrap .title {
-    min-height: 40px;
-    padding-right: 20px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  #AboutUs .title-wrap .title {
-    border-right: none;
-  }
-}
-
-#AboutUs .title-wrap .title h1 {
-  color: #000;
-  font-size: 3rem;
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
-  line-height: 1;
-  margin: 0;
-}
-
-@media (max-width: 1199.98px) {
-  #AboutUs .title-wrap .title h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #AboutUs .title-wrap .title h1 {
-    font-size: 2rem;
-  }
-}
-
-#AboutUs .title-wrap .title h2 {
-  color: #000;
-  font-size: 3rem;
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
-  line-height: 1;
-  margin: 0;
-  font-size: 1.875rem;
-  font-family: "Rubik", sans-serif;
-  font-weight: 700;
-  padding-top: 12px;
-}
-
-@media (max-width: 1199.98px) {
-  #AboutUs .title-wrap .title h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #AboutUs .title-wrap .title h2 {
-    font-size: 2rem;
-    line-height: 1.3;
-  }
-}
-
-#AboutUs .title-wrap .title-description {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-@media (max-width: 991.98px) {
-  #AboutUs .title-wrap .title-description {
-    display: block;
-    width: 100%;
-  }
-}
-
-#AboutUs .title-wrap .title-description p {
-  color: #333333;
-  font-size: 1.125rem;
-  font-family: "Rubik", sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
-  margin: 0;
-}
-
-@media (max-width: 1199.98px) {
-  #AboutUs .title-wrap .title-description p {
-    font-size: 1rem;
-  }
-}
-
-#AboutUs .wrapper {
-  max-width: 100%;
-  margin: 0px auto;
-  background: #000;
-  overflow: hidden;
-}
-
-#AboutUs .bigtitle {
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box:hover .client-desc {
   display: block;
-  font-size: 1.25rem;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0 0 15px;
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
 }
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #AboutUs .bigtitle {
-    font-size: 0.87rem;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #AboutUs .bigtitle {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .bigtitle {
-    font-size: 1.5625rem;
-    font-family: "Rubik", sans-serif;
-    font-weight: 700;
-  }
-}
-
-#AboutUs .description {
-  font-size: 1rem;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc {
+  padding: 20px;
   display: none;
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
+  height: 220px;
 }
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #AboutUs .description {
-    font-size: .75rem;
-  }
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc h3 {
+  color: #fefefe;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 20px;
 }
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #AboutUs .description {
-    font-size: 0.87rem;
-  }
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc p {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  line-height: 1.3;
 }
-
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links {
+  margin-top: 20px;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links .web-link {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links .web-link:hover {
+  opacity: 0.8;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links .web-link a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links .web-link img {
+  width: 15px;
+  height: auto;
+  display: inline-block;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links .anchor-link.casestudy-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #4d7191;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links .anchor-link.casestudy-link a {
+  color: #fefefe;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-desc .links .anchor-link.casestudy-link a span i {
+  color: #fff;
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-logo {
+  width: 140px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.portfolio-filter .filter-wrap #Filter .each-box-wrapper .each-box .client-logo img {
+  width: 100%;
+  height: auto;
+}
+#Breadcrumb {
+  padding: 20px 0 0;
+}
 @media (max-width: 767.98px) {
-  #AboutUs .description {
-    display: block;
-    font-size: 1.0625rem;
-    font-family: "Rubik", sans-serif;
-    font-weight: 400;
-  }
-}
-
-#AboutUs .slider__item .about-mob-wrap {
-  position: relative;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__item .about-mob-wrap:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, rgba(0, 0, 0, 0.3)), to(black));
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 80%, black 100%);
-    /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=0);
-    /* ie6-9 */
-  }
-}
-
-@media (min-width: 768px) {
-  #AboutUs .slider__item .about-mob-wrap img.about-mob-img {
+  #Breadcrumb {
     display: none;
   }
 }
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__item .about-mob-wrap img.about-mob-img {
-    width: 100%;
-  }
+#Breadcrumb ul {
+  padding: 0;
+  margin: 0;
 }
-
-#AboutUs .slider__item.active .description {
-  display: block;
-  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__item.active .description {
-    -webkit-animation: none;
-            animation: none;
-  }
-}
-
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(-500px);
-    transform: translateX(-500px);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
-  }
-}
-
-#AboutUs .slider__item.active .bigtitle {
-  display: block;
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-}
-
-#AboutUs .slider__item.third {
-  -webkit-box-flex: 2.6;
-          flex: 2.6;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #AboutUs .slider__item.third {
-    -webkit-box-flex: 3;
-            flex: 3;
-  }
-}
-
-#AboutUs .slider__item.third .slider__img-droite {
-  background-image: url(../images/about-slide-3.jpg);
-  background-blend-mode: multiply;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: -170px;
-  bottom: 0;
-  right: -100px;
-  -webkit-transform: skew(20deg);
-          transform: skew(20deg);
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__item.third .slider__img-droite {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__item.third .slider__img-droite {
-    position: static;
-    display: block;
-    -webkit-transform: skew(0deg);
-            transform: skew(0deg);
-    -webkit-filter: grayscale(0);
-            filter: grayscale(0);
-    background-image: none;
-  }
-}
-
-#AboutUs .slider {
-  background: transparent;
-  height: 520px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: flex;
-  margin-left: -50px;
-  margin-right: -285px;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider {
-    height: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    display: block;
-  }
-}
-
-#AboutUs .slider__item {
-  -webkit-box-flex: 2;
-          flex: 2;
-  border-left: 10px solid #fff;
-  -webkit-transform: skew(-20deg);
-          transform: skew(-20deg);
-  overflow: hidden;
+#Breadcrumb ul li {
+  color: #333;
+  line-height: 1;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 10px 0 0;
   position: relative;
-  left: -65px;
-  opacity: 1;
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #AboutUs .slider__item {
-    left: -54px;
-    -webkit-box-flex: 2.5;
-            flex: 2.5;
-  }
+#Breadcrumb ul li:last-child::before {
+  display: none;
 }
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #AboutUs .slider__item {
-    left: -54px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__item {
-    border-left: none;
-    -webkit-transform: skew(0deg);
-            transform: skew(0deg);
-    position: static;
-    background-color: #fff;
-  }
-}
-
-#AboutUs .slider__item.active {
-  -webkit-box-flex: 3.5;
-          flex: 3.5;
-  opacity: 1;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__item.active {
-    border-left: none;
-    position: static;
-    -webkit-transform: skew(0deg);
-            transform: skew(0deg);
-  }
-}
-
-#AboutUs .slider__item.active .slider__img-droite,
-#AboutUs .slider__item.active .slider__img-gauche {
-  -webkit-filter: grayscale(0);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0);
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-}
-
-#AboutUs .slider__img-gauche {
-  background-image: url(../images/about-slide-1.jpg);
-  background-blend-mode: multiply;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
+#Breadcrumb ul li::before {
+  color: #999;
+  content: "/";
   position: absolute;
-  top: 0;
-  left: 0px;
-  bottom: 0;
-  right: -170px;
-  -webkit-transform: skew(20deg);
-          transform: skew(20deg);
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
+  right: 0;
+}
+#Breadcrumb ul li a {
+  font-weight: 600;
+  color: #999;
+}
+#Breadcrumb ul li a:hover {
+  text-decoration: underline;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap.is_stuck {
+  background-color: #ebeff3;
+  z-index: 99999;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap.is_stuck #Breadcrumb {
+  display: none;
+}
+.portfolio-filter .filter-wrap .portfolio-header-wrap.is_stuck .filter-clients ul li:last-child ul.filter-sub-menu {
+  background-color: #ebeff3;
 }
 
-@media (max-width: 767.98px) {
-  #AboutUs .slider__img-gauche {
-    background-image: none;
-    margin-bottom: 20px;
-    background-color: #000;
-  }
-}
-
-#AboutUs .slider__img-gauche::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(130%, black));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 130%);
-  /* w3c */
-  z-index: -1;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__img-gauche::before {
-    background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #AboutUs .slider__img-gauche {
-    right: -110px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__img-gauche {
-    position: static;
-    display: block;
-    -webkit-transform: skew(0deg);
-            transform: skew(0deg);
-    -webkit-filter: grayscale(0);
-            filter: grayscale(0);
-  }
-}
-
-#AboutUs .slider__textg, #AboutUs .slider__textd {
-  color: #fff;
-  position: absolute;
-  left: 15%;
-  bottom: 0;
-  padding: 30px 40px 30px 30px;
-  width: 460px;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__textg, #AboutUs .slider__textd {
-    position: static;
-    width: 100%;
-    padding: 10px 24px 30px 24px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #AboutUs .slider__textg, #AboutUs .slider__textd {
-    width: 266px;
-    left: 17%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #AboutUs .slider__textg, #AboutUs .slider__textd {
-    width: 370px;
-  }
-}
-
-#AboutUs .slider__img-droite {
-  background-image: url(../images/about-slide-2.jpg);
-  background-blend-mode: multiply;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: -170px;
-  bottom: 0;
-  right: -100px;
-  -webkit-transform: skew(20deg);
-          transform: skew(20deg);
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__img-droite {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-    -webkit-transition: none;
-    transition: none;
-    background-image: none;
-    margin-bottom: 20px;
-    background-color: #000;
-  }
-}
-
-#AboutUs .slider__img-droite::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(130%, black));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 130%);
-  /* w3c */
-  z-index: -1;
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__img-droite::before {
-    background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .slider__img-droite {
-    position: static;
-    display: block;
-    -webkit-transform: skew(0deg);
-            transform: skew(0deg);
-    -webkit-filter: grayscale(0);
-            filter: grayscale(0);
-  }
-}
-
-@media (max-width: 767.98px) {
-  #AboutUs .secondary-cta {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
 </code>
 </div>
-<div id="skewedsliderjs">
-<code id="code-css-eighteen" class="code javascript" data-clipboard-target=#code-javascript>
-$("#each-team-wrapper").skewedslider({
-  itemSelector : ".each-team",
-  activeFirst : false,
-  closeinnerelem:"X",
-  scrollOffset: $("#Header").outerHeight()
-})
+<div id="simplefilterjs">
+<code id="code-css-nineteen" class="code javascript" data-clipboard-target=#code-javascript>
+$(".filter-clients li").not($(".nofilter")).click(function() {
+  var disVal = $(this).data("val"),
+      fC = (disVal == "*") ? disVal : "."+disVal;
+  $(this).addClass("active").siblings("li").removeClass("active");
+  $(".each-box-wrapper .each-box").hide().filter(fC).show();
+}).eq(0).trigger("click");
+  $('#InnerBodyWrpapper .portfolio-header-wrap ul li').click(function() {
+     var offset = $('#InnerBodyWrpapper .each-box-wrapper').offset().top - $("#Header").outerHeight() - 100;
+     $('html,body').stop().animate({ scrollTop: offset }, 0);
+  });
 </code>
 </div>
-<div id="skewedsliderresult" class="result-wrap">
-<iframe width="100%" height="260px" src="codepen-files/skewedslider.html"></iframe>
+<div id="simplefilterresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/simplefilter.html"></iframe>
 </div>
 </div>
 </pre>
 </div>
 <div class="keyword-preview-wrap">
     <div class="tags">
-      <span class="skewedslider">skewedslider</span>
+      <span class="simplefilter">simplefilter</span>
     </div>
   </div>
 </div>
-<!-- skewed slider ends here -->
+<!-- Simple FIlter ends here -->
