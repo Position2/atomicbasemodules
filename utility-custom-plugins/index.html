@@ -76,6 +76,7 @@
                 <li data-val=".skewedslider">Skewed Slider</li>
                 <li data-val=".simplefilter">Simple Filter</li>
                 <li data-val=".simplefilterwithdropdown">Simple Filter with Dropdown</li>
+                <li data-val=".mansonarygallery">Mansonary Gallery</li>
               </ul>
             </div>  
           </div>
@@ -105,6 +106,7 @@
                 <li data-filter="skewedslider">Skewed Slider</li>
                 <li data-filter="simplefilter">Simple Filter</li>
                 <li data-filter="simplefilterwithdropdown">Simple Filter with Dropdown</li>
+                <li data-filter=".mansonarygallery">Mansonary Gallery</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -4686,6 +4688,151 @@ $(".filter-clients li").not($(".nofilter")).click(function() {
   </div>
 </div>
 <!-- Simple FIlter with Dropdown ends here -->
+ <!-- Mansonary Gallery Starts here -->
+<div class="rule each-module-preview mansonarygallery">
+  <div class="title">
+      <h1>22. Mansonary Gallery</h1>
+  </div>
+  <div class="rule" id="22">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="twenty-two-tab-group">
+          <li class="tab"><a href="#mansonarygalleryhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#mansonarygallerycss">Styling</a></li>
+          <li class="tab"><a href="#mansonarygalleryjs">Script</a></li>
+          <li class="tab"><a href="#mansonarygalleryresult">Result</a></li>
+      </ul>
+<pre>
+<div id="twenty-two-tab-group" class="tabgroup">
+<div id="mansonarygalleryhtml">
+<code id="code-html-twenty-two" class="code html" data-clipboard-target="#code-html">
+&lt;section id="photo-gallery"&gt;
+  &lt;div class="container"&gt;
+      &lt;div class="photo-gallery-wrapper"&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+            &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+            &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"/&gt;
+          &lt;/div&gt;
+          &lt;div class="each-gallery-img"&gt;
+              &lt;img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png"/&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="load-more-cta"&gt;
+          &lt;a href="javascript:void(0)" class="primary-cta"&gt;Load More&lt;/a&gt;
+      &lt;/div>
+  &lt;/div>
+&lt;/section>
+</code>
+</div>
+<div id="mansonarygallerycss">
+<code id="code-css-twenty-two" class="code css" data-clipboard-target=#code-css>
+#photo-gallery {
+  padding: 60px 0;
+  overflow: hidden;
+}
+#photo-gallery .photo-gallery-title {
+  text-align: center;
+}
+#photo-gallery .photo-gallery-wrapper .each-gallery-img {
+  padding: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+  margin-bottom: 5px;
+  width: 290px;
+  margin-right: 5px;
+}
+#photo-gallery .photo-gallery-wrapper .each-gallery-img img {
+  width: 100%;
+  height: auto;
+}
+#photo-gallery .load-more-cta {
+  margin-top: 35px;
+  text-align: center;
+}
+
+</code>
+</div>
+<div id="mansonarygalleryjs">
+<code id="code-css-twenty-two" class="code javascript" data-clipboard-target=#code-javascript>
+var sclGallery = "",
+sclGalCount = 5;
+function sgLoadMore() {
+  $('.photo-gallery-wrapper .each-gallery-img').hide().filter(function() {
+    return ($(this).index() < sclGalCount)
+  }).show();
+  (sclGallery != "") && (sclGallery.masonry('layout'));
+  $(".load-more-cta a").toggle(sclGalCount < $('.photo-gallery-wrapper .each-gallery-img').length)
+  sclGalCount += 5;
+}
+function masonryLayout() {
+  (sclGallery != "") && (sclGallery.masonry('destroy'));
+  sclGallery = $('.photo-gallery-wrapper').masonry({
+    itemSelector: '.each-gallery-img',
+    gutter: 5
+  });
+  sgLoadMore();
+}
+masonryLayout();
+$(".load-more-cta a").click(sgLoadMore);
+
+function findActiveSection() {
+  var winHO = $(window).height(),
+    adjustVal = 200;
+  winH = winHO - adjustVal;
+  var $return = $(".board-card").filter(function() {
+    return $(this).isInViewport();
+  });
+  if ($return.length <= 0) {
+    $return = $(".board-card:first,.board-card:last").filter(function() {
+      return $(this).isInViewport(0);
+    });
+  }
+  return $return;
+}
+</code>
+</div>
+<div id="mansonarygalleryresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/mansonarygallery.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="mansonarygallery">mansonarygallery</span>
+    </div>
+  </div>
+</div>
+<!-- Mansonary Gallery ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
