@@ -4835,6 +4835,179 @@ function findActiveSection() {
   </div>
 </div>
 <!-- Mansonary Gallery ends here -->
+ <!-- Vertical Tabs Starts here -->
+<div class="rule each-module-preview verticaltab">
+  <div class="title">
+      <h1>23. Vertical Tabs</h1>
+  </div>
+  <div class="rule" id="23">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="twenty-three-tab-group">
+          <li class="tab"><a href="#verticaltabhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#verticaltabcss">Styling</a></li>
+          <li class="tab"><a href="#verticaltabjs">Script</a></li>
+          <li class="tab"><a href="#verticaltabresult">Result</a></li>
+      </ul>
+<pre>
+<div id="twenty-three-tab-group" class="tabgroup">
+<div id="verticaltabhtml">
+<code id="code-html-twenty-three" class="code html" data-clipboard-target="#code-html">
+&lt;section id="vertical-tab"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="vertical-tab-wrapper"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4"&gt;
+          &lt;div class="vertical-tab"&gt;
+            &lt;div class="each-tab active" data-target="#Tab1"&gt;
+              &lt;div class="title"&gt;Tab 1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="each-tab" data-target="#Tab2"&gt;
+              &lt;div class="title"&gt;Tab 2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="each-tab" data-target="#Tab3"&gt;
+              &lt;div class="title"&gt;Tab 3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="each-tab" data-target="#Tab4"&gt;
+              &lt;div class="title"&gt;Tab 4&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="each-tab" data-target="#Tab5"&gt;
+              &lt;div class="title"&gt;Tab 5&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8"&gt;
+          &lt;div id="Tab1" class="vertical-tab-content active"&gt;
+            &lt;h3 role="heading"&gt;Tab 1&lt;/h3&gt;
+            &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div id="Tab2" class="vertical-tab-content"&gt;
+            &lt;h3 role="heading"&gt;Tab 2&lt;/h3&gt;
+           &lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div id="Tab3" class="vertical-tab-content"&gt;
+            &lt;h3 role="heading"&gt;Tab 3&lt;/h3&gt;
+           &lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div id="Tab4" class="vertical-tab-content"&gt;
+            &lt;h3 role="heading"&gt;Tab 4&lt;/h3&gt;
+             &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div id="Tab5" class="vertical-tab-content"&gt;
+            &lt;h3 role="heading"&gt;Tab 5&lt;/h3&gt;
+           &lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+</code>
+</div>
+<div id="verticaltabcss">
+<code id="code-css-twenty-three" class="code css" data-clipboard-target=#code-css>
+#vertical-tab {
+  padding: 60px 0;
+}
+#vertical-tab .vertical-tab-wrapper {
+  box-shadow: 0px 0px 5.88px 0.12px rgba(0, 0, 0, 0.14);
+  background: #dee;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab {
+  padding: 15px 30px;
+  background-color: #5d9ccc;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  cursor: pointer;
+  font-size: 0;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab .title {
+  font-size: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  line-height: 1.2;
+  color: #dee;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab.active {
+  background-color: #dee;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab.active .title {
+  color: #1c2a51;
+}
+
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content {
+  display: none;
+  padding: 35px 45px 15px 25px;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content h3 {
+  font-size: 2.25rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  color: #1c2a51;
+  margin: 0 0 30px;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content p {
+  font-size: 1.125rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #1c2a51;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #333333;
+  margin: 0 0 30px;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content.active {
+  display: block;
+}
+#vertical-tab .mobile-vertical-tab {
+  display: none;
+  position: relative;
+  box-shadow: 0px 0px 5.88px 0.12px rgba(0, 0, 0, 0.14);
+}
+#vertical-tab .mobile-vertical-tab .vertical-tab-header .each-tab-header .each-tab {
+  padding: 16px;
+  background-color: #5d9ccc;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  text-align: center;
+}
+#vertical-tab .mobile-vertical-tab .vertical-tab-header .each-tab-header .each-tab .title {
+  font-size: 1.375rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f7dd4b;
+}
+</code>
+</div>
+<div id="verticaltabjs">
+<code id="code-css-twenty-three" class="code javascript" data-clipboard-target=#code-javascript>
+ $(".vertical-tab .each-tab").on("click", function(e) {
+    var dis = $(this),
+      dataTarget = dis.data("target");
+    dis.addClass("active").siblings(".each-tab").removeClass("active");
+    $(".vertical-tab-wrapper .vertical-tab-content").hide();
+    $(dataTarget).show().addClass("active").siblings().removeClass("active");
+});
+</code>
+</div>
+<div id="verticaltabresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/verticaltab.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="verticaltab">verticaltab</span>
+    </div>
+  </div>
+</div>
+<!-- Vertical Tabs ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
