@@ -69,31 +69,82 @@
 </div>
 <div id="verticaltabcss">
 <code id="code-css-twenty-two" class="code css" data-clipboard-target=#code-css>
-#photo-gallery {
+#vertical-tab {
   padding: 60px 0;
-  overflow: hidden;
 }
-#photo-gallery .photo-gallery-title {
-  text-align: center;
+#vertical-tab .vertical-tab-wrapper {
+  box-shadow: 0px 0px 5.88px 0.12px rgba(0, 0, 0, 0.14);
+  background: #dee;
 }
-#photo-gallery .photo-gallery-wrapper .each-gallery-img {
-  padding: 0;
-  margin: 0;
-  float: left;
-  list-style: none;
-  margin-bottom: 5px;
-  width: 290px;
-  margin-right: 5px;
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab {
+  padding: 15px 30px;
+  background-color: #5d9ccc;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  cursor: pointer;
+  font-size: 0;
 }
-#photo-gallery .photo-gallery-wrapper .each-gallery-img img {
-  width: 100%;
-  height: auto;
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab .title {
+  font-size: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  line-height: 1.2;
+  color: #dee;
 }
-#photo-gallery .load-more-cta {
-  margin-top: 35px;
-  text-align: center;
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab.active {
+  background-color: #dee;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab.active .title {
+  color: #1c2a51;
 }
 
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content {
+  display: none;
+  padding: 35px 45px 15px 25px;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content h3 {
+  font-size: 2.25rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  color: #1c2a51;
+  margin: 0 0 30px;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content p {
+  font-size: 1.125rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #1c2a51;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #333333;
+  margin: 0 0 30px;
+}
+#vertical-tab .vertical-tab-wrapper .vertical-tab-content.active {
+  display: block;
+}
+#vertical-tab .mobile-vertical-tab {
+  display: none;
+  position: relative;
+  box-shadow: 0px 0px 5.88px 0.12px rgba(0, 0, 0, 0.14);
+}
+#vertical-tab .mobile-vertical-tab .vertical-tab-header .each-tab-header .each-tab {
+  padding: 16px;
+  background-color: #5d9ccc;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  text-align: center;
+}
+#vertical-tab .mobile-vertical-tab .vertical-tab-header .each-tab-header .each-tab .title {
+  font-size: 1.375rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f7dd4b;
+}
 </code>
 </div>
 <div id="verticaltabjs">
