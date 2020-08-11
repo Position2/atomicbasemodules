@@ -149,41 +149,13 @@
 </div>
 <div id="verticaltabjs">
 <code id="code-css-twenty-two" class="code javascript" data-clipboard-target=#code-javascript>
-var sclGallery = "",
-sclGalCount = 5;
-function sgLoadMore() {
-  $('.photo-gallery-wrapper .each-gallery-img').hide().filter(function() {
-    return ($(this).index() < sclGalCount)
-  }).show();
-  (sclGallery != "") && (sclGallery.masonry('layout'));
-  $(".load-more-cta a").toggle(sclGalCount < $('.photo-gallery-wrapper .each-gallery-img').length)
-  sclGalCount += 5;
-}
-function masonryLayout() {
-  (sclGallery != "") && (sclGallery.masonry('destroy'));
-  sclGallery = $('.photo-gallery-wrapper').masonry({
-    itemSelector: '.each-gallery-img',
-    gutter: 5
-  });
-  sgLoadMore();
-}
-masonryLayout();
-$(".load-more-cta a").click(sgLoadMore);
-
-function findActiveSection() {
-  var winHO = $(window).height(),
-    adjustVal = 200;
-  winH = winHO - adjustVal;
-  var $return = $(".board-card").filter(function() {
-    return $(this).isInViewport();
-  });
-  if ($return.length <= 0) {
-    $return = $(".board-card:first,.board-card:last").filter(function() {
-      return $(this).isInViewport(0);
-    });
-  }
-  return $return;
-}
+ $(".vertical-tab .each-tab").on("click", function(e) {
+    var dis = $(this),
+      dataTarget = dis.data("target");
+    dis.addClass("active").siblings(".each-tab").removeClass("active");
+    $(".vertical-tab-wrapper .vertical-tab-content").hide();
+    $(dataTarget).show().addClass("active").siblings().removeClass("active");
+});
 </code>
 </div>
 <div id="verticaltabresult" class="result-wrap">
