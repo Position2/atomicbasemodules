@@ -692,93 +692,412 @@
 </div>
 <div id="verticalstickylhscss">
 <code id="code-css-twenty-four" class="code css" data-clipboard-target=#code-css>
-#vertical-tab {
-  padding: 60px 0;
-}
-#vertical-tab .vertical-tab-wrapper {
-  box-shadow: 0px 0px 5.88px 0.12px rgba(0, 0, 0, 0.14);
-  background: #dee;
-}
-#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab {
-  padding: 15px 30px;
-  background-color: #5d9ccc;
-  border-bottom: 1px solid #fff;
-  position: relative;
-  cursor: pointer;
-  font-size: 0;
-}
-#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab .title {
-  font-size: 1.5rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  display: inline-block;
-  vertical-align: middle;
-  width: 70%;
-  line-height: 1.2;
-  color: #dee;
-}
-#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab.active {
-  background-color: #dee;
-}
-#vertical-tab .vertical-tab-wrapper .vertical-tab .each-tab.active .title {
-  color: #1c2a51;
+.advisory-boards {
+  display: -webkit-box;
+  display: flex;
 }
 
-#vertical-tab .vertical-tab-wrapper .vertical-tab-content {
-  display: none;
-  padding: 35px 45px 15px 25px;
+@media (max-width: 767.98px) {
+  .advisory-boards {
+    display: block;
+  }
 }
-#vertical-tab .vertical-tab-wrapper .vertical-tab-content h3 {
-  font-size: 2.25rem;
-  font-family: "Source Sans Pro", sans-serif;
+
+.advisory-boards .lhs-sticky-menu {
+  -webkit-box-flex: 1;
+          flex: 1 0 350px;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu {
+    -webkit-box-flex: 1;
+            flex: 1 0 100%;
+  }
+  .advisory-boards .lhs-sticky-menu .custom-dd-list {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .advisory-boards .lhs-sticky-menu {
+    -webkit-box-flex: 1;
+            flex: 1 0 150px;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu ul {
+  margin: 0;
+  padding: 30px 40px;
+  background-color: #191919;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul {
+    background-color: transparent;
+    padding: 0;
+    border: 1px solid #191919;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu ul li {
+  color: #999999;
+  font-size: 1.25rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul li {
+    color: #333333;
+    padding: 14px 16px;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu ul li.active {
+  color: #fff;
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.advisory-boards .lhs-sticky-menu ul li.active::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 30px;
+  background: #fff;
+  left: 0;
+  top: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul li.active {
+    background-color: #191919;
+    color: #fff;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advisory-boards .lhs-sticky-menu ul li:hover {
+    color: #fff;
+    font-weight: 500;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .advisory-boards .lhs-sticky-menu ul li:hover::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 30px;
+    background: #fff;
+    left: 0;
+    top: 14px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul li:hover {
+    background-color: #191919;
+    color: #fff;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu .custom-dd-selected {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu .custom-dd-selected {
+    display: block;
+  }
+}
+
+
+.advisory-boards .rhs-discription {
+  -webkit-box-flex: 1;
+          flex: 1 0 calc(100% - 350px);
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription {
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(100%);
+  }
+}
+
+.advisory-boards .rhs-discription h3 {
+  background: #000;
+}
+
+.advisory-boards .rhs-discription .board-card h3 {
+  padding: 30px 50px;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-card h3 {
+    padding: 20px;
+    font-size: 1.625rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-card h3 {
+    padding: 20px 50px;
+    font-size: 1.625rem;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap {
+  padding-left: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap {
+    padding-left: 30px;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member {
+  float: left;
+  width: calc(100%/3);
+  border-bottom: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+  border-left: 1px solid #ededed;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.member-bio-links {
+  cursor: default;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    width: calc(99.9%/3);
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(1) {
+  border-left: 1px solid #ededed;
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(3n+4) {
+  border-left: 1px solid #ededed;
+}
+
+@media (max-width: 575.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    float: none;
+    width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    width: 50%;
+  }
+  .advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(2), .advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(4) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    width: calc(100%/2);
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+  width: 200px;
+  margin-bottom: 30px;
+  height: 200px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+    width: 100px;
+    margin: 0 auto 30px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+    width: 150px;
+    margin: 0 auto 30px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  border-radius: 50%;
+}
+
+@media (min-width: 1200px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail:hover img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+  color: #000;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
   font-weight: 700;
   line-height: 1;
-  color: #1c2a51;
-  margin: 0 0 30px;
+  text-transform: uppercase;
 }
-#vertical-tab .vertical-tab-wrapper .vertical-tab-content p {
-  font-size: 1.125rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  color: #1c2a51;
-  line-height: 1.4;
+
+@media (max-width: 1199.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+    font-size: 0.87rem;
+    min-height: 36px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+    min-height: auto;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-info p {
+  color: #000;
   font-size: 1rem;
-  color: #333333;
-  margin: 0 0 30px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0;
+  min-height: 32px;
 }
-#vertical-tab .vertical-tab-wrapper .vertical-tab-content.active {
-  display: block;
+
+@media (max-width: 1199.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info p {
+    font-size: 0.87rem;
+    line-height: 1.2;
+    min-height: 52px;
+  }
 }
-#vertical-tab .mobile-vertical-tab {
-  display: none;
-  position: relative;
-  box-shadow: 0px 0px 5.88px 0.12px rgba(0, 0, 0, 0.14);
+
+@media (max-width: 575.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info p {
+    min-height: auto;
+  }
 }
-#vertical-tab .mobile-vertical-tab .vertical-tab-header .each-tab-header .each-tab {
-  padding: 16px;
-  background-color: #5d9ccc;
-  border-bottom: 1px solid #fff;
-  position: relative;
-  text-align: center;
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.active {
+  background-color: #f1f1f1;
 }
-#vertical-tab .mobile-vertical-tab .vertical-tab-header .each-tab-header .each-tab .title {
-  font-size: 1.375rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  line-height: 1.1;
-  color: #f7dd4b;
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.active.member-bio-links {
+  background-color: transparent;
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.active .board-thumbnail img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 </code>
 </div>
 <div id="verticalstickylhsjs">
 <code id="code-css-twenty-four" class="code javascript" data-clipboard-target=#code-javascript>
- $(".vertical-tab .each-tab").on("click", function(e) {
-    var dis = $(this),
-      dataTarget = dis.data("target");
-    dis.addClass("active").siblings(".each-tab").removeClass("active");
-    $(".vertical-tab-wrapper .vertical-tab-content").hide();
-    $(dataTarget).show().addClass("active").siblings().removeClass("active");
-});
+ $(".lhs-sticky-menu ul").stick_in_parent({
+        parent : $(".advisory-boards"), 
+        offset_top: $("#Header").outerHeight()
+      }); 
+       $(".smooth-scroll").click(function() {
+      var dis = $(this),
+          disTarget = dis.data("target"),
+          header = $("#Header"),
+          // hval = (header.css('position') == "absolute") ? 0 : $("#Header").outerHeight(),
+          scrollTo = parseInt($(disTarget).offset().top); //- hval;
+      $('html,body').stop().animate({ scrollTop: scrollTo }, 1000);
+      dis.addClass("active").siblings().removeClass("active");
+    });
+    $.fn.isInViewport = function(opt) {
+      opt = typeof(opt) == "undefined" ? 4 : Number(opt);
+      var dis = $(this),
+          disY = dis[0].getBoundingClientRect().top,
+          disH = dis.outerHeight();
+          adjustVal = opt > 0 ? (disH / opt) : 0;
+      return ((disY < winH) && (Math.abs(disY) < (disH - adjustVal)))
+    };
+    function findActiveSection() {
+      var winHO = $(window).height(),
+          adjustVal = 200;
+          winH  = winHO - adjustVal;
+      var $return = $(".board-card").filter(function() {
+        return $(this).isInViewport();
+      });
+      if($return.length <= 0) {
+        $return = $(".board-card:first,.board-card:last").filter(function() {
+          return $(this).isInViewport(0);
+        });
+      }
+      return $return;
+    }
+     var prop_scrol_time = "";
+    if ($(window).width() > 1024) {
+      $(window).scroll(function() {
+        clearTimeout(prop_scrol_time);
+        prop_scrol_time = setTimeout(function() {
+          var cActive = findActiveSection();
+           $(".smooth-scroll").removeClass("active").filter("[data-target='#" + $(cActive[0]).attr("id") + "']").addClass("active");
+            }, 200);
+      })
+    }
 </code>
 </div>
 <div id="verticalstickylhsresult" class="result-wrap">
