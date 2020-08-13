@@ -1,0 +1,1050 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Sticky LHS and Smooth Scroll</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<style>
+.advisory-boards {
+  display: -webkit-box;
+  display: flex;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards {
+    display: block;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu {
+  -webkit-box-flex: 1;
+          flex: 1 0 350px;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu {
+    -webkit-box-flex: 1;
+            flex: 1 0 100%;
+  }
+  .advisory-boards .lhs-sticky-menu .custom-dd-list {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .advisory-boards .lhs-sticky-menu {
+    -webkit-box-flex: 1;
+            flex: 1 0 150px;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu ul {
+  margin: 0;
+  padding: 30px 40px;
+  background-color: #191919;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul {
+    background-color: transparent;
+    padding: 0;
+    border: 1px solid #191919;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu ul li {
+  color: #999999;
+  font-size: 1.25rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul li {
+    color: #333333;
+    padding: 14px 16px;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu ul li.active {
+  color: #fff;
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.advisory-boards .lhs-sticky-menu ul li.active::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 30px;
+  background: #fff;
+  left: 0;
+  top: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul li.active {
+    background-color: #191919;
+    color: #fff;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advisory-boards .lhs-sticky-menu ul li:hover {
+    color: #fff;
+    font-weight: 500;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .advisory-boards .lhs-sticky-menu ul li:hover::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 30px;
+    background: #fff;
+    left: 0;
+    top: 14px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu ul li:hover {
+    background-color: #191919;
+    color: #fff;
+  }
+}
+
+.advisory-boards .lhs-sticky-menu .custom-dd-selected {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .lhs-sticky-menu .custom-dd-selected {
+    display: block;
+  }
+}
+
+
+.advisory-boards .rhs-discription {
+  -webkit-box-flex: 1;
+          flex: 1 0 calc(100% - 350px);
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription {
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(100%);
+  }
+}
+
+.advisory-boards .rhs-discription h3 {
+  background: #000;
+}
+
+.advisory-boards .rhs-discription .board-card h3 {
+  padding: 30px 50px;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-card h3 {
+    padding: 20px;
+    font-size: 1.625rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-card h3 {
+    padding: 20px 50px;
+    font-size: 1.625rem;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap {
+  padding-left: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap {
+    padding-left: 30px;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member {
+  float: left;
+  width: calc(100%/3);
+  border-bottom: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+  border-left: 1px solid #ededed;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.member-bio-links {
+  cursor: default;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    width: calc(99.9%/3);
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(1) {
+  border-left: 1px solid #ededed;
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(3n+4) {
+  border-left: 1px solid #ededed;
+}
+
+@media (max-width: 575.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    float: none;
+    width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    width: 50%;
+  }
+  .advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(2), .advisory-boards .rhs-discription .board-member-wrap .board-member:nth-child(4) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member {
+    width: calc(100%/2);
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+  width: 200px;
+  margin-bottom: 30px;
+  height: 200px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+    width: 100px;
+    margin: 0 auto 30px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+    width: 150px;
+    margin: 0 auto 30px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  border-radius: 50%;
+}
+
+@media (min-width: 1200px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-thumbnail:hover img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+  color: #000;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1199.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+    font-size: 0.87rem;
+    min-height: 36px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info h4 {
+    min-height: auto;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member .board-info p {
+  color: #000;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0;
+  min-height: 32px;
+}
+
+@media (max-width: 1199.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info p {
+    font-size: 0.87rem;
+    line-height: 1.2;
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .advisory-boards .rhs-discription .board-member-wrap .board-member .board-info p {
+    min-height: auto;
+  }
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.active {
+  background-color: #f1f1f1;
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.active.member-bio-links {
+  background-color: transparent;
+}
+
+.advisory-boards .rhs-discription .board-member-wrap .board-member.active .board-thumbnail img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="advisory-boards">
+<div class="lhs-sticky-menu">
+<ul>
+<li class="smooth-scroll active" data-target="#Boston">Boston</li>
+<li class="smooth-scroll" data-target="#Chicago">Chicago</li>
+<li class="smooth-scroll" data-target="#LosAngeles">Los Angeles</li>
+<li class="smooth-scroll" data-target="#NewYork">New York</li>
+<li class="smooth-scroll" data-target="#SanFrancisco">San Francisco</li>
+<li class="smooth-scroll" data-target="#Seattle">Seattle</li>
+<li class="smooth-scroll" data-target="#Toronto">Toronto</li>
+<li class="smooth-scroll" data-target="#Alumni">Alumni</li>
+</ul>
+</div>
+<div class="rhs-discription">
+<div id="Boston" class="board-card">
+<h3>Boston</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+</div>
+</div>
+<div id="Chicago" class="board-card">
+<h3>Chicago</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+</div>
+</div>
+<div id="LosAngeles" class="board-card">
+<h3>Los Angeles</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+ <div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+</div>
+</div>
+<div id="NewYork" class="board-card">
+<h3>New York</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+</div>
+</div>
+<div id="SanFrancisco" class="board-card">
+<h3>San Francisco</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+ <div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+</div>
+</div>
+<div id="Seattle" class="board-card">
+<h3>Seattle</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+</div>
+</div>
+<div id="Toronto" class="board-card">
+<h3>Toronto</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+ <div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+</div>
+</div>
+<div id="Alumni" class="board-card">
+<h3>Alumni</h3>
+<div class="board-member-wrap clearfix">
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Google</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>LaunchDarkly</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+<div class="board-member">
+<div class="board-thumbnail">
+<img src="https://www.bavarealtors.in/wp-content/uploads/2019/11/dummy-man-570x570.png" alt="Lorem Ipsum">
+</div>
+<div class="board-info">
+<h4>Lorem Ipsum</h4>
+<p>Precursor Ventures</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js'></script>
+<script id="rendered-js">
+$(".lhs-sticky-menu ul").stick_in_parent({
+  parent: $(".advisory-boards"),
+  offset_top: $("#Header").outerHeight() });
+
+$(".smooth-scroll").click(function () {
+  var dis = $(this),
+  disTarget = dis.data("target"),
+  header = $("#Header"),
+  // hval = (header.css('position') == "absolute") ? 0 : $("#Header").outerHeight(),
+  scrollTo = parseInt($(disTarget).offset().top); //- hval;
+  $('html,body').stop().animate({ scrollTop: scrollTo }, 1000);
+  dis.addClass("active").siblings().removeClass("active");
+});
+$.fn.isInViewport = function (opt) {
+  opt = typeof opt == "undefined" ? 4 : Number(opt);
+  var dis = $(this),
+  disY = dis[0].getBoundingClientRect().top,
+  disH = dis.outerHeight();
+  adjustVal = opt > 0 ? disH / opt : 0;
+  return disY < winH && Math.abs(disY) < disH - adjustVal;
+};
+function findActiveSection() {
+  var winHO = $(window).height(),
+  adjustVal = 200;
+  winH = winHO - adjustVal;
+  var $return = $(".board-card").filter(function () {
+    return $(this).isInViewport();
+  });
+  if ($return.length <= 0) {
+    $return = $(".board-card:first,.board-card:last").filter(function () {
+      return $(this).isInViewport(0);
+    });
+  }
+  return $return;
+}
+var prop_scrol_time = "";
+if ($(window).width() > 1024) {
+  $(window).scroll(function () {
+    clearTimeout(prop_scrol_time);
+    prop_scrol_time = setTimeout(function () {
+      var cActive = findActiveSection();
+      $(".smooth-scroll").removeClass("active").filter("[data-target='#" + $(cActive[0]).attr("id") + "']").addClass("active");
+    }, 200);
+  });
+}
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
