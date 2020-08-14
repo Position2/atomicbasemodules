@@ -40,64 +40,25 @@
 </div>
 <div id="continuousscrollcss">
 <code id="code-css-twenty-six" class="code css" data-clipboard-target=#code-css>
-.vertical-autoscroll .right-content ul {
-  margin: 0;
-  padding: 60px 0;
-  width: 600px;
-  margin: 0 auto
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
-
-.vertical-autoscroll .right-content ul li {
-  margin-bottom: 10px;
-background-color: #fff;
-padding: 30px;
-border-radius: 4px;
-box-shadow: 0px 1px 9px 0px rgba(51,51,51,0.3);
-border-bottom: 3px solid #ababab;
-transition: all 0.3s ease;
-width: 600px;
-  list-style: none;
-}
-.vertical-autoscroll .right-content ul li:hover, .vertical-autoscroll .right-content ul li.active {
-  border-bottom: 3px solid #003462;
-}
-a {
-  text-decoration:none;
-  color: #666;
-}
-h4 {
-  color: #999;
-font-size: 20px;
-font-weight: 100;
-font-family: 'avalon demi', sans-serif;
-line-height: 1;
-text-transform: uppercase;
-margin: 0 0 10px;
-}
-p {
-  color: #999;
-  font-size: 18px;
-font-weight: 400;
-font-family: 'avalon demi', sans-serif;
-line-height: 1.5;
-margin: 0;
-transition: all 0.3s ease;
-}
-.vertical-autoscroll .right-content ul li.active h4, .vertical-autoscroll .right-content ul li.active p {
-  color: #252525;
+li {
+    padding: 20px;
 }
 </code>
 </div>
 <div id="continuousscrolljs">
 <code id="code-css-twenty-six" class="code javascript" data-clipboard-target=#code-javascript>
- setInterval(function() {
-    var target = $(".each-tab"),
-        currentActive = target.filter(".active"),
-        nextActive = currentActive.next();
-    nextActive = nextActive.length > 0 ? nextActive : target.eq(0);
-    // nextActive.trigger("click");
-nextActive.addClass("active").siblings().removeClass("active");
-  },3000)
+$('.client-carousel').bxSlider({
+    minSlides: 1,
+    maxSlides: 8,
+    slideWidth: 250,
+    slideMargin: 0,
+    ticker: true,
+    speed: 100000
+  });
 </code>
 </div>
 <div id="continuousscrollresult" class="result-wrap">
