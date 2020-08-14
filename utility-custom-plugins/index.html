@@ -80,6 +80,7 @@
                 <li data-val=".verticaltab">Vertical Tabs</li>
                 <li data-val=".verticalstickylhs">Vertical Sticky LHS</li>
                 <li data-val=".verticalautohighlight">Vertical Auto Highlight</li>
+                <li data-val=".continuousscroll">Continuous Scroll</li>
               </ul>
             </div>  
           </div>
@@ -113,6 +114,7 @@
                 <li data-filter="verticaltab">Vertical Tabs</li>
                 <li data-filter="verticalstickylhs">Vertical Sticky LHS</li>
                 <li data-filter="verticalautohighlight">Vertical Auto Highlight</li>
+                <li data-filter="continuousscroll">Continuous Scroll</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -6241,6 +6243,82 @@ nextActive.addClass("active").siblings().removeClass("active");
   </div>
 </div>
 <!-- Vertical Auto Higlight ends here -->
+ <!-- Continuous Scroll Starts here -->
+<div class="rule each-module-preview continuousscroll">
+  <div class="title">
+      <h1>26. Continuous Scroll</h1>
+  </div>
+  <div class="rule" id="26">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="twenty-six-tab-group">
+          <li class="tab"><a href="#continuousscrollhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#continuousscrollcss">Styling</a></li>
+          <li class="tab"><a href="#continuousscrolljs">Script</a></li>
+          <li class="tab"><a href="#continuousscrollresult">Result</a></li>
+      </ul>
+<pre>
+<div id="twenty-six-tab-group" class="tabgroup">
+<div id="continuousscrollhtml">
+<code id="code-html-twenty-six" class="code html" data-clipboard-target="#code-html">
+&lt;ul class="client-carousel"&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src="https://www.startupsavior.com/wp-content/uploads/2019/12/circle-1.png"&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+</code>
+</div>
+<div id="continuousscrollcss">
+<code id="code-css-twenty-six" class="code css" data-clipboard-target=#code-css>
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+li {
+    padding: 20px;
+}
+</code>
+</div>
+<div id="continuousscrolljs">
+<code id="code-css-twenty-six" class="code javascript" data-clipboard-target=#code-javascript>
+$('.client-carousel').bxSlider({
+    minSlides: 1,
+    maxSlides: 8,
+    slideWidth: 250,
+    slideMargin: 0,
+    ticker: true,
+    speed: 100000
+  });
+</code>
+</div>
+<div id="continuousscrollresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/continuousscroll.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="continuousscroll">continuousscroll</span>
+    </div>
+  </div>
+</div>
+<!-- Continuous Scroll ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
