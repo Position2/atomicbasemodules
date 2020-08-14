@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Vertical Auto Highlight</title>
+<style>
+  body {
+    background-color: #dee;
+  }
+.vertical-autoscroll .right-content ul {
+  margin: 0;
+  padding: 60px 0;
+  width: 600px;
+  margin: 0 auto
+}
+
+.vertical-autoscroll .right-content ul li {
+  margin-bottom: 10px;
+background-color: #fff;
+padding: 30px;
+border-radius: 4px;
+box-shadow: 0px 1px 9px 0px rgba(51,51,51,0.3);
+border-bottom: 3px solid #ababab;
+transition: all 0.3s ease;
+width: 600px;
+  list-style: none;
+  cursor: pointer;
+}
+.vertical-autoscroll .right-content ul li:hover, .vertical-autoscroll .right-content ul li.active {
+  border-bottom: 3px solid #003462;
+}
+a {
+  text-decoration:none;
+  color: #666;
+}
+h4 {
+  color: #999;
+font-size: 20px;
+font-weight: 100;
+font-family: 'avalon demi', sans-serif;
+line-height: 1;
+text-transform: uppercase;
+margin: 0 0 10px;
+}
+p {
+  color: #999;
+  font-size: 18px;
+font-weight: 400;
+font-family: 'avalon demi', sans-serif;
+line-height: 1.5;
+margin: 0;
+transition: all 0.3s ease;
+}
+.vertical-autoscroll .right-content ul li.active h4, .vertical-autoscroll .right-content ul li.active p {
+  color: #252525;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="vertical-autoscroll">
+<div class="tab-wrapper">
+<div class="right-content">
+<ul class="tabs-section">
+<li class="each-tab active">
+<a href=""><h4>What is Lorem Ipsum?</h4>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+</a></li>
+<li class="each-tab">
+<a href=""><h4>Where does it come from?</h4>
+<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
+</a> </li>
+<li class="each-tab">
+<a href=""><h4>Why do we use it?</h4>
+<p>It is a long established fact that a reader will be distracted by the readable content </p>
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script id="rendered-js">
+setInterval(function () {
+  var target = $(".each-tab"),
+  currentActive = target.filter(".active"),
+  nextActive = currentActive.next();
+  nextActive = nextActive.length > 0 ? nextActive : target.eq(0);
+  // nextActive.trigger("click");
+  nextActive.addClass("active").siblings().removeClass("active");
+}, 3000);
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
