@@ -89,51 +89,14 @@ transition: all 0.3s ease;
 </div>
 <div id="verticalautohighlightjs">
 <code id="code-css-twenty-five" class="code javascript" data-clipboard-target=#code-javascript>
- $(".lhs-sticky-menu ul").stick_in_parent({
-        parent : $(".advisory-boards"), 
-        offset_top: $("#Header").outerHeight()
-      }); 
-       $(".smooth-scroll").click(function() {
-      var dis = $(this),
-          disTarget = dis.data("target"),
-          header = $("#Header"),
-          // hval = (header.css('position') == "absolute") ? 0 : $("#Header").outerHeight(),
-          scrollTo = parseInt($(disTarget).offset().top); //- hval;
-      $('html,body').stop().animate({ scrollTop: scrollTo }, 1000);
-      dis.addClass("active").siblings().removeClass("active");
-    });
-    $.fn.isInViewport = function(opt) {
-      opt = typeof(opt) == "undefined" ? 4 : Number(opt);
-      var dis = $(this),
-          disY = dis[0].getBoundingClientRect().top,
-          disH = dis.outerHeight();
-          adjustVal = opt > 0 ? (disH / opt) : 0;
-      return ((disY < winH) && (Math.abs(disY) < (disH - adjustVal)))
-    };
-    function findActiveSection() {
-      var winHO = $(window).height(),
-          adjustVal = 200;
-          winH  = winHO - adjustVal;
-      var $return = $(".board-card").filter(function() {
-        return $(this).isInViewport();
-      });
-      if($return.length <= 0) {
-        $return = $(".board-card:first,.board-card:last").filter(function() {
-          return $(this).isInViewport(0);
-        });
-      }
-      return $return;
-    }
-     var prop_scrol_time = "";
-    if ($(window).width() > 1024) {
-      $(window).scroll(function() {
-        clearTimeout(prop_scrol_time);
-        prop_scrol_time = setTimeout(function() {
-          var cActive = findActiveSection();
-           $(".smooth-scroll").removeClass("active").filter("[data-target='#" + $(cActive[0]).attr("id") + "']").addClass("active");
-            }, 200);
-      })
-    }
+ setInterval(function() {
+    var target = $(".each-tab"),
+        currentActive = target.filter(".active"),
+        nextActive = currentActive.next();
+    nextActive = nextActive.length > 0 ? nextActive : target.eq(0);
+    // nextActive.trigger("click");
+nextActive.addClass("active").siblings().removeClass("active");
+  },3000)
 </code>
 </div>
 <div id="verticalautohighlightresult" class="result-wrap">

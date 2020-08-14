@@ -6127,6 +6127,120 @@ function findActiveSection() {
   </div>
 </div>
 <!-- Vertical Sticky LHS ends here -->
+ <!-- Vertical Sticky LHS Starts here -->
+<div class="rule each-module-preview verticalautohighlight">
+  <div class="title">
+      <h1>25. Vertical Auto scroll</h1>
+  </div>
+  <div class="rule" id="25">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="twenty-five-tab-group">
+          <li class="tab"><a href="#verticalautohighlighthtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#verticalautohighlightcss">Styling</a></li>
+          <li class="tab"><a href="#verticalautohighlightjs">Script</a></li>
+          <li class="tab"><a href="#verticalautohighlightresult">Result</a></li>
+      </ul>
+<pre>
+<div id="twenty-five-tab-group" class="tabgroup">
+<div id="verticalautohighlighthtml">
+<code id="code-html-twenty-five" class="code html" data-clipboard-target="#code-html">
+  &lt;div class="vertical-autoscroll"&gt;
+    &lt;div class="tab-wrapper"&gt;
+      &lt;div class="right-content"&gt;
+          &lt;ul class="tabs-section"&gt;
+              &lt;li class="each-tab"&gt;
+                  &lt;a href=""&gt;&lt;h4&gt;What is Lorem Ipsum?&lt;/h4&gt;
+                  &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
+                &lt;/a&gt;&lt;/li&gt;
+              &lt;li class="each-tab"&gt;
+                  &lt;a href=""&gt;&lt;h4&gt;Where does it come from?&lt;/h4&gt;
+                  &lt;p&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical &lt;/p&gt;
+                &lt;/a&gt; &lt;/li&gt;
+              &lt;li class="each-tab"&gt;
+                  &lt;a href=""&gt;&lt;h4&gt;Why do we use it?&lt;/h4&gt;
+                  &lt;p&gt;It is a long established fact that a reader will be distracted by the readable content &lt;/p&gt;
+                &lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="verticalautohighlightcss">
+<code id="code-css-twenty-five" class="code css" data-clipboard-target=#code-css>
+.vertical-autoscroll .right-content ul {
+  margin: 0;
+  padding: 60px 0;
+  width: 600px;
+  margin: 0 auto
+}
+
+.vertical-autoscroll .right-content ul li {
+  margin-bottom: 10px;
+background-color: #fff;
+padding: 30px;
+border-radius: 4px;
+box-shadow: 0px 1px 9px 0px rgba(51,51,51,0.3);
+border-bottom: 3px solid #ababab;
+transition: all 0.3s ease;
+width: 600px;
+  list-style: none;
+}
+.vertical-autoscroll .right-content ul li:hover, .vertical-autoscroll .right-content ul li.active {
+  border-bottom: 3px solid #003462;
+}
+a {
+  text-decoration:none;
+  color: #666;
+}
+h4 {
+  color: #999;
+font-size: 20px;
+font-weight: 100;
+font-family: 'avalon demi', sans-serif;
+line-height: 1;
+text-transform: uppercase;
+margin: 0 0 10px;
+}
+p {
+  color: #999;
+  font-size: 18px;
+font-weight: 400;
+font-family: 'avalon demi', sans-serif;
+line-height: 1.5;
+margin: 0;
+transition: all 0.3s ease;
+}
+.vertical-autoscroll .right-content ul li.active h4, .vertical-autoscroll .right-content ul li.active p {
+  color: #252525;
+}
+</code>
+</div>
+<div id="verticalautohighlightjs">
+<code id="code-css-twenty-five" class="code javascript" data-clipboard-target=#code-javascript>
+ setInterval(function() {
+    var target = $(".each-tab"),
+        currentActive = target.filter(".active"),
+        nextActive = currentActive.next();
+    nextActive = nextActive.length > 0 ? nextActive : target.eq(0);
+    // nextActive.trigger("click");
+nextActive.addClass("active").siblings().removeClass("active");
+  },3000)
+</code>
+</div>
+<div id="verticalautohighlightresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/verticalautohighlight.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="verticalautohighlight">verticalautohighlight</span>
+    </div>
+  </div>
+</div>
+<!-- Vertical Sticky LHS ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
