@@ -6321,6 +6321,138 @@ $('.client-carousel').bxSlider({
   </div>
 </div>
 <!-- Continuous Scroll ends here -->
+ <!-- Tabs FadeIn Starts here -->
+<div class="rule each-module-preview tabsfadein">
+  <div class="title">
+      <h1>27. Tabs FadeIn</h1>
+  </div>
+  <div class="rule" id="27">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="twenty-seven-tab-group">
+          <li class="tab"><a href="#tabsfadeinhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#tabsfadeincss">Styling</a></li>
+          <li class="tab"><a href="#tabsfadeinjs">Script</a></li>
+          <li class="tab"><a href="#tabsfadeinresult">Result</a></li>
+      </ul>
+<pre>
+<div id="twenty-seven-tab-group" class="tabgroup">
+<div id="tabsfadeinhtml">
+<code id="code-html-twenty-seven" class="code html" data-clipboard-target="#code-html">
+  &lt;div id="tabs-container"&gt;
+    &lt;ul class="tabs-menu clearfix"&gt;
+      &lt;li class="current"&gt;
+        &lt;a href="#tab-1"&gt;&lt;h2&gt;TAB 1&lt;/h2&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=""&gt;
+        &lt;a href="#tab-2"&gt;&lt;h2&gt;TAB 2&lt;/h2&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=""&gt;
+        &lt;a href="#tab-3"&gt;&lt;h2&gt;TAB 3&lt;/h2&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab"&gt;
+      &lt;div class="tab-content" id="tab-1"&gt;
+        &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="tab-content" id="tab-2"&gt;
+        &lt;p&gt;Why do we use it?
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="tab-content" id="tab-3" &gt;
+      &lt;p&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="tabsfadeincss">
+<code id="code-css-twenty-seven" class="code css" data-clipboard-target=#code-css>
+#tabs-container {
+  padding: 30px 0;
+  width: 800px;
+  margin: 0 auto;
+}
+#tabs-container .tabs-menu {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+}
+#tabs-container .tabs-menu li.current {
+  background-color: #dedede;
+  position: relative;
+  z-index: 5;
+}
+#tabs-container .tabs-menu {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+#tabs-container .tabs-menu li {
+  background-color: #c9c9c9;
+  border: none;
+  float: left;
+  margin: 0 10px 0 0;
+  list-style: none;
+}
+#tabs-container .tabs-menu li.current .tab-content {
+  display: block;
+}
+a {
+  padding: 15px 20px;
+  display: inline-block;
+}
+a, a:hover {
+  color: #585858;
+  text-decoration: none;
+}
+#tabs-container .tabs-menu {
+  list-style: none;
+}
+#tabs-container .tab .tab-content {
+  display: none;
+}
+#tabs-container .tab {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #dedede;
+}
+#tabs-container #tab-1 {
+  display: block;
+}
+h2 {
+  font-size: 18px;
+  line-height: 1;
+  margin:0;
+  color: #000;
+}
+</code>
+</div>
+<div id="tabsfadeinjs">
+<code id="code-css-twenty-seven" class="code javascript" data-clipboard-target=#code-javascript>
+ $(".tabs-menu a").click(function(event) {
+    event.preventDefault();
+    $(this).parent().addClass("current");
+    $(this).parent().siblings().removeClass("current");
+    var tab = $(this).attr("href");
+    $(".tab-content").not(tab).css("display", "none");
+    $(tab).fadeIn();
+  });
+</code>
+</div>
+<div id="tabsfadeinresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/tabsfadein.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="tabsfadein">tabsfadein</span>
+    </div>
+  </div>
+</div>
+<!-- Tabs FadeIn ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
