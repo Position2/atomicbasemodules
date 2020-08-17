@@ -6420,13 +6420,13 @@ h2 {
 </div>
 <div id="tabsfadeinjs">
 <code id="code-css-twenty-seven" class="code javascript" data-clipboard-target=#code-javascript>
-$('.client-carousel').bxSlider({
-    minSlides: 1,
-    maxSlides: 8,
-    slideWidth: 250,
-    slideMargin: 0,
-    ticker: true,
-    speed: 100000
+ $(".tabs-menu a").click(function(event) {
+    event.preventDefault();
+    $(this).parent().addClass("current");
+    $(this).parent().siblings().removeClass("current");
+    var tab = $(this).attr("href");
+    $(".tab-content").not(tab).css("display", "none");
+    $(tab).fadeIn();
   });
 </code>
 </div>
