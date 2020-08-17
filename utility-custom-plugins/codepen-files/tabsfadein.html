@@ -1,0 +1,123 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Tab Fade&#39;s In</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<style>
+#tabs-container {
+  padding: 30px 0;
+  width: 800px;
+  margin: 0 auto;
+}
+#tabs-container .tabs-menu {
+	list-style: none;
+	margin: 0 0 30px;
+	padding: 0;
+}
+#tabs-container .tabs-menu li.current {
+	background-color: #dedede;
+	position: relative;
+	z-index: 5;
+}
+#tabs-container .tabs-menu {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+#tabs-container .tabs-menu li {
+	background-color: #c9c9c9;
+	border: none;
+	float: left;
+	margin: 0 10px 0 0;
+  list-style: none;
+}
+#tabs-container .tabs-menu li.current .tab-content {
+  display: block;
+}
+a {
+  padding: 15px 20px;
+  display: inline-block;
+}
+a, a:hover {
+	color: #585858;
+  text-decoration: none;
+}
+#tabs-container .tabs-menu {
+	list-style: none;
+}
+#tabs-container .tab .tab-content {
+  display: none;
+}
+#tabs-container .tab {
+	margin-bottom: 20px;
+	width: 100%;
+  padding: 40px 20px;
+  background-color: #dedede;
+}
+#tabs-container #tab-1 {
+	display: block;
+}
+h2 {
+  font-size: 18px;
+  line-height: 1;
+  margin:0;
+  color: #000;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div id="tabs-container">
+<ul class="tabs-menu clearfix">
+<li class="current">
+<a href="#tab-1"><h2>TAB 1</h2></a>
+</li>
+<li class="">
+<a href="#tab-2"><h2>TAB 2</h2></a>
+</li>
+<li class="">
+<a href="#tab-3"><h2>TAB 3</h2></a>
+</li>
+</ul>
+<div class="tab">
+<div class="tab-content" id="tab-1">
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+<div class="tab-content" id="tab-2">
+<p>Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+</div>
+<div class="tab-content" id="tab-3">
+<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script id="rendered-js">
+$(".tabs-menu a").click(function (event) {
+  event.preventDefault();
+  $(this).parent().addClass("current");
+  $(this).parent().siblings().removeClass("current");
+  var tab = $(this).attr("href");
+  $(".tab-content").not(tab).css("display", "none");
+  $(tab).fadeIn();
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
