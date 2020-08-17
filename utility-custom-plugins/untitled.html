@@ -44,24 +44,76 @@
 </div>
 <div id="tabsfadeincss">
 <code id="code-css-twenty-seven" class="code css" data-clipboard-target=#code-css>
-ul {
-    margin-top: 0;
-    margin-bottom: 10px;
+#tabs-container {
+  padding: 30px 0;
+  width: 800px;
+  margin: 0 auto;
 }
-li {
-    padding: 20px;
+#tabs-container .tabs-menu {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+}
+#tabs-container .tabs-menu li.current {
+  background-color: #dedede;
+  position: relative;
+  z-index: 5;
+}
+#tabs-container .tabs-menu {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+#tabs-container .tabs-menu li {
+  background-color: #c9c9c9;
+  border: none;
+  float: left;
+  margin: 0 10px 0 0;
+  list-style: none;
+}
+#tabs-container .tabs-menu li.current .tab-content {
+  display: block;
+}
+a {
+  padding: 15px 20px;
+  display: inline-block;
+}
+a, a:hover {
+  color: #585858;
+  text-decoration: none;
+}
+#tabs-container .tabs-menu {
+  list-style: none;
+}
+#tabs-container .tab .tab-content {
+  display: none;
+}
+#tabs-container .tab {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #dedede;
+}
+#tabs-container #tab-1 {
+  display: block;
+}
+h2 {
+  font-size: 18px;
+  line-height: 1;
+  margin:0;
+  color: #000;
 }
 </code>
 </div>
 <div id="tabsfadeinjs">
 <code id="code-css-twenty-seven" class="code javascript" data-clipboard-target=#code-javascript>
-$('.client-carousel').bxSlider({
-    minSlides: 1,
-    maxSlides: 8,
-    slideWidth: 250,
-    slideMargin: 0,
-    ticker: true,
-    speed: 100000
+ $(".tabs-menu a").click(function(event) {
+    event.preventDefault();
+    $(this).parent().addClass("current");
+    $(this).parent().siblings().removeClass("current");
+    var tab = $(this).attr("href");
+    $(".tab-content").not(tab).css("display", "none");
+    $(tab).fadeIn();
   });
 </code>
 </div>
