@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Blog Vertical Scroll</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<style>
+.featured-blog {
+  padding: 30px 0;
+}
+.featured-blog ul.vertical-slider {
+  margin: 0;
+  padding: 0;
+}
+.featured-blog ul.vertical-slider li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.featured-blog ul.vertical-slider li .each-blog .img-holder {
+  width: 200px;
+  float: left;
+  padding-right: 20px;
+}
+@media (min-width: 0) and (max-width: 767.98px) {
+  .featured-blog ul.vertical-slider li .each-blog .img-holder {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+}
+.featured-blog ul.vertical-slider li .each-blog .img-holder a {
+  display: block;
+  text-decoration: none;
+}
+.featured-blog ul.vertical-slider li .each-blog .img-holder img {
+  width: 100%;
+  height: auto;
+}
+.featured-blog ul.vertical-slider li .each-blog .content {
+  float: left;
+  width: calc(100% - 200px);
+}
+@media (min-width: 0) and (max-width: 767.98px) {
+  .featured-blog ul.vertical-slider li .each-blog .content {
+    width: 100%;
+  }
+}
+.featured-blog ul.vertical-slider li .each-blog .content a {
+  display: inline-block;
+  -webkit-text-decoration-color: #3765a0;
+  text-decoration-color: #3765a0;
+  color: #333;
+}
+.featured-blog ul.vertical-slider li .each-blog .content a h3 {
+  color: #333;
+  font-size: 24px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+.featured-blog ul.vertical-slider li .each-blog .content p {
+  color: #5b5b5f;
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+.featured-blog .bx-wrapper .bx-controls {
+  bottom: -40px;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 0) and (max-width: 767.98px) {
+  .featured-blog .bx-wrapper .bx-controls {
+    bottom: -80px;
+    right: 20px;
+  }
+}
+.featured-blog .bx-wrapper .bx-controls a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.featured-blog .bx-wrapper .bx-controls a.bx-prev {
+  width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 0;
+  position: absolute;
+  left: -58px;
+  z-index: 999;
+}
+.featured-blog .bx-wrapper .bx-controls a.bx-next {
+  width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 100%;
+  right: 0;
+  z-index: 999;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+<div class="featured-blog">
+<ul class="vertical-slider">
+<li>
+<div class="each-blog clearfix">
+<div class="img-holder">
+<a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/03/11/15/53/dummy-92579_1280.jpg" alt="Image"></a>
+</div>
+<div class="content">
+<a href="javascript:void(0)"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h3></a>
+<p>Authored by: Position<sup>2</sup> Team Blogs | Dec 04, 2018</p>
+ </div>
+</div>
+</li>
+<li>
+<div class="each-blog clearfix">
+<div class="img-holder">
+<a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/03/11/15/53/dummy-92579_1280.jpg" alt="Image"></a>
+</div>
+<div class="content">
+<a href="javascript:void(0)"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h3></a>
+<p>Authored by: Position<sup>2</sup> Team Blogs | Dec 04, 2018</p>
+</div>
+</div>
+</li>
+<li>
+<div class="each-blog clearfix">
+<div class="img-holder">
+<a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/03/11/15/53/dummy-92579_1280.jpg" alt="Image"></a>
+</div>
+<div class="content">
+<a href="javascript:void(0)"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h3></a>
+<p>Authored by: Position<sup>2</sup> Team Blogs | Dec 04, 2018</p>
+</div>
+</div>
+</li>
+<li>
+<div class="each-blog clearfix">
+<div class="img-holder">
+<a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/03/11/15/53/dummy-92579_1280.jpg" alt="Image"></a>
+</div>
+<div class="content">
+<a href="javascript:void(0)"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h3></a>
+<p>Authored by: Position<sup>2</sup> Team Blogs | Dec 04, 2018</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js'></script>
+<script id="rendered-js">
+$('.vertical-slider').bxSlider({
+  moveSlides: 1,
+  auto: true,
+  mode: "vertical",
+  pager: false,
+  slideMargin: 54,
+  minSlides: 2,
+  maxSlides: 2 });
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
