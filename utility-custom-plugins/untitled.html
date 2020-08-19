@@ -137,9 +137,9 @@
 </div>
 <div id="alphabeticalfilterjs">
 <code id="code-css-thirty" class="code javascript" data-clipboard-target=#code-javascript>
- var filterUl = $("<ul/>");
-  $("<li/>", {
-    "html": "ALL <span class='count_pp'>" + $(".alpha-filter").length + "</span>",
+ var filterUl = $("&lt;ul/&gt;");
+  $("&lt;li/&gt;", {
+    "html": "ALL &lt;span class='count_pp'&gt;" + $(".alpha-filter").length + "&lt;/span&gt;",
     "data-filter": "*"
   }).appendTo(filterUl);
   for (var i = 65; i <= 90; i++) {
@@ -147,8 +147,8 @@
       charAppered = $(".alpha-filter").filter(function() {
         return $(this).text().trim().charAt(0).toLowerCase() == alphachar.toLowerCase()
       }).get();
-    $("<li/>", {
-      "html": alphachar + "<span class='count_pp'>" + charAppered.length + "</span>",
+    $("&lt;li/&gt;", {
+      "html": alphachar + "&lt;span class='count_pp'&gt;" + charAppered.length + "&lt;/span&gt;",
       "data-filter": alphachar.toLowerCase(),
       "class": (charAppered.length <= 0) ? "disabled" : ""
     }).appendTo(filterUl);
