@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Alphabetical Filter</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<style>
+.filtersection {
+  margin: 40px 0;
+}
+.filtersection ul {
+  margin: 0;
+  padding: 0;
+}
+.filtersection ul li {
+  color: #333;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  margin: 0;
+  padding: 5px 12px;
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+  border-top: 1px solid #333;
+  cursor: pointer;
+  position: relative;
+}
+@media (min-width: 0) and (max-width: 1199.98px) {
+  .filtersection ul li {
+    margin: 0 5px 5px 0;
+  }
+  .filtersection ul li,
+  .filtersection ul li:first-child {
+    border: 1px solid #333;
+  }
+}
+.filtersection ul li:first-child {
+  border-left: 1px solid #333;
+}
+.filtersection ul li .count_pp {
+  display: none;
+  color: #333;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 5px 12px;
+}
+.filtersection ul li.current,
+.filtersection ul li:hover {
+  background-color: #dee;
+  color: #000;
+}
+.filtersection ul li:hover .count_pp {
+  display: inline;
+}
+@media (min-width: 0) and (max-width: 1199.98px) {
+  .filtersection ul li:hover .count_pp {
+    display: none;
+  }
+}
+.filtersection ul li.disabled {
+  color: #ccc;
+  cursor: default;
+}
+.filterwrapper .alpha-filter {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 20px;
+}
+.filterwrapper .alpha-filter h4 {
+  color: #333;
+  font-size: 22px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.filterwrapper .alpha-filter p {
+  color: #333;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin: 0 0 30px;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="filtersection"></div>
+<div class="filterwrapper">
+<div class="alpha-filter">
+<h4>A Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+<div class="alpha-filter">
+<h4>A Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+<div class="alpha-filter">
+<h4>B Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+<div class="alpha-filter">
+<h4>B Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+<div class="alpha-filter">
+<h4>B Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+<div class="alpha-filter">
+<h4>C Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+<div class="alpha-filter">
+<h4>N Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+<div class="alpha-filter">
+<h4>Z Series</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores repellat accusamus veritatis, commodi adipisci consequuntur ratione dolores ipsum mollitia totam hic at, ducimus ad quidem pariatur recusandae aliquid officia.</p>
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script id="rendered-js">
+var filterUl = $("<ul/>");
+$("<li/>", {
+  "html": "ALL <span class='count_pp'>" + $(".alpha-filter").length + "</span>",
+  "data-filter": "*" }).
+appendTo(filterUl);
+for (var i = 65; i <= 90; i++) {if (window.CP.shouldStopExecution(0)) break;
+  var alphachar = String.fromCharCode(i),
+  charAppered = $(".alpha-filter").filter(function () {
+    return $(this).text().trim().charAt(0).toLowerCase() == alphachar.toLowerCase();
+  }).get();
+  $("<li/>", {
+    "html": alphachar + "<span class='count_pp'>" + charAppered.length + "</span>",
+    "data-filter": alphachar.toLowerCase(),
+    "class": charAppered.length <= 0 ? "disabled" : "" }).
+  appendTo(filterUl);
+}window.CP.exitedLoop(0);
+filterUl.appendTo($(".filtersection"));
+$("body").on("click", ".filtersection ul li", function () {
+  var dis = $(this),
+  disFilter = dis.attr("data-filter") || "";
+  if (!dis.hasClass("disabled")) {
+    dis.addClass("current").siblings("li").removeClass("current");
+    if (disFilter != "" && disFilter != "*")
+    $(".alpha-filter").hide().filter(function () {
+      return $(this).text().trim().charAt(0).toLowerCase() == disFilter.toLowerCase();
+    }).show();else
+
+    $(".alpha-filter").show();
+  }
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
