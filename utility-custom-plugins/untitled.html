@@ -56,117 +56,117 @@
 </div>
 <div id="alphabeticalfiltercss">
 <code id="code-css-thirty" class="code css" data-clipboard-target=#code-css>
-.featured-blog {
-  padding: 30px 0;
+.filtersection {
+  margin: 40px 0;
 }
-.featured-blog ul.vertical-slider {
+.filtersection ul {
   margin: 0;
   padding: 0;
 }
-.featured-blog ul.vertical-slider li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.featured-blog ul.vertical-slider li .each-blog .img-holder {
-  width: 200px;
-  float: left;
-  padding-right: 20px;
-}
-@media (min-width: 0) and (max-width: 767.98px) {
-  .featured-blog ul.vertical-slider li .each-blog .img-holder {
-    padding-right: 0;
-    padding-bottom: 30px;
-  }
-}
-.featured-blog ul.vertical-slider li .each-blog .img-holder a {
-  display: block;
-  text-decoration: none;
-}
-.featured-blog ul.vertical-slider li .each-blog .img-holder img {
-  width: 100%;
-  height: auto;
-}
-.featured-blog ul.vertical-slider li .each-blog .content {
-  float: left;
-  width: calc(100% - 200px);
-}
-@media (min-width: 0) and (max-width: 767.98px) {
-  .featured-blog ul.vertical-slider li .each-blog .content {
-    width: 100%;
-  }
-}
-.featured-blog ul.vertical-slider li .each-blog .content a {
+.filtersection ul li {
+  color: #333;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
   display: inline-block;
-  -webkit-text-decoration-color: #3765a0;
-  text-decoration-color: #3765a0;
-  color: #333;
-}
-.featured-blog ul.vertical-slider li .each-blog .content a h3 {
-  color: #333;
-  font-size: 24px;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  margin: 0 0 12px;
-  line-height: 1.3;
-}
-.featured-blog ul.vertical-slider li .each-blog .content p {
-  color: #5b5b5f;
-  font-size: 16px;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
   margin: 0;
+  padding: 5px 12px;
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+  border-top: 1px solid #333;
+  cursor: pointer;
+  position: relative;
 }
-.featured-blog .bx-wrapper .bx-controls {
-  bottom: -40px;
-  position: absolute;
-  right: 0;
-}
-@media (min-width: 0) and (max-width: 767.98px) {
-  .featured-blog .bx-wrapper .bx-controls {
-    bottom: -80px;
-    right: 20px;
+@media (min-width: 0) and (max-width: 1199.98px) {
+  .filtersection ul li {
+    margin: 0 5px 5px 0;
+  }
+  .filtersection ul li,
+  .filtersection ul li:first-child {
+    border: 1px solid #333;
   }
 }
-.featured-blog .bx-wrapper .bx-controls a {
-  position: absolute;
-  top: 50%;
-  margin-top: -16px;
-  outline: 0;
-  width: 32px;
-  height: 32px;
-  text-indent: -9999px;
-  z-index: 9999;
+.filtersection ul li:first-child {
+  border-left: 1px solid #333;
 }
-.featured-blog .bx-wrapper .bx-controls a.bx-prev {
-  width: 22px;
-  height: 22px;
-  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 0;
+.filtersection ul li .count_pp {
+  display: none;
+  color: #333;
   position: absolute;
-  left: -58px;
-  z-index: 999;
+  top: -40px;
+  left: 0;
+  padding: 5px 12px;
 }
-.featured-blog .bx-wrapper .bx-controls a.bx-next {
-  width: 22px;
-  height: 22px;
-  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 100%;
-  right: 0;
-  z-index: 999;
+.filtersection ul li.current,
+.filtersection ul li:hover {
+  background-color: #dee;
+  color: #000;
+}
+.filtersection ul li:hover .count_pp {
+  display: inline;
+}
+@media (min-width: 0) and (max-width: 1199.98px) {
+  .filtersection ul li:hover .count_pp {
+    display: none;
+  }
+}
+.filtersection ul li.disabled {
+  color: #ccc;
+  cursor: default;
+}
+.filterwrapper .alpha-filter {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 20px;
+}
+.filterwrapper .alpha-filter h4 {
+  color: #333;
+  font-size: 22px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.filterwrapper .alpha-filter p {
+  color: #333;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin: 0 0 30px;
 }
 
 </code>
 </div>
 <div id="alphabeticalfilterjs">
 <code id="code-css-thirty" class="code javascript" data-clipboard-target=#code-javascript>
- $('.vertical-slider').bxSlider({
-  moveSlides: 1,
-  auto: true,
-  mode: "vertical",
-  pager: false,
-  slideMargin: 54,
-  minSlides: 2,
-  maxSlides: 2
-});
+ var filterUl = $("<ul/>");
+  $("<li/>", {
+    "html": "ALL <span class='count_pp'>" + $(".alpha-filter").length + "</span>",
+    "data-filter": "*"
+  }).appendTo(filterUl);
+  for (var i = 65; i <= 90; i++) {
+    var alphachar = String.fromCharCode(i),
+      charAppered = $(".alpha-filter").filter(function() {
+        return $(this).text().trim().charAt(0).toLowerCase() == alphachar.toLowerCase()
+      }).get();
+    $("<li/>", {
+      "html": alphachar + "<span class='count_pp'>" + charAppered.length + "</span>",
+      "data-filter": alphachar.toLowerCase(),
+      "class": (charAppered.length <= 0) ? "disabled" : ""
+    }).appendTo(filterUl);
+  }
+  filterUl.appendTo($(".filtersection"));
+  $("body").on("click", ".filtersection ul li", function() {
+    var dis = $(this),
+      disFilter = dis.attr("data-filter") || "";
+    if (!dis.hasClass("disabled")) {
+      dis.addClass("current").siblings("li").removeClass("current");
+      if (disFilter != "" && disFilter != "*")
+        $(".alpha-filter").hide().filter(function() {
+          return $(this).text().trim().charAt(0).toLowerCase() == disFilter.toLowerCase()
+        }).show();
+      else
+        $(".alpha-filter").show();
+    }
+  });
 </code>
 </div>
 <div id="alphabeticalfilterresult" class="result-wrap">
