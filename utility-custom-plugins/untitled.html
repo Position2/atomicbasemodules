@@ -980,36 +980,12 @@ body.compensate-for-scrollbar {
 </div>
 <div id="galleryjs">
 <code id="code-css-thirtyone" class="code javascript" data-clipboard-target=#code-javascript>
- var filterUl = $("&lt;ul/&gt;");
-  $("&lt;li/&gt;", {
-    "html": "ALL &lt;span class='count_pp'&gt;" + $(".alpha-filter").length + "&lt;/span&gt;",
-    "data-filter": "*"
-  }).appendTo(filterUl);
-  for (var i = 65; i <= 90; i++) {
-    var alphachar = String.fromCharCode(i),
-      charAppered = $(".alpha-filter").filter(function() {
-        return $(this).text().trim().charAt(0).toLowerCase() == alphachar.toLowerCase()
-      }).get();
-    $("&lt;li/&gt;", {
-      "html": alphachar + "&lt;span class='count_pp'&gt;" + charAppered.length + "&lt;/span&gt;",
-      "data-filter": alphachar.toLowerCase(),
-      "class": (charAppered.length <= 0) ? "disabled" : ""
-    }).appendTo(filterUl);
-  }
-  filterUl.appendTo($(".filtersection"));
-  $("body").on("click", ".filtersection ul li", function() {
-    var dis = $(this),
-      disFilter = dis.attr("data-filter") || "";
-    if (!dis.hasClass("disabled")) {
-      dis.addClass("current").siblings("li").removeClass("current");
-      if (disFilter != "" && disFilter != "*")
-        $(".alpha-filter").hide().filter(function() {
-          return $(this).text().trim().charAt(0).toLowerCase() == disFilter.toLowerCase()
-        }).show();
-      else
-        $(".alpha-filter").show();
-    }
-  });
+ $('[data-fancybox="gallery"]').fancybox({
+  thumbs : false,
+  buttons: [
+    "close"
+  ],
+});
 </code>
 </div>
 <div id="galleryresult" class="result-wrap">
