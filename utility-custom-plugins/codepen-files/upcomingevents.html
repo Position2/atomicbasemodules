@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Upcoming Events</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+<style>
+.eventslider {
+  padding: 60px 0;
+}
+.eventslider .carousel-inner .upcoming-event {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+.eventslider .carousel-inner .upcoming-event a {
+  display: block;
+}
+.eventslider .carousel-inner .upcoming-event a img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .eventslider .carousel-inner .upcoming-event a img {
+    width: auto;
+  }
+}
+.eventslider .carousel-inner .upcoming-event .latest-content {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+.eventslider .carousel-inner .upcoming-event .latest-content p {
+  color: #fff;
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.eventslider .carousel-inner .upcoming-event .latest-content h3 {
+  color: #fff;
+  font-size: 20px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.eventslider .carousel-inner .upcoming-event .latest-content p.date {
+  color: #fff;
+  font-size: 14px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.eventslider .carousel-control-prev {
+  right: 60px;
+  top: auto;
+  bottom: -78px;
+  width: auto;
+  left: auto;
+}
+.eventslider .carousel-control-prev i {
+  font-size: 50px;
+  color: #333;
+}
+.eventslider .carousel-control-next {
+  top: auto;
+  bottom: -78px;
+  width: auto;
+}
+.eventslider .carousel-control-next i {
+  font-size: 50px;
+  color: #333;
+}
+.view-all {
+  padding-top: 30px;
+}
+.view-all a {
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.view-all a,
+.view-all a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.view-all a:hover {
+  color: #fff;
+  background-color: #da423e;
+  border-color: #da423e;
+}
+ .bx-wrapper .bx-controls a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bx-wrapper .bx-controls a.bx-prev {
+  width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 0;
+  position: absolute;
+  left: -58px;
+  z-index: 999;
+}
+ .bx-wrapper .bx-controls a.bx-next {
+  width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 100%;
+  right: 0;
+  z-index: 999;
+}
+
+.bx-wrapper .bx-controls {
+  bottom: -40px;
+  position: absolute;
+  right: 0;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+<div class="eventslider carousel" data-ride="carousel">
+<ul class="carousel-inner">
+<li>
+<div class="upcoming-event">
+<a href="javascript:void(0)">
+<img src="https://picsum.photos/300/300/?random&1" alt="First slide">
+</a>
+<div class="latest-content">
+<p>Upcoming Events</p>
+<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+<p class="date">Date: May 4 and 5, 2019</p>
+</div>
+</div>
+</li>
+<li>
+<div class="upcoming-event">
+<a href="javascript:void(0)">
+<img src="https://picsum.photos/300/300/?random&2" alt="First slide">
+</a>
+<div class="latest-content">
+<p>Upcoming Events</p>
+<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+<p class="date">Date: May 4 and 5, 2019</p>
+</div>
+</div>
+</li>
+<li>
+<div class="upcoming-event">
+<a href="javascript:void(0)">
+<img src="https://picsum.photos/300/300/?random&3" alt="First slide">
+</a>
+<div class="latest-content">
+<p>Upcoming Events</p>
+<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+<p class="date">Date: May 4 and 5, 2019</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="view-all">
+<a href="javascript:void(0)">View All</a>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js'></script>
+<script id="rendered-js">
+$('.carousel-inner').bxSlider({
+  infiniteLoop: true,
+  nav: true,
+  speed: 3000,
+  touchEnabled: true,
+  pager: false });
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>

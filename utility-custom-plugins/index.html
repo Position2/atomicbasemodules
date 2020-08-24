@@ -86,6 +86,7 @@
                 <li data-val=".blogverticalscroll">Blog Vertical Scroll</li>
                 <li data-val=".alphabeticalfilter">Alphabetical Filter</li>
                 <li data-val=".gallery">Gallery</li>
+                <li data-val=".upcomingevents">Upcoming Events</li>
               </ul>
             </div>  
           </div>
@@ -125,6 +126,7 @@
                 <li data-filter="blogverticalscroll">Blog Vertical Scroll</li>
                  <li data-filter="alphabeticalfilter">Alphabetical Filter</li>
                  <li data-filter="gallery">Gallery</li>
+                 <li data-filter="upcomingevents">Upcoming Events</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -7916,6 +7918,229 @@ body.compensate-for-scrollbar {
   </div>
 </div>
 <!-- Gallery ends here -->
+ <!-- upcomingevents Starts here -->
+<div class="rule each-module-preview upcomingevents">
+  <div class="title">
+      <h1>32. Upcoming Events</h1>
+  </div>
+  <div class="rule" id="32">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="thirtytwo-tab-group">
+          <li class="tab"><a href="#upcomingeventshtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#upcomingeventscss">Styling</a></li>
+          <li class="tab"><a href="#upcomingeventsjs">Script</a></li>
+          <li class="tab"><a href="#upcomingeventsresult">Result</a></li>
+      </ul>
+<pre>
+<div id="thirtytwo-tab-group" class="tabgroup">
+<div id="upcomingeventshtml">
+<code id="code-html-thirtytwo" class="code html" data-clipboard-target="#code-html">
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+        &lt;div class="eventslider carousel" data-ride="carousel"&gt;
+          &lt;ul class="carousel-inner"&gt;
+            &lt;li&gt;
+              &lt;div class="upcoming-event"&gt;
+                &lt;a href="javascript:void(0)"&gt;
+                  &lt;img src="https://picsum.photos/300/300/?random&1" alt="First slide"&gt;
+                &lt;/a&gt;
+                &lt;div class="latest-content"&gt;
+                  &lt;p&gt;Upcoming Events&lt;/p&gt;
+                  &lt;h3&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/h3&gt;
+                  &lt;p class="date"&gt;Date: May 4 and 5, 2019&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;div class="upcoming-event"&gt;
+                &lt;a href="javascript:void(0)"&gt;
+                  &lt;img src="https://picsum.photos/300/300/?random&2" alt="First slide"&gt;
+                &lt;/a&gt;
+                &lt;div class="latest-content"&gt;
+                  &lt;p&gt;Upcoming Events&lt;/p&gt;
+                  &lt;h3&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/h3&gt;
+                  &lt;p class="date"&gt;Date: May 4 and 5, 2019&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;div class="upcoming-event"&gt;
+                &lt;a href="javascript:void(0)"&gt;
+                  &lt;img src="https://picsum.photos/300/300/?random&3" alt="First slide"&gt;
+                &lt;/a&gt;
+                &lt;div class="latest-content"&gt;
+                  &lt;p&gt;Upcoming Events&lt;/p&gt;
+                  &lt;h3&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/h3&gt;
+                  &lt;p class="date"&gt;Date: May 4 and 5, 2019&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="view-all"&gt;
+          &lt;a href="javascript:void(0)"&gt;View All&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"&gt;
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="upcomingeventscss">
+<code id="code-css-thirtytwo" class="code css" data-clipboard-target=#code-css>
+.eventslider {
+  padding: 60px 0;
+}
+.eventslider .carousel-inner .upcoming-event {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+.eventslider .carousel-inner .upcoming-event a {
+  display: block;
+}
+.eventslider .carousel-inner .upcoming-event a img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .eventslider .carousel-inner .upcoming-event a img {
+    width: auto;
+  }
+}
+.eventslider .carousel-inner .upcoming-event .latest-content {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+.eventslider .carousel-inner .upcoming-event .latest-content p {
+  color: #fff;
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.eventslider .carousel-inner .upcoming-event .latest-content h3 {
+  color: #fff;
+  font-size: 20px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.eventslider .carousel-inner .upcoming-event .latest-content p.date {
+  color: #fff;
+  font-size: 14px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.eventslider .carousel-control-prev {
+  right: 60px;
+  top: auto;
+  bottom: -78px;
+  width: auto;
+  left: auto;
+}
+.eventslider .carousel-control-prev i {
+  font-size: 50px;
+  color: #333;
+}
+.eventslider .carousel-control-next {
+  top: auto;
+  bottom: -78px;
+  width: auto;
+}
+.eventslider .carousel-control-next i {
+  font-size: 50px;
+  color: #333;
+}
+.view-all {
+  padding-top: 30px;
+}
+.view-all a {
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.view-all a,
+.view-all a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.view-all a:hover {
+  color: #fff;
+  background-color: #da423e;
+  border-color: #da423e;
+}
+ .bx-wrapper .bx-controls a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bx-wrapper .bx-controls a.bx-prev {
+  width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 0;
+  position: absolute;
+  left: -58px;
+  z-index: 999;
+}
+ .bx-wrapper .bx-controls a.bx-next {
+  width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 100%;
+  right: 0;
+  z-index: 999;
+}
+
+.bx-wrapper .bx-controls {
+  bottom: -40px;
+  position: absolute;
+  right: 0;
+}
+
+</code>
+</div>
+<div id="upcomingeventsjs">
+<code id="code-css-thirtytwo" class="code javascript" data-clipboard-target=#code-javascript>
+ $('.carousel-inner').bxSlider({
+    infiniteLoop: true,
+    nav: true,
+    speed: 3000,
+    touchEnabled: true,
+    pager: false
+}); 
+</code>
+</div>
+<div id="upcomingeventsresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/upcomingevents.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="upcomingevents">upcomingevents</span>
+    </div>
+  </div>
+</div>
+<!-- upcomingevents ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
