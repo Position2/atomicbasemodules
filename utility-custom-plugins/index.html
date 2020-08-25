@@ -126,10 +126,10 @@
                 <li data-filter="tabsfadein">Tabs FadeIn</li>
                 <li data-filter="nicescroll">Nice Scroll</li>
                 <li data-filter="blogverticalscroll">Blog Vertical Scroll</li>
-                 <li data-filter="alphabeticalfilter">Alphabetical Filter</li>
-                 <li data-filter="gallery">Gallery</li>
-                 <li data-filter="upcomingevents">Upcoming Events</li>
-                  <li data-filter="testimonialslider">Testimonial Slider</li>
+                <li data-filter="alphabeticalfilter">Alphabetical Filter</li>
+                <li data-filter="gallery">Gallery</li>
+                <li data-filter="upcomingevents">Upcoming Events</li>
+                <li data-filter="testimonialslider">Testimonial Slider</li>
                 <li data-filter="slickslider">Slick Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
@@ -8145,6 +8145,379 @@ body.compensate-for-scrollbar {
   </div>
 </div>
 <!-- upcomingevents ends here -->
+ <!-- testimonialslider Starts here -->
+<div class="rule each-module-preview testimonialslider">
+  <div class="title">
+      <h1>33. Testimonial Slider</h1>
+  </div>
+  <div class="rule" id="33">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="thirtythree-tab-group">
+          <li class="tab"><a href="#testimonialsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#testimonialslidercss">Styling</a></li>
+          <li class="tab"><a href="#testimonialsliderjs">Script</a></li>
+          <li class="tab"><a href="#testimonialsliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="thirtythree-tab-group" class="tabgroup">
+<div id="testimonialsliderhtml">
+<code id="code-html-thirtythree" class="code html" data-clipboard-target="#code-html">
+  &lt;section id="OurClients"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="our-clients-slider"&gt;
+        &lt;ul class="clients-slider loading"&gt;
+          &lt;div id="loader"&gt;&lt;/div&gt;
+          &lt;li&gt;
+            &lt;div class="each-slide"&gt;
+              &lt;div class="heading-wrap"&gt;
+                &lt;div class="lhs-wrap"&gt;
+                  &lt;img src="https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/he-thumbnail.png" alt="Mihran D."&gt;
+                &lt;/div&gt;
+                &lt;div class="rhs-wrap"&gt;
+                  &lt;h3&gt;Name &lt;/h3&gt;
+                  &lt;p&gt;Designation&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="content-wrap"&gt;
+                &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+              &lt;/div&gt;
+            
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;div class="each-slide"&gt;
+              &lt;div class="heading-wrap"&gt;
+                &lt;div class="lhs-wrap"&gt;
+                  &lt;img src="https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/she-thumbnail.png" alt="Kimberly D."&gt;
+                &lt;/div&gt;
+                &lt;div class="rhs-wrap"&gt;
+                  &lt;h3&gt;Name &lt;/h3&gt;
+                  &lt;p&gt;Designation&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="content-wrap"&gt;
+                &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+              &lt;/div&gt;
+             
+            &lt;/div&gt;
+          &lt;li&gt;
+            &lt;div class="each-slide"&gt;
+              &lt;div class="heading-wrap"&gt;
+                &lt;div class="lhs-wrap"&gt;
+                  &lt;img src="https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/he-thumbnail.png" alt="Mihran D."&gt;
+                &lt;/div&gt;
+                &lt;div class="rhs-wrap"&gt;
+                   &lt;h3&gt;Name &lt;/h3&gt;
+                  &lt;p&gt;Designation&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="content-wrap"&gt;
+                &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+              &lt;/div&gt;
+             
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;div class="each-slide"&gt;
+              &lt;div class="heading-wrap"&gt;
+                &lt;div class="lhs-wrap"&gt;
+                  &lt;img src="https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/she-thumbnail.png" alt="Kimberly D."&gt;
+                &lt;/div&gt;
+                &lt;div class="rhs-wrap"&gt;
+                   &lt;h3&gt;Name &lt;/h3&gt;
+                  &lt;p&gt;Designation&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="content-wrap"&gt;
+                &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+              &lt;/div&gt;
+            
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+</code>
+</div>
+<div id="testimonialslidercss">
+<code id="code-css-thirtythree" class="code css" data-clipboard-target=#code-css>
+#OurClients {
+  background-color: #f9f9f9;
+  padding: 30px 0 80px;
+}
+@media (max-width: 767.98px) {
+  #OurClients {
+    text-align: left;
+    padding: 30px 10px 70px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  #OurClients {
+    padding: 30px 0 70px;
+  }
+}
+#OurClients h2 {
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  #OurClients h2 {
+    text-align: left;
+  }
+}
+@media (max-width: 1199.98px) {
+  #OurClients h2 br {
+    display: none;
+  }
+}
+#OurClients .bx-wrapper {
+  margin-bottom: 0px;
+  box-shadow: none;
+  background: none;
+  border: none;
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  #OurClients .bx-wrapper {
+    margin: 0 auto;
+  }
+}
+#OurClients .bx-wrapper .bx-controls .bx-controls-direction a {
+  z-index: 999;
+}
+#OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-prev {
+  background: url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/gd-homepage-arrow.svg") no-repeat left top;
+  left: -60px;
+  width: 42px;
+  height: 60px;
+}
+@media (max-width: 1199.98px) {
+  #OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-prev {
+    background: url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/gd-homepage-left-arrow-mob.svg") no-repeat 0 0/15px auto;
+    left: 0;
+    width: 17px;
+    height: 35px;
+    bottom: -39px;
+    top: auto;
+  }
+}
+#OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-prev:hover {
+  background-position: 0 -61px;
+}
+#OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-next {
+  background: url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/gd-homepage-arrow.svg") no-repeat right top;
+  right: -55px;
+  width: 42px;
+  height: 60px;
+}
+@media (max-width: 1199.98px) {
+  #OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-next {
+    background: url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/gd-homepage-right-arrow-mob.svg") no-repeat 0 0/15px auto;
+    right: 0;
+    width: 17px;
+    height: 35px;
+    bottom: -39px;
+    top: auto;
+  }
+}
+#OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-next:hover {
+  background-position: -42px -61px;
+}
+#OurClients .bx-wrapper .bx-controls .bx-pager {
+  padding-top: 0;
+  bottom: -45px;
+}
+@media (max-width: 767.98px) {
+  #OurClients .bx-wrapper .bx-controls .bx-pager {
+    bottom: -22px;
+  }
+}
+#OurClients .bx-wrapper .bx-controls .bx-pager .bx-pager-item a {
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #b7b7b7;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767.98px) {
+  #OurClients .bx-wrapper .bx-controls .bx-pager .bx-pager-item a {
+    width: 10px;
+    height: 10px;
+  }
+}
+#OurClients .bx-wrapper .bx-controls .bx-pager .bx-pager-item a:hover,
+#OurClients .bx-wrapper .bx-controls .bx-pager .bx-pager-item a.active {
+  background: #ab4399;
+}
+#OurClients .our-clients-slider #loader {
+  background: #f4f3f3 url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/bx_loader.gif") no-repeat center center;
+}
+#OurClients .our-clients-slider ul.clients-slider {
+  margin: 0;
+  padding: 0;
+}
+#OurClients .our-clients-slider ul.clients-slider li {
+  list-style: none;
+  padding: 0 60px 0px 0;
+  margin: 0 60px 0 0;
+  position: relative;
+}
+#OurClients .our-clients-slider ul.clients-slider li::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  border-right: 1px solid #cbd7e4;
+  right: 0;
+  top: 0;
+}
+@media (max-width: 1199.98px) {
+  #OurClients .our-clients-slider ul.clients-slider li::before {
+    display: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  #OurClients .our-clients-slider ul.clients-slider li {
+    padding: 0 20px 0 0;
+    margin: 0 20px 0 0;
+    border: none;
+  }
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap {
+  margin-bottom: 20px;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .lhs-wrap {
+  width: 85px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .lhs-wrap::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/quotes.png") no-repeat;
+  width: 25px;
+  height: 20px;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .lhs-wrap img {
+  width: 100%;
+  height: auto;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .rhs-wrap h3,
+#OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .rhs-wrap h5 {
+  color: #000;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-size: 22px;
+  line-height: 120%;
+  margin: 0 0 5px;
+}
+@media (max-width: 1199.98px) {
+  #OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .rhs-wrap h3,
+  #OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .rhs-wrap h5 {
+    font-size: 20px;
+  }
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .heading-wrap .rhs-wrap p {
+  color: #666;
+  font-family: "OpenSans-Semibold", sans-serif;
+  font-size: 15px;
+  line-height: 100%;
+  margin: 0;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .content-wrap p {
+  color: #000;
+  font-family: "OpenSans-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  margin: 0 0 15px;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .rating-wrap {
+  margin-top: 10px;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .rating-wrap .star-rating {
+  display: inline-block;
+  vertical-align: middle;
+  width: 145px;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .rating-wrap .star-rating span i {
+  font-size: 30px;
+  color: #d59a0c;
+}
+@media (max-width: 1199.98px) {
+  #OurClients .our-clients-slider ul.clients-slider .each-slide .rating-wrap .star-rating span i {
+    font-size: 24px;
+  }
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .rating-wrap .star-rating span.text {
+  color: #ffcc00;
+  font-family: "OpenSans-Semibold", sans-serif;
+  font-size: 1rem;
+  line-height: 100%;
+  margin-right: 10px;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .rating-wrap .total-rating {
+  display: inline-block;
+  vertical-align: middle;
+  width: 145px;
+}
+#OurClients .our-clients-slider ul.clients-slider .each-slide .rating-wrap .total-rating p {
+  color: #000;
+  font-family: "OpenSans-Semibold", sans-serif;
+  font-size: 14px;
+  line-height: 100%;
+  margin: 0;
+}
+#OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-next {
+  background: url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/gd-homepage-arrow.svg") no-repeat right top;
+  right: -55px;
+  width: 42px;
+  height: 60px;
+}
+#OurClients .bx-wrapper .bx-controls .bx-controls-direction .bx-prev {
+  background: url("https://staging.gentledental.com/themes/custom/gentledentaldptheme/images/gd-homepage-arrow.svg") no-repeat left top;
+  left: -60px;
+  width: 42px;
+  height: 60px;
+}
+
+
+</code>
+</div>
+<div id="testimonialsliderjs">
+<code id="code-css-thirtythree" class="code javascript" data-clipboard-target=#code-javascript>
+$('.clients-slider').bxSlider({
+        controls: false,
+        auto: false,
+        pause: 3000,
+        pager: false,
+        preloadImages: 'visible',
+        slideWidth:  600,
+        minSlides: 2,
+        maxSlides:  2,
+        responsive: true,
+        adaptiveHeight: false,
+        touchEnabled: true
+      });
+    
+</code>
+</div>
+<div id="testimonialsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/testimonialslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="testimonialslider">testimonialslider</span>
+    </div>
+  </div>
+</div>
+<!-- testimonialslider ends here -->
  <!-- slickslider Starts here -->
 <div class="rule each-module-preview slickslider">
   <div class="title">
