@@ -87,6 +87,8 @@
                 <li data-val=".alphabeticalfilter">Alphabetical Filter</li>
                 <li data-val=".gallery">Gallery</li>
                 <li data-val=".upcomingevents">Upcoming Events</li>
+                <li data-val=".testimonialslider">Testimonial Slider</li>
+                <li data-val=".slickslider">Slick Slider</li>
               </ul>
             </div>  
           </div>
@@ -127,6 +129,8 @@
                  <li data-filter="alphabeticalfilter">Alphabetical Filter</li>
                  <li data-filter="gallery">Gallery</li>
                  <li data-filter="upcomingevents">Upcoming Events</li>
+                  <li data-filter="testimonialslider">Testimonial Slider</li>
+                <li data-filter="slickslider">Slick Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -8141,6 +8145,345 @@ body.compensate-for-scrollbar {
   </div>
 </div>
 <!-- upcomingevents ends here -->
+ <!-- slickslider Starts here -->
+<div class="rule each-module-preview slickslider">
+  <div class="title">
+      <h1>34. Slick Slider</h1>
+  </div>
+  <div class="rule" id="34">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="thirtyfour-tab-group">
+          <li class="tab"><a href="#slicksliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#slickslidercss">Styling</a></li>
+          <li class="tab"><a href="#slicksliderjs">Script</a></li>
+          <li class="tab"><a href="#slicksliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="thirtyfour-tab-group" class="tabgroup">
+<div id="slicksliderhtml">
+<code id="code-html-thirtyfour" class="code html" data-clipboard-target="#code-html">
+   &lt;div class="container"&gt;
+    &lt;div class="featured-slider"&gt;
+      &lt;div class="each-slider slider-1"&gt;
+        &lt;img src="https://picsum.photos/300/300/?random&1" alt="Image"&gt;
+        &lt;div class="description"&gt;
+          &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+          &lt;p&gt;"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ducimus, asperiores illum nam quisquam, totam quam voluptatum magnam voluptates nihil quae, quasi eligendi magni deserunt, aut assumenda saepe. Laudantium, quibusdam."&lt;/p&gt;
+          &lt;a href="javascript:void(0)"&gt;Learn More&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="each-slider slider-2"&gt;
+        &lt;img src="https://picsum.photos/300/300/?random&2" alt="Image"&gt;
+        &lt;div class="description"&gt;
+          &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+          &lt;p&gt;"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ducimus, asperiores illum nam quisquam, totam quam voluptatum magnam voluptates nihil quae, quasi eligendi magni deserunt, aut assumenda saepe. Laudantium, quibusdam."&lt;/p&gt;
+          &lt;a href="javascript:void(0)"&gt;Learn More&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="each-slider slider-3"&gt;
+        &lt;img src="https://picsum.photos/300/300/?random&3" alt="Image"&gt;
+        &lt;div class="description"&gt;
+          &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+          &lt;p&gt;"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ducimus, asperiores illum nam quisquam, totam quam voluptatum magnam voluptates nihil quae, quasi eligendi magni deserunt, aut assumenda saepe. Laudantium, quibusdam."&lt;/p&gt;
+          &lt;a href="javascript:void(0)"&gt;Learn More&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="each-slider slider-4"&gt;
+        &lt;img src="https://picsum.photos/300/300/?random&4" alt="Image"&gt;
+        &lt;div class="description"&gt;
+          &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+          &lt;p&gt;"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ducimus, asperiores illum nam quisquam, totam quam voluptatum magnam voluptates nihil quae, quasi eligendi magni deserunt, aut assumenda saepe. Laudantium, quibusdam."&lt;/p&gt;
+          &lt;a href="javascript:void(0)"&gt;Learn More&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="each-slider slider-5"&gt;
+        &lt;img src="https://picsum.photos/300/300/?random&5" alt="Image"&gt;
+        &lt;div class="description"&gt;
+          &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+          &lt;p&gt;"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ducimus, asperiores illum nam quisquam, totam quam voluptatum magnam voluptates nihil quae, quasi eligendi magni deserunt, aut assumenda saepe. Laudantium, quibusdam."&lt;/p&gt;
+          &lt;a href="javascript:void(0)"&gt;Learn More&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="slickslidercss">
+<code id="code-css-thirtyfour" class="code css" data-clipboard-target=#code-css>
+.slick-slider {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list,
+.slick-slider {
+  position: relative;
+  display: block;
+}
+.slick-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-list,
+.slick-slider .slick-track {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-track:after,
+.slick-track:before {
+  display: table;
+  content: "";
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.featured-slider .slick-list {
+  padding: 0 150px !important;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .featured-slider .slick-list {
+    padding: 0 !important;
+  }
+}
+.featured-slider .each-slider {
+  position: relative;
+  padding: 0 20px;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .featured-slider .each-slider {
+    padding: 0;
+  }
+}
+.featured-slider .each-slider img {
+  width: 100%;
+  height: auto;
+}
+.featured-slider .each-slider .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: hsla(0, 0%, 100%, 0.7);
+  padding: 30px;
+  width: 60%;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .featured-slider .each-slider .description {
+    padding: 20px;
+    width: 80%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .featured-slider .each-slider .description {
+    padding: 15px;
+    width: 85%;
+  }
+}
+.featured-slider .each-slider .description h1 {
+  color: #333;
+  font-size: 32px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin: 0 0 10px;
+  line-height: 1;
+}
+@media (min-width: 0) and (max-width: 767.98px) {
+  .featured-slider .each-slider .description h1 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+.featured-slider .each-slider .description p {
+  color: #333;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin: 0 0 30px;
+}
+@media (min-width: 0) and (max-width: 767.98px) {
+  .featured-slider .each-slider .description p {
+    display: none;
+  }
+}
+.featured-slider .each-slider .description a {
+  color: #333;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (min-width: 0) and (max-width: 767.98px) {
+  .featured-slider .each-slider .description a {
+    font-size: 16px;
+    padding: 8 18px;
+  }
+}
+.featured-slider .each-slider .description a:hover {
+  background: #3765a0;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.featured-slider .slick-arrow {
+  width: 110px;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  text-indent: -9999px;
+  outline: 0;
+  z-index: 99;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .featured-slider .slick-arrow {
+    width: 26px;
+    height: 33px;
+    bottom: -53px;
+    right: 0;
+    top: auto;
+  }
+}
+.featured-slider .slick-arrow.slick-next {
+  background: url("https://ui-modules.p2staging.us/slider-six/images/client-slider-arrow-next.png") no-repeat 41px;
+  right: 0;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .featured-slider .slick-arrow.slick-next {
+    background-position: 4px 4px;
+    right: 0;
+    background-size: 20px;
+    background-color: rgba(0, 0, 0, 0.47);
+    margin: 0 0 10px 20px;
+  }
+}
+.featured-slider .slick-arrow.slick-prev {
+  background: url("https://ui-modules.p2staging.us/slider-six/images/client-slider-arrow-prev.png") no-repeat 41px;
+  left: 0;
+}
+@media (min-width: 0) and (max-width: 991.98px) {
+  .featured-slider .slick-arrow.slick-prev {
+    right: 40px;
+    left: auto;
+    background-position: 6px 5px;
+    background-size: 20px;
+    background-color: rgba(0, 0, 0, 0.47);
+    margin-bottom: 10px;
+  }
+}
+
+
+</code>
+</div>
+<div id="slicksliderjs">
+<code id="code-css-thirtyfour" class="code javascript" data-clipboard-target=#code-javascript>
+(function($) {
+      $(document).ready(function() {
+         $('.featured-slider').slick({
+          centerMode: true,
+          slidesToShow: 1,
+          speed: 600,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '5px',
+                slidesToShow: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '5px',
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      });
+    })(jQuery);
+</code>
+</div>
+<div id="slicksliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/slickslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="slickslider">slickslider</span>
+    </div>
+  </div>
+</div>
+<!-- slickslider ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
