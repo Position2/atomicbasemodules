@@ -89,6 +89,7 @@
                 <li data-val=".upcomingevents">Upcoming Events</li>
                 <li data-val=".testimonialslider">Testimonial Slider</li>
                 <li data-val=".slickslider">Slick Slider</li>
+                <li data-val=".teamslider">Team Slider</li>
               </ul>
             </div>  
           </div>
@@ -131,6 +132,7 @@
                 <li data-filter="upcomingevents">Upcoming Events</li>
                 <li data-filter="testimonialslider">Testimonial Slider</li>
                 <li data-filter="slickslider">Slick Slider</li>
+                <li data-filter="teamslider">Team Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -8857,6 +8859,446 @@ $('.clients-slider').bxSlider({
   </div>
 </div>
 <!-- slickslider ends here -->
+ <!-- teamslider Starts here -->
+<div class="rule each-module-preview teamslider">
+  <div class="title">
+      <h1>35. Team Slider</h1>
+  </div>
+  <div class="rule" id="35">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="thirtyfive-tab-group">
+          <li class="tab"><a href="#teamsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#teamslidercss">Styling</a></li>
+          <li class="tab"><a href="#teamsliderjs">Script</a></li>
+          <li class="tab"><a href="#teamsliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="thirtyfive-tab-group" class="tabgroup">
+<div id="teamsliderhtml">
+<code id="code-html-thirtyfive" class="code html" data-clipboard-target="#code-html">
+     &lt;div class="carouselteam-wrap"&gt;
+    &lt;div class="container"&gt;
+      &lt;ul class="team-carousel"&gt;
+        &lt;li class="team-each-block"&gt;
+          &lt;a href="javascript:void(0)" class="team-prof-wrap"&gt;
+            &lt;div class="team-profile"&gt;
+              &lt;img src="https://picsum.photos/300/300/?random&1" alt="Image"&gt;
+            &lt;/div&gt;
+            &lt;div class="team-sub-wrap"&gt;
+              &lt;div class="team-sub-content"&gt;
+                &lt;h3&gt;Lorem ipsum.&lt;/h3&gt;
+                &lt;span&gt;Partner&lt;/span&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag linkedin-icon" target="_blank"&gt;&lt;i class="fa fa-linkedin-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag team-tag twitter-icon" target="_blank"&gt;&lt;i class="fa fa-twitter-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="team-each-block"&gt;
+          &lt;a href="javascript:void(0)" class="team-prof-wrap"&gt;
+            &lt;div class="team-profile"&gt;
+              &lt;img src="https://picsum.photos/300/300/?random&2" alt="Image"&gt;
+            &lt;/div&gt;
+            &lt;div class="team-sub-wrap"&gt;
+              &lt;div class="team-sub-content"&gt;
+                &lt;h3&gt;Lorem ipsum.&lt;/h3&gt;
+                &lt;span&gt;Partner&lt;/span&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag linkedin-icon" target="_blank"&gt;&lt;i class="fa fa-linkedin-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag team-tag twitter-icon" target="_blank"&gt;&lt;i class="fa fa-twitter-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="team-each-block"&gt;
+          &lt;a href="javascript:void(0)" class="team-prof-wrap"&gt;
+            &lt;div class="team-profile"&gt;
+              &lt;img src="https://picsum.photos/300/300/?random&2" alt="Image"&gt;
+            &lt;/div&gt;
+            &lt;div class="team-sub-wrap"&gt;
+              &lt;div class="team-sub-content"&gt;
+                &lt;h3&gt;Lorem ipsum.&lt;/h3&gt;
+                &lt;span&gt;Partner&lt;/span&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag linkedin-icon" target="_blank"&gt;&lt;i class="fa fa-linkedin-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag team-tag twitter-icon" target="_blank"&gt;&lt;i class="fa fa-twitter-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="team-each-block"&gt;
+          &lt;a href="javascript:void(0)" class="team-prof-wrap"&gt;
+            &lt;div class="team-profile"&gt;
+              &lt;img src="https://picsum.photos/300/300/?random&2" alt="Image"&gt;
+            &lt;/div&gt;
+            &lt;div class="team-sub-wrap"&gt;
+              &lt;div class="team-sub-content"&gt;
+                &lt;h3&gt;Lorem ipsum.&lt;/h3&gt;
+                &lt;span&gt;Partner&lt;/span&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag linkedin-icon" target="_blank"&gt;&lt;i class="fa fa-linkedin-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag team-tag twitter-icon" target="_blank"&gt;&lt;i class="fa fa-twitter-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="team-each-block"&gt;
+          &lt;a href="javascript:void(0)" class="team-prof-wrap"&gt;
+            &lt;div class="team-profile"&gt;
+              &lt;img src="https://picsum.photos/300/300/?random&2" alt="Image"&gt;
+            &lt;/div&gt;
+            &lt;div class="team-sub-wrap"&gt;
+              &lt;div class="team-sub-content"&gt;
+                &lt;h3&gt;Lorem ipsum.&lt;/h3&gt;
+                &lt;span&gt;Partner&lt;/span&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag linkedin-icon" target="_blank"&gt;&lt;i class="fa fa-linkedin-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag team-tag twitter-icon" target="_blank"&gt;&lt;i class="fa fa-twitter-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="team-each-block"&gt;
+          &lt;a href="javascript:void(0)" class="team-prof-wrap"&gt;
+            &lt;div class="team-profile"&gt;
+              &lt;img src="https://picsum.photos/300/300/?random&2" alt="Image"&gt;
+            &lt;/div&gt;
+            &lt;div class="team-sub-wrap"&gt;
+              &lt;div class="team-sub-content"&gt;
+                &lt;h3&gt;Lorem ipsum.&lt;/h3&gt;
+                &lt;span&gt;Partner&lt;/span&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag linkedin-icon" target="_blank"&gt;&lt;i class="fa fa-linkedin-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="javascript:void(0)" class="team-tag team-tag twitter-icon" target="_blank"&gt;&lt;i class="fa fa-twitter-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="teamslidercss">
+<code id="code-css-thirtyfive" class="code css" data-clipboard-target=#code-css>
+.bx-wrapper {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 0;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+    background: #fff;
+}
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+.bxslider {
+    margin: 0;
+    padding: 0;
+    -webkit-perspective: 1000;
+}
+ul.bxslider {
+    list-style: none;
+}
+.bx-viewport {
+    -webkit-transform: translateZ(0);
+}
+.bx-wrapper .bx-controls-auto,
+.bx-wrapper .bx-pager {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(../../images/slider-one/bx_loader.gif) 50% no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: 0.85em;
+    font-family: Arial;
+    font-weight: 700;
+    color: #666;
+    padding-top: 20px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus,
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: #000;
+}
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item,
+.bx-wrapper .bx-pager-item {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.bx-wrapper .bx-pager-item {
+    font-size: 0;
+    line-height: 0;
+}
+.bx-wrapper .bx-prev {
+    left: 10px;
+    background: url(images/controls.png) 0 -32px no-repeat;
+}
+.bx-wrapper .bx-prev:focus,
+.bx-wrapper .bx-prev:hover {
+    background-position: 0 0;
+}
+.bx-wrapper .bx-next {
+    right: 10px;
+    background: url(images/controls.png) -43px -32px no-repeat;
+}
+.bx-wrapper .bx-next:focus,
+.bx-wrapper .bx-next:hover {
+    background-position: -43px 0;
+}
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+.bx-wrapper .bx-controls-auto {
+    text-align: center;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -11px no-repeat;
+    margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus,
+.bx-wrapper .bx-controls-auto .bx-start:hover {
+    background-position: -86px 0;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    text-indent: -9999px;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -44px no-repeat;
+    margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus,
+.bx-wrapper .bx-controls-auto .bx-stop:hover {
+    background-position: -86px -33px;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+}
+.bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+}
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: Arial;
+    display: block;
+    font-size: 0.85em;
+    padding: 10px;
+}
+.carouselteam-wrap .bx-wrapper {
+    margin: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.carouselteam-wrap .bx-wrapper .bx-pager.bx-default-pager a {
+    background-color: #ededee;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid #3765a0;
+}
+.carouselteam-wrap .bx-wrapper .bx-pager.bx-default-pager a.active,
+.carouselteam-wrap .bx-wrapper .bx-pager.bx-default-pager a:focus,
+.carouselteam-wrap .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: #3765a0;
+}
+.carouselteam-wrap .bx-wrapper .bx-controls-auto,
+.carouselteam-wrap .bx-wrapper .bx-pager {
+    bottom: -40px;
+}
+.carouselteam-wrap .bx-wrapper .bx-controls-direction a {
+    margin-top: -5px;
+}
+.carouselteam-wrap .bx-wrapper .bx-controls-direction a.bx-prev {
+    background: url(../../images/team-two/arrows-sprite.png) no-repeat 0 0/60px auto;
+    left: -29px;
+}
+.carouselteam-wrap .bx-wrapper .bx-controls-direction a.bx-next {
+    background: url(../../images/team-two/arrows-sprite.png) no-repeat -33px 0/60px auto;
+    right: -40px;
+}
+.carouselteam-wrap .team-carousel {
+    margin: 0;
+    padding: 0;
+}
+.carouselteam-wrap .team-carousel li {
+    padding: 0;
+    list-style-type: none;
+    width: calc(25% - 20px);
+    margin: 0 10px;
+    float: left;
+    position: relative;
+}
+@media (min-width: 0) and (max-width: 479.98px) {
+    .carouselteam-wrap .team-carousel li {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media (min-width: 480px) and (max-width: 767.98px) {
+    .carouselteam-wrap .team-carousel li {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .carouselteam-wrap .team-carousel li {
+        width: calc(33.33333% - 20px);
+        margin-bottom: 20px;
+    }
+}
+.carouselteam-wrap .team-carousel li .team-profile {
+    position: relative;
+}
+.carouselteam-wrap .team-carousel li .team-profile img {
+    width: 100%;
+    height: auto;
+}
+.carouselteam-wrap .team-carousel li .team-sub-wrap {
+    bottom: -40px;
+    color: #fff;
+    padding: 0 10px;
+    position: absolute;
+    -webkit-transition: bottom 0.2s ease 0s;
+    transition: bottom 0.2s ease 0s;
+}
+@media (min-width: 0px) and (max-width: 1199.98px) {
+    .carouselteam-wrap .team-carousel li .team-sub-wrap {
+        bottom: 14px;
+    }
+}
+.carouselteam-wrap .team-carousel li .team-sub-wrap .team-sub-content h3 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+.carouselteam-wrap .team-carousel li .team-sub-wrap .team-sub-content h3 span {
+    display: block;
+    font-size: 16px;
+}
+.carouselteam-wrap .team-carousel li .team-sub-wrap .team-sub-content p {
+    color: #fff;
+    font-size: 14px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    min-height: 45px;
+    padding: 10px 25px 0 0;
+}
+@media (min-width: 0px) and (max-width: 1199.98px) {
+    .carouselteam-wrap .team-carousel li .team-sub-wrap .team-sub-content p {
+        display: none;
+    }
+}
+.carouselteam-wrap .team-carousel li:hover .team-sub-wrap {
+    bottom: 10px;
+    -webkit-transition: bottom 0.2s ease 0s;
+    transition: bottom 0.2s ease 0s;
+}
+.carouselteam-wrap .team-carousel .team-tag {
+    bottom: 10px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+}
+.carouselteam-wrap .team-carousel .team-tag.twitter-icon {
+    bottom: 35px;
+}
+.carouselteam-wrap .team-carousel .team-tag i {
+    font-size: 16px;
+}
+
+</code>
+</div>
+<div id="teamsliderjs">
+<code id="code-css-thirtyfive" class="code javascript" data-clipboard-target=#code-javascript>
+$('.team-carousel').bxSlider({
+  useCSS: true,
+  auto: true,
+  easing: 'easeInCirc',
+  speed: 1000,
+  pager: true,
+  controls: true,
+  maxSlides: 4,
+  minSlides: 4,
+  mouseDrag: true,
+  pause: 12000,
+  slideWidth: 468
+});
+</code>
+</div>
+<div id="teamsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/teamslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="teamslider">teamslider</span>
+    </div>
+  </div>
+</div>
+<!-- teamslider ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
