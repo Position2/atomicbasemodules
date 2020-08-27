@@ -90,6 +90,7 @@
                 <li data-val=".testimonialslider">Testimonial Slider</li>
                 <li data-val=".slickslider">Slick Slider</li>
                 <li data-val=".teamslider">Team Slider</li>
+                <li data-val=".simplyscroll">Simply Scroll</li>
               </ul>
             </div>  
           </div>
@@ -133,6 +134,7 @@
                 <li data-filter="testimonialslider">Testimonial Slider</li>
                 <li data-filter="slickslider">Slick Slider</li>
                 <li data-filter="teamslider">Team Slider</li>
+                <li data-filter="simplyscroll">Simply Scroll</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -9299,6 +9301,101 @@ $('.team-carousel').bxSlider({
   </div>
 </div>
 <!-- teamslider ends here -->
+ <!-- simplyscroll Starts here -->
+<div class="rule each-module-preview simplyscroll">
+  <div class="title">
+      <h1>36. Simply Scroll</h1>
+  </div>
+  <div class="rule" id="36">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="thirtysix-tab-group">
+          <li class="tab"><a href="#simplyscrollhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#simplyscrollcss">Styling</a></li>
+          <li class="tab"><a href="#simplyscrolljs">Script</a></li>
+          <li class="tab"><a href="#simplyscrollresult">Result</a></li>
+      </ul>
+<pre>
+<div id="thirtysix-tab-group" class="tabgroup">
+<div id="simplyscrollhtml">
+<code id="code-html-thirtysix" class="code html" data-clipboard-target="#code-html">
+   &lt;section id="Clients"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="client-wrapper"&gt;
+        &lt;ul class="client-slider simplyScroll"&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&1"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&2"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&3"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&4"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&5"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&6"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&7"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&8"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&9"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&1"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&2"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&3"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&4"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&5"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&6"&gt;&lt;/li&gt;
+          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&7"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+</code>
+</div>
+<div id="simplyscrollcss">
+<code id="code-css-thirtysix" class="code css" data-clipboard-target=#code-css>
+/* simplyScroll 2 - a scroll-tastic jQuery plugin */
+.simply-scroll-list,.simply-scroll-list li{padding:0;margin:0;list-style:none}.simply-scroll-container{position:relative}.simply-scroll-clip{position:relative;overflow:hidden}.simply-scroll-list{overflow:hidden}.simply-scroll-list li img{border:none;display:block}.simply-scroll-btn{position:absolute;background-image:url(buttons.png);width:42px;height:44px;z-index:3;cursor:pointer}.simply-scroll,.simply-scroll .simply-scroll-clip{width:576px;height:200px}.simply-scroll-btn-left{left:6px;bottom:6px;background-position:0 -44px}.simply-scroll-btn-left.disabled{background-position:0 0!important}.simply-scroll-btn-left:focus,.simply-scroll-btn-left:hover{background-position:0 -88px}.simply-scroll-btn-right{right:6px;bottom:6px;background-position:-84px -44px}.simply-scroll-btn-right.disabled{background-position:-84px 0!important}.simply-scroll-btn-right:focus,.simply-scroll-btn-right:hover{background-position:-84px -88px}.simply-scroll-btn-up{right:6px;top:6px;background-position:-126px -44px}.simply-scroll-btn-up.disabled{background-position:-126px 0!important}.simply-scroll-btn-up:focus,.simply-scroll-btn-up:hover{background-position:-126px -88px}.simply-scroll-btn-down{right:6px;bottom:6px;background-position:-42px -44px}.simply-scroll-btn-down.disabled{background-position:-42px 0!important}.simply-scroll-btn-down:focus,.simply-scroll-btn-down:hover{background-position:-42px -88px}.simply-scroll-btn-pause{right:6px;bottom:6px;background-position:-168px -44px}.simply-scroll-btn-pause:focus,.simply-scroll-btn-pause:hover{background-position:-168px -88px}.simply-scroll-btn-pause.active{background-position:-84px -44px}.simply-scroll-btn-pause.active:focus,.simply-scroll-btn-pause.active:hover{background-position:-84px -88px}.simply-scroll{margin-bottom:1em}.simply-scroll .simply-scroll-list li{float:left;width:290px;height:200px}.vert{width:340px;height:400px;margin-bottom:1.5em}.vert .simply-scroll-clip{width:290px;height:400px}.vert .simply-scroll-list li{width:290px;height:200px}.vert .simply-scroll-btn-up{right:0;top:0}.vert .simply-scroll-btn-down{right:0;top:52px}
+/* Client Section Styles Begins */
+#Clients {
+  background: #f5f5f5;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 40px 0;
+}
+#Clients ul {
+  padding: 0;
+  margin: 0;
+}
+#Clients ul li {
+  list-style-type: none;
+  display: inline-block;
+  width: 200px;
+  height: auto;
+}
+#Clients .client-wrapper .simply-scroll {
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+}
+#Clients .client-wrapper .simply-scroll .simply-scroll-clip {
+  width: auto;
+  height: auto;
+}
+/* Client Section Styles Ends */
+
+</code>
+</div>
+<div id="simplyscrolljs">
+<code id="code-css-thirtysix" class="code javascript" data-clipboard-target=#code-javascript>
+
+$('.client-slider').simplyScroll();
+</code>
+</div>
+<div id="simplyscrollresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/simplyscroll.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="simplyscroll">simplyscroll</span>
+    </div>
+  </div>
+</div>
+<!-- simplyscroll ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
