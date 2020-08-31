@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Form Slidein</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<style>
+body {
+  background-color: #252525;
+}
+#CustomFrom .form-content-wrap {
+  width: 475px;
+  background-color: #ff0000;
+  padding: 12% 20%;
+  height: 100vh;
+  position: relative;
+  overflow-y: auto;
+}
+
+@media (max-width: 575.98px) {
+  #CustomFrom .form-content-wrap {
+    width: 100vw;
+  }
+}
+
+#CustomFrom .form-content-wrap .close-icon {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+}
+
+#CustomFrom .form-content-wrap .close-icon img {
+  cursor: pointer;
+  width: 100%;
+}
+
+#CustomFrom .form-content-wrap .form-title h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  font-family: "Lato";
+  margin: 0 0 30px;
+  text-transform: uppercase;
+}
+
+#CustomFrom .form-content-wrap .form-row {
+  margin-bottom: 25px;
+}
+
+#CustomFrom .form-content-wrap .form-row input {
+  width: 100%;
+  color: #6f7170;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  font-family: "Lato";
+  padding: 10px 20px;
+  border: none;
+}
+
+#CustomFrom .form-content-wrap .form-row input:focus {
+  border: none;
+  outline: none;
+}
+
+#CustomFrom .form-content-wrap .form-row.form-check-box {
+  display: inline-block;
+}
+
+#CustomFrom .form-content-wrap .form-row.form-check-box input {
+  width: auto;
+  margin-right: 5px;
+}
+
+#CustomFrom .form-content-wrap .form-row.form-check-box span {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  font-family: "Lato";
+}
+
+#CustomFrom .form-content-wrap .form-row.form-submit input {
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 14px 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+#CustomFrom .form-content-wrap .form-row.form-submit input:hover {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  color: #ff0000;
+  background-color: #ffffff;
+}
+
+#CustomFrom {
+  position: fixed;
+  top: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  right: -475px;
+}
+
+#CustomFrom.open {
+  right: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+#CustomFrom.open::before {
+  position: absolute;
+  content: "";
+  left: -500%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(76, 76, 76, 0.7);
+  z-index: -1;
+  width: 700%;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.cta-section a {
+  color: #fff;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+font-family: "Lato";
+padding: 15px 40px;
+border: 1px solid #61b740;
+-webkit-transition: all 0.3s;
+transition: all 0.3s;
+display: block;
+margin-bottom: 20px;
+border-radius: 0;
+display: inline-block;
+margin-right: 20px;
+outline: none;
+}
+.cta-section a:hover {
+  text-decoration: none;
+  background-color: #61b740;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="cta-section">
+<a class="btn" href="javascript:void(0);">Download</a>
+</div>
+<section id="CustomFrom">
+<div class="form-content-wrap">
+<div class="close-icon"><img src="https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/close-512.png" alt="icon"></div>
+<div class="form-title">
+<h3>download</h3>
+</div>
+<form action="Javascript:void(0)" method="get">
+<div class="form-row">
+<input type="text" placeholder="First name">
+</div>
+<div class="form-row">
+<input type="text" placeholder="Last name">
+</div>
+<div class="form-row">
+<input type="text" placeholder="Job Title">
+</div>
+<div class="form-row">
+<input type="text" placeholder="Company">
+</div>
+<div class="form-row">
+<input type="email" placeholder="Email">
+</div>
+<div class="form-row">
+<input type="text" placeholder="Phone Number">
+</div>
+<div class="form-row form-check-box">
+<input type="checkbox"> <span>Please keep me informed</span>
+</div>
+<div class="form-row form-submit">
+<input type="submit" value="Submit">
+</div>
+</form>
+</div>
+</section>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script id="rendered-js">
+$("a.btn, .close-icon").click(function () {
+  $("#CustomFrom").toggleClass("open");
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
