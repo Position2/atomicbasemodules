@@ -94,6 +94,7 @@
                 <li data-val=".tabswithslider">Tabs with Slider</li>
                 <li data-val=".formslidein">Form Slidein</li>
                 <li data-val=".timelineslider">Timeline Slider</li>
+                <li data-val=".fullviewportslider">Full Viewport Slider</li>
               </ul>
             </div>  
           </div>
@@ -141,6 +142,7 @@
                 <li data-filter="tabswithslider">Tabs with Slider</li>
                 <li data-filter="tabswithslider">Form Slidein</li>
                 <li data-filter="timelineslider">Timeline Slider</li>
+                <li data-filter="fullviewportslider">Full Viewport Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -10399,6 +10401,377 @@ h1 {
   </div>
 </div>
 <!--Timeline Slider ends here -->
+ <!-- Full Viewport Slider Starts here -->
+<div class="rule each-module-preview fullviewportslider">
+  <div class="title">
+      <h1>40. Full Viewport Slider</h1>
+  </div>
+  <div class="rule" id="40">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fourty-tab-group">
+          <li class="tab"><a href="#fullviewportsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#fullviewportslidercss">Styling</a></li>
+          <li class="tab"><a href="#fullviewportsliderjs">Script</a></li>
+          <li class="tab"><a href="#fullviewportsliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fourty-tab-group" class="tabgroup">
+<div id="fullviewportsliderhtml">
+<code id="code-html-fourty" class="code html" data-clipboard-target="#code-html">
+  &lt;section id="HomeSliderSection"&gt;
+    &lt;ul class="homeslider"&gt;
+     &lt;li&gt;
+        &lt;picture&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&1" media="(max-width: 768px)"&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&1" media="(min-width: 768px)"&gt;
+          &lt;img class="banner-slider-image" src="https://picsum.photos/300/300/?random&1"&gt;
+        &lt;/picture&gt;
+        &lt;div class="slider-content"&gt;
+          &lt;div class="container"&gt;
+            &lt;h2&gt;What is Lorem Ipsum?&lt;/h2&gt;
+            &lt;p&gt;Lorem Ipsum is simply dummy text&lt;/p&gt;
+            &lt;a class="go-button" href="javascript:void(0)"&gt;LEARN MORE&lt;span class="go-button"&gt;&lt;img src="https://i.ibb.co/MhXw17c/arrow-right.png" class="arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;picture&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&2" media="(max-width: 768px)"&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&2" media="(min-width: 768px)"&gt;
+          &lt;img class="banner-slider-image" src="https://picsum.photos/300/300/?random&2"&gt;
+        &lt;/picture&gt;
+        &lt;div class="slider-content"&gt;
+          &lt;div class="container"&gt;
+            &lt;h2&gt;Where does it come from?&lt;/h2&gt;
+            &lt;p&gt;Contrary to popular belief, Lorem Ipsum is not simply&lt;/p&gt;
+            &lt;a class="go-button" href="javascript:void(0)"&gt;LEARN MORE&lt;span class="go-button"&gt;&lt;img src="https://i.ibb.co/MhXw17c/arrow-right.png" class="arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+       &lt;li&gt;
+        &lt;picture&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&3" media="(max-width: 768px)"&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&3" media="(min-width: 768px)"&gt;
+          &lt;img class="banner-slider-image" src="https://picsum.photos/300/300/?random&3"&gt;
+        &lt;/picture&gt;
+        &lt;div class="slider-content"&gt;
+          &lt;div class="container"&gt;
+            &lt;h2&gt;Why do we use it?&lt;/h2&gt;
+            &lt;p&gt;It is a long established fact that a reader will be distracted by the readable &lt;/p&gt;
+            &lt;a class="go-button" href="javascript:void(0)"&gt;LEARN MORE&lt;span class="go-button"&gt;&lt;img src="https://i.ibb.co/MhXw17c/arrow-right.png" class="arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      
+    &lt;/ul&gt;
+  &lt;/section&gt;
+</code>
+</div>
+<div id="fullviewportslidercss">
+<code id="code-css-fourty" class="code css" data-clipboard-target=#code-css>
+/*slider plugin css*/
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+}
+
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 5px solid #fff;
+  left: -5px;
+  background: #fff;
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+
+.bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(../images/bx_loader.gif) center center no-repeat #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: 700;
+  color: #666;
+  padding-top: 20px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item, .bx-wrapper .bx-pager .bx-pager-item {
+  display: inline-block;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+  background: #000;
+}
+
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(../images/controls.png) 0 -32px no-repeat;
+}
+
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url(../images/controls.png) -43px -32px no-repeat;
+}
+
+.bx-wrapper .bx-prev:hover {
+  background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+  background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(../images/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start.active, .bx-wrapper .bx-controls-auto .bx-start:hover {
+  background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(../images/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop.active, .bx-wrapper .bx-controls-auto .bx-stop:hover {
+  background-position: -86px -33px;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666 \9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+#HomeSliderSection {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+#HomeSliderSection ul.homeslider {
+  margin: 0;
+  padding: 0;
+}
+#HomeSliderSection ul.homeslider li .banner-slider-image {
+  width: 100%;
+  height: auto;
+}
+#HomeSliderSection ul.homeslider li .slider-content {
+  left: 0;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+#HomeSliderSection ul.homeslider li .slider-content h2 {
+  margin: 0 0 20px;
+  font: 500 46px/130% "Montserrat", sans-serif;
+  color: #fff;
+}
+#HomeSliderSection ul.homeslider li .slider-content h2 span {
+  color: #ffffff;
+  display: block;
+  font: 700 50px/130% "Montserrat", sans-serif;
+  margin: 0;
+}
+#HomeSliderSection ul.homeslider li .slider-content p {
+  color: #ffffff;
+  font: 400 18px/140% "Source Sans Pro", sans-serif;
+  margin: 0 0 30px;
+}
+#HomeSliderSection ul.homeslider li .slider-content .go-button {
+  color: #ffffff;
+  display: inline-block;
+  font: 400 20px/130% "Montserrat",sans-serif;
+}
+#HomeSliderSection ul.homeslider li .slider-content .go-button .arrow-right {
+  display: inline-block;
+  height: 30px;
+  margin-left: 10px;
+  position: relative;
+  right: 0;
+  top: -1px;
+  transition: right 0.2s ease 0s;
+  width: 30px;
+}
+#HomeSliderSection ul.homeslider li .slider-content .go-button:hover .arrow-right {
+  right: -10px;
+  transition: right 0.2s ease 0s;
+}
+#HomeSliderSection .bx-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#HomeSliderSection .bx-wrapper .bx-viewport {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  box-shadow: none;
+  left: 0;
+  transform: translateZ(0px);
+  height: 100vh;
+}
+#HomeSliderSection .bx-wrapper .homeslider li {
+  height: 100vh;
+}
+#HomeSliderSection .bx-wrapper .bx-controls-auto, #HomeSliderSection .bx-wrapper .bx-pager {
+  bottom: 10px;
+}
+#HomeSliderSection .bx-wrapper .bx-pager {
+  padding-top: 0;
+}
+#HomeSliderSection .bx-controls .bx-pager-item .bx-pager-link {
+  background: #ffffff none repeat scroll 0 0;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin: 0 2px;
+  transition: all 0.3s ease 0s;
+  width: 15px;
+}
+#HomeSliderSection .bx-controls .bx-pager-item .bx-pager-link.active {
+  background: transparent none repeat scroll 0 0;
+  border: 2px solid #ffffff;
+  height: 15px;
+  transition: all 0.3s ease 0s;
+  width: 15px;
+}
+#HomeSliderSection .bx-controls .bx-pager-item .bx-pager-link:hover {
+  background: #999;
+}
+
+
+</code>
+</div>
+<div id="fullviewportsliderjs">
+<code id="code-css-fourty" class="code javascript" data-clipboard-target=#code-javascript>
+
+ 
+$('.homeslider').bxSlider({
+      controls: false,
+          auto: true,
+          easing: 'ease-in',
+          pager: ($(".homeslider > li").length > 1) ? true : false,
+          pause: 7000,
+          speed: 1000,
+          mode: 'fade',
+          responsive: true,
+          adaptiveHeight: true,
+          touchEnabled: false
+    });      
+$('.bx-pager-item').mouseenter(function(){
+        homeSlider.stopAuto();     
+      });
+      $('.bx-pager-item').mouseleave(function(){
+        homeSlider.startAuto();        
+      });
+</code>
+</div>
+<div id="fullviewportsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/fullviewportslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="fullviewportslider">fullviewportslider</span>
+    </div>
+  </div>
+</div>
+<!--Full Viewport Slider ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
