@@ -1,123 +1,420 @@
- <!-- simplyscroll Starts here -->
-<div class="rule each-module-preview simplyscroll">
+ <!-- Tabs with Slider Starts here -->
+<div class="rule each-module-preview tabswithslider">
   <div class="title">
-      <h1>36. Simply Scroll</h1>
+      <h1>37. Tabs with Slider</h1>
   </div>
-  <div class="rule" id="36">
+  <div class="rule" id="37">
       <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
-      <ul class="tabs" data-tabgroup="thirtysix-tab-group">
-          <li class="tab"><a href="#simplyscrollhtml" class="active">HTML</a></li>
-          <li class="tab"><a href="#simplyscrollcss">Styling</a></li>
-          <li class="tab"><a href="#simplyscrolljs">Script</a></li>
-          <li class="tab"><a href="#simplyscrollresult">Result</a></li>
+      <ul class="tabs" data-tabgroup="thirtyseven-tab-group">
+          <li class="tab"><a href="#tabswithsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#tabswithslidercss">Styling</a></li>
+          <li class="tab"><a href="#tabswithsliderjs">Script</a></li>
+          <li class="tab"><a href="#tabswithsliderresult">Result</a></li>
       </ul>
 <pre>
-<div id="thirtysix-tab-group" class="tabgroup">
-<div id="simplyscrollhtml">
-<code id="code-html-thirtysix" class="code html" data-clipboard-target="#code-html">
-   &lt;section id="Clients"&gt;
-    &lt;div class="container"&gt;
-      &lt;div class="client-wrapper"&gt;
-        &lt;ul class="client-slider simplyScroll"&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&1"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&2"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&3"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&4"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&5"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&6"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&7"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&8"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&9"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&1"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&2"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&3"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&4"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&5"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&6"&gt;&lt;/li&gt;
-          &lt;li&gt; &lt;img src="https://picsum.photos/300/300/?random&7"&gt;&lt;/li&gt;
+<div id="thirtyseven-tab-group" class="tabgroup">
+<div id="tabswithsliderhtml">
+<code id="code-html-thirtyseven" class="code html" data-clipboard-target="#code-html">
+ &lt;div class="container"&gt;
+    &lt;div id="slider-thumb"&gt;
+      &lt;h1&gt;Lorem Ipsum&lt;/h1&gt;
+      &lt;div class="filter-by-section"&gt;
+        &lt;ul class="dTab clearfix"&gt;
+          &lt;li data-slide-index="0" class="active"&gt;
+            &lt;div class="filter-by-section-box" data-href="#ONE"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Trusted Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 1&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="1"&gt;
+            &lt;div class="filter-by-section-box" data-href="#TWO"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Expertise Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 2&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="2"&gt;
+            &lt;div class="filter-by-section-box" data-href="#THREE"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Confidence Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 3&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="3" class=""&gt;
+            &lt;div class="filter-by-section-box" data-href="#FOUR"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Business Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 4&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="4"&gt;
+            &lt;div class="filter-by-section-box" data-href="#FIVE"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Network Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 5&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/div&gt;
+      &lt;div class="filter-by-section-description-wrapper"&gt;
+        &lt;div class="filter-by-section-description" id="ONE"&gt;
+          &lt;h4&gt;Tab 1&lt;/h4&gt;
+          &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="TWO"&gt;
+          &lt;h4&gt;Tab 2&lt;/h4&gt;
+          &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="THREE"&gt;
+          &lt;h4&gt;Tab 3&lt;/h4&gt;
+         &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="FOUR"&gt;
+          &lt;h4&gt;Tab 4&lt;/h4&gt;
+         &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="FIVE"&gt;
+          &lt;h4&gt;Tab 5&lt;/h4&gt;
+         &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/section&gt;
+  &lt;/div&gt;
 </code>
 </div>
-<div id="simplyscrollcss">
-<code id="code-css-thirtysix" class="code css" data-clipboard-target=#code-css>
-/* simplyScroll 2 - a scroll-tastic jQuery plugin */
-.simply-scroll-list,.simply-scroll-list li{padding:0;margin:0;list-style:none}.simply-scroll-container{position:relative}.simply-scroll-clip{position:relative;overflow:hidden}.simply-scroll-list{overflow:hidden}.simply-scroll-list li img{border:none;display:block}.simply-scroll-btn{position:absolute;background-image:url(buttons.png);width:42px;height:44px;z-index:3;cursor:pointer}.simply-scroll,.simply-scroll .simply-scroll-clip{width:576px;height:200px}.simply-scroll-btn-left{left:6px;bottom:6px;background-position:0 -44px}.simply-scroll-btn-left.disabled{background-position:0 0!important}.simply-scroll-btn-left:focus,.simply-scroll-btn-left:hover{background-position:0 -88px}.simply-scroll-btn-right{right:6px;bottom:6px;background-position:-84px -44px}.simply-scroll-btn-right.disabled{background-position:-84px 0!important}.simply-scroll-btn-right:focus,.simply-scroll-btn-right:hover{background-position:-84px -88px}.simply-scroll-btn-up{right:6px;top:6px;background-position:-126px -44px}.simply-scroll-btn-up.disabled{background-position:-126px 0!important}.simply-scroll-btn-up:focus,.simply-scroll-btn-up:hover{background-position:-126px -88px}.simply-scroll-btn-down{right:6px;bottom:6px;background-position:-42px -44px}.simply-scroll-btn-down.disabled{background-position:-42px 0!important}.simply-scroll-btn-down:focus,.simply-scroll-btn-down:hover{background-position:-42px -88px}.simply-scroll-btn-pause{right:6px;bottom:6px;background-position:-168px -44px}.simply-scroll-btn-pause:focus,.simply-scroll-btn-pause:hover{background-position:-168px -88px}.simply-scroll-btn-pause.active{background-position:-84px -44px}.simply-scroll-btn-pause.active:focus,.simply-scroll-btn-pause.active:hover{background-position:-84px -88px}.simply-scroll{margin-bottom:1em}.simply-scroll .simply-scroll-list li{float:left;width:290px;height:200px}.vert{width:340px;height:400px;margin-bottom:1.5em}.vert .simply-scroll-clip{width:290px;height:400px}.vert .simply-scroll-list li{width:290px;height:200px}.vert .simply-scroll-btn-up{right:0;top:0}.vert .simply-scroll-btn-down{right:0;top:52px}
-/* Client Section Styles Begins */
-#Clients {
-  background: #f5f5f5;
-  border-bottom: 1px solid #c2c2c2;
-  padding: 40px 0;
-}
-#Clients ul {
-  padding: 0;
+<div id="tabswithslidercss">
+<code id="code-css-thirtyseven" class="code css" data-clipboard-target=#code-css>
+#slider-thumb ul {
   margin: 0;
-}
-#Clients ul li {
+  padding: 0;
   list-style-type: none;
+}
+
+@media (max-width: 991.98px) {
+  #slider-thumb ul {
+    text-align: center;
+  }
+}
+
+#slider-thumb ul li {
   display: inline-block;
-  width: 200px;
-  height: auto;
+  vertical-align: top;
+  width: 19%;
+  text-align: center;
+  opacity: 0.2;
 }
-#Clients .client-wrapper .simply-scroll {
-  width: auto;
-  height: auto;
-  margin-bottom: 0;
+
+@media (max-width: 767.98px) {
+  #slider-thumb ul li {
+    padding-bottom: 30px;
+    width: 30%;
+  }
 }
-#Clients .client-wrapper .simply-scroll .simply-scroll-clip {
-  width: auto;
-  height: auto;
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #slider-thumb ul li {
+    width: 32.7%;
+    padding-bottom: 30px;
+  }
 }
-/* Client Section Styles Ends */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #slider-thumb ul li {
+    width: 19.6%;
+  }
+}
+
+#slider-thumb ul li .content-new {
+  cursor: pointer;
+}
+
+#slider-thumb li.active,
+#slider-thumb li:hover {
+  opacity: 1;
+}
+
+#slider-thumb {
+  background-color: #437fc1;
+  margin-bottom: 1px;
+  padding: 56px 0px 40px 0px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .bottom-cta-wrap .cta-section {
+    text-align: center;
+  }
+}
+
+#slider-thumb .filter-by-section-box p {
+  color: #333;
+  display: block;
+}
+
+#slider-thumb .filter-by-section {
+  margin: 0 0 80px;
+  min-height: 100px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper {
+  min-height: 60px;
+  position: relative;
+}
+
+#slider-thumb li.active .filter-by-section-box p {
+  color: #26a9e0;
+}
+
+#slider-thumb .bx-wrapper {
+  border: transparent;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .bx-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+#slider-thumb h1 {
+  color: #fff;
+  font-size: 36px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 70px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+#slider-thumb .img-holder {
+  width: 102px;
+  height: 102px;
+  display: inline-block;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .img-holder {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+#slider-thumb h3 {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 0px;
+  font-weight: 400;
+  margin-top: 18px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb h3 {
+    font-size: 14px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper {
+  text-align: center;
+}
+
+#slider-thumb .filter-by-section-description-wrapper h4 {
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description-wrapper h4 {
+    font-size: 20px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper div {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description-wrapper div {
+    font-size: 14px;
+  }
+}
+
+#slider-thumb a.btn {
+  color: #fff;
+  padding: 15px 40px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  border: 1px solid #fff;
+  border-radius: 0;
+  line-height: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  outline: none;
+}
+
+#slider-thumb a.btn:nth-child(2) {
+  margin-left: 40px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+#slider-thumb a.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 575.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  #slider-thumb a.btn:nth-of-type(2) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  #slider-thumb a.btn:nth-of-type(2) {
+    margin-left: 10px;
+  }
+}
+
+#slider-thumb a.btn:hover {
+  color: #437fc1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  background-color: #fff;
+}
+
+#slider-thumb .btn-wrapper {
+  text-align: center;
+}
+
+#slider-thumb .filter-by-section-description div {
+  padding: 0px 220px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0 100px;
+  }
+}
+
 
 </code>
 </div>
-<div id="simplyscrolljs">
-<code id="code-css-thirtysix" class="code javascript" data-clipboard-target=#code-javascript>
+<div id="tabswithsliderjs">
+<code id="code-css-thirtyseven" class="code javascript" data-clipboard-target=#code-javascript>
+ var slider = $('#slider-thumb .filter-by-section-description-wrapper').bxSlider({
+      "mode": "fade",
+      "auto": true,
+      "pager": false,
+      "speed": 1000,
+      "pause": 9000,
+      "controls": false,
+      "onSlideBefore": function($slideElement, oldIndex, newIndex) {
+        $("#slider-thumb .filter-by-section .dTab li[data-slide-index='" + newIndex + "']").addClass("active").siblings("li").removeClass("active");
+      }
+    });
 
-/*
- * simplyScroll 2 - a scroll-tastic jQuery plugin
- *
- * http://logicbox.net/jquery/simplyscroll/
- *
- * Copyright (c) 2009-2012 Will Kelly - http://logicbox.net
- *
- * Dual licensed under the MIT and GPL licenses.
- *
- * Version: 2.0.5 Last revised: 10/05/2012
- *
- */
-(function(c,j,i){c.fn.simplyScroll=function(a){return this.each(function(){new c.simplyScroll(this,a)})};var h={customClass:"simply-scroll",frameRate:24,speed:1,orientation:"horizontal",auto:!0,autoMode:"loop",manualMode:"end",direction:"forwards",pauseOnHover:!0,pauseOnTouch:!0,pauseButton:!1,startOnLoad:!1};c.simplyScroll=function(a,b){var g=this;this.o=c.extend({},h,b||{});this.isAuto=!1!==this.o.auto&&null!==this.o.autoMode.match(/^loop|bounce$/);this.isRTL=(this.isHorizontal=null!==this.o.orientation.match(/^horizontal|vertical$/)&&
-this.o.orientation==h.orientation)&&"rtl"==c("html").attr("dir");this.isForwards=!this.isAuto||this.isAuto&&(null!==this.o.direction.match(/^forwards|backwards$/)&&this.o.direction==h.direction)&&!this.isRTL;this.isLoop=this.isAuto&&"loop"==this.o.autoMode||!this.isAuto&&"loop"==this.o.manualMode;this.events=(this.supportsTouch="createTouch"in document)?{start:"touchstart MozTouchDown",move:"touchmove MozTouchMove",end:"touchend touchcancel MozTouchRelease"}:{start:"mouseenter",end:"mouseleave"};
-this.$list=c(a);var d=this.$list.children();this.$list.addClass("simply-scroll-list").wrap('<div class="simply-scroll-clip"></div>').parent().wrap('<div class="'+this.o.customClass+' simply-scroll-container"></div>');this.isAuto?this.o.pauseButton&&(this.$list.parent().parent().prepend('<div class="simply-scroll-btn simply-scroll-btn-pause"></div>'),this.o.pauseOnHover=!1):this.$list.parent().parent().prepend('<div class="simply-scroll-forward"></div>').prepend('<div class="simply-scroll-back"></div>');
-if(1<d.length){var f=!1,e=0;this.isHorizontal?(d.each(function(){e=e+c(this).outerWidth(true)}),f=d.eq(0).outerWidth(!0)*d.length!==e):(d.each(function(){e=e+c(this).outerHeight(true)}),f=d.eq(0).outerHeight(!0)*d.length!==e);f&&(this.$list=this.$list.wrap("<div></div>").parent().addClass("simply-scroll-list"),this.isHorizontal?this.$list.children().css({"float":"left",width:e+"px"}):this.$list.children().css({height:e+"px"}))}this.o.startOnLoad?c(j).load(function(){g.init()}):this.init()};c.simplyScroll.fn=
-c.simplyScroll.prototype={};c.simplyScroll.fn.extend=c.simplyScroll.extend=c.extend;c.simplyScroll.fn.extend({init:function(){this.$items=this.$list.children();this.$clip=this.$list.parent();this.$container=this.$clip.parent();this.$btnBack=c(".simply-scroll-back",this.$container);this.$btnForward=c(".simply-scroll-forward",this.$container);this.isHorizontal?(this.itemMax=this.$items.eq(0).outerWidth(!0),this.clipMax=this.$clip.width(),this.dimension="width",this.moveBackClass="simply-scroll-btn-left",
-this.moveForwardClass="simply-scroll-btn-right",this.scrollPos="Left"):(this.itemMax=this.$items.eq(0).outerHeight(!0),this.clipMax=this.$clip.height(),this.dimension="height",this.moveBackClass="simply-scroll-btn-up",this.moveForwardClass="simply-scroll-btn-down",this.scrollPos="Top");this.posMin=0;this.posMax=this.$items.length*this.itemMax;var a=Math.ceil(this.clipMax/this.itemMax);if(this.isAuto&&"loop"==this.o.autoMode)this.$list.css(this.dimension,this.posMax+this.itemMax*a+"px"),this.posMax+=
-this.clipMax-this.o.speed,this.isForwards?(this.$items.slice(0,a).clone(!0).appendTo(this.$list),this.resetPosition=0):(this.$items.slice(-a).clone(!0).prependTo(this.$list),this.resetPosition=this.$items.length*this.itemMax,this.isRTL&&(this.$clip[0].dir="ltr",this.$items.css("float","right")));else if(!this.isAuto&&"loop"==this.o.manualMode){this.posMax+=this.itemMax*a;this.$list.css(this.dimension,this.posMax+this.itemMax*a+"px");this.posMax+=this.clipMax-this.o.speed;this.$items.slice(0,a).clone(!0).appendTo(this.$list);
-this.$items.slice(-a).clone(!0).prependTo(this.$list);this.resetPositionForwards=this.resetPosition=a*this.itemMax;this.resetPositionBackwards=this.$items.length*this.itemMax;var b=this;this.$btnBack.bind(this.events.start,function(){b.isForwards=false;b.resetPosition=b.resetPositionBackwards});this.$btnForward.bind(this.events.start,function(){b.isForwards=true;b.resetPosition=b.resetPositionForwards})}else this.$list.css(this.dimension,this.posMax+"px"),this.isForwards?this.resetPosition=0:(this.resetPosition=
-this.$items.length*this.itemMax,this.isRTL&&(this.$clip[0].dir="ltr",this.$items.css("float","right")));this.resetPos();this.interval=null;this.intervalDelay=Math.floor(1E3/this.o.frameRate);if(this.isAuto||"end"!=this.o.manualMode)for(;0!==this.itemMax%this.o.speed;)if(this.o.speed--,0===this.o.speed){this.o.speed=1;break}b=this;this.trigger=null;this.funcMoveBack=function(a){a!==i&&a.preventDefault();b.trigger=!b.isAuto&&b.o.manualMode=="end"?this:null;b.isAuto?b.isForwards?b.moveBack():b.moveForward():
-b.moveBack()};this.funcMoveForward=function(a){a!==i&&a.preventDefault();b.trigger=!b.isAuto&&b.o.manualMode=="end"?this:null;b.isAuto?b.isForwards?b.moveForward():b.moveBack():b.moveForward()};this.funcMovePause=function(){b.movePause()};this.funcMoveStop=function(){b.moveStop()};this.funcMoveResume=function(){b.moveResume()};if(this.isAuto){this.paused=!1;var g=function(){if(b.paused===false){b.paused=true;b.funcMovePause()}else{b.paused=false;b.funcMoveResume()}return b.paused};this.supportsTouch&&
-this.$items.find("a").length&&(this.supportsTouch=!1);if(this.isAuto&&this.o.pauseOnHover&&!this.supportsTouch)this.$clip.bind(this.events.start,this.funcMovePause).bind(this.events.end,this.funcMoveResume);else if(this.isAuto&&this.o.pauseOnTouch&&!this.o.pauseButton&&this.supportsTouch){var d,f;this.$clip.bind(this.events.start,function(a){g();var c=a.originalEvent.touches[0];d=b.isHorizontal?c.pageX:c.pageY;f=b.$clip[0]["scroll"+b.scrollPos];a.stopPropagation();a.preventDefault()}).bind(this.events.move,
-function(a){a.stopPropagation();a.preventDefault();a=a.originalEvent.touches[0];a=d-(b.isHorizontal?a.pageX:a.pageY)+f;if(a<0)a=0;else if(a>b.posMax)a=b.posMax;b.$clip[0]["scroll"+b.scrollPos]=a;b.funcMovePause();b.paused=true})}else this.o.pauseButton&&(this.$btnPause=c(".simply-scroll-btn-pause",this.$container).bind("click",function(a){a.preventDefault();g()?c(this).addClass("active"):c(this).removeClass("active")}));this.funcMoveForward()}else this.$btnBack.addClass("simply-scroll-btn "+this.moveBackClass).bind(this.events.start,
-this.funcMoveBack).bind(this.events.end,this.funcMoveStop),this.$btnForward.addClass("simply-scroll-btn "+this.moveForwardClass).bind(this.events.start,this.funcMoveForward).bind(this.events.end,this.funcMoveStop),"end"==this.o.manualMode&&(!this.isRTL?this.$btnBack.addClass("disabled"):this.$btnForward.addClass("disabled"))},moveForward:function(){var a=this;this.movement="forward";null!==this.trigger&&this.$btnBack.removeClass("disabled");a.interval=setInterval(function(){a.$clip[0]["scroll"+a.scrollPos]<
-a.posMax-a.clipMax?a.$clip[0]["scroll"+a.scrollPos]+=a.o.speed:a.isLoop?a.resetPos():a.moveStop(a.movement)},a.intervalDelay)},moveBack:function(){var a=this;this.movement="back";null!==this.trigger&&this.$btnForward.removeClass("disabled");a.interval=setInterval(function(){a.$clip[0]["scroll"+a.scrollPos]>a.posMin?a.$clip[0]["scroll"+a.scrollPos]-=a.o.speed:a.isLoop?a.resetPos():a.moveStop(a.movement)},a.intervalDelay)},movePause:function(){clearInterval(this.interval)},moveStop:function(a){this.movePause();
-null!==this.trigger&&("undefined"!==typeof a&&c(this.trigger).addClass("disabled"),this.trigger=null);this.isAuto&&"bounce"==this.o.autoMode&&("forward"==a?this.moveBack():this.moveForward())},moveResume:function(){"forward"==this.movement?this.moveForward():this.moveBack()},resetPos:function(){this.$clip[0]["scroll"+this.scrollPos]=this.resetPosition}})})(jQuery,window);
-// Plugins Activate
-$('.client-slider').simplyScroll();
+$("#slider-thumb .filter-by-section .dTab li").click(function() {
+      slider.goToSlide($(this).attr("data-slide-index"));
+      $(this).addClass("active").siblings("li").removeClass("active");
+      slider.stopAuto();
+    });
 </code>
 </div>
-<div id="simplyscrollresult" class="result-wrap">
-<iframe width="100%" height="260px" src="codepen-files/simplyscroll.html"></iframe>
+<div id="tabswithsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/tabswithslider.html"></iframe>
 </div>
 </div>
 </pre>
 </div>
 <div class="keyword-preview-wrap">
     <div class="tags">
-      <span class="simplyscroll">simplyscroll</span>
+      <span class="tabswithslider">tabswithslider</span>
     </div>
   </div>
 </div>
-<!-- simplyscroll ends here -->
+<!--Tabs with Slider ends here -->

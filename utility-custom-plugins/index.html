@@ -91,6 +91,7 @@
                 <li data-val=".slickslider">Slick Slider</li>
                 <li data-val=".teamslider">Team Slider</li>
                 <li data-val=".simplyscroll">Simply Scroll</li>
+                <li data-val=".tabswithslider">Tabs with Slider</li>
               </ul>
             </div>  
           </div>
@@ -135,6 +136,7 @@
                 <li data-filter="slickslider">Slick Slider</li>
                 <li data-filter="teamslider">Team Slider</li>
                 <li data-filter="simplyscroll">Simply Scroll</li>
+                <li data-filter="tabswithslider">Tabs with Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -9396,6 +9398,426 @@ $('.client-slider').simplyScroll();
   </div>
 </div>
 <!-- simplyscroll ends here -->
+ <!-- Tabs with Slider Starts here -->
+<div class="rule each-module-preview tabswithslider">
+  <div class="title">
+      <h1>37. Tabs with Slider</h1>
+  </div>
+  <div class="rule" id="37">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="thirtyseven-tab-group">
+          <li class="tab"><a href="#tabswithsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#tabswithslidercss">Styling</a></li>
+          <li class="tab"><a href="#tabswithsliderjs">Script</a></li>
+          <li class="tab"><a href="#tabswithsliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="thirtyseven-tab-group" class="tabgroup">
+<div id="tabswithsliderhtml">
+<code id="code-html-thirtyseven" class="code html" data-clipboard-target="#code-html">
+ &lt;div class="container"&gt;
+    &lt;div id="slider-thumb"&gt;
+      &lt;h1&gt;Lorem Ipsum&lt;/h1&gt;
+      &lt;div class="filter-by-section"&gt;
+        &lt;ul class="dTab clearfix"&gt;
+          &lt;li data-slide-index="0" class="active"&gt;
+            &lt;div class="filter-by-section-box" data-href="#ONE"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Trusted Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 1&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="1"&gt;
+            &lt;div class="filter-by-section-box" data-href="#TWO"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Expertise Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 2&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="2"&gt;
+            &lt;div class="filter-by-section-box" data-href="#THREE"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Confidence Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 3&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="3" class=""&gt;
+            &lt;div class="filter-by-section-box" data-href="#FOUR"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Business Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 4&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li data-slide-index="4"&gt;
+            &lt;div class="filter-by-section-box" data-href="#FIVE"&gt;
+              &lt;div class="content-new"&gt;
+                &lt;div class="img-holder"&gt;
+                  &lt;img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Network Icon"&gt;
+                &lt;/div&gt;
+                &lt;h3 class="img-text"&gt;Tab 5&lt;/h3&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="filter-by-section-description-wrapper"&gt;
+        &lt;div class="filter-by-section-description" id="ONE"&gt;
+          &lt;h4&gt;Tab 1&lt;/h4&gt;
+          &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="TWO"&gt;
+          &lt;h4&gt;Tab 2&lt;/h4&gt;
+          &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="THREE"&gt;
+          &lt;h4&gt;Tab 3&lt;/h4&gt;
+         &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="FOUR"&gt;
+          &lt;h4&gt;Tab 4&lt;/h4&gt;
+         &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="filter-by-section-description" id="FIVE"&gt;
+          &lt;h4&gt;Tab 5&lt;/h4&gt;
+         &lt;div&gt;
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="tabswithslidercss">
+<code id="code-css-thirtyseven" class="code css" data-clipboard-target=#code-css>
+#slider-thumb ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (max-width: 991.98px) {
+  #slider-thumb ul {
+    text-align: center;
+  }
+}
+
+#slider-thumb ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 19%;
+  text-align: center;
+  opacity: 0.2;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb ul li {
+    padding-bottom: 30px;
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #slider-thumb ul li {
+    width: 32.7%;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #slider-thumb ul li {
+    width: 19.6%;
+  }
+}
+
+#slider-thumb ul li .content-new {
+  cursor: pointer;
+}
+
+#slider-thumb li.active,
+#slider-thumb li:hover {
+  opacity: 1;
+}
+
+#slider-thumb {
+  background-color: #437fc1;
+  margin-bottom: 1px;
+  padding: 56px 0px 40px 0px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .bottom-cta-wrap .cta-section {
+    text-align: center;
+  }
+}
+
+#slider-thumb .filter-by-section-box p {
+  color: #333;
+  display: block;
+}
+
+#slider-thumb .filter-by-section {
+  margin: 0 0 80px;
+  min-height: 100px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper {
+  min-height: 60px;
+  position: relative;
+}
+
+#slider-thumb li.active .filter-by-section-box p {
+  color: #26a9e0;
+}
+
+#slider-thumb .bx-wrapper {
+  border: transparent;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .bx-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+#slider-thumb h1 {
+  color: #fff;
+  font-size: 36px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 70px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+#slider-thumb .img-holder {
+  width: 102px;
+  height: 102px;
+  display: inline-block;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .img-holder {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+#slider-thumb h3 {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 0px;
+  font-weight: 400;
+  margin-top: 18px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb h3 {
+    font-size: 14px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper {
+  text-align: center;
+}
+
+#slider-thumb .filter-by-section-description-wrapper h4 {
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description-wrapper h4 {
+    font-size: 20px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper div {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description-wrapper div {
+    font-size: 14px;
+  }
+}
+
+#slider-thumb a.btn {
+  color: #fff;
+  padding: 15px 40px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  border: 1px solid #fff;
+  border-radius: 0;
+  line-height: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  outline: none;
+}
+
+#slider-thumb a.btn:nth-child(2) {
+  margin-left: 40px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+#slider-thumb a.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 575.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  #slider-thumb a.btn:nth-of-type(2) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  #slider-thumb a.btn:nth-of-type(2) {
+    margin-left: 10px;
+  }
+}
+
+#slider-thumb a.btn:hover {
+  color: #437fc1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  background-color: #fff;
+}
+
+#slider-thumb .btn-wrapper {
+  text-align: center;
+}
+
+#slider-thumb .filter-by-section-description div {
+  padding: 0px 220px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0 100px;
+  }
+}
+
+
+</code>
+</div>
+<div id="tabswithsliderjs">
+<code id="code-css-thirtyseven" class="code javascript" data-clipboard-target=#code-javascript>
+ var slider = $('#slider-thumb .filter-by-section-description-wrapper').bxSlider({
+      "mode": "fade",
+      "auto": true,
+      "pager": false,
+      "speed": 1000,
+      "pause": 9000,
+      "controls": false,
+      "onSlideBefore": function($slideElement, oldIndex, newIndex) {
+        $("#slider-thumb .filter-by-section .dTab li[data-slide-index='" + newIndex + "']").addClass("active").siblings("li").removeClass("active");
+      }
+    });
+
+$("#slider-thumb .filter-by-section .dTab li").click(function() {
+      slider.goToSlide($(this).attr("data-slide-index"));
+      $(this).addClass("active").siblings("li").removeClass("active");
+      slider.stopAuto();
+    });
+</code>
+</div>
+<div id="tabswithsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/tabswithslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="tabswithslider">tabswithslider</span>
+    </div>
+  </div>
+</div>
+<!--Tabs with Slider ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->

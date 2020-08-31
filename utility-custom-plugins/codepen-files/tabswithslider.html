@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Tabs with Slider</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<style>
+#slider-thumb ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (max-width: 991.98px) {
+  #slider-thumb ul {
+    text-align: center;
+  }
+}
+
+#slider-thumb ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 19%;
+  text-align: center;
+  opacity: 0.2;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb ul li {
+    padding-bottom: 30px;
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #slider-thumb ul li {
+    width: 32.7%;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #slider-thumb ul li {
+    width: 19.6%;
+  }
+}
+
+#slider-thumb ul li .content-new {
+  cursor: pointer;
+}
+
+#slider-thumb li.active,
+#slider-thumb li:hover {
+  opacity: 1;
+}
+
+#slider-thumb {
+  background-color: #437fc1;
+  margin-bottom: 1px;
+  padding: 56px 0px 40px 0px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .bottom-cta-wrap .cta-section {
+    text-align: center;
+  }
+}
+
+#slider-thumb .filter-by-section-box p {
+  color: #333;
+  display: block;
+}
+
+#slider-thumb .filter-by-section {
+  margin: 0 0 80px;
+  min-height: 100px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper {
+  min-height: 60px;
+  position: relative;
+}
+
+#slider-thumb li.active .filter-by-section-box p {
+  color: #26a9e0;
+}
+
+#slider-thumb .bx-wrapper {
+  border: transparent;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .bx-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+#slider-thumb h1 {
+  color: #fff;
+  font-size: 36px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 70px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+#slider-thumb .img-holder {
+  width: 102px;
+  height: 102px;
+  display: inline-block;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .img-holder {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+#slider-thumb h3 {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 0px;
+  font-weight: 400;
+  margin-top: 18px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb h3 {
+    font-size: 14px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper {
+  text-align: center;
+}
+
+#slider-thumb .filter-by-section-description-wrapper h4 {
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  line-height: 125%;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description-wrapper h4 {
+    font-size: 20px;
+  }
+}
+
+#slider-thumb .filter-by-section-description-wrapper div {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description-wrapper div {
+    font-size: 14px;
+  }
+}
+
+#slider-thumb a.btn {
+  color: #fff;
+  padding: 15px 40px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  border: 1px solid #fff;
+  border-radius: 0;
+  line-height: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  outline: none;
+}
+
+#slider-thumb a.btn:nth-child(2) {
+  margin-left: 40px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+#slider-thumb a.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 575.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  #slider-thumb a.btn:nth-of-type(2) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #slider-thumb a.btn {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  #slider-thumb a.btn:nth-of-type(2) {
+    margin-left: 10px;
+  }
+}
+
+#slider-thumb a.btn:hover {
+  color: #437fc1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  background-color: #fff;
+}
+
+#slider-thumb .btn-wrapper {
+  text-align: center;
+}
+
+#slider-thumb .filter-by-section-description div {
+  padding: 0px 220px;
+}
+
+@media (max-width: 767.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #slider-thumb .filter-by-section-description div {
+    padding: 0 100px;
+  }
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div id="slider-thumb">
+<h1>Lorem Ipsum</h1>
+<div class="filter-by-section">
+<ul class="dTab clearfix">
+<li data-slide-index="0" class="active">
+<div class="filter-by-section-box" data-href="#ONE">
+<div class="content-new">
+<div class="img-holder">
+<img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Trusted Icon">
+</div>
+<h3 class="img-text">Tab 1</h3>
+</div>
+</div>
+</li>
+<li data-slide-index="1">
+<div class="filter-by-section-box" data-href="#TWO">
+<div class="content-new">
+<div class="img-holder">
+<img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Expertise Icon">
+</div>
+<h3 class="img-text">Tab 2</h3>
+</div>
+</div>
+</li>
+<li data-slide-index="2">
+<div class="filter-by-section-box" data-href="#THREE">
+<div class="content-new">
+<div class="img-holder">
+<img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Confidence Icon">
+</div>
+<h3 class="img-text">Tab 3</h3>
+</div>
+</div>
+</li>
+<li data-slide-index="3" class="">
+<div class="filter-by-section-box" data-href="#FOUR">
+<div class="content-new">
+<div class="img-holder">
+<img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Business Icon">
+</div>
+<h3 class="img-text">Tab 4</h3>
+</div>
+</div>
+</li>
+<li data-slide-index="4">
+<div class="filter-by-section-box" data-href="#FIVE">
+<div class="content-new">
+<div class="img-holder">
+<img src="http://dev.p2staging.biz/landing-pages/lenovo-linkedin-campaign-lp/images_iax/trusted-icon.svg" alt="Network Icon">
+</div>
+<h3 class="img-text">Tab 5</h3>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="filter-by-section-description-wrapper">
+<div class="filter-by-section-description" id="ONE">
+<h4>Tab 1</h4>
+<div>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+</div>
+<div class="filter-by-section-description" id="TWO">
+<h4>Tab 2</h4>
+<div>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+</div>
+<div class="filter-by-section-description" id="THREE">
+<h4>Tab 3</h4>
+<div>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+</div>
+<div class="filter-by-section-description" id="FOUR">
+<h4>Tab 4</h4>
+<div>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+</div>
+<div class="filter-by-section-description" id="FIVE">
+<h4>Tab 5</h4>
+<div>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+</div>
+</div>
+
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js'></script>
+<script id="rendered-js">
+var slider = $('#slider-thumb .filter-by-section-description-wrapper').bxSlider({
+  "mode": "fade",
+  "auto": true,
+  "pager": false,
+  "speed": 1000,
+  "pause": 9000,
+  "controls": false,
+  "onSlideBefore": function ($slideElement, oldIndex, newIndex) {
+    $("#slider-thumb .filter-by-section .dTab li[data-slide-index='" + newIndex + "']").addClass("active").siblings("li").removeClass("active");
+  } });
+
+
+$("#slider-thumb .filter-by-section .dTab li").click(function () {
+  slider.goToSlide($(this).attr("data-slide-index"));
+  $(this).addClass("active").siblings("li").removeClass("active");
+  slider.stopAuto();
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
