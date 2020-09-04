@@ -97,6 +97,7 @@
                 <li data-val=".fullviewportslider">Full Viewport Slider</li>
                 <li data-val=".teamtabs">Team Tabs</li>
                 <li data-val=".fancyboxportfolio">Fancybox Portfolio</li>
+                <li data-val=".owlcauroselslider">Owl Caurosel Slider</li>
               </ul>
             </div>  
           </div>
@@ -147,6 +148,7 @@
                 <li data-filter="fullviewportslider">Full Viewport Slider</li>
                 <li data-filter="teamtabs">Team tabs</li>
                 <li data-filter="fancyboxportfolio">Fancybox Portfolio</li>
+                <li data-filter="owlcauroselslider">Owl Caurosel Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -11479,7 +11481,7 @@ initTab(".tab-list-warp ul li",".each-team",null,"#",null)
 </div>
 <div id="fancyboxportfoliojs">
 <code id="code-css-fourtytwo" class="code javascript" data-clipboard-target=#code-javascript>
-  
+
 </code>
 </div>
 <div id="fancyboxportfolioresult" class="result-wrap">
@@ -11495,6 +11497,366 @@ initTab(".tab-list-warp ul li",".each-team",null,"#",null)
   </div>
 </div>
 <!--Fancybox Portfolio ends here -->
+ <!-- Owl Caurosel Slider Starts here -->
+<div class="rule each-module-preview owlcauroselslider">
+  <div class="title">
+      <h1>43. Owl Caurosel Slider</h1>
+  </div>
+  <div class="rule" id="43">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fourtythree-tab-group">
+          <li class="tab"><a href="#owlcauroselsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#owlcauroselslidercss">Styling</a></li>
+          <li class="tab"><a href="#owlcauroselsliderjs">Script</a></li>
+          <li class="tab"><a href="#owlcauroselsliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fourtythree-tab-group" class="tabgroup">
+<div id="owlcauroselsliderhtml">
+<code id="code-html-fourtythree" class="code html" data-clipboard-target="#code-html">
+  &lt;section class="slider"&gt;
+     &lt;ul class="slider-wrap owl-carousel loading"&gt;
+      &lt;div id="loader"&gt;&lt;span&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+       &lt;li&gt;
+         &lt;picture&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&1" media="(max-width: 767.98px)"&gt;
+          &lt;img src="https://picsum.photos/300/300/?random&1" alt=""&gt;
+          &lt;/picture&gt;
+          &lt;div class="each-slider"&gt;
+            &lt;div class="container clearfix"&gt;
+            &lt;div class="inner-content"&gt;
+                &lt;div class="text-wrapper"&gt;
+                &lt;h1&gt;What is Lorem Ipsum?&lt;/h1&gt;
+                &lt;span&gt;Lorem Ipsum&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;  
+          &lt;/div&gt; 
+       &lt;/li&gt;
+        &lt;li&gt;
+         &lt;picture&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&2" media="(max-width: 767.98px)"&gt;
+          &lt;img src="https://picsum.photos/300/300/?random&2" alt=""&gt;
+          &lt;/picture&gt;
+          &lt;div class="each-slider"&gt;
+            &lt;div class="container clearfix"&gt;
+            &lt;div class="inner-content"&gt;
+                &lt;div class="text-wrapper"&gt;
+                &lt;h1&gt;Where does it come from?&lt;/h1&gt;
+                &lt;span&gt;Lorem Ipsum&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;  
+          &lt;/div&gt; 
+       &lt;/li&gt;
+       &lt;li&gt;
+         &lt;picture&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&3" media="(max-width: 767.98px)"&gt;
+          &lt;img src="https://picsum.photos/300/300/?random&3" alt=""&gt;
+          &lt;/picture&gt;
+          &lt;div class="each-slider"&gt;
+            &lt;div class="container clearfix"&gt;
+            &lt;div class="inner-content"&gt;
+                &lt;div class="text-wrapper"&gt;
+                &lt;h1&gt; Why do we use it?&lt;/h1&gt;
+                &lt;span&gt;Lorem Ipsum&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;  
+          &lt;/div&gt; 
+       &lt;/li&gt;
+       &lt;li&gt;
+         &lt;picture&gt;
+          &lt;source srcset="https://picsum.photos/300/300/?random&4" media="(max-width: 767.98px)"&gt;
+          &lt;img src="https://picsum.photos/300/300/?random&4" alt=""&gt;
+          &lt;/picture&gt;
+          &lt;div class="each-slider"&gt;
+            &lt;div class="container clearfix"&gt;
+           &lt;div class="inner-content"&gt;
+                &lt;div class="text-wrapper"&gt;
+                &lt;h1&gt;Where can I get some?&lt;/h1&gt;
+                &lt;span&gt;Lorem Ipsum&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;  
+          &lt;/div&gt; 
+       &lt;/li&gt;
+     &lt;/ul&gt;
+   &lt;/section&gt;
+</code>
+</div>
+<div id="owlcauroselslidercss">
+<code id="code-css-fourtythree" class="code css" data-clipboard-target=#code-css>
+.owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}.owl-carousel{display:none;width:100%;z-index:1}.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y}.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0)}.owl-carousel .owl-item{min-height:1px;float:left;-webkit-backface-visibility:hidden;-webkit-touch-callout:none}.owl-carousel .owl-item img{display:block;width:100%;-webkit-transform-style:preserve-3d}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;cursor:hand;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{visibility:hidden}.owl-carousel.owl-drag .owl-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-grab{cursor:move;cursor:-webkit-grab;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}.owl-carousel .animated{-webkit-animation-duration:.6s;animation-duration:.6s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}.owl-carousel .owl-animated-out{z-index:1}.owl-carousel .fadeOut{-webkit-animation-name:fadeOut;animation-name:fadeOut}@-webkit-keyframes fadeOut{0%{opacity:1}100%{opacity:0}}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.owl-height{transition:height .5s ease-in-out}.owl-carousel .owl-item .owl-lazy{opacity:0;transition:opacity .4s ease}.owl-carousel .owl-item img.owl-lazy{transform-style:preserve-3d}.owl-carousel .owl-video-wrapper{position:relative;height:100%;background:#000}.owl-carousel .owl-video-play-icon{position:absolute;height:80px;width:80px;left:50%;top:50%;margin-left:-40px;margin-top:-40px;background:url(owl.video.play.png) no-repeat;cursor:pointer;z-index:1;-webkit-backface-visibility:hidden;transition:transform .1s ease}.owl-carousel .owl-video-play-icon:hover{transform:scale(1.3,1.3)}.owl-carousel .owl-video-playing .owl-video-play-icon,.owl-carousel .owl-video-playing .owl-video-tn{display:none}.owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;transition:opacity .4s ease}.owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
+
+.slider {
+  position: relative;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .slider {
+    margin-top: 68px;
+  }
+}
+
+.slider ul.slider-wrap {
+  margin: 0;
+  padding: 0;
+}
+
+.slider ul.slider-wrap li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.slider ul.slider-wrap li picture {
+  display: block;
+}
+
+.slider ul.slider-wrap li picture img {
+  width: 100%;
+  height: auto;
+}
+
+.slider ul.slider-wrap li .each-slider {
+  position: absolute;
+  top: 77px;
+  width: 100%;
+  right: 0;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .slider ul.slider-wrap li .each-slider {
+    top: 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .slider ul.slider-wrap li .each-slider {
+    top: 100px;
+  }
+}
+
+.slider ul.slider-wrap li .each-slider .text-wrapper h1 {
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .slider ul.slider-wrap li .each-slider .text-wrapper h1 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .slider ul.slider-wrap li .each-slider .text-wrapper h1 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .slider ul.slider-wrap li .each-slider .text-wrapper h1 {
+    font-size: 30px;
+  }
+}
+
+.slider ul.slider-wrap li .each-slider .text-wrapper span {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #27296c;
+  padding: 1px 8px;
+  margin-top: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  float: center;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .slider ul.slider-wrap li .each-slider .text-wrapper span {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .slider ul.slider-wrap li .each-slider .text-wrapper span {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .slider ul.slider-wrap li .each-slider .text-wrapper span {
+    font-size: 30px;
+  }
+}
+
+.slider ul.slider-wrap li .each-slider .inner-content {
+  position: relative;
+}
+
+.slider ul.slider-wrap li .each-slider .inner-content .text-wrapper {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .slider ul.slider-wrap li .each-slider .inner-content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .slider ul.slider-wrap li .each-slider .inner-content {
+    width: 54%;
+  }
+}
+
+.loading {
+  position: relative;
+  height: 660px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.loading #loader {
+  background: #fff;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+
+.loading #loader span {
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateX();
+  color: #27296c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+.slider-wrap .owl-nav {
+  display: none;
+}
+
+.slider-wrap .owl-dots {
+  position: absolute;
+  bottom: 30px;
+  text-align: left;
+  width: 1240px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .slider-wrap .owl-dots {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .slider-wrap .owl-dots {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .slider-wrap .owl-dots {
+    max-width: 960px;
+  }
+}
+
+.slider-wrap .owl-dots .owl-dot {
+  margin: 0 6px;
+  display: inline-block;
+}
+
+.slider-wrap .owl-dots .owl-dot span {
+  background: #f1f1f1;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.slider-wrap .owl-dots .owl-dot.active span, .slider-wrap .owl-dots .owl-dot:hover span {
+  background: #ff5c00;
+}
+
+</code>
+</div>
+<div id="owlcauroselsliderjs">
+<code id="code-css-fourtythree" class="code javascript" data-clipboard-target=#code-javascript>
+function isRealDevice() {
+      return /Android|webOS|iPhone|iPad|macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (typeof(window.orientation) != "undefined" || (navigator.maxTouchPoints > 1));
+    }
+var homeSlider = "";
+    function homeSliderInit() {
+      $('.slider-wrap').removeClass("loading").find("#loader").remove();
+      $('.slider-wrap')
+      if (homeSlider == "") {
+        homeSlider = $('.slider-wrap').owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: true,
+          items: 1,
+          dots: true,
+          autoplay: true,
+          animateOut: 'fadeOut',
+        });
+      } 
+    }
+    $(".slider-wrap").imagesLoaded(homeSliderInit);
+ //Window Reinit on resize
+    function reInitSliderOnResize() {
+      homeSliderInit();
+    }
+    var prop_resize_time = "",
+    wRevent = isRealDevice() ? "orientationchange" : "resize";
+    $(window).on(wRevent, function() {
+      clearTimeout(prop_resize_time);
+      prop_resize_time = setTimeout(reInitSliderOnResize, 200);
+    });
+
+</code>
+</div>
+<div id="owlcauroselsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/owlcauroselslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="owlcauroselslider">owlcauroselslider</span>
+    </div>
+  </div>
+</div>
+<!--Owl Caurosel Slider ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
