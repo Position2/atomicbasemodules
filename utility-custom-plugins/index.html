@@ -99,6 +99,7 @@
                 <li data-val=".fancyboxportfolio">Fancybox Portfolio</li>
                 <li data-val=".owlcauroselslider">Owl Caurosel Slider</li>
                 <li data-val=".setcookievalue">Set Cookie Value</li>
+                <li data-val=".owltestimonialslider">Owl Testimonial Slider</li>
               </ul>
             </div>  
           </div>
@@ -151,6 +152,7 @@
                 <li data-filter="fancyboxportfolio">Fancybox Portfolio</li>
                 <li data-filter="owlcauroselslider">Owl Caurosel Slider</li>
                 <li data-filter="setcookievalue">Set Cookie Value</li>
+                <li data-filter="owltestimonialslider">Owl Testimonial Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -11934,6 +11936,447 @@ $(document).ready(function() {
   </div>
 </div>
 <!--Set Cookie Value ends here -->
+ <!-- Owl Testimonials Slider Starts here -->
+<div class="rule each-module-preview owltestimonialslider">
+  <div class="title">
+      <h1>45. Owl Testimonials Slider</h1>
+  </div>
+  <div class="rule" id="45">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fourtyfive-tab-group">
+          <li class="tab"><a href="#owltestimonialsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#owltestimonialslidercss">Styling</a></li>
+          <li class="tab"><a href="#owltestimonialsliderjs">Script</a></li>
+          <li class="tab"><a href="#owltestimonialsliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fourtyfive-tab-group" class="tabgroup">
+<div id="owltestimonialsliderhtml">
+<code id="code-html-fourtyfive" class="code html" data-clipboard-target="#code-html">
+   &lt;section id="testimonials"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="testimonial-slider owl-carousel" id="testimonial-slider"&gt;
+        &lt;div class="item"&gt;
+          &lt;div class="row vertical-align-middle"&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-text"&gt;
+                &lt;p&gt;&lt;span class="quote-start"&gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, magna vitae pulvinar malesuada, nibh erat vehicula nisi, a ultrices magna sapien eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, magna vitae pulvinar malesuada, nibh erat vehicula nisi, a ultrices magna sapien eu justo. Duis sit amet mi neque. Duis scelerisque, magna vitae pulvinar malesuada, nibh erat vehicula nisi, a ultrices magna sapien eu justo. Duis sit amet mi neque.&lt;span class="quote-end"&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;h5&gt;Name&lt;/h5&gt;
+                &lt;h6&gt;Lorem ipsum dolor sit amet&lt;/h6&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-img"&gt;
+                &lt;img src="https://picsum.photos/300/300/?random&1" class="img-fluid" alt="Testimonial"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+          &lt;div class="row vertical-align-middle"&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-text"&gt;
+                &lt;p&gt;&lt;span class="quote-start"&gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, magna vitae pulvinar malesuad agna sapien eu justo. Duis sit amet mi neque.&lt;span class="quote-end"&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;h5&gt;Name&lt;/h5&gt;
+                &lt;h6&gt;Lorem ipsum dolor sit amet&lt;/h6&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-img"&gt;
+                &lt;img src="https://picsum.photos/300/300/?random&4" class="img-fluid" alt="Testimonial"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+          &lt;div class="row vertical-align-middle"&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-text"&gt;
+                &lt;p&gt;&lt;span class="quote-start"&gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, magna vitae pulvinar Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, magna vitae pulvinar malesuad agna sapien eu justo. Duis sit amet mi neque.&lt;span class="quote-end"&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;h5&gt;Name&lt;/h5&gt;
+                &lt;h6&gt;Lorem ipsum dolor sit amet&lt;/h6&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-img"&gt;
+                &lt;img src="https://picsum.photos/300/300/?random&2" class="img-fluid" alt="Testimonial"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+          &lt;div class="row vertical-align-middle"&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-text"&gt;
+                &lt;p&gt;&lt;span class="quote-start"&gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, magna vitae pulvinar malesuad agna sit amet, consectetur adipiscing elit. Duis scelerisque, magna vitae pulvinar malesuad agna sapien eu justo. Duis sit amet mi neque.&lt;span class="quote-end"&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;h5&gt;Name&lt;/h5&gt;
+                &lt;h6&gt;Lorem ipsum dolor sit amet&lt;/h6&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"&gt;
+              &lt;div class="testimonial-slider-img"&gt;
+                &lt;img src="https://picsum.photos/300/300/?random&3" class="img-fluid" alt="Testimonial"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+</code>
+</div>
+<div id="owltestimonialslidercss">
+<code id="code-css-fourtyfive" class="code css" data-clipboard-target=#code-css>
+  #testimonials {
+  position: relative;
+  background: #ddd;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 767.98px) {
+  #testimonials {
+    overflow: hidden;
+  }
+}
+
+#testimonials .testimonial-slider {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+@media (max-width: 1199.98px) {
+  #testimonials .testimonial-slider {
+    overflow: hidden;
+  }
+}
+
+#testimonials .testimonial-slider .item {
+  margin: 0;
+  padding: 60px 0px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #testimonials .testimonial-slider .item {
+    padding: 50px 0 70px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .item {
+    padding: 50px 0 90px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .item .col-xl-6:first-child {
+    order: 2;
+  }
+  #testimonials .testimonial-slider .item .col-xl-6:last-child {
+    order: 1;
+  }
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-text {
+  padding-left: 150px;
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text {
+    padding-left: 60px;
+  }
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-text p {
+  font-size: 1.125rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #1c2a51;
+  margin: 0 0 30px;
+  line-height: 1.4;
+  position: relative;
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-text p span {
+  width: 38px;
+  height: 32px;
+  position: absolute;
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-start {
+  background: url("../images/quotes-start.png") no-repeat 0 0;
+  top: -12px;
+  left: -44px;
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-start {
+    background-size: 100%;
+    top: -10px;
+    left: -30px;
+    width: 25px;
+  }
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-end {
+  background: url("../images/quotes-end.png") no-repeat 0 0;
+  right: auto;
+  bottom: -16px;
+  margin-left: 8px;
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-end {
+    background-size: 100%;
+    width: 25px;
+  }
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-text p.designation {
+  font-size: 1.125rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1;
+}
+
+@media (max-width: 1199.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text p.designation {
+    font-size: 1rem;
+  }
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-text h4 {
+  font-size: 1.875rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  color: #1c2a51;
+  margin: 0 0 5px;
+  line-height: 1;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text h4 {
+    font-size: 1.375rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text h4 {
+    font-size: 1.525rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-text h4 {
+    font-size: 1.375rem;
+  }
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-img {
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-img {
+    padding-bottom: 30px;
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #testimonials .testimonial-slider .item .testimonial-slider-img {
+    width: 85%;
+  }
+}
+
+#testimonials .testimonial-slider .item .testimonial-slider-img img {
+  border-radius: 50%;
+  padding: 6px;
+  border: 1px dashed #b0c6d7;
+  display: inline-block;
+  width: auto;
+}
+
+#testimonials .testimonial-slider .owl-nav .owl-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 0;
+  text-indent: -99999px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #testimonials .testimonial-slider .owl-nav .owl-prev img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #testimonials .testimonial-slider .owl-nav .owl-prev img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .owl-nav .owl-prev {
+    top: 90px;
+    transform: none;
+  }
+  #testimonials .testimonial-slider .owl-nav .owl-prev img {
+    width: 70%;
+  }
+}
+
+#testimonials .testimonial-slider .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+   width: 22px;
+  height: 22px;
+  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 100%;
+  text-indent: -99999px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #testimonials .testimonial-slider .owl-nav .owl-next {
+    text-align: right;
+  }
+  #testimonials .testimonial-slider .owl-nav .owl-next img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #testimonials .testimonial-slider .owl-nav .owl-next {
+    text-align: right;
+  }
+  #testimonials .testimonial-slider .owl-nav .owl-next img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .owl-nav .owl-next {
+    top: 90px;
+    transform: none;
+    text-align: right;
+  }
+  #testimonials .testimonial-slider .owl-nav .owl-next img {
+    width: 70%;
+  }
+}
+
+#testimonials .testimonial-slider .owl-dots {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-align: left;
+  left: 150px;
+  bottom: 0px;
+}
+
+#testimonials .testimonial-slider .owl-dots .owl-dot {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#testimonials .testimonial-slider .owl-dots .owl-dot span {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-color: #999;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+#testimonials .testimonial-slider .owl-dots .owl-dot.active span, #testimonials .testimonial-slider .owl-dots .owl-dot:hover span {
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+#testimonials .testimonial-slider .owl-dots .owl-dot:first-child {
+  margin-left: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #testimonials .testimonial-slider .owl-dots {
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #testimonials .testimonial-slider .owl-dots {
+    left: 60px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #testimonials .testimonial-slider .owl-dots {
+    left: 50px;
+    bottom: 50px;
+  }
+}
+
+.owl-caraousel .animated {
+  -webkit-animation-duration: 4000ms;
+          animation-duration: 4000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+</code>
+</div>
+<div id="owltestimonialsliderjs">
+<code id="code-css-fourtyfive" class="code javascript" data-clipboard-target=#code-javascript>
+$('#testimonials').imagesLoaded(function() {
+ $('#testimonials .testimonial-slider').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        items: 1,
+        dots: true,
+        autoplay: false,
+        //autoplayTimeout: 7000,
+        autoHeight: false
+   });
+  });
+</code>
+</div>
+<div id="owltestimonialsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/owltestimonialslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="owltestimonialslider">owltestimonialslider</span>
+    </div>
+  </div>
+</div>
+<!--Owl Testimonials Slider ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
