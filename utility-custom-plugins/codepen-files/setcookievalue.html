@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Set Cookie Value</title>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div id="utm_source_hidden_checkout_field">
+<input type="hidden" class="input-hidden" name="utm_source" id="utm_source" value="">
+</div>
+<div id="utm_content_hidden_checkout_field">
+<input type="hidden" class="input-hidden" name="utm_content" id="utm_content" value="">
+</div>
+<div id="utm_campaign_hidden_checkout_field">
+<input type="hidden" class="input-hidden" name="utm_campaign" id="utm_campaign" value="">
+</div>
+<div id="utm_medium_hidden_checkout_field">
+<input type="hidden" class="input-hidden" name="utm_medium" id="utm_medium" value="">
+</div>
+<div id="utm_term_hidden_checkout_field">
+<input type="hidden" class="input-hidden" name="utm_term" id="utm_term" value="">
+</div>
+<div id="xuid_hidden_checkout_field">
+<input type="hidden" class="input-hidden" name="xuid" id="xuid" value="">
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js'></script>
+<script id="rendered-js">
+/*!
+ * JavaScript Cookie v2.1.4
+ * https://github.com/js-cookie/js-cookie
+ *
+ * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+ * Released under the MIT license
+ */
+!function (e) {var n = !1;if ("function" == typeof define && define.amd && (define(e), n = !0), "object" == typeof exports && (module.exports = e(), n = !0), !n) {var o = window.Cookies,t = window.Cookies = e();t.noConflict = function () {return window.Cookies = o, t;};}}(function () {function e() {for (var e = 0, n = {}; e < arguments.length; e++) {if (window.CP.shouldStopExecution(0)) break;var o = arguments[e];for (var t in o) n[t] = o[t];}window.CP.exitedLoop(0);return n;}function n(o) {function t(n, r, i) {var c;if ("undefined" != typeof document) {if (arguments.length > 1) {if ("number" == typeof (i = e({ path: "/" }, t.defaults, i)).expires) {var a = new Date();a.setMilliseconds(a.getMilliseconds() + 864e5 * i.expires), i.expires = a;}i.expires = i.expires ? i.expires.toUTCString() : "";try {c = JSON.stringify(r), /^[\{\[]/.test(c) && (r = c);} catch (m) {}r = o.write ? o.write(r, n) : encodeURIComponent(String(r)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), n = (n = (n = encodeURIComponent(String(n))).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent)).replace(/[\(\)]/g, escape);var f = "";for (var s in i) i[s] && (f += "; " + s, !0 !== i[s] && (f += "=" + i[s]));return document.cookie = n + "=" + r + f;}n || (c = {});for (var p = document.cookie ? document.cookie.split("; ") : [], d = /(%[0-9A-Z]{2})+/g, u = 0; u < p.length; u++) {if (window.CP.shouldStopExecution(1)) break;var l = p[u].split("="),C = l.slice(1).join("=");'"' === C.charAt(0) && (C = C.slice(1, -1));try {var g = l[0].replace(d, decodeURIComponent);if (C = o.read ? o.read(C, g) : o(C, g) || C.replace(d, decodeURIComponent), this.json) try {C = JSON.parse(C);} catch (m) {}if (n === g) {c = C;break;}n || (c[g] = C);} catch (m) {}}window.CP.exitedLoop(1);return c;}}return t.set = t, t.get = function (e) {return t.call(t, e);}, t.getJSON = function () {return t.apply({ json: !0 }, [].slice.call(arguments));}, t.defaults = {}, t.remove = function (n, o) {t(n, "", e(o, { expires: -1 }));}, t.withConverter = n, t;}return n(function () {});});
+
+$(document).ready(function () {
+  var utm_source = Cookies.get('utm_source');
+  var utm_content = Cookies.get('utm_content');
+  var utm_campaign = Cookies.get('utm_campaign');
+  var utm_medium = Cookies.get('utm_medium');
+  var utm_term = Cookies.get('utm_term');
+  var xuid = Cookies.get('xuid');
+
+  $("#utm_source_hidden_checkout_field").val(utm_source);
+  $("#utm_content_hidden_checkout_field").val(utm_content);
+  $("#utm_campaign_hidden_checkout_field").val(utm_campaign);
+  $("#utm_medium_hidden_checkout_field").val(utm_medium);
+  $("#utm_term_hidden_checkout_field").val(utm_term);
+  $("#xuid_hidden_checkout_field").val(xuid);
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
