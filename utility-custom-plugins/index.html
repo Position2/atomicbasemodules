@@ -98,6 +98,7 @@
                 <li data-val=".teamtabs">Team Tabs</li>
                 <li data-val=".fancyboxportfolio">Fancybox Portfolio</li>
                 <li data-val=".owlcauroselslider">Owl Caurosel Slider</li>
+                <li data-val=".setcookievalue">Set Cookie Value</li>
               </ul>
             </div>  
           </div>
@@ -149,6 +150,7 @@
                 <li data-filter="teamtabs">Team tabs</li>
                 <li data-filter="fancyboxportfolio">Fancybox Portfolio</li>
                 <li data-filter="owlcauroselslider">Owl Caurosel Slider</li>
+                <li data-filter="setcookievalue">Set Cookie Value</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -11857,6 +11859,81 @@ var homeSlider = "";
   </div>
 </div>
 <!--Owl Caurosel Slider ends here -->
+ <!-- Set Cookie Value Starts here -->
+<div class="rule each-module-preview setcookievalue">
+  <div class="title">
+      <h1>44. Set Cookie Value</h1>
+  </div>
+  <div class="rule" id="44">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fourtyfour-tab-group">
+          <li class="tab"><a href="#setcookievaluehtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#setcookievaluecss">Styling</a></li>
+          <li class="tab"><a href="#setcookievaluejs">Script</a></li>
+          <li class="tab"><a href="#setcookievalueresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fourtyfour-tab-group" class="tabgroup">
+<div id="setcookievaluehtml">
+<code id="code-html-fourtyfour" class="code html" data-clipboard-target="#code-html">
+  &lt;div id="utm_source_hidden_checkout_field"&gt;
+    &lt;input type="hidden" class="input-hidden" name="utm_source" id="utm_source" value=""&gt;
+  &lt;/div&gt;
+  &lt;div id="utm_content_hidden_checkout_field"&gt;
+    &lt;input type="hidden" class="input-hidden" name="utm_content" id="utm_content" value=""&gt;
+  &lt;/div&gt;
+  &lt;div id="utm_campaign_hidden_checkout_field"&gt;
+    &lt;input type="hidden" class="input-hidden" name="utm_campaign" id="utm_campaign" value=""&gt;
+  &lt;/div&gt;
+  &lt;div id="utm_medium_hidden_checkout_field"&gt;
+    &lt;input type="hidden" class="input-hidden" name="utm_medium" id="utm_medium" value=""&gt;
+  &lt;/div&gt;
+  &lt;div id="utm_term_hidden_checkout_field"&gt;
+    &lt;input type="hidden" class="input-hidden" name="utm_term" id="utm_term" value=""&gt;
+  &lt;/div&gt;
+  &lt;div id="xuid_hidden_checkout_field"&gt;
+    &lt;input type="hidden" class="input-hidden" name="xuid" id="xuid" value=""&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="setcookievaluecss">
+<code id="code-css-fourtyfour" class="code css" data-clipboard-target=#code-css>
+
+</code>
+</div>
+<div id="setcookievaluejs">
+<code id="code-css-fourtyfour" class="code javascript" data-clipboard-target=#code-javascript>
+$(document).ready(function() {
+   var utm_source = Cookies.get('utm_source');
+   var utm_content = Cookies.get('utm_content');
+   var utm_campaign = Cookies.get('utm_campaign');
+   var utm_medium = Cookies.get('utm_medium');
+   var utm_term = Cookies.get('utm_term');
+   var xuid = Cookies.get('xuid');
+
+   $("#utm_source_hidden_checkout_field").val(utm_source);
+   $("#utm_content_hidden_checkout_field").val(utm_content);
+   $("#utm_campaign_hidden_checkout_field").val(utm_campaign);
+   $("#utm_medium_hidden_checkout_field").val(utm_medium);
+   $("#utm_term_hidden_checkout_field").val(utm_term);
+   $("#xuid_hidden_checkout_field").val(xuid);
+});
+
+</code>
+</div>
+<div id="setcookievalueresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/setcookievalue.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="setcookievalue">setcookievalue</span>
+    </div>
+  </div>
+</div>
+<!--Set Cookie Value ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
