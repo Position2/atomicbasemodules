@@ -26,341 +26,123 @@
 </div>
 <div id="modalpopupcss">
 <code id="code-css-fourtysix" class="code css" data-clipboard-target=#code-css>
-  #testimonials {
-  position: relative;
-  background: #ddd;
-  padding-bottom: 60px;
+  html {
+  min-height: 100%;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (max-width: 767.98px) {
-  #testimonials {
-    overflow: hidden;
-  }
-}
-
-#testimonials .testimonial-slider {
-  margin: 0;
-  padding: 0;
-  outline: none;
-}
-
-@media (max-width: 1199.98px) {
-  #testimonials .testimonial-slider {
-    overflow: hidden;
-  }
-}
-
-#testimonials .testimonial-slider .item {
-  margin: 0;
-  padding: 60px 0px;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #testimonials .testimonial-slider .item {
-    padding: 50px 0 70px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .item {
-    padding: 50px 0 90px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .item .col-xl-6:first-child {
-    order: 2;
-  }
-  #testimonials .testimonial-slider .item .col-xl-6:last-child {
-    order: 1;
-  }
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-text {
-  padding-left: 150px;
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text {
-    padding-left: 60px;
-  }
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-text p {
-  font-size: 1.125rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  color: #1c2a51;
-  margin: 0 0 30px;
-  line-height: 1.4;
-  position: relative;
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-text p span {
-  width: 38px;
-  height: 32px;
-  position: absolute;
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-start {
-  background: url("../images/quotes-start.png") no-repeat 0 0;
-  top: -12px;
-  left: -44px;
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-start {
-    background-size: 100%;
-    top: -10px;
-    left: -30px;
-    width: 25px;
-  }
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-end {
-  background: url("../images/quotes-end.png") no-repeat 0 0;
-  right: auto;
-  bottom: -16px;
-  margin-left: 8px;
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text p span.quote-end {
-    background-size: 100%;
-    width: 25px;
-  }
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-text p.designation {
-  font-size: 1.125rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  color: #fff;
-  margin: 0 0 8px;
-  line-height: 1;
-}
-
-@media (max-width: 1199.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text p.designation {
-    font-size: 1rem;
-  }
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-text h4 {
-  font-size: 1.875rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  color: #1c2a51;
-  margin: 0 0 5px;
-  line-height: 1;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text h4 {
-    font-size: 1.375rem;
-    margin-bottom: 15px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text h4 {
-    font-size: 1.525rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-text h4 {
-    font-size: 1.375rem;
-  }
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-img {
+body {
+  background: linear-gradient(to bottom right, #3D4258, #6670A0, #9688B4);
+  line-height: 1.5;
   text-align: center;
 }
 
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-img {
-    padding-bottom: 30px;
-    width: 65%;
-    margin: 0 auto;
-  }
+h1 {
+  font-weight: 200;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-img {
-    width: 70%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #testimonials .testimonial-slider .item .testimonial-slider-img {
-    width: 85%;
-  }
-}
-
-#testimonials .testimonial-slider .item .testimonial-slider-img img {
-  border-radius: 50%;
-  padding: 6px;
-  border: 1px dashed #b0c6d7;
-  display: inline-block;
-  width: auto;
-}
-
-#testimonials .testimonial-slider .owl-nav .owl-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.overlay {
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 22px;
-  height: 22px;
-  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 0;
-  text-indent: -99999px;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #testimonials .testimonial-slider .owl-nav .owl-prev img {
-    width: 70%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #testimonials .testimonial-slider .owl-nav .owl-prev img {
-    width: 80%;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .owl-nav .owl-prev {
-    top: 90px;
-    transform: none;
-  }
-  #testimonials .testimonial-slider .owl-nav .owl-prev img {
-    width: 70%;
-  }
-}
-
-#testimonials .testimonial-slider .owl-nav .owl-next {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-   width: 22px;
-  height: 22px;
-  background: url(https://ui-modules.p2staging.us/module-twelve/images/latestpost-slider-arrow.png) no-repeat 100%;
-  text-indent: -99999px;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #testimonials .testimonial-slider .owl-nav .owl-next {
-    text-align: right;
-  }
-  #testimonials .testimonial-slider .owl-nav .owl-next img {
-    width: 70%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #testimonials .testimonial-slider .owl-nav .owl-next {
-    text-align: right;
-  }
-  #testimonials .testimonial-slider .owl-nav .owl-next img {
-    width: 80%;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .owl-nav .owl-next {
-    top: 90px;
-    transform: none;
-    text-align: right;
-  }
-  #testimonials .testimonial-slider .owl-nav .owl-next img {
-    width: 70%;
-  }
-}
-
-#testimonials .testimonial-slider .owl-dots {
-  position: absolute;
   width: 100%;
-  text-align: center;
-  text-align: left;
-  left: 150px;
-  bottom: 0px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .5s ease;
+  z-index: -1;
 }
 
-#testimonials .testimonial-slider .owl-dots .owl-dot {
+.overlay.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.modal {
+  max-height: calc(100% - 100px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 450px;
+  transform: translate(-50%, -50%);
+  color: #4a5666;
+  background: linear-gradient(to bottom right, white, #F8F8F8) !important;
+  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.modal h2 {
+  margin: 0;
+  font-weight: 400;
+  padding: 1rem;
+  border-bottom: 1px solid #DDE0E7;
+}
+
+.modal p {
+  padding: 1rem;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+button {
   display: inline-block;
-  margin-left: 20px;
+  background: rgba(10, 20, 30, .3);
+  border: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 45px;
+  margin: .25rem 0;
+  vertical-align: middle;
+  line-height: 1;
+  overflow: visible;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-#testimonials .testimonial-slider .owl-dots .owl-dot span {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  background-color: #999;
-  border-radius: 50%;
-  transition: all 0.3s;
+button:hover {
+  border: 1px solid rgba(255, 255, 255, .8);
+  color: white;
+  background: rgba(255, 255, 255, .1);
 }
 
-#testimonials .testimonial-slider .owl-dots .owl-dot.active span, #testimonials .testimonial-slider .owl-dots .owl-dot:hover span {
-  background-color: #fff;
-  transition: all 0.3s;
+button.close {
+  margin: 0 0 1rem;
+  background: #FC6468;
 }
 
-#testimonials .testimonial-slider .owl-dots .owl-dot:first-child {
-  margin-left: 0;
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #testimonials .testimonial-slider .owl-dots {
-    bottom: 70px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #testimonials .testimonial-slider .owl-dots {
-    left: 60px;
-    bottom: 40px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #testimonials .testimonial-slider .owl-dots {
-    left: 50px;
-    bottom: 50px;
-  }
-}
-
-.owl-caraousel .animated {
-  -webkit-animation-duration: 4000ms;
-          animation-duration: 4000ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+button.close:hover {
+  border: 1px solid #FC6468;
+  color: #FC6468;
+  background: transparent;
 }
 
 </code>
 </div>
 <div id="modalpopupjs">
 <code id="code-css-fourtysix" class="code javascript" data-clipboard-target=#code-javascript>
-$('#testimonials').imagesLoaded(function() {
- $('#testimonials .testimonial-slider').owlCarousel({
-        loop: true,
-        margin: 0,
-        nav: true,
-        items: 1,
-        dots: true,
-        autoplay: false,
-        //autoplayTimeout: 7000,
-        autoHeight: false
-   });
-  });
+$(".open").on("click", function(){
+  $(".overlay, .modal").addClass("active");
+});
+$(".close, .overlay").on("click", function(){
+   $(".overlay, .modal").removeClass("active");
+});
+$(document).keyup(function(e) {
+  if (e.keyCode === 27) {
+    $(".overlay, .modal").removeClass("active");
+  }
+});
 </code>
 </div>
 <div id="modalpopupresult" class="result-wrap">
