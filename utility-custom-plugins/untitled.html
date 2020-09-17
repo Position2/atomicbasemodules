@@ -1,160 +1,57 @@
- <!-- Modal Popup Starts here -->
-<div class="rule each-module-preview modalpopup">
+ <!-- Scroll to Id Starts here -->
+<div class="rule each-module-preview scrolltoid">
   <div class="title">
-      <h1>45. Modal Popup</h1>
+      <h1>47. Scroll to Id</h1>
   </div>
-  <div class="rule" id="45">
+  <div class="rule" id="47">
       <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
-      <ul class="tabs" data-tabgroup="fourtysix-tab-group">
-          <li class="tab"><a href="#modalpopuphtml" class="active">HTML</a></li>
-          <li class="tab"><a href="#modalpopupcss">Styling</a></li>
-          <li class="tab"><a href="#modalpopupjs">Script</a></li>
-          <li class="tab"><a href="#modalpopupresult">Result</a></li>
+      <ul class="tabs" data-tabgroup="fourtyseven-tab-group">
+          <li class="tab"><a href="#scrolltoidhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#scrolltoidcss">Styling</a></li>
+          <li class="tab"><a href="#scrolltoidjs">Script</a></li>
+          <li class="tab"><a href="#scrolltoidresult">Result</a></li>
       </ul>
 <pre>
-<div id="fourtysix-tab-group" class="tabgroup">
-<div id="modalpopuphtml">
-<code id="code-html-fourtysix" class="code html" data-clipboard-target="#code-html">
-   &lt;h1&gt;Modal&lt;/h1&gt;
-    &lt;div class="overlay"&gt;&lt;/div&gt;
-    &lt;div class="modal"&gt;
-      &lt;h2&gt;Modal&lt;/h2&gt;
-      &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&lt;/p&gt;
-      &lt;button class="close"&gt;Close&lt;/button&gt;&lt;/div&gt;
-    &lt;button class="open"&gt;Open&lt;/button&gt;
+<div id="fourtyseven-tab-group" class="tabgroup">
+<div id="scrolltoidhtml">
+<code id="code-html-fourtyseven" class="code html" data-clipboard-target="#code-html">
+  &lt;a href="#one"&gt;One&lt;/a&gt;
+    &lt;a href="#two"&gt;Two&lt;/a&gt;
+    &lt;hr&gt;
+    &lt;div id="one"&gt;First Element&lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div id="two"&gt;Second Element&lt;/a&gt;
+  &lt;hr&gt;
 </code>
 </div>
-<div id="modalpopupcss">
-<code id="code-css-fourtysix" class="code css" data-clipboard-target=#code-css>
-  html {
-  min-height: 100%;
-  font-family: 'Nunito', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  background: linear-gradient(to bottom right, #3D4258, #6670A0, #9688B4);
-  line-height: 1.5;
-  text-align: center;
-}
-
-h1 {
-  font-weight: 200;
-  font-size: 3rem;
-  color: white;
-  text-align: center;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: .5s ease;
-  z-index: -1;
-}
-
-.overlay.active {
-  opacity: 1;
-  z-index: 2;
-}
-
-.modal {
-  max-height: calc(100% - 100px);
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  max-width: 450px;
-  transform: translate(-50%, -50%);
-  color: #4a5666;
-  background: linear-gradient(to bottom right, white, #F8F8F8) !important;
-  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
-  z-index: 3;
-  visibility: hidden;
-  opacity: 0;
-  transition: .5s ease;
-}
-
-.modal h2 {
-  margin: 0;
-  font-weight: 400;
-  padding: 1rem;
-  border-bottom: 1px solid #DDE0E7;
-}
-
-.modal p {
-  padding: 1rem;
-}
-
-.modal.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-button {
-  display: inline-block;
-  background: rgba(10, 20, 30, .3);
-  border: 1px solid transparent;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  border-radius: 45px;
-  margin: .25rem 0;
-  vertical-align: middle;
-  line-height: 1;
-  overflow: visible;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-button:hover {
-  border: 1px solid rgba(255, 255, 255, .8);
-  color: white;
-  background: rgba(255, 255, 255, .1);
-}
-
-button.close {
-  margin: 0 0 1rem;
-  background: #FC6468;
-}
-
-button.close:hover {
-  border: 1px solid #FC6468;
-  color: #FC6468;
-  background: transparent;
-}
-
-</code>
-</div>
-<div id="modalpopupjs">
-<code id="code-css-fourtysix" class="code javascript" data-clipboard-target=#code-javascript>
-$(".open").on("click", function(){
-  $(".overlay, .modal").addClass("active");
-});
-$(".close, .overlay").on("click", function(){
-   $(".overlay, .modal").removeClass("active");
-});
-$(document).keyup(function(e) {
-  if (e.keyCode === 27) {
-    $(".overlay, .modal").removeClass("active");
+<div id="scrolltoidcss">
+<code id="code-css-fourtyseven" class="code css" data-clipboard-target=#code-css>
+  hr {
+    height: 100vh;
   }
+</code>
+</div>
+<div id="scrolltoidjs">
+<code id="code-css-fourtyseven" class="code javascript" data-clipboard-target=#code-javascript>
+$("a[href^='#']").click(function(e) {
+  e.preventDefault();
+  var position = $($(this).attr("href")).offset().top;
+  $("body, html").animate({
+    scrollTop: position
+  } /* speed */ );
 });
 </code>
 </div>
-<div id="modalpopupresult" class="result-wrap">
-<iframe width="100%" height="260px" src="codepen-files/modalpopup.html"></iframe>
+<div id="scrolltoidresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/scrolltoid.html"></iframe>
 </div>
 </div>
 </pre>
 </div>
 <div class="keyword-preview-wrap">
     <div class="tags">
-      <span class="modalpopup">modalpopup</span>
+      <span class="scrolltoid">scrolltoid</span>
     </div>
   </div>
 </div>
-<!--Modal Popup ends here -->
+<!--Scroll to Id ends here -->
