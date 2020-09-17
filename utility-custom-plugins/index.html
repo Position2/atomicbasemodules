@@ -102,6 +102,7 @@
                 <li data-val=".owltestimonialslider">Owl Testimonial Slider</li>
                 <li data-val=".modalpopup">Modal Popup</li>
                 <li data-val=".scrolltoid">Scroll to Id</li>
+                <li data-val=".jqueryimagesfadeinslider">jQuery Images FadeIn Slider</li>
               </ul>
             </div>  
           </div>
@@ -157,6 +158,7 @@
                 <li data-filter="owltestimonialslider">Owl Testimonial Slider</li>
                 <li data-filter="modalpopup">Modal Popup</li>
                 <li data-filter="scrolltoid">Scroll to id</li>
+                <li data-filter="jqueryimagesfadeinslider">jQuery Images FadeIn Slider</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -12598,6 +12600,66 @@ $("a[href^='#']").click(function(e) {
   </div>
 </div>
 <!--Scroll to Id ends here -->
+ <!-- jQuery Images fadein Slider Starts here -->
+<div class="rule each-module-preview jqueryimagesfadeinslider">
+  <div class="title">
+      <h1>48. jQuery Images FadeIn Slider</h1>
+  </div>
+  <div class="rule" id="48">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fourtyeight-tab-group">
+          <li class="tab"><a href="#jqueryimagesfadeinsliderhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#jqueryimagesfadeinslidercss">Styling</a></li>
+          <li class="tab"><a href="#jqueryimagesfadeinsliderjs">Script</a></li>
+          <li class="tab"><a href="#jqueryimagesfadeinsliderresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fourtyeight-tab-group" class="tabgroup">
+<div id="jqueryimagesfadeinsliderhtml">
+<code id="code-html-fourtyeight" class="code html" data-clipboard-target="#code-html">
+ &lt;div class="slider"&gt;
+  &lt;div&gt;&lt;img src="https://picsum.photos/500/500?image=1051"&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img src="https://picsum.photos/500/500?image=1057"&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img src="https://picsum.photos/500/500?image=1073"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+</code>
+</div>
+<div id="jqueryimagesfadeinslidercss">
+<code id="code-css-fourtyeight" class="code css" data-clipboard-target=#code-css>
+  .slider {
+    position: relative;
+  }
+  .slider > div {
+    position: absolute;
+  }
+</code>
+</div>
+<div id="jqueryimagesfadeinsliderjs">
+<code id="code-css-fourtyeight" class="code javascript" data-clipboard-target=#code-javascript>
+$(".slider > div:gt(0)").hide();
+setInterval(function() {
+  $('.slider > div:first-child')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('.slider');
+}, 3000);
+</code>
+</div>
+<div id="jqueryimagesfadeinsliderresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/jqueryimagesfadeinslider.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="jqueryimagesfadeinslider">jqueryimagesfadeinslider</span>
+    </div>
+  </div>
+</div>
+<!--jQuery Images fadein Slider ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
