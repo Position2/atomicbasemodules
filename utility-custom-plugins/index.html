@@ -104,6 +104,7 @@
                 <li data-val=".scrolltoid">Scroll to Id</li>
                 <li data-val=".jqueryimagesfadeinslider">jQuery Images FadeIn Slider</li>
                 <li data-val=".removeclassafterdelayinjquery">Remove Class After Delay</li>
+                <li data-val=".onfocushighlightlabel">On Focus Highlight Label</li>
               </ul>
             </div>  
           </div>
@@ -161,6 +162,7 @@
                 <li data-filter="scrolltoid">Scroll to id</li>
                 <li data-filter="jqueryimagesfadeinslider">jQuery Images FadeIn Slider</li>
                 <li data-filter="removeclassafterdelayinjquery">Remove Class After Delay</li>
+                <li data-filter="onfocushighlightlabel">On Focus Highlight Label</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -12732,6 +12734,66 @@ $(document).ready(function() {
   </div>
 </div>
 <!--Remove class after delay in jQuery ends here -->
+ <!-- On Focus Highlight Label Starts here -->
+<div class="rule each-module-preview onfocushighlightlabel">
+  <div class="title">
+      <h1>50. On Focus Highlight Label</h1>
+  </div>
+  <div class="rule" id="50">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fifty-tab-group">
+          <li class="tab"><a href="#onfocushighlightlabelhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#onfocushighlightlabelcss">Styling</a></li>
+          <li class="tab"><a href="#onfocushighlightlabeljs">Script</a></li>
+          <li class="tab"><a href="#onfocushighlightlabelresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fifty-tab-group" class="tabgroup">
+<div id="onfocushighlightlabelhtml">
+<code id="code-html-fifty" class="code html" data-clipboard-target="#code-html">
+ &lt;form&gt;
+  &lt;label for="firstname"&gt;First Name&lt;/label&gt;
+  &lt;input id="firstname" type="text"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label for="lastname"&gt;Last Name&lt;/label&gt;
+  &lt;input id="lastname" type="text"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label for="age"&gt;Age&lt;/label&gt;
+  &lt;input id="age" type="text"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label for="address"&gt;Address&lt;/label&gt;
+  &lt;input id="address" type="text"&gt;
+&lt;/form&gt;
+</code>
+</div>
+<div id="onfocushighlightlabelcss">
+<code id="code-css-fifty" class="code css" data-clipboard-target=#code-css>
+  .labelfocus {
+    color: red;
+  }
+</code>
+</div>
+<div id="onfocushighlightlabeljs">
+<code id="code-css-fifty" class="code javascript" data-clipboard-target=#code-javascript>
+$(document).ready(function() {
+  $("form :input").focus(function() {
+  $("label[for='" + this.id + "']").addClass("labelfocus");
+  }).blur(function() {
+  $("label").removeClass("labelfocus");
+  });
+});
+</code>
+</div>
+<div id="onfocushighlightlabelresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/onfocushighlightlabel.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="onfocushighlightlabel">onfocushighlightlabel</span>
+    </div>
+  </div>
+</div>
+<!--On Focus Highlight Label ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
