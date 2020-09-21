@@ -106,6 +106,7 @@
                 <li data-val=".removeclassafterdelayinjquery">Remove Class After Delay</li>
                 <li data-val=".onfocushighlightlabel">On Focus Highlight Label</li>
                 <li data-val=".randomimagefadein">Random Image Fadein</li>
+                <li data-val=".horizontalscrollingwithmousewheel">Mouse Wheel Scrolling</li>
               </ul>
             </div>  
           </div>
@@ -165,6 +166,7 @@
                 <li data-filter="removeclassafterdelayinjquery">Remove Class After Delay</li>
                 <li data-filter="onfocushighlightlabel">On Focus Highlight Label</li>
                 <li data-filter="randomimagefadein">Random Image Fadein</li>
+                <li data-filter="horizontalscrollingwithmousewheel">Mouse Wheel Scrolling</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -12877,6 +12879,1057 @@ clearInterval(timer);
   </div>
 </div>
 <!--Random Image Fadein ends here -->
+ <!-- Horizontal Scrolling with mouse wheel Starts here -->
+<div class="rule each-module-preview horizontalscrollingwithmousewheel">
+  <div class="title">
+      <h1>52. Horizontal Scrolling with mouse wheel</h1>
+  </div>
+  <div class="rule" id="52">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fiftytwo-tab-group">
+          <li class="tab"><a href="#horizontalscrollingwithmousewheelhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#horizontalscrollingwithmousewheelcss">Styling</a></li>
+          <li class="tab"><a href="#horizontalscrollingwithmousewheeljs">Script</a></li>
+          <li class="tab"><a href="#horizontalscrollingwithmousewheelresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fiftytwo-tab-group" class="tabgroup">
+<div id="horizontalscrollingwithmousewheelhtml">
+<code id="code-html-fiftytwo" class="code html" data-clipboard-target="#code-html">
+ &lt;div class="container"&gt;
+&lt;html&gt;
+  &lt;body class="wrapper"&gt;
+    &lt;div id="main" class="site-main"&gt;
+      &lt;div class="scrollbaby"&gt;◄---- Mouse Scroll ----►&lt;/div&gt;
+      &lt;div id="main-content" class="main-content"&gt;
+        &lt;div id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print"&gt;
+          &lt;a class="image_link" href="https://unsplash.com/@erondu"&gt; &lt;img src="https://source.unsplash.com/user/erondu/420x800" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@erondu"&gt;@erondu &lt;3 Hi Res &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-2" class="post-2 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print"&gt;
+          &lt;a class="image_link" href="https://unsplash.com/@rickyzden"&gt; &lt;img src="https://source.unsplash.com/user/rickyzden/320x800" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@rickyzden"&gt; @rickyzden&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-3" class="post-3 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://unsplash.com/@limabravo"&gt; &lt;img src="https://source.unsplash.com/user/limabravo/240x800" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@limabravo"&gt;@limabravo&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-4" class="post-4 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://source.unsplash.com/420x800/?happy,smile"&gt; &lt;img src="https://source.unsplash.com/420x800/?happy,smile" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://source.unsplash.com/420x800/?happy,smile"&gt; Be happy, smile&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-5" class="post-5 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print tag-adobe tag-adobe-photoshop tag-branding tag-business-cards tag-graphic-design tag-id tag-identity tag-print"
+        &gt;
+          &lt;a class="image_link" href="https://unsplash.com/@lidyanada"&gt; &lt;img src="https://source.unsplash.com/user/lidyanada/420x800/" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@lidyanada"&gt;@lidyanada&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-6" class="post-6 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://source.unsplash.com/620x800/?music"&gt; &lt;img src="https://source.unsplash.com/620x800/?music" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://source.unsplash.com/620x800/?music"&gt; Kick out the Jams&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-7" class="post-7 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://www.youtube.com/watch?v=U23z-XotFds"&gt; &lt;img src="https://source.unsplash.com/420x800/?gangster,smoke" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://www.youtube.com/watch?v=U23z-XotFds"&gt; Gangsta Pat - Smoke Somethin'&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-8" class="post-8 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://source.unsplash.com/420x800/?distance,bridge"&gt; &lt;img src="https://source.unsplash.com/220x800/?distance,bridge" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://source.unsplash.com/220x800/?distance,bridge"&gt; Distance&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-9" class="post-9 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://unsplash.com/@imgix"&gt; &lt;img src="https://source.unsplash.com/user/imgix/370x800/" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@imgix"&gt; @imgix &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-9" class="post-9 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://unsplash.com/@diempic"&gt;
+            &lt;img src="https://source.unsplash.com/user/diempic/700x800/" /&gt;
+          &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@diempic"&gt;@diempic&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div
+          id="post-5"
+          class="post-5 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print tag-adobe tag-adobe-photoshop tag-branding tag-business-cards tag-graphic-design tag-id tag-identity tag-print"
+        &gt;
+          &lt;a class="image_link" href="https://unsplash.com/@lidyanada"&gt; &lt;img src="https://source.unsplash.com/user/lidyanada/400x800/" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@lidyanada"&gt;@lidyanada&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-9" class="post-9 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://unsplash.com/@diempic"&gt;
+            &lt;img src="https://source.unsplash.com/user/diempic/200x800/" /&gt;
+          &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://unsplash.com/@diempic"&gt;@diempic&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-9" class="post-9 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id"&gt;
+          &lt;a class="image_link" href="https://source.unsplash.com/1600x800/?nature,animals"&gt;
+            &lt;img src="https://source.unsplash.com/800x800/?nature,animals" /&gt;
+          &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://source.unsplash.com/800x800/?nature,animals"&gt;Animals&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="post-32" class="post-32 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print"&gt;
+          &lt;a class="image_link" href="https://picsum.photos/"&gt; &lt;img src="https://picsum.photos/420/800" /&gt; &lt;/a&gt;
+          &lt;div&gt;
+            &lt;a href="https://picsum.photos/"&gt;Picsum.photos&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</div>
+<div id="horizontalscrollingwithmousewheelcss">
+<code id="code-css-fiftytwo" class="code css" data-clipboard-target=#code-css>
+ body{
+  font-family:arial!important;
+ 
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.scrollbaby{
+position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  font-size:12px;
+  letter-spacing:1px;
+  font-weight:bold;
+  padding:4px 10px;
+  background:rgba(255,255,255,.8);
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+body,
+button,
+input,
+select,
+textarea {
+  color: #222223;
+  font-size: 19px;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 29px;
+  line-height: 2.9rem;
+}
+
+body {
+  height: 100%;
+  background: #fff;
+}
+
+a {
+  color: #222223;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #963cbd;
+  border-bottom: 1px solid #963cbd;
+}
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  vertical-align: top;
+}
+
+/* Support a widely-adopted but non-standard selector for text selection styles
+ * to achieve a better experience. See http://core.trac.wordpress.org/ticket/25898.
+ */
+::selection {
+  background: #963cbd;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #963cbd;
+  color: #fff;
+  text-shadow: none;
+}
+/**
+ * 2.0 Repeatable Patterns
+ * -----------------------------------------------------------------------------
+ */
+
+/* Input fields */
+input,
+textarea {
+  border: 1px solid #222223;
+  border-radius: 2px;
+  color: #222223;
+  padding: 4px 10px;
+  padding: 0.4rem 1rem;
+  margin-bottom: 3px;
+  margin-bottom: 0.3rem;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #963cbd;
+  outline: 0;
+}
+
+/* Buttons */
+button,
+.contributor-posts-link,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #222223;
+  border: 0;
+  border-radius: 2px;
+  color: #963cbd;
+  padding: 5px 20px;
+  padding: 0.5rem 2rem;
+  margin-bottom: 3px;
+  margin-bottom: 0.3rem;
+  vertical-align: bottom;
+}
+
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #963cbd;
+  color: #fff;
+}
+
+button:active,
+.contributor-posts-link:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: #963cbd;
+  color: #fff;
+}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder {
+  color: #222223;
+}
+
+:-moz-placeholder {
+  color: #222223;
+}
+
+::-moz-placeholder {
+  color: #222223;
+  /* Since FF19 lowers the opacity of the placeholder by default */
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #222223;
+}
+
+/* Responsive images. Fluid images for posts, comments, and widgets */
+.entry-content img,
+.entry-summary img,
+.wp-caption {
+  max-width: 100%;
+}
+
+/**
+ * Make sure images with WordPress-added height and width attributes are
+ * scaled correctly.
+ */
+.entry-content img,
+.entry-summary img,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+  height: auto;
+}
+
+img.size-full,
+img.size-large,
+.wp-post-image,
+.post-thumbnail img {
+  height: auto;
+  max-width: 100%;
+}
+
+body.home .wp-post-image {
+  max-width: none;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object,
+video {
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
+  max-width: 100%;
+}
+
+p > embed,
+p > iframe,
+p > object,
+span > embed,
+span > iframe,
+span > object {
+  margin-bottom: 0;
+}
+
+/* Alignment */
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote.alignleft,
+img.alignleft {
+  margin: 7px 28px 7px 0;
+  margin: 0.7rem 2.8rem 0.7rem 0;
+}
+
+.wp-caption.alignleft {
+  margin: 7px 14px 7px 0;
+  margin: 0.7rem 1.4rem 0.7rem 0;
+}
+
+blockquote.alignright,
+img.alignright {
+  margin: 7px 0 7px 28px;
+  margin: 0.7rem 0 0.7rem 2.8rem;
+}
+
+.wp-caption.alignright {
+  margin: 7px 0 7px 14px;
+  margin: 0.7rem 0 0.7rem 1.4rem;
+}
+
+blockquote.aligncenter,
+img.aligncenter,
+.wp-caption.aligncenter {
+  margin-top: 7px;
+  margin-top: 0.7rem;
+  margin-bottom: 7px;
+  margin-bottom: 0.7rem;
+}
+
+.site-content blockquote.alignleft,
+.site-content blockquote.alignright {
+  padding-top: 14px;
+  padding-top: 1.4rem;
+}
+
+.site-content blockquote.alignleft p,
+.site-content blockquote.alignright p {
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
+}
+
+.wp-caption {
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0;
+}
+
+.wp-caption {
+  color: #222223;
+}
+
+.wp-caption a {
+  color: #963cbd;
+}
+
+.wp-caption-text {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 15px;
+  line-height: 1.5rem;
+  margin: 9px 0;
+  margin: 0.9rem 0;
+}
+
+.wp-smiley {
+  border: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Assistive text */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+/* Clearing floats */
+.site-header:after,
+.site-footer:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/**
+ * 3.0 Basic Structure
+ * -----------------------------------------------------------------------------
+ */
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.site {
+  opacity: 0;
+  position: relative;
+  min-width: 320px;
+  -webkit-transition: opacity 0.3s, left 0.3s ease-out;
+  -moz-transition: opacity 0.3s, left 0.3s ease-out;
+  -o-transition: opacity 0.3s, left 0.3s ease-out;
+  transition: opacity 0.3s, left 0.3s ease-out;
+}
+
+.main-content,
+.content-area {
+  height: 100%;
+  white-space: nowrap;
+}
+
+/* Infinite load */
+@-webkit-keyframes buffer1 {
+  0% {
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes buffer1 {
+  0% {
+    -moz-transform: scale(0);
+  }
+
+  50% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes buffer1 {
+  0% {
+    -o-transform: scale(0);
+  }
+
+  50% {
+    -o-transform: scale(1);
+  }
+}
+@-ms-keyframes buffer1 {
+  0% {
+    -ms-transform: scale(0);
+  }
+
+  50% {
+    -ms-transform: scale(1);
+  }
+}
+@keyframes buffer1 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes buffer2 {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes buffer2 {
+  0% {
+    -moz-transform: scale(0);
+  }
+
+  50% {
+    -moz-transform: scale(0);
+  }
+
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-o-keyframes buffer2 {
+  0% {
+    -o-transform: scale(0);
+  }
+
+  50% {
+    -o-transform: scale(0);
+  }
+
+  100% {
+    -o-transform: scale(1);
+  }
+}
+@-ms-keyframes buffer2 {
+  0% {
+    -ms-transform: scale(0);
+  }
+  50% {
+    -ms-transform: scale(0);
+  }
+
+  100% {
+    -ms-transform: scale(1);
+  }
+}
+@keyframes buffer2 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+#infinite-loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+}
+#infinite-loader.active {
+  display: block;
+}
+#infinite-loader > * {
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: #963cbd;
+  border-radius: 50%;
+}
+#infinite-loader > *:nth-child(1) {
+  background: transparent;
+}
+#infinite-loader > *:nth-child(2) {
+  -webkit-animation: buffer1 0.5s infinite;
+  -moz-animation: buffer1 0.5s infinite;
+  -o-animation: buffer1 0.5s infinite;
+  -ms-animation: buffer1 0.5s infinite;
+  animation: buffer1 0.5s infinite;
+}
+#infinite-loader > *:nth-child(3) {
+  background: transparent;
+  -webkit-animation: buffer2 0.2s infinite;
+  -moz-animation: buffer2 0.2s infinite;
+  -o-animation: buffer2 0.2s infinite;
+  -ms-animation: buffer2 0.2s infinite;
+  animation: buffer2 0.2s infinite;
+}
+#wpadminbar {
+  min-height: 32px;
+}
+.site-header {
+  background: #fff;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+#header-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 1px;
+}
+.site-navigation ul {
+  list-style: none;
+  margin: 0;
+}
+.site-navigation li {
+  display: block;
+  position: relative;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  word-wrap: break-word;
+}
+.site-navigation ul ul ul {
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 10px;
+  top: 1rem;
+  right: 20px;
+  right: 2rem;
+  margin: 0;
+  color: #222223;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 30px;
+  line-height: 3rem;
+  cursor: pointer;
+}
+.menu-toggle:hover {
+  color: #963cbd;
+}
+#navigation-close {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  top: 10px;
+  top: 1rem;
+  right: 20px;
+  right: 2rem;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 30px;
+  line-height: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+.content-area {
+  white-space: nowrap;
+}
+.hentry,
+.page-content {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  word-wrap: break-word;
+}
+body.single .hentry {
+  width: 67.391304348%;
+  padding-right: 20px;
+  padding-right: 2rem;
+}
+body.page .hentry,
+.page-content {
+  width: 67.391304348%;
+  padding-right: 20px;
+  padding-right: 2rem;
+}
+.image_link:hover {
+  border-bottom: none;
+}
+.post-thumbnail {
+  display: inline-block;
+  vertical-align: top;
+}
+body.home .post-thumbnail {
+  height: 100%;
+}
+body.single .entry-header,
+body.page .entry-header,
+.page-header {
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+.entry-title,
+.page-title {
+  margin: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 28px;
+  line-height: 2.8rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.entry-content > p:last-child {
+  margin-bottom: 0;
+}
+.entry-content a,
+.page-content a {
+  border-bottom: 1px solid;
+}
+.gallery {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  list-style-type: none;
+}
+.gallery-item {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  padding-right: 20px;
+  padding-right: 2rem;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.gallery-item img {
+  display: block;
+  width: auto;
+  height: 100%;
+  height: -moz-calc(100% - 28px);
+  height: -webkit-calc(100% - 28px);
+  height: calc(100% - 28px);
+}
+.paging-navigation {
+  display: none;
+}
+#image-navigation {
+  text-align: right;
+}
+#image-navigation a:first-of-type {
+  float: left;
+}
+.entry-attachment .attachment {
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
+}
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 20px 40px;
+  padding: 0 2rem 4rem;
+  color: #999;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+@media (min-width: 951px) {
+  .site {
+    height: 100%;
+    padding: 40px 20px 40px 250px;
+    padding: 4rem 2rem 4rem 25rem;
+  }
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 40px 30px 0;
+    padding: 4rem 3rem 0;
+  }
+  body.admin-bar .site-header {
+    top: 32px;
+  }
+  .primary-navigation {
+    padding: 20px 0 40px;
+    padding: 2rem 0 4rem;
+  }
+  #top-right-menu {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .nav-menu li {
+    opacity: 0;
+  }
+  .site-navigation > div > ul > li.menu-item-has-children {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .site-navigation > div > ul > li.menu-item-has-children > a {
+    font-weight: 700;
+  }
+  .site-navigation > div > ul ul ul {
+    padding-left: 20px;
+    padding-left: 2rem;
+  }
+  .current-menu-item > a {
+    font-weight: 700;
+  }
+  #main {
+    height: 100%;
+  }
+  body.home .hentry {
+    height: 100%;
+    padding-right: 20px;
+    padding-right: 2rem;
+  }
+  body.home .hentry > a {
+    display: inline-block;
+    height: 100%;
+    height: -moz-calc(100% - 28px);
+    height: -webkit-calc(100% - 28px);
+    height: calc(100% - 28px);
+  }
+  body.home .hentry img {
+    height: 100%;
+    width: auto;
+  }
+  body.single .hentry {
+    padding-bottom: 40px;
+    padding-bottom: 4rem;
+    max-width: 620px;
+  }
+  body.page .hentry,
+  .page-content {
+    padding-bottom: 40px;
+    padding-bottom: 4rem;
+    max-width: 620px;
+  }
+  .gallery-animated img {
+    cursor: pointer;
+  }
+}
+@media (max-width: 950px) {
+  .site-header {
+    height: auto !important;
+    padding: 10px 20px 30px;
+    padding: 1rem 2rem 3rem;
+  }
+  #header-helper {
+    display: none;
+  }
+  .site-title {
+    padding-right: 40px;
+    padding-right: 4rem;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu-toggle.hidden {
+    display: none;
+  }
+  .primary-navigation {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: -84.375%;
+    width: 84.375%;
+    height: 100%;
+    background-color: #963cbd;
+    padding: 10px 20px;
+    padding: 1rem 2rem;
+    overflow-y: auto;
+    -webkit-transition: left 0.3s ease-out;
+    -moz-transition: left 0.3s ease-out;
+    -o-transition: left 0.3s ease-out;
+    transition: left 0.3s ease-out;
+  }
+  #top-right-menu {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .site-navigation > div > ul > li.menu-item-has-children {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .site-navigation > div > ul > li.menu-item-has-children > a {
+    font-weight: 700;
+  }
+  #wrapper {
+    position: relative;
+  }
+  #wrapper.overflow_fix {
+    overflow: hidden;
+  }
+  .site {
+    position: relative;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+  }
+  .toggled-on .site {
+    left: 84.375%;
+    height: 100%;
+  }
+  .toggled-on .site-footer {
+    display: none;
+  }
+  .primary-navigation a {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 35px;
+    line-height: 3.5rem;
+    color: #fff;
+  }
+  .primary-navigation a:hover {
+    border-bottom: 1px solid #fff;
+  }
+  .toggled-on #navigation-close {
+    display: block;
+  }
+  #main {
+    width: 100%;
+    padding: 0 20px;
+    padding: 0 2rem;
+  }
+  body.single #primary,
+  body.page #main-content {
+    padding-left: 20.689655172%;
+  }
+  body.home .hentry,
+  body.home .post-thumbnail,
+  body.home .hentry img {
+    height: auto;
+    width: 100% !important;
+  }
+  body.home .hentry {
+    display: block;
+    padding-bottom: 20px;
+    padding-bottom: 2rem;
+  }
+  body.home .hentry:last-of-type {
+    padding-bottom: 0;
+  }
+  body.single #primary,
+  body.page #main-content {
+    padding-left: 0;
+  }
+
+  body.single .hentry,
+  body.page .hentry,
+  .page-content {
+    width: 100%;
+    padding-right: 0;
+  }
+  .post-thumbnail {
+    display: block;
+  }
+  .gallery {
+    display: block;
+    margin-top: 28px;
+    margin-top: 2.8rem;
+  }
+  .gallery-item {
+    display: block;
+    width: 100% !important;
+    height: auto;
+    padding: 0 0 20px;
+    padding: 0 0 2rem;
+  }
+  .gallery-item:last-child {
+    padding-bottom: 0;
+  }
+  .gallery-item img {
+    width: 100% !important;
+    height: auto;
+  }
+  .site-footer {
+    padding-top: 30px;
+    padding-top: 3rem;
+  }
+}
+
+</code>
+</div>
+<div id="horizontalscrollingwithmousewheeljs">
+<code id="code-css-fiftytwo" class="code javascript" data-clipboard-target=#code-javascript>
+$(document).ready(function() {
+$('html, body, *').mousewheel(function(e, delta) {
+this.scrollLeft -= (delta);
+e.preventDefault();
+});
+});
+</code>
+</div>
+<div id="horizontalscrollingwithmousewheelresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/horizontalscrollingwithmousewheel.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="horizontalscrollingwithmousewheel">horizontalscrollingwithmousewheel</span>
+    </div>
+  </div>
+</div>
+<!--Horizontal Scrolling with mouse wheel ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
