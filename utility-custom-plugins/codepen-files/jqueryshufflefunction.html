@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - jQuery Shuffle Function</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.min.css'>
+  
+<style>
+body {
+  margin: 20px; 
+}
+div > div {
+  display: inline-block;
+  background: #26A69A;
+  color: white;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 4px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <ul class="shuffle">
+  <li>This</li>
+  <li>Little</li>
+  <li>Piggy</li>
+  <li>Went</li>
+  <li>To</li>
+  <li>Market</li>
+</ul>
+<div class="shuffle">
+  <div>This</div>
+  <div>Little</div>
+  <div>Piggy</div>
+  <div>Went</div>
+  <div>To</div>
+  <div>Market</div>
+</div>
+<br><br>
+<button class="button" id="shuffle">Shuffle</button>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  
+      <script id="rendered-js" >
+$.fn.shuffleChildren = function () {
+  $.each(this.get(), function (index, el) {
+    var $el = $(el);
+    var $find = $el.children();
+
+    $find.sort(function () {
+      return 0.5 - Math.random();
+    });
+    $el.empty();
+    $find.appendTo($el);
+  });
+};
+$("#shuffle").click(function () {
+  // Usage
+  $(".shuffle").shuffleChildren();
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

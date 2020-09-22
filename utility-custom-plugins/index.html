@@ -107,6 +107,8 @@
                 <li data-val=".onfocushighlightlabel">On Focus Highlight Label</li>
                 <li data-val=".randomimagefadein">Random Image Fadein</li>
                 <li data-val=".horizontalscrollingwithmousewheel">Mouse Wheel Scrolling</li>
+                <li data-val=".simplejqueryslideshow">Simple jQuery Slideshow</li>
+                <li data-val=".jqueryshufflefunction">jQuery Shuffle Function</li>
               </ul>
             </div>  
           </div>
@@ -167,6 +169,8 @@
                 <li data-filter="onfocushighlightlabel">On Focus Highlight Label</li>
                 <li data-filter="randomimagefadein">Random Image Fadein</li>
                 <li data-filter="horizontalscrollingwithmousewheel">Mouse Wheel Scrolling</li>
+                <li data-filter="simplejqueryslideshow">Simple jQuery Slideshow</li>
+                <li data-filter="jqueryshufflefunction">jQuery Shuffle Function</li>
               </ul>
               <span class="no_match" style="display:none;">No Match</span>
             </div>
@@ -13930,6 +13934,168 @@ e.preventDefault();
   </div>
 </div>
 <!--Horizontal Scrolling with mouse wheel ends here -->
+ <!-- Simple jQuery Slideshow Starts here -->
+<div class="rule each-module-preview simplejqueryslideshow">
+  <div class="title">
+      <h1>53. Simple jQuery Slideshow</h1>
+  </div>
+  <div class="rule" id="53">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fiftythree-tab-group">
+          <li class="tab"><a href="#simplejqueryslideshowhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#simplejqueryslideshowcss">Styling</a></li>
+          <li class="tab"><a href="#simplejqueryslideshowjs">Script</a></li>
+          <li class="tab"><a href="#simplejqueryslideshowresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fiftythree-tab-group" class="tabgroup">
+<div id="simplejqueryslideshowhtml">
+<code id="code-html-fiftythree" class="code html" data-clipboard-target="#code-html">
+  &lt;div id="slideshow"&gt;
+     &lt;div&gt;
+       &lt;img src="http://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg"&gt;
+     &lt;/div&gt;
+     &lt;div&gt;
+       &lt;img src="http://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg"&gt;
+     &lt;/div&gt;
+     &lt;div&gt;
+       Pretty cool eh? This slide is proof the content can be anything.
+     &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</div>
+<div id="simplejqueryslideshowcss">
+<code id="code-css-fiftythree" class="code css" data-clipboard-target=#code-css>
+ #slideshow {
+  margin: 80px auto;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+</code>
+</div>
+<div id="simplejqueryslideshowjs">
+<code id="code-css-fiftythree" class="code javascript" data-clipboard-target=#code-javascript>
+$("#slideshow > div:gt(0)").hide();
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+</code>
+</div>
+<div id="simplejqueryslideshowresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/simplejqueryslideshow.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="simplejqueryslideshow">simplejqueryslideshow</span>
+    </div>
+  </div>
+</div>
+<!--Simple jQuery Slideshow ends here -->
+ <!-- jQuery Shuffle Function Starts here -->
+<div class="rule each-module-preview jqueryshufflefunction">
+  <div class="title">
+      <h1>54. jQuery Shuffle Function</h1>
+  </div>
+  <div class="rule" id="54">
+      <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
+      <ul class="tabs" data-tabgroup="fiftyfour-tab-group">
+          <li class="tab"><a href="#jqueryshufflefunctionhtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#jqueryshufflefunctioncss">Styling</a></li>
+          <li class="tab"><a href="#jqueryshufflefunctionjs">Script</a></li>
+          <li class="tab"><a href="#jqueryshufflefunctionresult">Result</a></li>
+      </ul>
+<pre>
+<div id="fiftyfour-tab-group" class="tabgroup">
+<div id="jqueryshufflefunctionhtml">
+<code id="code-html-fiftyfour" class="code html" data-clipboard-target="#code-html">
+  &lt;div id="slideshow"&gt;
+   &lt;ul class="shuffle"&gt;
+    &lt;li&gt;This&lt;/li&gt;
+    &lt;li&gt;Little&lt;/li&gt;
+    &lt;li&gt;Piggy&lt;/li&gt;
+    &lt;li&gt;Went&lt;/li&gt;
+    &lt;li&gt;To&lt;/li&gt;
+    &lt;li&gt;Market&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="shuffle"&gt;
+    &lt;div&gt;This&lt;/div&gt;
+    &lt;div&gt;Little&lt;/div&gt;
+    &lt;div&gt;Piggy&lt;/div&gt;
+    &lt;div&gt;Went&lt;/div&gt;
+    &lt;div&gt;To&lt;/div&gt;
+    &lt;div&gt;Market&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;button class="button" id="shuffle"&gt;Shuffle&lt;/button&gt;
+</code>
+</div>
+<div id="jqueryshufflefunctioncss">
+<code id="code-css-fiftyfour" class="code css" data-clipboard-target=#code-css>
+ body {
+  margin: 20px; 
+}
+div > div {
+  display: inline-block;
+  background: #26A69A;
+  color: white;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 4px;
+}
+</code>
+</div>
+<div id="jqueryshufflefunctionjs">
+<code id="code-css-fiftyfour" class="code javascript" data-clipboard-target=#code-javascript>
+$.fn.shuffleChildren = function() {
+  $.each(this.get(), function(index, el) {
+    var $el = $(el);
+    var $find = $el.children();
+
+    $find.sort(function() {
+      return 0.5 - Math.random();
+    });
+    $el.empty();
+    $find.appendTo($el);
+  });
+};
+$("#shuffle").click(function() {
+  // Usage
+  $(".shuffle").shuffleChildren();
+});
+
+</code>
+</div>
+<div id="jqueryshufflefunctionresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/jqueryshufflefunction.html"></iframe>
+</div>
+</div>
+</pre>
+</div>
+<div class="keyword-preview-wrap">
+    <div class="tags">
+      <span class="jqueryshufflefunction">jqueryshufflefunction</span>
+    </div>
+  </div>
+</div>
+<!--jQuery Shuffle Function ends here -->
 <div id="noresult">No Result</div>
 <!-- No result ends-->
  <!-- Main filter content Wrap Ends -->
