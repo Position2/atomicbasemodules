@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Mobile Slidein Popup</title>
+  
+  
+  
+  
+<style>
+  body {
+    background: #fff;
+  }
+.mobile-bottom-cta {
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .mobile-bottom-cta {
+    display: block;
+  }
+}
+
+.mobile-bottom-cta ul {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.mobile-bottom-cta ul li {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100%/2);
+}
+
+.mobile-bottom-cta ul li:nth-child(2) {
+  background: #F2B023;
+}
+
+.mobile-bottom-cta ul li a {
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.mobile-bottom-cta ul li:first-child {
+  background-color: #DD9D13;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .mobile-bottom-cta ul li:first-child {
+    padding-right: 7px;
+  }
+}
+
+.mobile-bottom-cta ul li:first-child span {
+  vertical-align: top;
+  margin-right: 7px;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.mobile-bottom-cta ul li:first-child a {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #DD9D13;
+  padding: 14px 0;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .mobile-bottom-cta ul li:first-child a {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.mobile-bottom-cta ul li:nth-child(2) a {
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #F2B023;
+  display: inline-block;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  .mobile-bottom-cta ul li:nth-child(2) a {
+    font-size: 15px;
+    margin: 0;
+  }
+}
+
+.mobile-bottom-cta ul li:nth-child(2) a:hover {
+  opacity: 0.8;
+}
+
+.mobile-bottom-cta ul li:nth-child(2) span {
+  width: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.mobile-bottom-cta ul li:nth-child(2) span img {
+  width: 100%;
+  height: auto;
+}
+#form-wrap {
+    position: fixed;
+    left: 0;
+    transition: all 0.25s ease;
+    bottom: -475px;
+    width: 100%;
+  }
+  #form-wrap.open {
+    bottom: 30px;
+    transition: all 0.25s ease;
+    z-index: 999;
+  }
+  #form-wrap.open::before {
+    position: absolute;
+    content: "";
+    top: -500%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(76, 76, 76, 0.7);
+    z-index: -1;
+    height: 700%;
+    transition: all 0.25s ease;
+  }
+  #form-wrap .holder {
+   padding: 42px 20px 12px 20px;
+    height: 200px;
+    overflow-y: scroll;
+    background: #fff;
+    width: 50%;
+    margin: 0 auto;
+  }
+ .close-icon {
+    display: block;
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .close-icon img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+<div class="mobile-bottom-cta">
+    <ul>
+       <li>
+         <a href="javascript:void(0)" class="slide-form">GET IN TOUCH</a> 
+       </li>
+        <li>
+         <a href="tel:0-000-000-000"><span><img src="https://discover.kogniz.com/contact-tracing/images/phone-white.svg" alt="Phone | Icon"></span>CALL NOW</a>
+       </li>
+     </ul>
+</div>
+  <div id="form-wrap">
+      <div class="container">
+        <div class="holder clearfix">
+          <div class="close-icon">
+            <img src="https://discover.kogniz.com/contact-tracing/images/close-icon.png" alt="close">
+          </div>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>      
+        </div>
+    </div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+      <script id="rendered-js" >
+$("a.slide-form, .close-icon").click(function () {
+  $("#form-wrap").toggleClass("open");
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
