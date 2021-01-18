@@ -1,20 +1,20 @@
  <!-- Simple jQuery Slideshow Starts here -->
-<div class="rule each-module-preview mobileslideinform">
+<div class="rule each-module-preview geturlparameters">
   <div class="title">
-      <h1>56. Mobile Slidein Form</h1>
+      <h1>57. Get URL Parameters and smooth scroll</h1>
   </div>
-  <div class="rule" id="56">
+  <div class="rule" id="57">
       <p class="ft">The HTML Structure, Styling and the Scripts that needs to be included are given below </p>
-      <ul class="tabs" data-tabgroup="fiftysix-tab-group">
-          <li class="tab"><a href="#mobileslideinformhtml" class="active">HTML</a></li>
-          <li class="tab"><a href="#mobileslideinformcss">Styling</a></li>
-          <li class="tab"><a href="#mobileslideinformjs">Script</a></li>
-          <li class="tab"><a href="#mobileslideinformresult">Result</a></li>
+      <ul class="tabs" data-tabgroup="fiftyseven-tab-group">
+         <!--  <li class="tab"><a href="#geturlparametershtml" class="active">HTML</a></li>
+          <li class="tab"><a href="#geturlparameterscss">Styling</a></li> -->
+          <li class="tab"><a href="#geturlparametersjs">Script</a></li>
+          <!-- <li class="tab"><a href="#geturlparametersresult">Result</a></li> -->
       </ul>
 <pre>
-<div id="fiftysix-tab-group" class="tabgroup">
-<div id="mobileslideinformhtml">
-<code id="code-html-fiftysix" class="code html" data-clipboard-target="#code-html">
+<div id="fiftyseven-tab-group" class="tabgroup">
+<!-- <div id="geturlparametershtml">
+<code id="code-html-fiftyseven" class="code html" data-clipboard-target="#code-html">
  &lt;body&gt;
   &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
     &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
@@ -37,9 +37,9 @@
     &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
 &lt;/body&gt;
 </code>
-</div>
-<div id="mobileslideinformcss">
-<code id="code-css-fiftysix" class="code css" data-clipboard-target=#code-css>
+</div> -->
+<!-- <div id="geturlparameterscss">
+<code id="code-css-fiftyseven" class="code css" data-clipboard-target=#code-css>
 
 .mobile-bottom-cta {
   display: block;
@@ -195,23 +195,39 @@
   }
 
 </code>
-</div>
-<div id="mobileslideinformjs">
-<code id="code-css-fiftysix" class="code javascript" data-clipboard-target=#code-javascript>
- $("a.slide-form, .close-icon").click(function(){
-    $("#form-wrap").toggleClass("open");
- });
+</div> -->
+<div id="geturlparametersjs">
+<code id="code-css-fiftyseven" class="code javascript" data-clipboard-target=#code-javascript>
+(function($) { 
+  $(document).ready(function() {  
+function extractUrlValue(key, url) {
+      if (typeof(url) === 'undefined')
+      url = window.location.href;
+      var match = url.match('[?&]' + key + '=([^&]+)');
+      return match ? match[1] : null;
+    }
+    var value = extractUrlValue('gh_jid', window.location.href);
+    var myInterval = setTimeout(function () { 
+      if (value > "") {
+           $('html, body').animate({
+            scrollTop: $("#").offset().top  - $("#header").outerHeight()
+        }, 2000);
+      }
+    },1000);
+    
+    });
+})(jQuery);
 </code>
 </div>
-<div id="mobileslideinformresult" class="result-wrap">
-<iframe width="100%" height="260px" src="codepen-files/mobileslideinform.html"></iframe>
-</div>
+<!-- <div id="geturlparametersresult" class="result-wrap">
+<iframe width="100%" height="260px" src="codepen-files/geturlparameters.html"></iframe>
+</div> -->
 </div>
 </pre>
 </div>
 <div class="keyword-preview-wrap">
     <div class="tags">
-      <span class="mobileslideinform">mobileslideinform</span>
+      <span class="geturlparameters">geturlparameters</span>
     </div>
   </div>
 </div>
