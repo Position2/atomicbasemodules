@@ -1,0 +1,190 @@
+#ResourcesFilter .drop-down-filter {
+	 background-color: #261f1f;
+	 padding: 30px 0;
+	 margin-bottom: 60px;
+}
+ #ResourcesFilter .drop-down-filter .each-down-filter {
+	 display: inline-block;
+	 width: 49%;
+	 vertical-align: middle;
+}
+ #ResourcesFilter .drop-down-filter .each-down-filter .dropdown-title {
+	 display: inline-block;
+	 vertical-align: middle;
+	 font: 18px/130% "arial", Arial;
+	 color: #fff;
+	 padding-right: 14px;
+}
+ #ResourcesFilter .drop-down-filter .each-down-filter .resources-dropdown {
+	 cursor: pointer;
+	 position: relative;
+	 display: inline-block;
+	 vertical-align: middle;
+	 width: 350px;
+}
+ #ResourcesFilter .drop-down-filter .each-down-filter .resources-dropdown select {
+	 width: 100%;
+	 border: 1px solid #6b6b6b;
+	 border-radius: 3px;
+	 padding: 10px;
+	 font: 16px/130% "arial", Arial;
+	 color: #0a0a0a;
+}
+ #ResourcesFilter .drop-down-filter .each-down-filter .resources-dropdown select option {
+	 font: 16px/130% "arial", Arial;
+	 color: #0a0a0a;
+}
+ #ResourcesFilter .drop-down-filter .each-down-filter.resources-industries {
+	 margin-bottom: 20px;
+}
+ #ResourcesFilter .resources-filter-content {
+	 padding-bottom: 30px;
+}
+ #ResourcesFilter .resources-filter-content .no-resources-box {
+	 font: 20px/130% "arial", Arial;
+	 color: #424a55;
+	 display: none;
+	 padding-bottom: 30px;
+}
+ #ResourcesFilter .resources-filter-content.noResource .no-resources-box {
+	 display: block;
+}
+ #ResourcesFilter .resources-filter-content .each-content {
+	 display: none;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap {
+	 margin-bottom: 30px;
+	 display: inline-block;
+	 position: relative;
+	 width: 100%;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap:after {
+	 background-color: rgba(0, 0, 0, 0.6);
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 content: "";
+	 transition: all 0.3s;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap:hover:after, #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap:focus:after {
+	 background-color: rgba(137, 4, 5, 0.75);
+	 transition: all 0.3s;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap:hover .resources-box-text .text-wrap, #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap:focus .resources-box-text .text-wrap {
+	 transform: translate(0, -50%);
+	 bottom: 50%;
+	 transition: all 0.3s;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap:hover .resources-box-text .hover-cta, #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap:focus .resources-box-text .hover-cta {
+	 transition: all 0.3s;
+	 opacity: 1;
+	 transform: translate(0, -110%);
+	 top: 110%;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap img {
+	 width: 100%;
+	 height: auto;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text {
+	 position: absolute;
+	 left: 0;
+	 bottom: 30px;
+	 z-index: 9;
+	 width: 100%;
+	 padding: 0 30px;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .text-wrap {
+	 padding: 0 30px;
+	 position: absolute;
+	 left: 0;
+	 bottom: 0;
+	 right: 0;
+	 width: 100%;
+	 transform: translate(0, 0);
+	 z-index: 9;
+	 transition: all 0.3s;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .text-wrap .title {
+	 font: 18px/130% "arial", Arial;
+	 color: #fff;
+	 margin: 0 0 15px;
+	 text-transform: uppercase;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .text-wrap h4 {
+	 font: 22px/130% "arial", Arial;
+	 color: #fff;
+	 margin: 0 0 15px;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .text-wrap p {
+	 font: 16px/130% "arial", Arial;
+	 color: #fff;
+	 margin: 0 0 25px;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .hover-cta {
+	 transition: all 0.3s;
+	 overflow: hidden;
+	 position: absolute;
+	 left: 0;
+	 top: 70%;
+	 right: 0;
+	 transform: translate(0, -70%);
+	 opacity: 0;
+	 padding: 0px 30px;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .hover-cta span {
+	 padding: 8px 16px;
+	 text-align: center;
+	 color: #fff;
+	 font: 18px/130% "Conv_FujitsuSansMedium", Arial;
+	 text-decoration: none;
+	 transition: all 0.3s;
+	 border-radius: 10px;
+	 display: inline-block;
+	 vertical-align: middle;
+	 border: 1px solid #fff;
+	 padding: 12px 44px;
+	 padding: 8px 30px;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .hover-cta span:hover, #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .hover-cta span:focus {
+	 transition: all 0.3s;
+	 background-color: #822630;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .hover-cta span:focus-within {
+	 transition: all 0.3s;
+	 background-color: #822630;
+}
+ #ResourcesFilter .resources-filter-content .each-content .resources-box-wrap .resources-box-text .hover-cta span:hover {
+	 background-color: transparent;
+}
+ #ResourcesFilter .load-more-cta {
+	 text-align: center;
+}
+ #ResourcesFilter .load-more-cta .load-more {
+	 margin-bottom: 60px;
+	 background-color: #822630;
+	 padding: 8px 16px;
+	 text-align: center;
+	 color: #fff;
+	 font: 18px/130% "Conv_FujitsuSansMedium", Arial;
+	 text-decoration: none;
+	 transition: all 0.3s;
+	 border-radius: 10px;
+	 display: inline-block;
+	 vertical-align: middle;
+	 border: 1px solid #822630;
+	 padding: 12px 44px;
+}
+ #ResourcesFilter .load-more-cta .load-more:hover, #ResourcesFilter .load-more-cta .load-more:focus {
+	 transition: all 0.3s;
+	 background-color: #822630;
+}
+ #ResourcesFilter .load-more-cta .load-more:focus-within {
+	 transition: all 0.3s;
+	 background-color: #822630;
+}
+ #ResourcesFilter .load-more-cta .load-more.noContent {
+	 display: none;
+}
+ 

@@ -84,6 +84,7 @@ var paths = [
   ["module-fifteen/module-scss/style.scss","module-fifteen/css","module-fifteen/module-scss/*.scss"],
   ["module-sixteen/module-scss/style.scss","module-sixteen/css","module-sixteen/module-scss/*.scss"],
   ["module-seventeen/module-scss/style.scss","module-seventeen/css","module-seventeen/module-scss/*.scss"],
+  ["module-seventyfour/module-scss/style.scss","module-seventyfour/css","module-seventyfour/module-scss/*.scss"],
   ["module-eighteen/module-scss/style.scss","module-eighteen/css","module-eighteen/module-scss/*.scss"],
   ["module-nineteen/module-scss/style.scss","module-nineteen/css","module-nineteen/module-scss/*.scss"],
   ["module-twenty/module-scss/style.scss","module-twenty/css","module-twenty/module-scss/*.scss"],
