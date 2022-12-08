@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Emailer Module Nineteen</title>
+    <style type="text/css">
+    #outlook a {
+        padding: 0;
+    }
+
+    body {
+        background-color: #FFF;
+        -webkit-text-size-adjust: none;
+        border: none !important;
+    }
+
+    a {
+        color: #00768b
+    }
+
+    #header .wrap {
+        width: 100% !important;
+    }
+
+    @media screen and (max-width: 480px) {
+        table {
+            width: 100% !important;
+            -webkit-text-size-adjust: none !important;
+        }
+
+        img[class=img-responsive] {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        td[class=keepleft] {
+            float: left !important;
+            text-align: right !important;
+            clear: both !important;
+            width: 100% !important;
+        }
+
+        br[class=empty] {
+            display: none !important;
+        }
+
+        td[class=empty] {
+            display: none !important;
+            width: 0;
+        }
+
+        td[class=mobile-spacer] {
+            width: 10px !important;
+        }
+
+        img[class=mobile-spacer] {
+            width: 10px !important;
+        }
+
+        td[class=cta-mobile-spacer] {
+            width: 6px !important;
+        }
+
+        img[class=cta-mobile-spacer] {
+            width: 6px !important;
+        }
+
+        td[class=cta-spacer] {
+            width: 11px !important;
+        }
+
+        td[class=bull-spacer] {
+            width: 11px !important;
+        }
+
+        td[class=cta-text] {
+            font-size: 12px !important;
+        }
+
+
+    }
+    </style>
+</head>
+
+<body link="#00768b" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" vlink="#00768b">
+    <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;border:1px solid #000000;" width="650">
+            <tr>
+                <td align="left" valign="top" width="650">
+                    <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="650">
+                        <tr>
+                            <td align="left" valign="top" width="40">
+                                <img class="mobile-spacer" alt="" border="0" height="1" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="40">
+                            </td>
+                            <td align="left" valign="top" width="570">
+                                <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="570">
+                                    <tr>
+                                        <td align="left" valign="" width="570"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="570"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top" width="570">
+                                            <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="570">
+                                                <tr>
+                                                    <td class="keepleft" align="left" valign="top" width="270">
+                                                        <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="270">
+                                                            <tr>
+                                                                <td align="left" valign="top" width="270" bgcolor="#814aad">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="270">
+                                                                        <tr>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                            <td align="left" valign="" width="234" style="font-size: 14px; color:#f0f0f0; line-height: 16px;">
+                                                                                <strong>EMEA Live Stream</strong>
+                                                                            </td>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" width="270" bgcolor="#ecebea">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="270">
+                                                                        <tr>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                            <td align="left" valign="" width="234">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="234">
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong style="color: #8246af;">DATE</strong> <br>
+                                                                                            26<sup style="line-height: 10px;">th</sup> November 2019
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong style="color: #8246af;">TIME</strong> <br>
+                                                                                            3.00 PM CET | 9.00 AM EST
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong style="color: #8246af;">PANEL OF EXPERTS</strong>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong>Alain Raison</strong> <br>Executive Director EMEA, Lenovo
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong>Nicola Procaccio</strong> <br>EMEA Territory Marketing Director, Intel<sup style="line-height: 10px;">®</sup>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong>Pascal Matzke</strong> <br>VP, Research Director, <br class="empty">Forrester<sup style="line-height: 10px;">®</sup>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="top" width="234">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="234">
+                                                                                                <tr>
+                                                                                                    <td align="left" valign="top" width="168" style="border: 1px solid #8246af;">
+                                                                                                        <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="166">
+                                                                                                            <tr>
+                                                                                                                <td align="left" valign="top" width="11">
+                                                                                                                    <img class="mobile-spacer" alt="" border="0" height="30" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="11">
+                                                                                                                </td>
+                                                                                                                <td align="center" valign="" width="144" style="font-size: 14px; color: #8246af; line-height: 16px;">
+                                                                                                                    <a href="#" target="_blank" style="text-decoration: none; color:#8246af;"><strong>Join the Live Stream</strong></a>
+                                                                                                                </td>
+                                                                                                                <td align="left" valign="top" width="11">
+                                                                                                                    <img class="mobile-spacer" alt="" border="0" height="30" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="11">
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </table>
+                                                                                                    </td>
+                                                                                                    <td align="left" valign="top" width="46">&nbsp;</td>
+                                                                                                    <td class="empty" align="left" valign="top" width="20">&nbsp;</td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="top" width="234">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="234">
+                                                                                                <tr>
+                                                                                                    <td align="left" valign="top" width="28">
+                                                                                                        <a href="#"><img alt="" border="0" height="19" hspace="0" src="images/calander-icon.jpg" style="display:inline-block;" vspace="0" width="22"></a>
+                                                                                                    </td>
+                                                                                                    <td align="left" valign="" width="206" style="font-size: 14px; line-height: 16px;">
+                                                                                                        <a href="#" style="color:#8246af;">Add to Calendar</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="keepleft" align="left" valign="top" width="30">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td class="keepleft" align="left" valign="top" width="270">
+                                                        <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="270">
+                                                            <tr>
+                                                                <td align="left" valign="top" width="270" bgcolor="#f04187">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="270">
+                                                                        <tr>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                            <td align="left" valign="" width="234" style="font-size: 14px; color:#f0f0f0; line-height: 16px;">
+                                                                                <strong>AP Live Stream</strong>
+                                                                            </td>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" width="270" bgcolor="#ecebea">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="270">
+                                                                        <tr>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                            <td align="left" valign="" width="234">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="234">
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong style="color: #f04187;">DATE</strong> <br>
+                                                                                            28<sup style="line-height: 10px;">th</sup> November 2019
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong style="color: #f04187;">TIME</strong> <br>
+                                                                                            3.30 PM ICST | 9.30 AM CET
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong style="color: #f04187;">PANEL OF EXPERTS</strong>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong>Roy Ng</strong> <br>Director, CAP SMB, Lenovo
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong>George Chacko</strong> <br>Director, Global Account Lenovo, APJ, Intel<sup style="line-height: 10px;">®</sup>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234" style="font-size: 14px; color: #333f48; line-height: 16px;">
+                                                                                            <strong>Amit Bhatia</strong> <br>Senior Analyst, <br class="empty">Forrester<sup style="line-height: 10px;">®</sup>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="top" width="234">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="234">
+                                                                                                <tr>
+                                                                                                    <td align="left" valign="top" width="168" style="border: 1px solid #f04187;">
+                                                                                                        <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="166">
+                                                                                                            <tr>
+                                                                                                                <td align="left" valign="top" width="11">
+                                                                                                                    <img class="mobile-spacer" alt="" border="0" height="30" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="11">
+                                                                                                                </td>
+                                                                                                                <td align="center" valign="" width="144" style="font-size: 14px; color: #f04187; line-height: 16px;">
+                                                                                                                    <a href="#" target="_blank" style="text-decoration: none; color:#f04187;"><strong>Join the Live Stream</strong></a>
+                                                                                                                </td>
+                                                                                                                <td align="left" valign="top" width="11">
+                                                                                                                    <img class="mobile-spacer" alt="" border="0" height="30" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="11">
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </table>
+                                                                                                    </td>
+                                                                                                    <td align="left" valign="top" width="46">&nbsp;</td>
+                                                                                                    <td class="empty" align="left" valign="top" width="20">&nbsp;</td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="top" width="234">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;  color:#000000;" width="234">
+                                                                                                <tr>
+                                                                                                    <td align="left" valign="top" width="28">
+                                                                                                        <a href="#"><img alt="" border="0" height="19" hspace="0" src="images/calander-icon.jpg" style="display:inline-block;" vspace="0" width="22"></a>
+                                                                                                    </td>
+                                                                                                    <td align="left" valign="" width="206" style="font-size: 14px; line-height: 16px;">
+                                                                                                        <a href="#" style="color:#f04187;">Add to Calendar</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="" width="234"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="234"></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td align="left" valign="top" width="18">
+                                                                                <img class="mobile-spacer" alt="" border="0" height="40" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="18">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="" width="570"><img class="mobile-spacer" alt="" border="0" height="24" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="570"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="left" valign="top" width="40">
+                                <img class="mobile-spacer" alt="" border="0" height="1" hspace="0" src="images/spacer.gif" style="display:block;" vspace="0" width="40">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
