@@ -121,6 +121,7 @@ var paths = [
   ["form-one/form-scss/style.scss","form-one/css","form-one/form-scss/*.scss"],
   ["form-two/form-scss/style.scss","form-two/css","form-two/form-scss/*.scss"],
   ["button/button-scss/style.scss","button/css","button/button-scss/*.scss"],
+  ["emailer-view-source/emailer-view-source-scss/style.scss","emailer-view-source/css","emailer-view-source/emailer-view-source-scss/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
