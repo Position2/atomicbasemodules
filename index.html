@@ -2488,9 +2488,7 @@
             tags = $(".ac-tag").map(function () {
               var disText = $(this).text().toLowerCase().replace(" x", '');
               return "(?=.*" + disText + ")";
-            }).catch((e) => {
-              console.log('handle error here: ', e.message)
-            }),
+            }).get(),
             matchRegex = tags.join('');
           $("#noresult").hide();
           var firstLevelFilter = $(".each-module-prview").hide().filter(ddVal)
@@ -2622,15 +2620,10 @@
           var url = "https://app-ui-modules.herokuapp.com/?folder=";
           var fns = $(".bp_p_each").map(function () {
             return $(this).data("folder-name");
-          }).get(function (event) {
-            $(this).catch((e) => {
-              console.log('handle error here: ', e.message)
-            })
-          });
+          }).get();
           url += fns.join("--");
           console.log(url)
           $("#generate_url").attr("href", url);
-
         }
         $("#changeview").click(function () {
           $("body").toggleClass("builder", $(this).prop("checked"));
