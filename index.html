@@ -2622,8 +2622,6 @@
           var url = "https://app-ui-modules.herokuapp.com/?folder=";
           var fns = $(".bp_p_each").map(function () {
             return $(this).data("folder-name");
-          }).catch((e) => {
-            console.log('handle error here: ', e.message)
           }).get();
           url += fns.join("--");
           console.log(url)
