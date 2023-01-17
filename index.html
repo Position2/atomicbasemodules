@@ -2622,7 +2622,11 @@
           var url = "https://app-ui-modules.herokuapp.com/?folder=";
           var fns = $(".bp_p_each").map(function () {
             return $(this).data("folder-name");
-          }).get();
+          }).get(function (event) {
+            $(this).catch((e) => {
+              console.log('handle error here: ', e.message)
+            })
+          });
           url += fns.join("--");
           console.log(url)
           $("#generate_url").attr("href", url);
