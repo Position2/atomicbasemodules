@@ -123,6 +123,8 @@ var paths = [
   ["button/button-scss/style.scss","button/css","button/button-scss/*.scss"],
   ["emailer-view-source/emailer-view-source-scss/style.scss","emailer-view-source/css","emailer-view-source/emailer-view-source-scss/*.scss"],
   ["emailer-module-one/emailer-module-one-scss/style.scss","emailer-module-one/css","emailer-module-one/emailer-module-one-scss/*.scss"],
+  ["emailer-module-two/emailer-module-two-scss/style.scss","emailer-module-two/css","emailer-module-two/emailer-module-two-scss/*.scss"],
+  ["emailer-module-three/emailer-module-three-scss/style.scss","emailer-module-three/css","emailer-module-three/emailer-module-three-scss/*.scss"],
 ];
 
 function runGulpSass(src,dest,watch) {
