@@ -1,9 +1,9 @@
 "use strict"; 
-var gulp = require("gulp"),
-  sass = require("gulp-sass"),
-  postcss = require("gulp-postcss"),
-  autoprefixer = require("autoprefixer"),
-  cssnano = require("cssnano");
+const gulp = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
 
 var paths = [
   ["index/index-scss/style.scss","index/css","index/index-scss/*.scss"],
@@ -127,22 +127,25 @@ var paths = [
   ["emailer-module-three/emailer-module-three-scss/style.scss","emailer-module-three/css","emailer-module-three/emailer-module-three-scss/*.scss"],
 ];
 
-function runGulpSass(src,dest,watch) {
-  gulp.watch(watch, function() {
-    return gulp.src(src)
-           .pipe(sass())
-           .on("error", sass.logError)
-           .pipe(postcss([autoprefixer(), cssnano()]))
-           .pipe(gulp.dest(dest))
-  });
+function runGulpSass(src, dest, watch) {
+	console.log(`Watching files: ${watch}`);
+	gulp.watch(watch, function () {
+		console.log(`Processing file: ${src}`);
+		return gulp
+			.src(src)
+			.pipe(sass().on("error", sass.logError))
+			.pipe(postcss([autoprefixer(), cssnano()]))
+			.pipe(gulp.dest(dest))
+			.on("error", function (error) {
+				console.error(`Error: ${error.message}`);
+			});
+	});
 }
-
-exports.runGulpSass = runGulpSass;
 
 function startGulp() {
-  for(var i=0;i<paths.length;i++) {
-    runGulpSass(paths[i][0],paths[i][1],paths[i][2]);
-  }
+	for (let i = 0; i < paths.length; i++) {
+		runGulpSass(paths[i][0], paths[i][1], paths[i][2]);
+	}
 }
 
-exports.watch = startGulp;
+gulp.task("default", startGulp);

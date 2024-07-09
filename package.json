@@ -1,23 +1,23 @@
 {
-  "name": "AtomicBasicModules",
-  "version": "1.0.0",
-  "description": "Atomic Basic Modules",
-  "main": "index.js",
-  "scripts": {
-    "gulp": "gulp"
-  },
-  "author": "Aruna Keshavaiah",
-  "license": "ISC",
-  "repository": "",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-install": "^1.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.1.0"
-  },
-  "dependencies": {
-    "cssnano": "^4.1.10",
-    "node-sass": "^5.0.0"
-  }
+	"name": "AtomicBasicModules",
+	"version": "1.0.0",
+	"description": "Atomic Basic Modules",
+	"main": "index.js",
+	"scripts": {
+		"gulp": "gulp"
+	},
+	"author": "Aruna Keshavaiah",
+	"license": "ISC",
+	"repository": "",
+	"devDependencies": {
+		"autoprefixer": "^10.4.19",
+		"cssnano": "^7.0.4",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-install": "^1.1.0",
+		"gulp-postcss": "^10.0.0",
+		"gulp-sass": "^5.1.0",
+		"postcss": "^8.4.39",
+		"sass": "^1.71.1"
+	}
 }
