@@ -2,9 +2,21 @@
 	background-color: $primary-color;
 	padding: 50px 0;
 	.footer-top-content {
+		display: flex;
 		border-bottom: 1px solid $white;
 		margin-bottom: 30px;
 		padding-bottom: 30px;
+		@media (min-width: 0) and (max-width: 767.98px){
+			flex-direction: column;
+		}
+		.each-top-content{
+			flex: 1 calc(100%/3);
+			max-width: calc(100%/3);
+			@media (min-width: 0) and (max-width: 767.98px){
+				flex: 1 100%;
+				max-width: 100%;
+			}
+		}
 		ul {
 			padding: 0;
 			margin: 0;

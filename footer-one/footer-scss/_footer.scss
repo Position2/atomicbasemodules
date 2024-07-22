@@ -1,76 +1,135 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	@media (min-width: 1200px){
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}
+
 #Footer {
 	background-color: $primary-color;
 	padding: 20px 0;
+
+	.inner-content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (min-width: 0) and (max-width: 767.98px) {
+			margin: 0 20px;
+			flex-direction: column;
+			align-items: unset;
+		}
+
+		.left-content-wrap{
+			display: flex;
+			flex-direction: row;
+
+			@media (min-width: 0) and (max-width: 991.98px) {
+				flex-direction: column;
+			}
+		}
+
 	p {
 		color: $white;
 		font-size: $h6-fontsize;
-    font-family: $base-font-family;
-    font-weight: $fontweight-regular;
+		font-family: $base-font-family;
+		font-weight: $fontweight-regular;
 		margin: 0;
 		line-height: 1;
 		float: left;
 		margin-right: 20px;
-		@media (min-width: 0) and (max-width: 767.98px) { 
+
+		@media (min-width: 0) and (max-width: 767.98px) {
 			margin-right: 0;
 			margin-bottom: 20px;
 		}
+
 		@media (min-width: 768px) and (max-width: 991.98px) {
 			margin-right: 0;
 			margin-bottom: 20px;
 		}
 	}
+
 	ul.privacy-list {
 		margin: 0;
 		padding: 0;
 		float: left;
 		line-height: 1;
-		@media (min-width: 0) and (max-width: 767.98px) { 
+
+		@media (min-width: 0) and (max-width: 767.98px) {
 			margin: 0 0 16px 0;
 		}
+
 		li {
 			color: $white;
 			font-size: $h6-fontsize;
-	    font-family: $base-font-family;
-	    font-weight: $fontweight-regular;
+			font-family: $base-font-family;
+			font-weight: $fontweight-regular;
 			margin: 0 10px 0 0;
 			padding: 0 10px 0 0;
 			list-style-type: none;
 			display: inline-block;
 			line-height: 1;
 			border-right: 1px solid $white;
+
 			a {
 				color: $white;
 			}
+
 			&:last-child {
 				border-right: 0;
 				margin-right: 0;
 				padding-right: 0;
 			}
-			@media (min-width: 0) and (max-width: 767.98px) { 
+
+			@media (min-width: 0) and (max-width: 767.98px) {
 				margin-bottom: 8px;
 			}
 		}
 	}
+
 	ul.social-link {
 		text-align: right;
 		margin: 0;
 		padding: 0;
-		@media (min-width: 0) and (max-width: 767.98px) { 
+
+		@media (min-width: 0) and (max-width: 767.98px) {
 			text-align: left;
 		}
+
 		li {
 			display: inline-block;
 			margin: 0;
 			padding: 0 10px 0 0;
+
 			i {
 				color: $white;
 				font-size: $h5-fontsize + 2;
 				transform: scale(1);
 				transition: 0.3s all;
 			}
+
 			&:last-child {
 				padding: 0;
 			}
+
 			a {
 				&:hover {
 					i {
@@ -81,13 +140,5 @@
 			}
 		}
 	}
+	}
 }
-
-
-
-
-
-
-
-
-

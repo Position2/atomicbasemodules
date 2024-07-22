@@ -1,101 +1,143 @@
-.locationwrap	{
+.container{
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	@media (min-width: 1200px){
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}
+
+.locationwrap {
 	.tab {
 		margin: 0;
 		padding: 0;
 		text-align: center;
+
 		li {
 			display: inline-block;
 			color: $primary-utility-one;
-      font-size: $mobile-h1-fontsize;
-      font-family: $base-font-family;
-      font-weight: $fontweight-regular;
-      border-right: 2px solid $tertiary-color;
-	    line-height: 1;
-	    margin-right: 16px;
-	    padding-right: 16px;
-	    cursor: pointer;
-	    @media (min-width: 0) and (max-width: 767.98px) {
+			font-size: $mobile-h1-fontsize;
+			font-family: $base-font-family;
+			font-weight: $fontweight-regular;
+			border-right: 2px solid $tertiary-color;
+			line-height: 1;
+			margin-right: 16px;
+			padding-right: 16px;
+			cursor: pointer;
+
+			@media (min-width: 0) and (max-width: 767.98px) {
 				font-size: $h5-fontsize + 2;
 				margin-right: 10px;
-	    	padding-right: 10px;
-	    }
-	    &:last-child {
-	    	border-right: 0;
-	    	margin-right: 0;
-	    	padding-right: 0;
-	    }
+				padding-right: 10px;
+			}
+
+			&:last-child {
+				border-right: 0;
+				margin-right: 0;
+				padding-right: 0;
+			}
 		}
 	}
+
 	.location-holder {
 		.each-tab {
+			display: flex;
 			padding-top: 30px;
+
 			.bg-color {
 				background-color: $primary-color;
 				padding: 50px 40px;
 			}
+
 			.no-padding {
 				padding: 0;
 			}
+
+			.lhs-section{
+				flex: 1 50%;
+				max-width: 50%;
+			}
 			.rhs-section {
+				flex: 1 50%;
+				max-width: 50%;
 				iframe {
 					display: block;
 				}
 			}
+
 			h3 {
 				color: $white;
-	      font-size: $h3-fontsize;
-	      font-family: $base-font-family;
-	      font-weight: $fontweight-regular;
-	      margin-bottom: 40px;
-	      line-height: 1;
+				font-size: $h3-fontsize;
+				font-family: $base-font-family;
+				font-weight: $fontweight-regular;
+				margin-bottom: 40px;
+				line-height: 1;
 			}
+
 			p {
 				color: $white;
-	      font-size: $h5-fontsize + 2;
-	      font-family: $base-font-family;
-	      font-weight: $fontweight-regular;
-	      margin-bottom: 30px;
+				font-size: $h5-fontsize + 2;
+				font-family: $base-font-family;
+				font-weight: $fontweight-regular;
+				margin-bottom: 30px;
 			}
+
 			ul {
 				margin: 0 0 40px 0;
 				padding: 0;
+
 				li {
 					display: inline-block;
 					color: $white;
 					font-size: $h5-fontsize;
-		      font-family: $base-font-family;
-		      font-weight: $fontweight-regular;
-		      margin-right: 20px;
-		      a {
-		      	color: $white;
-		      	text-decoration: none;
-		      	i {
-		      		margin-right: 10px;
-		      	}
-		      }
+					font-family: $base-font-family;
+					font-weight: $fontweight-regular;
+					margin-right: 20px;
+
+					a {
+						color: $white;
+						text-decoration: none;
+
+						i {
+							margin-right: 10px;
+						}
+					}
 				}
 			}
+
 			.view-cta {
 				color: $white;
 				font-size: $h5-fontsize;
-	      font-family: $base-font-family;
-	      font-weight: $fontweight-bold;
+				font-family: $base-font-family;
+				font-weight: $fontweight-bold;
 				border: 1px solid $white;
 				display: inline-block;
-		    padding: 10px 30px;
-		    border-radius: 4px;
-		    text-decoration: none;
-		    text-transform: uppercase;
-		    transition: all 0.3s;
-		    &:hover {
-		    	color: $primary-color;
-		    	background-color: $white;
-		    	transition: all 0.3s;
-		    }
+				padding: 10px 30px;
+				border-radius: 4px;
+				text-decoration: none;
+				text-transform: uppercase;
+				transition: all 0.3s;
+
+				&:hover {
+					color: $primary-color;
+					background-color: $white;
+					transition: all 0.3s;
+				}
 			}
 		}
+
 		.location-two {
-			display: none;	
+			display: none;
 		}
 	}
-} 
+}

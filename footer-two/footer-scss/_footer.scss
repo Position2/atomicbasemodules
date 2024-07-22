@@ -1,3 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	@media (min-width: 1200px){
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}
+
 #Footer {
 	background-color: $grey;
 	padding: 40px 0;
@@ -10,177 +35,214 @@
 			list-style-type: none;
 		}
 	}
-	.footer-wrapper-lhs {
-		border-right: 1px solid $secondry-color;
-		margin-right: 20px;
-		@media (min-width: 0) and (max-width: 767.98px) {
-			border-right: 0;
-			margin-right: 0;
-			text-align: center;
+	.inner-content-wrapper{
+		display: flex;
+		@media (min-width: 0) and (max-width: 991.98px) {
+			flex-direction: column;
 		}
-		@media (min-width: 768px) and (max-width: 991.98px) {
-			border-right: 0;
-			margin-right: 0;
-		}
-		.footer-content-top {
-			margin-bottom: 40px;
-			h2 {
-				color: $primary-color;
-				font-size: $h5-fontsize + 4;
-		    font-family: $base-font-family;
-		    font-weight: $fontweight-bold;
-		    line-height: 1;
-		    margin: 0 0 16px 0;
+
+		.footer-wrapper-lhs {
+			border-right: 1px solid $secondry-color;
+			margin-right: 20px;
+			flex: 1 calc(75% - 20px);
+			max-width: calc(75% - 20px);
+			@media (min-width: 0) and (max-width: 767.98px) {
+				flex: 1 100%;
+				max-width: 100%;
+				border-right: 0;
+				margin-right: 0;
+				text-align: center;
 			}
-			ul.menu {
-				li {
-					color: $secondry-color;
-					font-size: $h6-fontsize;
-			    font-family: $base-font-family;
-			    font-weight: $fontweight-regular;
-			    line-height: 1;
-			    margin: 0 0 10px 0;
-			    a {
-			    	color: $secondry-color;
-			    	&:hover {
-			    		color: $primary-color;
-			    		text-decoration: none;
-			    	}
-			    }
-				}
-			}
-		}
-		.footer-content-bottom {
 			@media (min-width: 768px) and (max-width: 991.98px) {
-				margin-bottom: 20px;
+				flex: 1 100%;
+				max-width: 100%;
+				border-right: 0;
+				margin-right: 0;
 			}
-			p {
-				float: left;
-				color: $secondry-color;
-				font-size: $h6-fontsize;
-		    font-family: $base-font-family;
-		    font-weight: $fontweight-regular;
-		    line-height: 1;
-		    margin: 0 10px 0 0;
-		    @media (min-width: 0) and (max-width: 767.98px) {
-		    	line-height: 1.4;
-		    	margin-right: 0;
-		    	margin-bottom: 20px;
-		    	float: none;
-		    }
-		    @media (min-width: 768px) and (max-width: 991.98px) {
-		    	font-size: $h6-fontsize - 2;
-		    }
-		    @media (min-width: 992px) and (max-width: 1199.98px) {
-					float: none;
-					margin-right: 0;
-					margin-bottom: 20px;
-		    }
-			}
-			.privacy-list {
-				float: left;
-				line-height: 1;
-				@media (min-width: 0) and (max-width: 767.98px) {
-					margin-bottom: 30px;
-					float: none;
+			.footer-content-top {
+				display: flex;
+				margin-bottom: 40px;
+				@media (min-width: 0) and (max-width: 991.98px) {
+					display: none;
 				}
-				@media (min-width: 992px) and (max-width: 1199.98px) {
-					float: none;
-				}
-				li {
-					color: $secondry-color;
-					font-size: $h6-fontsize;
-			    font-family: $base-font-family;
-			    font-weight: $fontweight-regular;
-			    line-height: 1;
-			    margin: 0 0 0 10px;
-			    display: inline-block;
-			    @media (min-width: 0) and (max-width: 767.98px) {
-			    	margin-bottom: 20px;
-			    	border-right: 1px solid $secondry-color;
-			    	margin-left: 0;
-						margin-right: 10px;
-						padding-right: 10px;
-						&:last-child {
-							border-right: 0;
-				    	margin-left: 0;
-							margin-right: 0;
-							padding-right: 0;
+				.each-footer-menu{
+					flex: 1 25%;
+					max-width: 25%;
+	
+					h2 {
+						color: $primary-color;
+						font-size: $h5-fontsize + 4;
+						font-family: $base-font-family;
+						font-weight: $fontweight-bold;
+						line-height: 1;
+						margin: 0 0 16px 0;
+					}
+					ul.menu {
+						li {
+							color: $secondry-color;
+							font-size: $h6-fontsize;
+							font-family: $base-font-family;
+							font-weight: $fontweight-regular;
+							line-height: 1;
+							margin: 0 0 10px 0;
+							a {
+								color: $secondry-color;
+								text-decoration: none;
+								&:hover {
+									color: $primary-color;
+									text-decoration: none;
+								}
+							}
 						}
-			    }
-			    @media (min-width: 768px) and (max-width: 991.98px) {
-			    	font-size: $h6-fontsize - 2;
-			    }
-			    @media (min-width: 992px) and (max-width: 1199.98px) {
-			    	&:first-child {
-			    		margin-left: 0;
-			    	}
-			    }
-			    a {
-			    	color: $secondry-color;
-			    	&:hover {
-			    		color: $primary-color;
-			    		text-decoration: none;
-			    	}
-			    }
+					}
 				}
 			}
-		}
-	}
-	.footer-wrapper-rhs {
-		@media (min-width: 0) and (max-width: 767.98px) {
-			text-align: center;
-		}
-		.footercontactsection {
-			.address-section {
-				margin-bottom: 20px;
-				h3 {
-					color: $primary-color;
-					font-size: $h5-fontsize + 4;
-			    font-family: $base-font-family;
-			    font-weight: $fontweight-bold;
-			    line-height: 1;
-			    margin: 0 0 10px 0;
+			.footer-content-bottom {
+				display: flex;
+				align-items: baseline;
+				@media (min-width: 0) and (max-width: 767.98px){
+					flex-direction: column;
+				}
+				@media (min-width: 768px) and (max-width: 991.98px) {
+					margin-bottom: 20px;
+				}
+				@media (min-width: 992px) and (max-width: 1199.98px){
+					flex-direction: column;
 				}
 				p {
 					color: $secondry-color;
 					font-size: $h6-fontsize;
-			    font-family: $base-font-family;
-			    font-weight: $fontweight-regular;
-			    line-height: 1.4;
-			    margin: 0;
+					font-family: $base-font-family;
+					font-weight: $fontweight-regular;
+					line-height: 1;
+					margin: 0 10px 0 0;
+				@media (min-width: 0) and (max-width: 767.98px) {
+					line-height: 1.4;
+					margin-right: 0;
+					margin-bottom: 20px;
 				}
-			}
-			.contact-section {
-				margin-bottom: 20px;
-				color: $primary-color;
-				font-size: $h5-fontsize;
-		    font-family: $base-font-family;
-		    font-weight: $fontweight-bold;
-		    line-height: 1;
-		    @media (min-width: 992px) and (max-width: 1199.98px) {
-		    	line-height: 1.4;
-		    }
-			}
-			.social-link {
-				li {
-					display: inline-block;
-					margin: 0;
-					padding: 0 10px 0 0;
-					i {
-						color: $secondry-color;
-						font-size: $h5-fontsize + 2;
-						transform: scale(1);
-						transition: 0.3s all;
+				@media (min-width: 768px) and (max-width: 991.98px) {
+					font-size: $h6-fontsize - 2;
+				}
+				@media (min-width: 992px) and (max-width: 1199.98px) {
+						margin-right: 0;
+						margin-bottom: 20px;
+				}
+				}
+				.privacy-list {
+					line-height: 1;
+					@media (min-width: 0) and (max-width: 767.98px) {
+						margin-bottom: 30px;
 					}
-					&:last-child {
-						padding: 0;
+					@media (min-width: 992px) and (max-width: 1199.98px) {
+					}
+					li {
+						color: $secondry-color;
+						font-size: $h6-fontsize;
+						font-family: $base-font-family;
+						font-weight: $fontweight-regular;
+						line-height: 1;
+						margin: 0 0 0 10px;
+						display: inline-block;
+					@media (min-width: 0) and (max-width: 767.98px) {
+						margin-bottom: 20px;
+						border-right: 1px solid $secondry-color;
+						margin-left: 0;
+							margin-right: 10px;
+							padding-right: 10px;
+							&:last-child {
+								border-right: 0;
+							margin-left: 0;
+								margin-right: 0;
+								padding-right: 0;
+							}
+					}
+					@media (min-width: 768px) and (max-width: 991.98px) {
+						font-size: $h6-fontsize - 2;
+					}
+					@media (min-width: 992px) and (max-width: 1199.98px) {
+						&:first-child {
+							margin-left: 0;
+						}
 					}
 					a {
+						color: $secondry-color;
+						text-decoration: none;
 						&:hover {
-							i {
-								transform: scale(1.4);
-								transition: 0.3s all;
+							color: $primary-color;
+							text-decoration: none;
+						}
+					}
+					}
+				}
+			}
+		}
+		.footer-wrapper-rhs {
+			flex: 1 25%;
+			max-width: 25%;
+			padding: 0 15px;
+			@media (min-width: 0) and (max-width: 767.98px) {
+				flex: 1 100%;
+				max-width: 100%;
+				padding: 0;
+				text-align: center;
+			}
+			@media (min-width: 768px) and (max-width: 991.98px) {
+				flex: 1 100%;
+				max-width: 100%;
+				padding: 0;
+			}
+			.footercontactsection {
+				.address-section {
+					margin-bottom: 20px;
+					h3 {
+						color: $primary-color;
+						font-size: $h5-fontsize + 4;
+						font-family: $base-font-family;
+						font-weight: $fontweight-bold;
+						line-height: 1;
+						margin: 0 0 10px 0;
+					}
+					p {
+						color: $secondry-color;
+						font-size: $h6-fontsize;
+						font-family: $base-font-family;
+						font-weight: $fontweight-regular;
+						line-height: 1.4;
+						margin: 0;
+					}
+				}
+				.contact-section {
+					margin-bottom: 20px;
+					color: $primary-color;
+					font-size: $h5-fontsize;
+					font-family: $base-font-family;
+					font-weight: $fontweight-bold;
+					line-height: 1;
+					@media (min-width: 992px) and (max-width: 1199.98px) {
+						line-height: 1.4;
+					}
+				}
+				.social-link {
+					li {
+						display: inline-block;
+						margin: 0;
+						padding: 0 10px 0 0;
+						i {
+							color: $secondry-color;
+							font-size: $h5-fontsize + 2;
+							transform: scale(1);
+							transition: 0.3s all;
+						}
+						&:last-child {
+							padding: 0;
+						}
+						a {
+							&:hover {
+								i {
+									transform: scale(1.4);
+									transition: 0.3s all;
+								}
 							}
 						}
 					}
