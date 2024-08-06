@@ -138,7 +138,8 @@
   margin-bottom: 40px;
 }
 
-.footer-cta-link {
+.footer-cta-link { 
+  position: relative;
   &::after {
     background-image: url("https://neverbounce.com/images/background-images/yellow-airplane-left.png");
     background-repeat: no-repeat;
@@ -152,8 +153,6 @@
     position: absolute;
     width: 7em;
   }
-
-  position: relative;
 }
 
 .cta-link {

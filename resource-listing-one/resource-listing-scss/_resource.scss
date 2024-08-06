@@ -1,3 +1,30 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}
+
 .resource-title {
 	margin: 0 0 30px;
 	h1 {

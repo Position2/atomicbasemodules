@@ -1,54 +1,96 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}
+
 .bodywrap {
 	background: $grey;
-	.right-hightlight-box {
-		display: inline-block;
-		vertical-align: top;
-		width: 49%;
-		position: relative;
-		margin-bottom: 30px;
-		@media (min-width: 0) and (max-width: 991.98px) { 
-			width: 100%;
-		}
-    .higtlight-box { 
-      width: 190px;
-      text-align: center;
-	    padding: 0 20px 0 0;
-	    position: absolute;
-	    top: 50%;
-	    -webkit-transform: translateY(-50%);
-	    transform: translateY(-50%);
-	    z-index: 1;
-	    left: 0;
-	    @media (min-width: 0) and (max-width: 767.98px) { 
-	    	width: 120px;
-	    	padding: 0 10px 0 0;
-				img { 
+
+	.hightlight-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.right-hightlight-box {
+			flex: 1 calc(100% /2 - 40px);
+			max-width: calc(100% /2 - 40px);
+			position: relative;
+			margin-bottom: 30px;
+
+			@media (min-width: 0) and (max-width: 991.98px) {
+				flex: 1 100%;
+				max-width: 100%;
+			}
+
+			.higtlight-box {
+				width: 160px;
+				text-align: center;
+				padding: 0 20px 0 0;
+				position: absolute;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				z-index: 1;
+				left: 0;
+
+				img {
 					width: 100%;
 					height: auto;
 				}
-	    }
-    }
-    .description {
-      width: calc(100% - 70px);
-	    margin: 0 0 0 70px;
-	    padding: 28px 30px 25px 135px;
-	    background-color: $white;
-	    min-height: 280px;
-	    @media (min-width: 0) and (max-width: 767.98px) {
-	    	padding-left: 54px;
-	    }
-	    h3 {
-				color: $secondry-color;
-        font-size: $h5-fontsize;
-        font-family: $base-font-family;
-				font-weight: $fontweight-bold;
-	    }
-      p {
-        color: $secondry-color;
-        font-size: $h6-fontsize;
-        font-family: $base-font-family;
-				font-weight: $fontweight-regular;
-      }
-    }
-  }
+
+				@media (min-width: 0) and (max-width: 767.98px) {
+					width: 120px;
+					padding: 0 10px 0 0;
+
+				}
+			}
+
+			.description {
+				margin: 0 0 0 70px;
+				padding: 28px 30px 25px 125px;
+				background-color: $white;
+				min-height: 240px;
+
+				@media (min-width: 0) and (max-width: 767.98px) {
+					padding-left: 70px;
+				}
+
+				h3 {
+					color: $secondry-color;
+					font-size: $h5-fontsize;
+					font-family: $base-font-family;
+					font-weight: $fontweight-bold;
+				}
+
+				p {
+					color: $secondry-color;
+					font-size: $h6-fontsize;
+					font-family: $base-font-family;
+					font-weight: $fontweight-regular;
+				}
+			}
+		}
+	}
+
 }

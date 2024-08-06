@@ -1,3 +1,29 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.container {
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}  
+
 .each-slider-content {
 	position: relative;
 	padding: 0 0 0 50px;
@@ -50,7 +76,7 @@
 	}
 	.event-text {
 		position: absolute;
-    top: 50%;
+   		top: 50%;
 		left: 90%;
 		transform: translate(-90%,-50%);
 		width: 37%;
@@ -58,7 +84,7 @@
 			width: 40%;
 		}
 		@media (min-width: 0) and (max-width: 767.98px) {
-			width: 100%;
+			width: auto;
 			position: static;
 			transform: none;
 			padding: 25px;

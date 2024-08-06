@@ -1,88 +1,123 @@
-.eventslider {
-	.carousel-inner {
-		.carousel-item {
-			.upcoming-event {
-				position: relative;
-				height: 350px;
-				overflow: hidden;
-				a {
-					display: block;
-					img {
-						width: 100%;
-						height: auto;
-						@media (min-width: 0) and (max-width: 991.98px) {
-							width: auto;
+.event-slider-wraper {
+	display: flex;
+
+	.left-section {
+		flex: 1 50%;
+		max-width: 50%;
+		@media (min-width: 0) and (max-width: 767.98px) {
+			flex: 1 100%;
+			max-width: 100%;
+		}
+
+		.eventslider {
+			position: relative;
+			.carousel-inner {
+				.carousel-item {
+					.upcoming-event {
+						position: relative;
+						height: 350px;
+						overflow: hidden;
+
+						a {
+							display: block;
+
+							img {
+								width: 100%;
+								height: auto;
+
+								@media (min-width: 0) and (max-width: 991.98px) {
+									width: auto;
+								}
+							}
+						}
+
+						.latest-content {
+							position: absolute;
+							background-color: rgba(0, 0, 0, 0.8);
+							padding: 20px;
+							bottom: 0;
+							width: 100%;
+
+							p {
+								color: $white;
+								font-size: $h6-fontsize;
+								font-family: $base-font-family;
+								font-weight: $fontweight-bold;
+								margin-bottom: 10px;
+							}
+
+							h3 {
+								color: $white;
+								font-size: $p-fontsize + 2;
+								font-family: $base-font-family;
+								font-weight: $fontweight-regular;
+								margin-bottom: 10px;
+							}
+
+							p.date {
+								color: $white;
+								font-size: $h6-fontsize - 2;
+								font-family: $base-font-family;
+								font-weight: $fontweight-bold;
+								margin-bottom: 0;
+							}
 						}
 					}
 				}
-				.latest-content {
-					position: absolute;
-					background-color: rgba(0,0,0,0.8);
-					padding: 20px;
-					bottom: 0; 
-					width: 100%;
-					p {
-						color: $white;
-		        font-size: $h6-fontsize;
-		        font-family: $base-font-family;
-		        font-weight: $fontweight-bold;
-		        margin-bottom: 10px;
-					}
-					h3 {
-						color: $white;
-		        font-size: $p-fontsize + 2;
-		        font-family: $base-font-family;
-		        font-weight: $fontweight-regular;
-		        margin-bottom: 10px;
-					}
-					p.date {
-						color: $white;
-		        font-size: $h6-fontsize - 2;
-		        font-family: $base-font-family;
-		        font-weight: $fontweight-bold;
-		        margin-bottom: 0;
-					}
+			}
+
+			.carousel-control-prev {
+				position: absolute;
+				right: 60px;
+				top: auto;
+				bottom: -78px;
+				width: auto;
+				left: auto;
+
+				i {
+					font-size: $h1-fontsize;
+					color: $secondry-color;
+				}
+			}
+
+			.carousel-control-next {
+				position: absolute;
+				right: 0;
+				bottom: -78px;
+				width: auto;
+
+				i {
+					font-size: $h1-fontsize;
+					color: $secondry-color;
+				}
+			}
+		}
+
+		.view-all {
+			padding-top: 30px;
+
+			a {
+				color: $secondry-color;
+				border: 1px solid $secondry-color;
+				padding: 10px 30px;
+				display: inline-block;
+				text-decoration: none;
+				text-transform: uppercase;
+				border-radius: 10px;
+				transition: all 0.3s;
+
+				&:hover {
+					color: $white;
+					background-color: $primary-utility-one;
+					border-color: $primary-utility-one;
+					transition: all 0.3s;
 				}
 			}
 		}
 	}
-	.carousel-control-prev {
-		right: 60px;
-    top: auto;
-    bottom: -78px;
-    width: auto;
-    left: auto;
-		i {
-			font-size: $h1-fontsize;
-			color: $secondry-color;
-		}
-	}
-	.carousel-control-next {
-    top: auto;
-    bottom: -78px;
-    width: auto;
-		i {
-			font-size: $h1-fontsize;
-			color: $secondry-color;
-		}
-	}
-}
-.view-all	{
-	padding-top: 30px;
-	a {
-		color: $secondry-color;
-		border: 1px solid $secondry-color;
-		padding: 10px 30px;
-		display: inline-block;
-		text-decoration: none;
-		text-transform: uppercase;
-		border-radius: 10px;
-		transition: all 0.3s;
-		&:hover {
-			color: $white;
-			background-color: $primary-utility-one;
-			border-color: $primary-utility-one;
-			transition: all 0.3s;
-		}
+
+	.right-section {
+		flex: 1 50%;
+		max-width: 50%;
 	}
 }

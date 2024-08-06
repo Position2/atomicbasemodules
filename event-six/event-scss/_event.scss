@@ -1,82 +1,142 @@
-  .news-featured-wrap {
-  	background: $grey;
-  	img {
-  		width: 100%;
-  		height: auto;
-  	}
-  	.news-brief {
-  		padding: 20px;
-  		@media (min-width: 0) and (max-width: 991.98px) {
-  			padding: 40px 30px;
-  		}
-  		h2 {
-  			color: $secondry-color;
-        font-size: $mobile-h1-fontsize - 6;
-        font-family: $base-font-family;
-        font-weight: $fontweight-bold;
-				margin-bottom: 26px;
-				@media (min-width: 768px) and (max-width: 991.98px) {
-					font-size:  $p-fontsize;
-				}
-		  }
-		  p.date {
-				color: $tertiary-color;
-        font-size: $h6-fontsize;
-        font-family: $base-font-family;
-        font-weight: $fontweight-bold;
-		  }
-		  a {
-			  color: $secondry-color;
-			  font-size: $p-fontsize;
-			  font-family: $base-font-family;
-			  font-weight: $fontweight-bold;
-			  line-height: 100%;
-			  padding: 10px 28px 10px 30px;
-			  position: absolute;
-			  z-index: 1;
-			  text-decoration: none;
-			  bottom: 20px;
-			  text-transform: uppercase;
-			  @media (min-width: 0) and (max-width: 991.98px) {
-					position: static;
-					display: inline-block;
-					background: $primary-utility-two;
-					color: $white;
-			  }
-			  &::before {
-			    content: "";
-			    background-color: $primary-utility-two;
-			    bottom: 0;
-			    height: 100%;
-			    left: 0;
-			    position: absolute;
-			    width: 14px;
-			    transition: width 0.2s;
-			    z-index: -1;
-			    @media (min-width: 0) and (max-width: 991.98px) {
-			    	content: none;
-			    }
-			  }
-			  &:hover {
-			    color: $white;
-			    &::before {
-			      width: 100%;
-			      transition: width 0.2s;
-			    }
-			  }
-			  @media (min-width: 0) and (max-width: 991.98px) {
-			    font-size: $h6-fontsize;
-			  }
-		  }
-  	}
-  	@media (min-width: 0) and (max-width: 991.98px) {
-			.order-two {
-	  		-ms-flex-order: 2;
-				order: 2;
-	  	}
-	  	.order-one {
-	  		-ms-flex-order: 1;
-				order: 1;
-	  	}
-  	}
-  }
+*{
+	padding: 0;
+	margin: 0;
+}
+.container {
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}  
+ 
+.news-featured-wrap {
+display: flex;
+background: $grey;
+@media (min-width: 0) and (max-width: 991.98px) {
+	flex-direction: column;
+}
+
+.image-wrap{
+	flex: 1 50%;
+	max-width: 50%;
+	@media (min-width: 0) and (max-width: 991.98px) {
+		flex: 1 100%;
+		max-width: 100%;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.news-brief {
+	position: relative;
+	flex: 1 50%;
+	max-width: 50%;
+	padding: 20px;
+
+	@media (min-width: 0) and (max-width: 991.98px) {
+		flex: 1 100%;
+		max-width: 100%;
+		padding: 40px 30px;
+		order: 2;
+	}
+
+	h2 {
+		color: $secondry-color;
+		font-size: $mobile-h1-fontsize - 6;
+		font-family: $base-font-family;
+		font-weight: $fontweight-bold;
+		margin-bottom: 26px;
+
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			font-size: $p-fontsize;
+		}
+	}
+
+	p.date {
+		color: $tertiary-color;
+		font-size: $h6-fontsize;
+		font-family: $base-font-family;
+		font-weight: $fontweight-bold;
+	}
+
+	a {
+		position: absolute;
+		color: $secondry-color;
+		font-size: $p-fontsize;
+		font-family: $base-font-family;
+		font-weight: $fontweight-bold;
+		line-height: 100%;
+		padding: 10px 28px 10px 30px;
+		position: absolute;
+		z-index: 1;
+		text-decoration: none;
+		bottom: 20px;
+		text-transform: uppercase;
+
+		@media (min-width: 0) and (max-width: 991.98px) {
+			position: static;
+			display: inline-block;
+			background: $primary-utility-two;
+			color: $white;
+		}
+
+		&::before {
+			content: "";
+			background-color: $primary-utility-two;
+			bottom: 0;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 14px;
+			transition: width 0.2s;
+			z-index: -1;
+
+			@media (min-width: 0) and (max-width: 991.98px) {
+				content: none;
+			}
+		}
+
+		&:hover {
+			color: $white;
+
+			&::before {
+				width: 100%;
+				transition: width 0.2s;
+			}
+		}
+
+		@media (min-width: 0) and (max-width: 991.98px) {
+			font-size: $h6-fontsize;
+		}
+	}
+}
+
+@media (min-width: 0) and (max-width: 991.98px) {
+	.order-two {
+		-ms-flex-order: 2;
+		order: 2;
+	}
+
+	.order-one {
+		-ms-flex-order: 1;
+		order: 1;
+	}
+}
+}
