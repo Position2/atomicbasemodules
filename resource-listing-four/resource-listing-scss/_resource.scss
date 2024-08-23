@@ -1,24 +1,47 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}
+
 .resource-textthumb-wrap {
 	display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
   @media (min-width: 0) and (max-width: 767.98px) {
-  	display: block;
+	flex-direction: column;
   }
   .each-section {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-    -moz-box-flex: 0;
-    -moz-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    margin-right: 40px;
+    flex: 1 calc(50% - 20px);
+	max-width: calc(50% - 20px);
     @media (min-width: 0) and (max-width: 767.98px) {
-			flex: 0 0 100%;
+			flex: 1 100%;
+			max-width: 100%;
 			margin-bottom: 30px;
-			margin-right: 0;
     }
     a {
     	display: inline-block;
@@ -26,7 +49,6 @@
     }
     .image-wrap {
     	width: 150px;
-    	float: left; 
 	    margin-right: 20px;
 	    @media (min-width: 0) and (max-width: 1199.98px) {
 	    	margin-right: 0;
@@ -44,9 +66,7 @@
     }
     .content {
     	width: 335px;
-    	float: left;
     	@media (min-width: 0) and (max-width: 1199.98px) {
-    		float: none;
     		width: 100%;
     	}
     	a {

@@ -1,22 +1,50 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	@media (max-width: 576px) {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 992px) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+}
+
 .posts-wrap {
+	display: flex;
+	justify-content: space-between;
 	margin-right: -5px;
+	flex-wrap: wrap;
 	@media (min-width: 0) and (max-width: 767.98px) {
 		margin-left: 0;
 		margin-right: 0;
 	}
 	.each-post {
-    float: left;
-    margin: 0 5px 5px 0;
-    width: calc(100%/4 - 5px);
+    max-width: calc(50% - 5px);
+	flex: 1 calc(50% - 5px);
+	margin-bottom: 5px;
     display: block;
     position: relative;
     @media (min-width: 0) and (max-width: 767.98px) {
-			float: none;
 			margin: 0 0 5px 0;
   		width: 100%;
     }
     @media (min-width: 768px) and (max-width: 1199.98px) {
-			width: calc(100%/2 - 5px);
     }
     .post-content-wrapper {
     	img {
@@ -27,7 +55,6 @@
 		    position: absolute;
 		    background-color: rgba(0,0,0,0.65);
 		    bottom: 0;
-		    width: 100%;
 		    min-height: 70px;
 		    padding: 10px; 
 		    p {
@@ -52,11 +79,10 @@
 	    visibility: hidden;
 	    transition: all 0.35s ease 0s,opacity 0.5s ease 0s;
 	    .read-more-content-wrap {
-  	    position: absolute;
+  	    	position: absolute;
 		    top: 50%;
 		    -webkit-transform: translateY(-50%);
 		    transform: translateY(-50%);
-		    width: 100%;
 		    padding: 0 10px;
 		    h4 {
 		    	color: $white;
